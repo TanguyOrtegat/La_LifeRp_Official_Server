@@ -1,0 +1,11 @@
+.idea
+env.cfg
+/cache/*
+!/cache/.gitkeep
+
+CitizenFX.log
+ghostsessiondebug.txt
+
+.ftpconfig
+.remote-sync.json
+/resources/[car]/

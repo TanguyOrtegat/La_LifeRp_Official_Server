@@ -1,0 +1,36 @@
+version: "3"
+
+volumes:
+    database-data:
+        driver: local
+
+services:
+    fxserver:
+        build: .
+        depends_on:
+            - database
+        ports:
+            - 30120:30120
+            - 30120:30120/udp
+        volumes:
+            - ./resources:/opt/cfx-server/resources
+
+    database:
+        image: mariadb:10
+        ports:
+            - 127.0.0.1:3306:3306
+        volumes:
+            - database-data:/var/lib/mysql
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: Police911911pp
+            MYSQL_PASSWORD: fivem
+            MYSQL_USER: fivem
+            MYSQL_DATABASE: gta5_gamemode_essential
+
+    mysql_admin:
+        image: phpmyadmin/phpmyadmin
+        links:
+            - database:db
+        ports:
+            - 28080:80

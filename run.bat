@@ -1,0 +1,1 @@
+C:\users\root\desktop\FXS\run.cmd +exec server.cfg

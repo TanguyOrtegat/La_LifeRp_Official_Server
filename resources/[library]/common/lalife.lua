@@ -1,0 +1,2 @@
+LaLife = {}
+LaLife.Debug = true

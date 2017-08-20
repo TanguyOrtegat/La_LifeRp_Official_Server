@@ -1,0 +1,245 @@
+2017/08/18 19:54:14 Starting FXMonitor on 127.0.0.1:30114
+2017/08/18 19:54:14 Starting FXServer
+2017/08/18 19:54:14 FXServer started (pid: 208292)
+2017/08/18 19:54:39 FXServer exited (pid: 208292, reason: exit status 0)
+2017/08/18 19:54:44 NYI: Cleaning up FXServer cache
+2017/08/18 19:54:44 Starting FXServer
+2017/08/18 19:54:44 FXServer started (pid: 231760)
+2017/08/18 19:55:01 FXServer exited (pid: 231760, reason: exit status 0)
+2017/08/18 19:58:20 Starting FXMonitor on 127.0.0.1:30114
+2017/08/18 19:58:21 Starting FXServer
+2017/08/18 19:58:21 FXServer started (pid: 206700)
+2017/08/18 19:59:00 Stopping FXServer (triggered by cron)
+2017/08/18 19:59:00 FXServer exited (pid: 206700, reason: exit status 1)
+2017/08/18 19:59:05 NYI: Cleaning up FXServer cache
+2017/08/18 19:59:05 Starting FXServer
+2017/08/18 19:59:05 FXServer started (pid: 210020)
+2017/08/18 19:59:27 FXServer exited (pid: 210020, reason: exit status 0)
+2017/08/18 20:01:52 Starting FXMonitor on 127.0.0.1:30114
+2017/08/18 20:01:52 Starting FXServer
+2017/08/18 20:01:52 Beginning of range (0) below minimum (1): 0
+2017/08/18 20:01:52 FXServer started (pid: 210472)
+2017/08/18 21:32:35 Starting FXMonitor on 127.0.0.1:30114
+2017/08/18 21:32:35 Starting FXServer
+2017/08/18 21:32:35 Beginning of range (0) below minimum (1): 0
+2017/08/18 21:32:35 FXServer started (pid: 257912)
+2017/08/18 22:42:58 Starting FXMonitor on 127.0.0.1:30114
+2017/08/18 22:42:58 Starting FXServer
+2017/08/18 22:42:58 Beginning of range (0) below minimum (1): 0
+2017/08/18 22:42:58 FXServer started (pid: 318296)
+2017/08/18 22:43:06 FXServer exited (pid: 318296, reason: exit status 0)
+2017/08/18 22:43:12 Starting FXMonitor on 127.0.0.1:30114
+2017/08/18 22:43:12 Starting FXServer
+2017/08/18 22:43:12 Beginning of range (0) below minimum (1): 0
+2017/08/18 22:43:12 FXServer started (pid: 320172)
+2017/08/19 00:14:21 Starting FXMonitor on 127.0.0.1:30114
+2017/08/19 00:14:21 Starting FXServer
+2017/08/19 00:14:21 Beginning of range (0) below minimum (1): 0
+2017/08/19 00:14:21 FXServer started (pid: 121364)
+2017/08/19 00:40:42 Starting FXMonitor on 127.0.0.1:30114
+2017/08/19 00:40:42 Starting FXServer
+2017/08/19 00:40:42 Beginning of range (0) below minimum (1): 0
+2017/08/19 00:40:42 FXServer started (pid: 196664)
+2017/08/19 00:41:19 Starting FXMonitor on 127.0.0.1:30114
+2017/08/19 00:41:19 Starting FXServer
+2017/08/19 00:41:19 Beginning of range (0) below minimum (1): 0
+2017/08/19 00:41:19 FXServer started (pid: 46628)
+2017/08/19 00:48:43 FXServer exited (pid: 46628, reason: exit status 0)
+2017/08/19 00:48:48 NYI: Cleaning up FXServer cache
+2017/08/19 00:48:48 Starting FXServer
+2017/08/19 00:48:48 FXServer started (pid: 42452)
+2017/08/19 00:49:27 Starting FXMonitor on 127.0.0.1:30114
+2017/08/19 00:49:27 Starting FXServer
+2017/08/19 00:49:27 Beginning of range (0) below minimum (1): 0
+2017/08/19 00:49:27 FXServer started (pid: 15272)
+2017/08/19 00:51:07 FXServer exited (pid: 15272, reason: exit status 0)
+2017/08/19 00:51:12 NYI: Cleaning up FXServer cache
+2017/08/19 00:51:12 Starting FXServer
+2017/08/19 00:51:12 FXServer started (pid: 52720)
+2017/08/19 00:53:45 FXServer exited (pid: 52720, reason: exit status 0)
+2017/08/19 00:53:50 NYI: Cleaning up FXServer cache
+2017/08/19 00:53:50 Starting FXServer
+2017/08/19 00:53:50 FXServer started (pid: 74592)
+2017/08/19 00:56:59 FXServer exited (pid: 74592, reason: exit status 0)
+2017/08/19 00:57:04 NYI: Cleaning up FXServer cache
+2017/08/19 00:57:04 Starting FXServer
+2017/08/19 00:57:04 FXServer started (pid: 92200)
+2017/08/19 00:58:03 FXServer exited (pid: 92200, reason: exit status 0)
+2017/08/19 00:58:08 NYI: Cleaning up FXServer cache
+2017/08/19 00:58:08 Starting FXServer
+2017/08/19 00:58:08 FXServer started (pid: 85116)
+2017/08/19 01:04:57 FXServer exited (pid: 85116, reason: exit status 0)
+2017/08/19 01:05:02 NYI: Cleaning up FXServer cache
+2017/08/19 01:05:02 Starting FXServer
+2017/08/19 01:05:02 FXServer started (pid: 143428)
+2017/08/19 01:46:48 FXServer exited (pid: 143428, reason: exit status 0)
+2017/08/19 01:46:53 NYI: Cleaning up FXServer cache
+2017/08/19 01:46:53 Starting FXServer
+2017/08/19 01:46:53 FXServer started (pid: 76436)
+2017/08/19 02:44:56 FXServer exited (pid: 76436, reason: exit status 0)
+2017/08/19 02:45:01 NYI: Cleaning up FXServer cache
+2017/08/19 02:45:01 Starting FXServer
+2017/08/19 02:45:01 FXServer started (pid: 284152)
+2017/08/19 02:57:00 FXServer exited (pid: 284152, reason: exit status 0)
+2017/08/19 02:57:05 NYI: Cleaning up FXServer cache
+2017/08/19 02:57:05 Starting FXServer
+2017/08/19 02:57:05 FXServer started (pid: 288796)
+2017/08/19 02:59:39 FXServer exited (pid: 288796, reason: exit status 0)
+2017/08/19 02:59:44 NYI: Cleaning up FXServer cache
+2017/08/19 02:59:44 Starting FXServer
+2017/08/19 02:59:44 FXServer started (pid: 283424)
+2017/08/19 03:34:02 FXServer exited (pid: 283424, reason: exit status 0)
+2017/08/19 03:34:07 NYI: Cleaning up FXServer cache
+2017/08/19 03:34:07 Starting FXServer
+2017/08/19 03:34:07 FXServer started (pid: 307172)
+2017/08/19 03:39:47 Starting FXMonitor on 127.0.0.1:30114
+2017/08/19 03:39:47 Starting FXServer
+2017/08/19 03:39:47 Beginning of range (0) below minimum (1): 0
+2017/08/19 03:39:47 FXServer started (pid: 310180)
+2017/08/19 03:43:56 FXServer exited (pid: 310180, reason: exit status 0)
+2017/08/19 03:44:01 NYI: Cleaning up FXServer cache
+2017/08/19 03:44:01 Starting FXServer
+2017/08/19 03:44:01 FXServer started (pid: 311644)
+2017/08/19 03:46:32 FXServer exited (pid: 311644, reason: exit status 0)
+2017/08/19 03:46:48 Starting FXMonitor on 127.0.0.1:30114
+2017/08/19 03:46:48 Starting FXServer
+2017/08/19 03:46:48 Beginning of range (0) below minimum (1): 0
+2017/08/19 03:46:48 FXServer started (pid: 314376)
+2017/08/19 03:50:49 FXServer exited (pid: 314376, reason: exit status 0)
+2017/08/19 03:50:54 NYI: Cleaning up FXServer cache
+2017/08/19 03:50:54 Starting FXServer
+2017/08/19 03:50:54 FXServer started (pid: 279608)
+2017/08/19 03:57:53 FXServer exited (pid: 279608, reason: exit status 0)
+2017/08/19 03:57:58 NYI: Cleaning up FXServer cache
+2017/08/19 03:57:58 Starting FXServer
+2017/08/19 03:57:58 FXServer started (pid: 321036)
+2017/08/19 04:41:08 FXServer exited (pid: 321036, reason: exit status 0)
+2017/08/19 04:41:13 NYI: Cleaning up FXServer cache
+2017/08/19 04:41:13 Starting FXServer
+2017/08/19 04:41:13 FXServer started (pid: 95072)
+2017/08/19 04:57:30 Starting FXMonitor on 127.0.0.1:30114
+2017/08/19 04:57:30 Starting FXServer
+2017/08/19 04:57:30 Beginning of range (0) below minimum (1): 0
+2017/08/19 04:57:30 FXServer started (pid: 52192)
+2017/08/19 05:05:17 FXServer exited (pid: 52192, reason: exit status 0)
+2017/08/19 05:05:20 FXServer exited (pid: 95072, reason: exit status 0)
+2017/08/19 05:05:22 Starting FXMonitor on 127.0.0.1:30114
+2017/08/19 05:05:22 Starting FXServer
+2017/08/19 05:05:22 Beginning of range (0) below minimum (1): 0
+2017/08/19 05:05:22 FXServer started (pid: 105324)
+2017/08/19 05:42:13 FXServer exited (pid: 105324, reason: exit status 0)
+2017/08/19 05:42:18 NYI: Cleaning up FXServer cache
+2017/08/19 05:42:18 Starting FXServer
+2017/08/19 05:42:18 FXServer started (pid: 182356)
+2017/08/19 06:03:19 FXServer exited (pid: 182356, reason: exit status 0)
+2017/08/19 06:03:24 NYI: Cleaning up FXServer cache
+2017/08/19 06:03:24 Starting FXServer
+2017/08/19 06:03:24 FXServer started (pid: 161016)
+2017/08/19 06:21:59 FXServer exited (pid: 161016, reason: exit status 0)
+2017/08/19 06:22:04 NYI: Cleaning up FXServer cache
+2017/08/19 06:22:04 Starting FXServer
+2017/08/19 06:22:04 FXServer started (pid: 75788)
+2017/08/19 07:16:16 FXServer exited (pid: 75788, reason: exit status 0)
+2017/08/19 07:16:21 NYI: Cleaning up FXServer cache
+2017/08/19 07:16:21 Starting FXServer
+2017/08/19 07:16:21 FXServer started (pid: 8884)
+2017/08/19 14:10:14 Starting FXMonitor on 127.0.0.1:30114
+2017/08/19 14:10:14 Starting FXServer
+2017/08/19 14:10:14 Beginning of range (0) below minimum (1): 0
+2017/08/19 14:10:14 FXServer started (pid: 324460)
+2017/08/19 14:10:28 FXServer exited (pid: 324460, reason: exit status 0)
+2017/08/19 14:10:33 NYI: Cleaning up FXServer cache
+2017/08/19 14:10:33 Starting FXServer
+2017/08/19 14:10:33 FXServer started (pid: 35996)
+2017/08/19 14:29:26 Starting FXMonitor on 127.0.0.1:30114
+2017/08/19 14:29:26 Starting FXServer
+2017/08/19 14:29:26 Beginning of range (0) below minimum (1): 0
+2017/08/19 14:29:26 FXServer started (pid: 285452)
+2017/08/19 14:29:43 FXServer exited (pid: 285452, reason: exit status 0)
+2017/08/19 14:29:48 NYI: Cleaning up FXServer cache
+2017/08/19 14:29:48 Starting FXServer
+2017/08/19 14:29:48 FXServer started (pid: 6544)
+2017/08/19 14:57:00 Starting FXMonitor on 127.0.0.1:30114
+2017/08/19 14:57:00 Starting FXServer
+2017/08/19 14:57:00 Beginning of range (0) below minimum (1): 0
+2017/08/19 14:57:00 FXServer started (pid: 26796)
+2017/08/19 14:57:14 Starting FXMonitor on 127.0.0.1:30114
+2017/08/19 14:57:14 Starting FXServer
+2017/08/19 14:57:14 Beginning of range (0) below minimum (1): 0
+2017/08/19 14:57:14 FXServer started (pid: 14952)
+2017/08/19 15:11:26 Starting FXMonitor on 127.0.0.1:30114
+2017/08/19 15:11:26 Starting FXServer
+2017/08/19 15:11:26 Beginning of range (0) below minimum (1): 0
+2017/08/19 15:11:26 FXServer started (pid: 99656)
+2017/08/19 15:19:26 Starting FXMonitor on 127.0.0.1:30114
+2017/08/19 15:19:26 Starting FXServer
+2017/08/19 15:19:26 Beginning of range (0) below minimum (1): 0
+2017/08/19 15:19:26 FXServer started (pid: 153356)
+2017/08/19 15:19:40 Starting FXMonitor on 127.0.0.1:30114
+2017/08/19 15:19:40 Starting FXServer
+2017/08/19 15:19:40 Beginning of range (0) below minimum (1): 0
+2017/08/19 15:19:40 FXServer started (pid: 140240)
+2017/08/19 16:11:49 Starting FXMonitor on 127.0.0.1:30114
+2017/08/19 16:11:50 Starting FXServer
+2017/08/19 16:11:50 Beginning of range (0) below minimum (1): 0
+2017/08/19 16:11:50 FXServer started (pid: 13400)
+2017/08/19 16:27:53 Starting FXMonitor on 127.0.0.1:30114
+2017/08/19 16:27:53 Starting FXServer
+2017/08/19 16:27:53 Beginning of range (0) below minimum (1): 0
+2017/08/19 16:27:53 FXServer started (pid: 188392)
+2017/08/19 16:28:05 Starting FXMonitor on 127.0.0.1:30114
+2017/08/19 16:28:05 Starting FXServer
+2017/08/19 16:28:05 Beginning of range (0) below minimum (1): 0
+2017/08/19 16:28:05 FXServer started (pid: 80284)
+2017/08/19 16:37:43 Starting FXMonitor on 127.0.0.1:30114
+2017/08/19 16:37:43 Starting FXServer
+2017/08/19 16:37:43 Beginning of range (0) below minimum (1): 0
+2017/08/19 16:37:43 FXServer started (pid: 95264)
+2017/08/19 16:49:02 Starting FXMonitor on 127.0.0.1:30114
+2017/08/19 16:49:02 Starting FXServer
+2017/08/19 16:49:02 Beginning of range (0) below minimum (1): 0
+2017/08/19 16:49:02 FXServer started (pid: 31152)
+2017/08/19 16:52:04 Starting FXMonitor on 127.0.0.1:30114
+2017/08/19 16:52:04 Starting FXServer
+2017/08/19 16:52:04 Beginning of range (0) below minimum (1): 0
+2017/08/19 16:52:04 FXServer started (pid: 94552)
+2017/08/19 16:57:29 Starting FXMonitor on 127.0.0.1:30114
+2017/08/19 16:57:29 Starting FXServer
+2017/08/19 16:57:29 Beginning of range (0) below minimum (1): 0
+2017/08/19 16:57:29 FXServer started (pid: 271300)
+2017/08/19 17:09:19 Starting FXMonitor on 127.0.0.1:30114
+2017/08/19 17:09:19 Starting FXServer
+2017/08/19 17:09:19 Beginning of range (0) below minimum (1): 0
+2017/08/19 17:09:19 FXServer started (pid: 195104)
+2017/08/19 17:17:04 Starting FXMonitor on 127.0.0.1:30114
+2017/08/19 17:17:04 Starting FXServer
+2017/08/19 17:17:04 Beginning of range (0) below minimum (1): 0
+2017/08/19 17:17:04 FXServer started (pid: 54824)
+2017/08/19 17:19:32 Starting FXMonitor on 127.0.0.1:30114
+2017/08/19 17:19:32 Starting FXServer
+2017/08/19 17:19:32 Beginning of range (0) below minimum (1): 0
+2017/08/19 17:19:32 FXServer started (pid: 73932)
+2017/08/19 17:38:16 Starting FXMonitor on 127.0.0.1:30114
+2017/08/19 17:38:16 Starting FXServer
+2017/08/19 17:38:16 Beginning of range (0) below minimum (1): 0
+2017/08/19 17:38:16 FXServer started (pid: 284700)
+2017/08/19 17:44:48 Starting FXMonitor on 127.0.0.1:30114
+2017/08/19 17:44:48 Starting FXServer
+2017/08/19 17:44:48 Beginning of range (0) below minimum (1): 0
+2017/08/19 17:44:48 FXServer started (pid: 277540)
+2017/08/19 17:45:00 Starting FXMonitor on 127.0.0.1:30114
+2017/08/19 17:45:00 Starting FXServer
+2017/08/19 17:45:00 Beginning of range (0) below minimum (1): 0
+2017/08/19 17:45:00 FXServer started (pid: 109212)
+2017/08/19 18:30:50 Starting FXMonitor on 127.0.0.1:30114
+2017/08/19 18:30:50 Starting FXServer
+2017/08/19 18:30:50 Beginning of range (0) below minimum (1): 0
+2017/08/19 18:30:50 FXServer started (pid: 7256)
+2017/08/19 18:31:01 Starting FXMonitor on 127.0.0.1:30114
+2017/08/19 18:31:01 Starting FXServer
+2017/08/19 18:31:01 Beginning of range (0) below minimum (1): 0
+2017/08/19 18:31:01 FXServer started (pid: 301516)
+2017/08/19 19:03:25 Starting FXMonitor on 127.0.0.1:30114
+2017/08/19 19:03:26 Starting FXServer
+2017/08/19 19:03:26 Beginning of range (0) below minimum (1): 0
+2017/08/19 19:03:26 FXServer started (pid: 310068)

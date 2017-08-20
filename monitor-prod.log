@@ -1,0 +1,145 @@
+2017/08/18 21:07:28 Starting FXMonitor on 127.0.0.1:56292
+2017/08/18 21:07:28 Starting FXServer
+2017/08/18 21:07:28 FXServer started (pid: 225100)
+2017/08/18 22:35:29 Starting FXMonitor on 127.0.0.1:56292
+2017/08/18 22:35:29 Starting FXServer
+2017/08/18 22:35:29 FXServer started (pid: 278132)
+2017/08/18 22:44:44 Starting FXMonitor on 127.0.0.1:56292
+2017/08/18 22:44:44 Starting FXServer
+2017/08/18 22:44:44 FXServer started (pid: 330740)
+2017/08/18 22:44:58 Starting FXMonitor on 127.0.0.1:56292
+2017/08/18 22:44:58 Starting FXServer
+2017/08/18 22:44:58 FXServer started (pid: 313708)
+2017/08/18 22:47:53 Starting FXMonitor on 127.0.0.1:56292
+2017/08/18 22:47:53 Starting FXServer
+2017/08/18 22:47:53 FXServer started (pid: 335456)
+2017/08/18 22:48:07 Starting FXMonitor on 127.0.0.1:56292
+2017/08/18 22:48:07 Starting FXServer
+2017/08/18 22:48:07 FXServer started (pid: 325896)
+2017/08/18 22:57:27 Starting FXMonitor on 127.0.0.1:56292
+2017/08/18 22:57:27 Starting FXServer
+2017/08/18 22:57:27 FXServer started (pid: 335236)
+2017/08/18 22:57:40 Starting FXMonitor on 127.0.0.1:56292
+2017/08/18 22:57:41 Starting FXServer
+2017/08/18 22:57:41 FXServer started (pid: 29836)
+2017/08/18 22:59:48 Starting FXMonitor on 127.0.0.1:56292
+2017/08/18 22:59:48 Starting FXServer
+2017/08/18 22:59:48 FXServer started (pid: 33900)
+2017/08/18 23:00:00 Starting FXMonitor on 127.0.0.1:56292
+2017/08/18 23:00:00 Starting FXServer
+2017/08/18 23:00:00 FXServer started (pid: 334728)
+2017/08/18 23:08:43 Starting FXMonitor on 127.0.0.1:56292
+2017/08/18 23:08:44 Starting FXServer
+2017/08/18 23:08:44 FXServer started (pid: 90652)
+2017/08/18 23:08:57 Starting FXMonitor on 127.0.0.1:56292
+2017/08/18 23:08:57 Starting FXServer
+2017/08/18 23:08:57 FXServer started (pid: 49856)
+2017/08/18 23:14:13 Starting FXMonitor on 127.0.0.1:56292
+2017/08/18 23:14:13 Starting FXServer
+2017/08/18 23:14:13 FXServer started (pid: 56956)
+2017/08/18 23:14:37 Starting FXMonitor on 127.0.0.1:56292
+2017/08/18 23:14:37 Starting FXServer
+2017/08/18 23:14:37 FXServer started (pid: 65276)
+2017/08/19 01:00:00 Stopping FXServer (triggered by cron)
+2017/08/19 01:00:00 FXServer exited (pid: 65276, reason: exit status 1)
+2017/08/19 01:00:05 NYI: Cleaning up FXServer cache
+2017/08/19 01:00:05 Starting FXServer
+2017/08/19 01:00:05 FXServer started (pid: 105212)
+2017/08/19 11:00:00 Stopping FXServer (triggered by cron)
+2017/08/19 11:00:00 FXServer exited (pid: 105212, reason: exit status 1)
+2017/08/19 11:00:05 NYI: Cleaning up FXServer cache
+2017/08/19 11:00:05 Starting FXServer
+2017/08/19 11:00:05 FXServer started (pid: 227824)
+2017/08/19 17:00:00 Stopping FXServer (triggered by cron)
+2017/08/19 17:00:00 FXServer exited (pid: 227824, reason: exit status 1)
+2017/08/19 17:00:05 NYI: Cleaning up FXServer cache
+2017/08/19 17:00:05 Starting FXServer
+2017/08/19 17:00:05 FXServer started (pid: 252920)
+2017/08/19 19:22:42 Starting FXMonitor on 127.0.0.1:56292
+2017/08/19 19:22:42 Starting FXServer
+2017/08/19 19:22:42 FXServer started (pid: 318156)
+2017/08/19 19:23:35 Starting FXMonitor on 127.0.0.1:56292
+2017/08/19 19:23:35 Starting FXServer
+2017/08/19 19:23:35 FXServer started (pid: 319048)
+2017/08/19 19:41:34 Starting FXMonitor on 127.0.0.1:56292
+2017/08/19 19:41:34 Starting FXServer
+2017/08/19 19:41:34 FXServer started (pid: 329832)
+2017/08/19 19:41:59 Starting FXMonitor on 127.0.0.1:56292
+2017/08/19 19:41:59 Starting FXServer
+2017/08/19 19:41:59 FXServer started (pid: 328412)
+2017/08/19 19:57:51 Starting FXMonitor on 127.0.0.1:56292
+2017/08/19 19:57:51 Starting FXServer
+2017/08/19 19:57:51 FXServer started (pid: 62676)
+2017/08/19 19:58:04 Starting FXMonitor on 127.0.0.1:56292
+2017/08/19 19:58:04 Starting FXServer
+2017/08/19 19:58:04 FXServer started (pid: 107776)
+2017/08/19 20:09:45 Starting FXMonitor on 127.0.0.1:56292
+2017/08/19 20:09:45 Starting FXServer
+2017/08/19 20:09:45 FXServer started (pid: 143676)
+2017/08/19 20:09:57 Starting FXMonitor on 127.0.0.1:56292
+2017/08/19 20:09:57 Starting FXServer
+2017/08/19 20:09:57 FXServer started (pid: 314964)
+2017/08/19 20:19:03 Starting FXMonitor on 127.0.0.1:56292
+2017/08/19 20:19:03 Starting FXServer
+2017/08/19 20:19:03 FXServer started (pid: 60160)
+2017/08/19 20:19:16 Starting FXMonitor on 127.0.0.1:56292
+2017/08/19 20:19:16 Starting FXServer
+2017/08/19 20:19:16 FXServer started (pid: 7060)
+2017/08/19 20:41:11 Starting FXMonitor on 127.0.0.1:56292
+2017/08/19 20:41:11 Starting FXServer
+2017/08/19 20:41:11 FXServer started (pid: 188832)
+2017/08/19 20:42:02 Starting FXMonitor on 127.0.0.1:56292
+2017/08/19 20:42:02 Starting FXServer
+2017/08/19 20:42:02 FXServer started (pid: 160176)
+2017/08/19 20:42:15 Starting FXMonitor on 127.0.0.1:56292
+2017/08/19 20:42:15 Starting FXServer
+2017/08/19 20:42:15 FXServer started (pid: 167672)
+2017/08/19 20:58:53 Starting FXMonitor on 127.0.0.1:56292
+2017/08/19 20:58:53 Starting FXServer
+2017/08/19 20:58:53 FXServer started (pid: 97968)
+2017/08/19 21:13:22 FXServer exited (pid: 97968, reason: exit status 0)
+2017/08/19 21:13:31 Starting FXMonitor on 127.0.0.1:56292
+2017/08/19 21:13:31 Starting FXServer
+2017/08/19 21:13:31 FXServer started (pid: 8804)
+2017/08/19 21:19:55 FXServer exited (pid: 8804, reason: exit status 0)
+2017/08/19 21:20:03 Starting FXMonitor on 127.0.0.1:56292
+2017/08/19 21:20:03 Starting FXServer
+2017/08/19 21:20:03 FXServer started (pid: 125108)
+2017/08/19 21:21:04 Starting FXMonitor on 127.0.0.1:56292
+2017/08/19 21:21:04 Starting FXServer
+2017/08/19 21:21:04 FXServer started (pid: 95144)
+2017/08/19 21:30:20 FXServer exited (pid: 95144, reason: exit status 0)
+2017/08/19 21:30:23 Starting FXMonitor on 127.0.0.1:56292
+2017/08/19 21:30:23 Starting FXServer
+2017/08/19 21:30:23 FXServer started (pid: 7968)
+2017/08/19 21:31:10 Starting FXMonitor on 127.0.0.1:56292
+2017/08/19 21:31:10 Starting FXServer
+2017/08/19 21:31:10 FXServer started (pid: 6680)
+2017/08/19 21:38:06 Starting FXMonitor on 127.0.0.1:56292
+2017/08/19 21:38:06 Starting FXServer
+2017/08/19 21:38:06 FXServer started (pid: 33164)
+2017/08/19 21:50:34 Starting FXMonitor on 127.0.0.1:56292
+2017/08/19 21:50:34 Starting FXServer
+2017/08/19 21:50:34 FXServer started (pid: 87848)
+2017/08/19 22:03:04 FXServer exited (pid: 87848, reason: exit status 0)
+2017/08/19 22:03:09 NYI: Cleaning up FXServer cache
+2017/08/19 22:03:09 Starting FXServer
+2017/08/19 22:03:09 FXServer started (pid: 20592)
+2017/08/19 22:04:40 FXServer exited (pid: 20592, reason: exit status 0)
+2017/08/19 22:04:45 NYI: Cleaning up FXServer cache
+2017/08/19 22:04:45 Starting FXServer
+2017/08/19 22:04:45 FXServer started (pid: 196848)
+2017/08/19 22:06:19 FXServer exited (pid: 196848, reason: exit status 0)
+2017/08/19 22:06:24 NYI: Cleaning up FXServer cache
+2017/08/19 22:06:24 Starting FXServer
+2017/08/19 22:06:24 FXServer started (pid: 118388)
+2017/08/19 22:07:05 FXServer exited (pid: 118388, reason: exit status 0)
+2017/08/19 22:07:10 NYI: Cleaning up FXServer cache
+2017/08/19 22:07:10 Starting FXServer
+2017/08/19 22:07:10 FXServer started (pid: 90896)
+2017/08/19 22:50:22 Starting FXMonitor on 127.0.0.1:56292
+2017/08/19 22:50:22 Starting FXServer
+2017/08/19 22:50:22 FXServer started (pid: 198488)
+2017/08/19 23:24:29 Starting FXMonitor on 127.0.0.1:56292
+2017/08/19 23:24:29 Starting FXServer
+2017/08/19 23:24:29 FXServer started (pid: 170364)

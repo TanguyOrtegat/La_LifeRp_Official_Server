@@ -1,0 +1,1 @@
+client_script 'anti-gang_client.lua'
