@@ -1,3 +1,6 @@
 [submodule "LaLifeRP-Wrapper-Source"]
 	path = LaLifeRP-Wrapper-Source
-	url = https://github.com/ldlac/LaLifeRP-Wrapper-Source
+	url = https://github.com/LaLI/LaLifeRP-Wrapper-Source
+[submodule "LalifeRP-Wrapper-Source"]
+	path = LalifeRP-Wrapper-Source
+	url = https://github.com/LaLife/La_LifeRp_Official_Server.git
