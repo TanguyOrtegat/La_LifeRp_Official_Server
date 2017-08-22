@@ -11,8 +11,8 @@ local weedserver = 0
 local Positions = {
     -- VOS POINTS ICI
     recolte={x=1875.8841552734,y=5056.6772460938,z=51.513126373291, distance=20},
-    traitement={x=83.502479553223,y=6650.2631835938,z=32.19792175293, distance=20},
-    vente={x=2477.1474609375,y=3763.0439453125,z=41.8897171020508, distance=20}
+    traitement={x=83.502479553223,y=6650.2631835938,z=32.19792175293, distance=5},
+    vente={x=2477.1474609375,y=3763.0439453125,z=41.8897171020508, distance=5}
 }
 
 function drawTxt(text,font,centre,x,y,scale,r,g,b,a)
@@ -262,9 +262,10 @@ Citizen.CreateThread(function()
 				ShowMsgtime.msg = 'En train de vendre...'
 				ShowMsgtime.time = 250
 				Wait(2500)
-				ShowMsgtime.msg = '~r~-1 cannabis roulé ~w~/ ~r~+'..PriceBourse..'$'
+        local price = math.ceil(PriceBourse)
+				ShowMsgtime.msg = '~r~-1 cannabis roulé ~w~/ ~r~+'..price..'$'
 				ShowMsgtime.time = 150
-				TriggerEvent("player:sellItem", 5, PriceBourse)
+				TriggerEvent("player:sellItem", 5, price)
 			else
 				TriggerEvent("itinerance:notif", "~r~Vous devez avoir moins de 31 cannabis roulés pour vendre !")
 			end

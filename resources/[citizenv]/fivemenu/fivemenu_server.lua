@@ -136,37 +136,38 @@ RegisterServerEvent('vmenu:bourse_s')
 AddEventHandler('vmenu:bourse_s', function()
     local playerSource = source
     local roche, rochechange, cuivre, cuivrechange, fer, ferchange, diamant, diamantchange, morue, moruechange, sardine, sardinechange, daurade, dauradechange, saumon, saumonchange, vin, vinchange, bcuivre, bcuivrechange, pfer, pferchange, patate, patatechange = nil
-    
+
     MySQL.Async.fetchAll("SELECT * FROM bourse",{}, function (result)
     print(tostring(result[1].changement))
       roche = result[1].prix
-      rochechange = result[1].changement
+      rochechange = tonumber(result[1].changement)
       cuivre = result[2].prix
-      cuivrechange = result[2].changement
+      cuivrechange = tonumber(result[2].changement)
       fer = result[3].prix
-      ferchange = result[3].changement
+      ferchange =tonumber( result[3].changement)
       diamant = result[4].prix
-      diamantchange = result[4].changement
+      diamantchange = tonumber(result[4].changement)
       morue = result[5].prix
-      moruechange = result[5].changement
+      moruechange = tonumber(result[5].changement)
       sardine = result[6].prix
-      sardinechange = result[6].changement
+      sardinechange = tonumber(result[6].changement)
       daurade = result[7].prix
-      dauradechange = result[7].changement
+      dauradechange = tonumber(result[7].changement)
       saumon = result[8].prix
-      saumonchange = result[8].changement
+      saumonchange = tonumber(result[8].changement)
       vin = result[9].prix
-      vinchange = result[9].changement
+      vinchange = tonumber(result[9].changement)
       patate = result[12].prix
-      patatechange = result[12].changement
+      patatechange = tonumber(result[12].changement)
       bcuivre = result[10].prix
-      bcuivrechange = result[10].changement
+      bcuivrechange = tonumber(result[10].changement)
       pfer = result[11].prix
-      pferchange = result[11].changement
+      pferchange = tonumber(result[11].changement)
       TriggerClientEvent("vmenu:bourse", playerSource, roche, rochechange, cuivre, cuivrechange, fer, ferchange, diamant, diamantchange, morue, moruechange, sardine, sardinechange, daurade, dauradechange, saumon, saumonchange, vin, vinchange, bcuivre, bcuivrechange, pfer, pferchange, patate, patatechange)
     end)
-        
+
 end)
+
 
 AddRegisteredUserEventHandler("vmenu:sync_s", function(playerSource, user)
 	local player = user.identifier

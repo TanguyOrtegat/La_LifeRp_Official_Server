@@ -141,7 +141,7 @@ Citizen.CreateThread(function()
   if DrawBlipTradeShow then
      ShowBlipsCie()
   end
-  
+
    while true do
     Citizen.Wait(0)
     if DrawMarkerShow then
@@ -398,7 +398,7 @@ Citizen.CreateThread(function()
                         Wait(2500)
                         ShowMsgtime.msg = '+1 diamant traité'
                         ShowMsgtime.time = 150
-      
+
                         TriggerEvent("player:looseItem", 19, 1)
                         TriggerEvent("player:receiveItem", 22, 1)
                       else
@@ -477,9 +477,10 @@ Citizen.CreateThread(function()
                       ShowMsgtime.msg = 'En train de vendre...'
                       ShowMsgtime.time = 250
                       Wait(2500)
-                      ShowMsgtime.msg = '~r~-1 roche traité ~w~/ ~g~+' .. PriceBourse .. '$'
+                      local price = math.ceil(PriceBourse)
+                      ShowMsgtime.msg = '~r~-1 roche traité ~w~/ ~g~+' .. price .. '$'
                       ShowMsgtime.time = 150
-                      TriggerEvent("inventory:sell",0, 1, 24, PriceBourse, "")
+                      TriggerEvent("inventory:sell",0, 1, 24, price, "")
                       Wait(2000)
                     elseif tonumber(ITEMSJOB[20].quantity) > 0 then
                       TriggerServerEvent("jobs:getBoursePrice", ITEMSJOB[20].libelle)
@@ -487,9 +488,10 @@ Citizen.CreateThread(function()
                       ShowMsgtime.msg = 'En train de vendre...'
                       ShowMsgtime.time = 250
                       Wait(2500)
-                      ShowMsgtime.msg = '~r~-1 cuivre traité ~w~/ ~g~+' .. PriceBourse .. '$'
+                      local price = math.ceil(PriceBourse)
+                      ShowMsgtime.msg = '~r~-1 cuivre traité ~w~/ ~g~+' .. price .. '$'
                       ShowMsgtime.time = 150
-                      TriggerEvent("inventory:sell",0, 1, 20, PriceBourse, "")
+                      TriggerEvent("inventory:sell",0, 1, 20, price, "")
                       Wait(2000)
                     elseif tonumber(ITEMSJOB[21].quantity) > 0 then
                       TriggerServerEvent("jobs:getBoursePrice", ITEMSJOB[21].libelle)
@@ -497,9 +499,10 @@ Citizen.CreateThread(function()
                       ShowMsgtime.msg = 'En train de vendre...'
                       ShowMsgtime.time = 250
                       Wait(2500)
-                      ShowMsgtime.msg = '~r~-1 fer traité ~w~/ ~g~+' .. PriceBourse .. '$'
+                      local price = math.ceil(PriceBourse)
+                      ShowMsgtime.msg = '~r~-1 fer traité ~w~/ ~g~+' .. price .. '$'
                       ShowMsgtime.time = 150
-                      TriggerEvent("inventory:sell",0, 1, 21, PriceBourse, "")
+                      TriggerEvent("inventory:sell",0, 1, 21, price, "")
                       Wait(2000)
                     else
                       TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de minerais traités sur vous !")
@@ -574,9 +577,10 @@ Citizen.CreateThread(function()
                       ShowMsgtime.msg = 'En train de vendre...'
                       ShowMsgtime.time = 250
                       Wait(2500)
-                      ShowMsgtime.msg = '~r~-1 diamant traité ~w~/ ~g~+' .. PriceBourse .. '$'
+                      local price = math.ceil(PriceBourse)
+                      ShowMsgtime.msg = '~r~-1 diamant traité ~w~/ ~g~+' .. price .. '$'
                       ShowMsgtime.time = 150
-                      TriggerEvent("inventory:sell",0, 1, 22, PriceBourse, "")
+                      TriggerEvent("inventory:sell",0, 1, 22, price, "")
                       Wait(2000)
                     else
                       TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de minerais traités sur vous !")
@@ -608,15 +612,16 @@ Citizen.CreateThread(function()
           Citizen.Wait(0)
           playerPos = GetEntityCoords(GetPlayerPed(-1))
           local distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.tenue.x, Positions.tenue.y, Positions.tenue.z, true)
-          TriggerServerEvent("poleemploi:getjobs")
           if distance < Positions.tenue.distance then
             ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~b~mettre votre tenue de mineur~w~.", 0)
-            if IsControlJustPressed(1, 38) and myjob == 4 then
-              mineOutfits()
-            elseif IsControlJustPressed(1, 38) and myjob ~= 4 then
-              TriggerEvent("itinerance:notif", "~r~Vous devez être mineur !")
+            if IsControlJustPressed(1, 38) then
+              TriggerServerEvent("poleemploi:getjobs")
+              if  myjob == 4 then
+                mineOutfits()
+              else
+                TriggerEvent("itinerance:notif", "~r~Vous devez être mineur !")
+              end
             end
          end
       end
 end)
-

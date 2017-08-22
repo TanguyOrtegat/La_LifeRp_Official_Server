@@ -24,7 +24,7 @@ end)
 local function setPriorities()
     MySQL.Async.fetchAll('SELECT * FROM whitelist WHERE banned = 0', {}, function (whitelisted)
         for key, user in ipairs(whitelisted) do
-            AddPriority(user.steam_id, user.priority)
+            --AddPriority(user.steam_id, user.priority)
         end
     end)
 

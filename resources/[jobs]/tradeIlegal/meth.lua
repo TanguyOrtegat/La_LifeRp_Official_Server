@@ -406,9 +406,10 @@ Citizen.CreateThread(function()
 				ShowMsgtime.msg = 'En train de vendre...'
 				ShowMsgtime.time = 250
 				Wait(2500)
-				ShowMsgtime.msg = '~r~-1 méthemphétamine ~w~/ ~r~+'..PriceBourse..'$'
+        local price = math.ceil(PriceBourse)
+				ShowMsgtime.msg = '~r~-1 méthemphétamine ~w~/ ~r~+'..price..'$'
 				ShowMsgtime.time = 150
-				TriggerEvent("player:sellItem", 12, PriceBourse)
+				TriggerEvent("player:sellItem", 12, price)
 			else
 				TriggerEvent("itinerance:notif", "~r~Vous devez avoir moins de 31 méthemphétamine pour vendre !")
 			end
@@ -473,9 +474,10 @@ Citizen.CreateThread(function()
 				ShowMsgtime.msg = 'En train de vendre...'
 				ShowMsgtime.time = 250
 				Wait(2500)
-				ShowMsgtime.msg = '~r~-1 méthemphétamine ~w~/ ~r~+'..PriceBourse..'$'
+        local price = math.ceil(PriceBourse)
+				ShowMsgtime.msg = '~r~-1 méthemphétamine ~w~/ ~r~+'..price..'$'
 				ShowMsgtime.time = 150
-				TriggerEvent("player:sellItem", 12, PriceBourse)
+				TriggerEvent("player:sellItem", 12, price)
 			else
 				TriggerEvent("itinerance:notif", "~r~Vous devez avoir moins de 31 méthemphétamine pour vendre !")
 			end

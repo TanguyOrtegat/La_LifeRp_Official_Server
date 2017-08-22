@@ -84,7 +84,7 @@ function viningEnding2()
   TriggerServerEvent("vmenu:lastChar")
   RemoveBlipvining()
   Citizen.Trace("Cleared")
-  EndingDay = false  
+  EndingDay = false
 end
 
 function RemoveBlipvining()
@@ -168,7 +168,7 @@ function ShowBlipsvining()
   BeginTextCommandSetBlipName("STRING")
   AddTextComponentString('Zone de récolte')
   EndTextCommandSetBlipName(BlipZone4)
-  
+
   BlipVenteVin = AddBlipForCoord(Positions.vente.x, Positions.vente.y, Positions.vente.z)
 
   SetBlipSprite(BlipVenteVin, 431)
@@ -178,7 +178,7 @@ function ShowBlipsvining()
   BeginTextCommandSetBlipName("STRING")
   AddTextComponentString('Acheteur de vin')
   EndTextCommandSetBlipName(BlipVenteVin)
-  
+
   BlipPressage = AddBlipForCoord(Positions.traitement.x, Positions.traitement.y, Positions.traitement.z)
 
   SetBlipSprite(BlipPressage, 280)
@@ -195,7 +195,7 @@ Citizen.CreateThread(function()
   if DrawBlipTradeShow then
      ShowBlipsCieVin()
   end
-  
+
    while true do
     Citizen.Wait(0)
     if DrawMarkerShow then
@@ -473,9 +473,10 @@ Citizen.CreateThread(function()
                       ShowMsgtime.msg = 'Vente en cours...'
                       ShowMsgtime.time = 250
                       Wait(2500)
-                      ShowMsgtime.msg = '~r~-1 Vin ~w~/ ~g~+' .. PriceBourse .. '$'
+                      local price = math.ceil(PriceBourse)
+                      ShowMsgtime.msg = '~r~-1 Vin ~w~/ ~g~+' .. price .. '$'
                       ShowMsgtime.time = 150
-                      TriggerEvent("inventory:sell",0, 1, 37, PriceBourse, "")
+                      TriggerEvent("inventory:sell",0, 1, 37, price, "")
                       Wait(2000)
                     else
                       TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de vin sur vous !")

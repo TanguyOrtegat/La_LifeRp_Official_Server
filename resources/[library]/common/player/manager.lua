@@ -89,4 +89,12 @@ LaLife.Player.Manager.RemovePlayerDirtyMoney = function (player, removedMoney)
     LaLife.Player.Manager.SetPlayerDirtyMoney(player, player.dirtymoney - removedMoney)
 end
 
+LaLife.Player.Manager.SetPlayerJob = function (player, param)
+    player.job = param
+	TriggerEvent('LaLife:Player:Save', {
+        identifier = player.identifier,
+        job = player.job,
+    })
+end
+
 

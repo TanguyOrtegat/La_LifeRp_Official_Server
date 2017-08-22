@@ -43,5 +43,5 @@ client_script {
 	'menugarde_client.lua',
 	'menupres_client.lua',
 	'apart_client.lua'
---	'GUI.lua'
+	--'GUI.lua'
 }

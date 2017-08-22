@@ -62,12 +62,13 @@ end)
 RegisterServerEvent('menutaxi:givefac_s')
 AddEventHandler('menutaxi:givefac_s', function(netID, amount)
 	local playerSource = source
+	local target = netID
 	TriggerEvent('es:getPlayerFromId', netID, function(user)
 	if user.money >= amount then
     MySQL.Async.fetchAll("SELECT money FROM user_appartement WHERE name = @name", {['@name'] = 'Taxi Garage'}, function (result)
       LaLife.Player.Manager.RemovePlayerMoney(user, amount)
       MySQL.Async.execute("UPDATE user_appartement SET `money`=@value WHERE name = @identifier", {['@value'] = (tonumber(result[1].money)+tonumber(amount)), ['@identifier'] = 'Taxi Garage'})
-      TriggerClientEvent("itinerance:notif", netID, "Vous avez reçu une facture de ~r~".. amount.."$~w~.")
+      TriggerClientEvent("itinerance:notif", target, "Vous avez reçu une facture de ~r~".. amount.."$~w~.")
     end)
   else
     TriggerClientEvent("itinerance:notif", playerSource, "~r~La cible n'a pas assez d'argent.")

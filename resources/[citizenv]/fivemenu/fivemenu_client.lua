@@ -932,6 +932,7 @@ AddEventHandler("vmenu:bourse_check", function(target)
   TriggerServerEvent('vmenu:bourse_s')
 end)
 
+
 RegisterNetEvent("vmenu:identity")
 AddEventHandler("vmenu:identity", function(permis, permisArme, permisBateau, permisPilote)
   showId = false
@@ -1029,6 +1030,7 @@ AddEventHandler("vmenu:bourse", function(roche, rochechange, cuivre, cuivrechang
         end
   end
 end)
+
 
 Citizen.CreateThread(function()
 	while true do

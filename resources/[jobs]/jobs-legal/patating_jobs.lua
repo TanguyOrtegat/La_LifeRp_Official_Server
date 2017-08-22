@@ -78,7 +78,7 @@ function patatingEnding2()
   TriggerServerEvent("vmenu:lastChar")
   RemoveBlippatating()
   Citizen.Trace("Cleared")
-  EndingDay = false  
+  EndingDay = false
 end
 
 function RemoveBlippatating()
@@ -150,7 +150,7 @@ Citizen.CreateThread(function()
   if DrawBlipTradeShow then
      ShowBlipsCieFerme()
   end
-  
+
    while true do
     Citizen.Wait(0)
     if DrawMarkerShow then
@@ -492,9 +492,10 @@ Citizen.CreateThread(function()
                       ShowMsgtime.msg = 'En train de vendre...'
                       ShowMsgtime.time = 250
                       Wait(2500)
-                      ShowMsgtime.msg = '~r~-1 Sac de pommes de terre ~w~/ ~g~+' .. PriceBourse .. '$'
+                      local price = math.ceil(PriceBourse)
+                      ShowMsgtime.msg = '~r~-1 Sac de pommes de terre ~w~/ ~g~+' .. price .. '$'
                       ShowMsgtime.time = 150
-                      TriggerEvent("inventory:sell",0, 1, 43, PriceBourse, "")
+                      TriggerEvent("inventory:sell",0, 1, 43, price, "")
                       Wait(2000)
                     else
                       TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de sac de pommes de terre sur vous !")
