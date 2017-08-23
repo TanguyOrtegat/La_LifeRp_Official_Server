@@ -562,7 +562,7 @@ Citizen.CreateThread(function()
                       ShowMsgtime.msg = 'En train de vendre...'
                       ShowMsgtime.time = 250
                       Wait(2500)
-                      local price - math.ceil(PriceBourse)
+                      local price = math.ceil(PriceBourse)
                       ShowMsgtime.msg = '~r~-1 Sardine surgelée ~w~/ ~g~+' .. price .. '$'
                       ShowMsgtime.time = 150
                       TriggerEvent("inventory:sell",0, 1, 33, price, "")
@@ -573,7 +573,7 @@ Citizen.CreateThread(function()
                       ShowMsgtime.msg = 'En train de vendre...'
                       ShowMsgtime.time = 250
                       Wait(2500)
-                      local price - math.ceil(PriceBourse)
+                      local price = math.ceil(PriceBourse)
                       ShowMsgtime.msg = '~r~-1 Daurade surgelée ~w~/ ~g~+' .. price .. '$'
                       ShowMsgtime.time = 150
                       TriggerEvent("inventory:sell",0, 1, 34, price, "")
@@ -584,7 +584,7 @@ Citizen.CreateThread(function()
                       ShowMsgtime.msg = 'En train de vendre...'
                       ShowMsgtime.time = 250
                       Wait(2500)
-                      local price - math.ceil(PriceBourse)
+                      local price = math.ceil(PriceBourse)
                       ShowMsgtime.msg = '~r~-1 Saumon surgelé ~w~/ ~g~+' .. price .. '$'
                       ShowMsgtime.time = 150
                       TriggerEvent("inventory:sell",0, 1, 35, price, "")
