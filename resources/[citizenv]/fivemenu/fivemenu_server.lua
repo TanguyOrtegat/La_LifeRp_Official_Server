@@ -266,15 +266,16 @@ end)
 
 RegisterServerEvent("vmenu:takevote_s")
 AddEventHandler("vmenu:takevote_s", function(cand)
+  local ouvert = 1
 local playerSource = source
   TriggerEvent('es:getPlayerFromId', playerSource, function(user)
   local player = user.identifier
   MySQL.Async.fetchAll("SELECT * FROM users WHERE identifier = @name", {['@name'] = player}, function (result)
-  MySQL.Async.fetchAll("SELECT * FROM votes WHERE candidat = @name", {['@name'] = 'NONE'}, function (resultn)
+  MySQL.Async.fetchAll("SELECT * FROM votes WHERE candidat = @name", {['@name'] = tostring(cand)}, function (resultn)
   if tonumber(result[1].aVote) == 0 then
-    if tonumber(cand) == 1 then
+    if tonumber(ouvert) == 1 then
       MySQL.Async.execute("UPDATE users SET `aVote`=@value WHERE identifier = @identifier", {['@value'] = 1, ['@identifier'] = player})
-      MySQL.Async.execute("UPDATE users SET `votes`=@value WHERE candidat = @identifier", {['@value'] = tonumber(resultn[1].votes)+1, ['@identifier'] = 'NONE'})
+      MySQL.Async.execute("UPDATE votes SET `votes`=@value WHERE candidat = @identifier", {['@value'] = tonumber(resultn[1].votes)+1, ['@identifier'] = tostring(cand)})
       TriggerClientEvent("itinerance:notif", playerSource, "~g~Votre vote a été pris en compte !")
     else
       TriggerClientEvent("itinerance:notif", playerSource, "~r~Il n'y a pas d'éléctions pour l'instant !")

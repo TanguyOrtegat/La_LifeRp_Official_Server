@@ -124,6 +124,7 @@ Citizen.CreateThread(function()
     if DrawMarkerShow then
       DrawMarker(1, 473.07241821289, -1310.0407714844, 28.230070114136, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 2.0, 1.0, 255, 255, 0, 75, 0, 0, 2, 0, 0, 0, 0)
 	  DrawMarker(1, 491.9787902832, -1334.0855712891, 28.420988082886, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 4.0, 4.0, 1.0, 255, 255, 0, 75, 0, 0, 2, 0, 0, 0, 0)
+		    DrawMarker(1, 169.60827636719, -1000.9912719727, -99.999992370605, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0, 255, 255, 75, 0, 0, 2, 0, 0, 0, 0)
     end
   end
 end)
@@ -248,4 +249,23 @@ end
 
 AddEventHandler('playerDropped', function()
 	TriggerServerEvent("player:serviceOff", "tow")
+end)
+
+Citizen.CreateThread(function()
+  while true do
+    Citizen.Wait(0)
+    local playerPos = GetEntityCoords(GetPlayerPed(-1))
+    local distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, 169.60827636719, -1000.9912719727, -98.999992370605, true)
+    if not IsInVehicle() then
+      if distance < 1.5 then
+        if serviceOn == false then
+          ShowInfo('~w~Appuyez sur ~INPUT_CONTEXT~ pour ~b~prendre votre service~w~.', 0)
+          if IsControlJustPressed(1,38) then
+            TriggerServerEvent("tow:pdg")
+            --TriggerEvent("vmenu:poleemploi",18)
+          end
+      end
+    end
+end
+end
 end)

@@ -551,7 +551,7 @@ Citizen.CreateThread(function()
                       ShowMsgtime.msg = 'En train de vendre...'
                       ShowMsgtime.time = 250
                       Wait(2500)
-                      local price - math.ceil(PriceBourse)
+                      local price = math.ceil(PriceBourse)
                       ShowMsgtime.msg = '~r~-1 Morue surgelée ~w~/ ~g~+' .. price .. '$'
                       ShowMsgtime.time = 150
                       TriggerEvent("inventory:sell",0, 1, 32, price, "")

@@ -141,6 +141,8 @@ local VOpts = {
 	openMenu = false
 }
 
+local isHaveMask = false
+
 User = {
 	Spawned = false,
 	Loaded = false,
@@ -964,69 +966,69 @@ AddEventHandler("vmenu:bourse", function(roche, rochechange, cuivre, cuivrechang
         DrawRect(0.862, 0.322, 0.18, 0.4, 0, 0, 0, 150)
         DrawAdvancedText(0.922000000000001, 0.200, 0.005, 0.0028, 0.9, "~h~~g~Bourse", 255, 255, 255, 255, 1, 1)
         if rochechange < 0 then
-          DrawAdvancedText(0.874000000000001, 0.278, 0.005, 0.0028, 0.4, "Roche: ~w~" ..roche.. "$ (~r~" ..rochechange.."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.278, 0.005, 0.0028, 0.4, "Roche: ~w~" .. math.ceil(roche) .. "$ (~r~" ..math.floor(rochechange).."$~w~)", 255, 255, 255, 255, 6, 1)
         else
-          DrawAdvancedText(0.874000000000001, 0.278, 0.005, 0.0028, 0.4, "Roche: ~w~" ..roche.. "$ (~g~+" ..rochechange.."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.278, 0.005, 0.0028, 0.4, "Roche: ~w~" .. math.ceil(roche) .. "$ (~g~+" ..math.floor(rochechange).."$~w~)", 255, 255, 255, 255, 6, 1)
         end
         if cuivrechange < 0 then
-          DrawAdvancedText(0.874000000000001, 0.298, 0.005, 0.0028, 0.4, "Cuivre: ~w~" ..cuivre.. "$ (~r~" ..cuivrechange.."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.298, 0.005, 0.0028, 0.4, "Cuivre: ~w~" ..math.ceil(cuivre).. "$ (~r~" ..math.floor(cuivrechange).."$~w~)", 255, 255, 255, 255, 6, 1)
         else
-          DrawAdvancedText(0.874000000000001, 0.298, 0.005, 0.0028, 0.4, "Cuivre: ~w~" ..cuivre.. "$ (~g~+" ..cuivrechange.."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.298, 0.005, 0.0028, 0.4, "Cuivre: ~w~" ..math.ceil(cuivre).. "$ (~g~+" ..math.floor(cuivrechange).."$~w~)", 255, 255, 255, 255, 6, 1)
         end
         if ferchange < 0 then
-          DrawAdvancedText(0.874000000000001, 0.318, 0.005, 0.0028, 0.4, "Fer: ~w~" ..fer.. "$ (~r~" ..ferchange.."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.318, 0.005, 0.0028, 0.4, "Fer: ~w~" ..math.ceil(fer).. "$ (~r~" ..math.floor(ferchange).."$~w~)", 255, 255, 255, 255, 6, 1)
         else
-          DrawAdvancedText(0.874000000000001, 0.318, 0.005, 0.0028, 0.4, "Fer: ~w~" ..fer.. "$ ( ~g~+" ..ferchange.."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.318, 0.005, 0.0028, 0.4, "Fer: ~w~" ..math.ceil(fer).. "$ ( ~g~+" ..math.floor(ferchange).."$~w~)", 255, 255, 255, 255, 6, 1)
         end
         if diamantchange < 0 then
-          DrawAdvancedText(0.874000000000001, 0.338, 0.005, 0.0028, 0.4, "Diamant: ~w~" ..diamant.. "$ (~r~" ..diamantchange.."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.338, 0.005, 0.0028, 0.4, "Diamant: ~w~" ..math.ceil(diamant).. "$ (~r~" ..math.floor(diamantchange).."$~w~)", 255, 255, 255, 255, 6, 1)
         else
-          DrawAdvancedText(0.874000000000001, 0.338, 0.005, 0.0028, 0.4, "Diamant: ~w~" ..diamant.. "$ (~g~+" ..diamantchange.."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.338, 0.005, 0.0028, 0.4, "Diamant: ~w~" ..math.ceil(diamant).. "$ (~g~+" ..math.floor(diamantchange).."$~w~)", 255, 255, 255, 255, 6, 1)
         end
         if diamantchange < 0 then
-          DrawAdvancedText(0.874000000000001, 0.338, 0.005, 0.0028, 0.4, "Diamant: ~w~" ..diamant.. "$ (~r~" ..diamantchange.."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.338, 0.005, 0.0028, 0.4, "Diamant: ~w~" ..math.ceil(diamant).. "$ (~r~" ..math.floor(diamantchange).."$~w~)", 255, 255, 255, 255, 6, 1)
         else
-          DrawAdvancedText(0.874000000000001, 0.338, 0.005, 0.0028, 0.4, "Diamant: ~w~" ..diamant.. "$ (~g~+" ..diamantchange.."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.338, 0.005, 0.0028, 0.4, "Diamant: ~w~" ..math.ceil(diamant).. "$ (~g~+" ..math.floor(diamantchange).."$~w~)", 255, 255, 255, 255, 6, 1)
         end
         if moruechange < 0 then
-          DrawAdvancedText(0.874000000000001, 0.358, 0.005, 0.0028, 0.4, "Morue: ~w~" ..morue.. "$ (~r~" ..moruechange.."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.358, 0.005, 0.0028, 0.4, "Morue: ~w~" ..math.ceil(morue).. "$ (~r~" ..math.floor(moruechange).."$~w~)", 255, 255, 255, 255, 6, 1)
         else
-          DrawAdvancedText(0.874000000000001, 0.358, 0.005, 0.0028, 0.4, "Morue: ~w~" ..morue.. "$ (~g~+" ..moruechange.."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.358, 0.005, 0.0028, 0.4, "Morue: ~w~" ..math.ceil(morue).. "$ (~g~+" ..math.floor(moruechange).."$~w~)", 255, 255, 255, 255, 6, 1)
         end
         if sardinechange < 0 then
-          DrawAdvancedText(0.874000000000001, 0.378, 0.005, 0.0028, 0.4, "Sardine: ~w~" ..sardine.. "$ (~r~" ..sardinechange.."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.378, 0.005, 0.0028, 0.4, "Sardine: ~w~" ..math.ceil(sardine).. "$ (~r~" ..math.floor(sardinechange).."$~w~)", 255, 255, 255, 255, 6, 1)
         else
-          DrawAdvancedText(0.874000000000001, 0.378, 0.005, 0.0028, 0.4, "Sardine: ~w~" ..sardine.. "$ (~g~+" ..sardinechange.."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.378, 0.005, 0.0028, 0.4, "Sardine: ~w~" ..math.ceil(sardine).. "$ (~g~+" ..math.floor(sardinechange).."$~w~)", 255, 255, 255, 255, 6, 1)
         end
         if dauradechange < 0 then
-          DrawAdvancedText(0.874000000000001, 0.398, 0.005, 0.0028, 0.4, "Daurade: ~w~" ..daurade.. "$ (~r~" ..dauradechange.."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.398, 0.005, 0.0028, 0.4, "Daurade: ~w~" ..math.ceil(daurade).. "$ (~r~" ..math.floor(dauradechange).."$~w~)", 255, 255, 255, 255, 6, 1)
         else
-          DrawAdvancedText(0.874000000000001, 0.398, 0.005, 0.0028, 0.4, "Daurade: ~w~" ..daurade.. "$ (~g~+" ..dauradechange.."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.398, 0.005, 0.0028, 0.4, "Daurade: ~w~" ..math.ceil(daurade).. "$ (~g~+" ..math.floor(dauradechange).."$~w~)", 255, 255, 255, 255, 6, 1)
         end
         if saumonchange < 0 then
-          DrawAdvancedText(0.874000000000001, 0.418, 0.005, 0.0028, 0.4, "Saumon: ~w~" ..saumon.. "$ (~r~" ..saumonchange.."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.418, 0.005, 0.0028, 0.4, "Saumon: ~w~" ..math.ceil(saumon).. "$ (~r~" ..math.floor(saumonchange).."$~w~)", 255, 255, 255, 255, 6, 1)
         else
-          DrawAdvancedText(0.874000000000001, 0.418, 0.005, 0.0028, 0.4, "Saumon: ~w~" ..saumon.. "$ (~g~+" ..saumonchange.."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.418, 0.005, 0.0028, 0.4, "Saumon: ~w~" ..math.ceil(saumon).. "$ (~g~+" ..math.floor(saumonchange).."$~w~)", 255, 255, 255, 255, 6, 1)
         end
         if vinchange < 0 then
-          DrawAdvancedText(0.874000000000001, 0.438, 0.005, 0.0028, 0.4, "Vin: ~w~" ..vin.. "$ (~r~" ..vinchange.."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.438, 0.005, 0.0028, 0.4, "Vin: ~w~" ..math.ceil(vin).. "$ (~r~" ..math.floor(vinchange).."$~w~)", 255, 255, 255, 255, 6, 1)
         else
-          DrawAdvancedText(0.874000000000001, 0.438, 0.005, 0.0028, 0.4, "Vin: ~w~" ..vin.. "$ (~g~+" ..vinchange.."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.438, 0.005, 0.0028, 0.4, "Vin: ~w~" ..math.ceil(vin).. "$ (~g~+" ..math.floor(vinchange).."$~w~)", 255, 255, 255, 255, 6, 1)
         end
         if bcuivrechange < 0 then
-          DrawAdvancedText(0.874000000000001, 0.458, 0.005, 0.0028, 0.4, "Bobine de cuivre: ~w~" ..bcuivre.. "$ (~r~" ..bcuivrechange.."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.458, 0.005, 0.0028, 0.4, "Bobine de cuivre: ~w~" ..math.ceil(bcuivre).. "$ (~r~" ..math.floor(bcuivrechange).."$~w~)", 255, 255, 255, 255, 6, 1)
         else
-          DrawAdvancedText(0.874000000000001, 0.458, 0.005, 0.0028, 0.4, "Bobine de cuivre: ~w~" ..bcuivre.. "$ (~g~+" ..bcuivrechange.."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.458, 0.005, 0.0028, 0.4, "Bobine de cuivre: ~w~" ..math.ceil(bcuivre).. "$ (~g~+" ..math.floor(bcuivrechange).."$~w~)", 255, 255, 255, 255, 6, 1)
         end
         if pferchange < 0 then
-          DrawAdvancedText(0.874000000000001, 0.478, 0.005, 0.0028, 0.4, "Plaque de fer: ~w~" ..pfer.. "$ (~r~" ..pferchange.."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.478, 0.005, 0.0028, 0.4, "Plaque de fer: ~w~" ..math.ceil(pfer).. "$ (~r~" ..math.floor(pferchange).."$~w~)", 255, 255, 255, 255, 6, 1)
         else
-          DrawAdvancedText(0.874000000000001, 0.478, 0.005, 0.0028, 0.4, "Plaque de fer: ~w~" ..pfer.. "$ (~g~+" ..pferchange.."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.478, 0.005, 0.0028, 0.4, "Plaque de fer: ~w~" ..math.ceil(pfer).. "$ (~g~+" ..math.floor(pferchange).."$~w~)", 255, 255, 255, 255, 6, 1)
         end
         if patatechange < 0 then
-          DrawAdvancedText(0.874000000000001, 0.498, 0.005, 0.0028, 0.4, "Sac de pommes de terre: ~w~" ..patate.. "$ (~r~" ..patatechange.."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.498, 0.005, 0.0028, 0.4, "Sac de pommes de terre: ~w~" ..math.ceil(patate).. "$ (~r~" ..math.floor(patatechange).."$~w~)", 255, 255, 255, 255, 6, 1)
         else
-          DrawAdvancedText(0.874000000000001, 0.498, 0.005, 0.0028, 0.4, "Sac de pommes de terre: ~w~" ..patate.. "$ (~g~+" ..patatechange.."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.498, 0.005, 0.0028, 0.4, "Sac de pommes de terre: ~w~" ..math.ceil(patate).. "$ (~g~+" ..math.floor(patatechange).."$~w~)", 255, 255, 255, 255, 6, 1)
         end
   end
 end)
@@ -1486,6 +1488,7 @@ function getMainMenu()
 		VMenu.AddFunc(98, lang.menu.mainmenu.anim, "menuanim:AnimOG", {}, lang.common.access)
 		VMenu.AddFunc(98, lang.menu.mainmenu.givecash, "vmenu:giveCash", {User.money}, lang.common.access)
 		VMenu.AddFunc(98, lang.menu.mainmenu.givedcash, "vmenu:giveDCash", {User.dirtymoney}, lang.common.access)
+    VMenu.AddFunc(98, "Mettre/Enlever le masque", "vmenu:switchMask", {}, lang.common.access)
 		VMenu.AddSep(98, lang.menu.mainmenu.inventory)
 		for ind, value in ipairs(ITEMS) do
 			Citizen.Wait(1)
@@ -1496,6 +1499,18 @@ function getMainMenu()
 		end
 	end
 end
+
+
+RegisterNetEvent("vmenu:switchMask")
+AddEventHandler("vmenu:switchMask", function()
+  if isHaveMask then
+      SetPedComponentVariation(GetPlayerPed(-1), 1, 0, 0, 0)
+      isHaveMask = false
+  else
+      TriggerServerEvent("maskshop:reloadOutfits_s")
+      isHaveMask = true
+  end
+end)
 
 RegisterNetEvent("vmenu:sync")
 AddEventHandler("vmenu:sync", function()
@@ -1646,15 +1661,15 @@ function getVoteMenu()
   TriggerServerEvent('vmenu:updateUser', 28)
   Wait(100)
   VMenu.ResetMenu(28, "", "default")
-  VMenu.AddFunc(28, "Aucun candidat", "vmenu:takevote", {0}, lang.common.access)
-  VMenu.AddFunc(28, "Aucun candidat", "vmenu:takevote", {0}, lang.common.access)
-  VMenu.AddFunc(28, "Aucun candidat", "vmenu:takevote", {0}, lang.common.access)
+  VMenu.AddFunc(28, "Une Merde", "vmenu:takevote", {"Une merde"}, lang.common.access)
+  VMenu.AddFunc(28, "Shakir Darwish", "vmenu:takevote", {"Shakir"}, lang.common.access)
+  VMenu.AddFunc(28, "Montecristo", "vmenu:takevote", {"Monte"}, lang.common.access)
 end
 
 RegisterNetEvent("vmenu:takevote")
 AddEventHandler("vmenu:takevote", function(target, cand)
-  candidat = tonumber(cand)
-  TriggerServerEvent("vmenu:takevote_s", candidat)
+  --candidat = --tonumber(cand)
+  TriggerServerEvent("vmenu:takevote_s", cand)
 end)
 
 function getBarberShop()

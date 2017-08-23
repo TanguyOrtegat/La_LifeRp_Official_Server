@@ -28,10 +28,21 @@ AddEventHandler("menutaxi:TaxiOG", function(target, rangTaxi)
 		end
 end)
 
-jobs = {peds = {}, flag = {}, blip = {}, cars = {}, coords = {cx={}, cy={}, cz={}}}
+local jobs = {
+	peds = {},
+ 	flag = {},
+	blip = {},
+	cars = {},
+	coords = {
+		cx={},
+		cy={},
+		cz={}
+	}
+}
 
 function StartDispatch()
     showLoadingPromt("Chargement", 2000, 3)
+		--Citizen.Trace(tonumber(jobs.coords.cx))
     jobs.coords.cx[1],jobs.coords.cy[1],jobs.coords.cz[1] = 293.476,-590.163,42.7371
     jobs.coords.cx[2],jobs.coords.cy[2],jobs.coords.cz[2] = 253.404,-375.86,44.0819
     jobs.coords.cx[3],jobs.coords.cy[3],jobs.coords.cz[3] = 120.808,-300.416,45.1399

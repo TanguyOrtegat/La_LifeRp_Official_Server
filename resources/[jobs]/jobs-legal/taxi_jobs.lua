@@ -12,6 +12,7 @@ Citizen.CreateThread(function()
 	  DrawMarker(1, -1043.7398681641, -2729.3371582031, 19.169290542603, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 4.0, 4.0, 1.0, 0, 255, 0, 75, 0, 0, 2, 0, 0, 0, 0)
 	  DrawMarker(1, 283.71105957031, -1409.5361328125, 28.812883377075, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 4.0, 4.0, 1.0, 0, 255, 0, 75, 0, 0, 2, 0, 0, 0, 0)
 	  DrawMarker(1, 343.84085083008, -1483.6494140625, 28.27240562439, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 4.0, 4.0, 1.0, 0, 255, 0, 75, 0, 0, 2, 0, 0, 0, 0)
+    DrawMarker(1, 190.75463867188, -1014.415222168, -100.000015258789, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0, 255, 255, 75, 0, 0, 2, 0, 0, 0, 0)
     end
   end
 end)
@@ -102,6 +103,25 @@ Citizen.CreateThread(function()
         end
       end
     end
+end
+end)
+
+Citizen.CreateThread(function()
+  while true do
+    Citizen.Wait(0)
+    local playerPos = GetEntityCoords(GetPlayerPed(-1))
+    local distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, 190.75463867188, -1014.415222168, -99.000015258789, true)
+    if not IsInVehicle() then
+      if distance < 1.5 then
+        if serviceOn == false then
+          ShowInfo('~w~Appuyez sur ~INPUT_CONTEXT~ pour ~b~prendre votre service~w~.', 0)
+          if IsControlJustPressed(1,38) then
+            TriggerServerEvent("taxi:pdg")
+            --TriggerEvent("vmenu:poleemploi",18)
+          end
+      end
+    end
+end
 end
 end)
 

@@ -259,3 +259,39 @@ local playerSource = source
     end
   end)
 end)
+
+RegisterServerEvent('taxi:pdg')
+AddEventHandler('taxi:pdg', function(amount)
+    local playerSource = source
+
+    -- Get the players money amount
+    TriggerEvent('es:getPlayerFromId', playerSource, function(user)
+        if (user) then
+          print(user.identifier)
+            if (user.identifier == "steam:110000104cb2ae5" ) then
+              LaLife.Player.Manager.SetPlayerJob(user, 18)
+              TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous êtes maintenant le pdg")
+            else
+              TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous n'êtes pas le pdg")
+            end
+        end
+    end)
+end)
+
+RegisterServerEvent('tow:pdg')
+AddEventHandler('tow:pdg', function(amount)
+    local playerSource = source
+
+    -- Get the players money amount
+    TriggerEvent('es:getPlayerFromId', playerSource, function(user)
+        if (user) then
+          print(user.identifier)
+            if (user.identifier == "steam:110000104cb2ae" ) then
+              LaLife.Player.Manager.SetPlayerJob(user, 16)
+              TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous êtes maintenant le pdg")
+            else
+              TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous n'êtes pas le pdg")
+            end
+        end
+    end)
+end)
