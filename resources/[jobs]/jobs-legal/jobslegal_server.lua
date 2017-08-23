@@ -66,7 +66,7 @@ print(libelle)
    local randomChange = 0
    MySQL.Async.fetchAll("SELECT * FROM bourse", {}, function (result)
    for i, v in ipairs(result) do
-	randomChange = math.random(1, 4)
+	randomChange = math.random(7, 20)
 	randomChange = randomChange/100
      if tostring(v.item) ~= tostring(libelle) then
         if v.prix <= v.base*2 then
@@ -75,8 +75,8 @@ print(libelle)
         end
      elseif tostring(v.item) == tostring(libelle) then
       if v.prix >= v.base/4 then
-        MySQL.Async.execute("UPDATE bourse SET `prix` = @prix WHERE item = @item", {['@item'] = tostring(v.item), ['@prix'] = v.prix-0.07})
-          MySQL.Async.execute("UPDATE bourse SET changement = @changement WHERE item = @item", {['@item'] = tostring(v.item), ['@changement'] = v.changement-0.07})
+        MySQL.Async.execute("UPDATE bourse SET `prix` = @prix WHERE item = @item", {['@item'] = tostring(v.item), ['@prix'] = v.prix-0.20})
+          MySQL.Async.execute("UPDATE bourse SET changement = @changement WHERE item = @item", {['@item'] = tostring(v.item), ['@changement'] = v.changement-0.20})
       end
      end
    end
