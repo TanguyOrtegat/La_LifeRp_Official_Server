@@ -1781,6 +1781,30 @@ Citizen.CreateThread(function()
 
 			------------ Options Toggle : Changement des options depuis le menu.
 
+      if VMenu.hospital then
+    if VOpts.toUpdate == "Sexe" then
+      local model = nil
+      if getOpt("Sexe") == 0 then
+        model = GetHashKey("mp_m_freemode_01")
+      else
+        model = GetHashKey("mp_f_freemode_01")
+      end
+
+      if model ~= nil then
+        TriggerServerEvent("vmenu:lastCharInShop", model)
+      end
+      VMenu.EditFunc(10, "Valider", "vmenu:getclientFace", {getOpt("Sexe"),getOpt("Face"),0}, "Obtenir ce changement")
+    elseif VOpts.toUpdate == "Face" or VOpts.toUpdate == "Face_text" then
+      -- local id = getOpt("Face")
+      SetPedHeadBlendData(GetPlayerPed(-1), getOpt("Face"), getOpt("Face"), getOpt("Face"), getOpt("Face"), getOpt("Face"), getOpt("Face"), 1.0, 1.0, 1.0, true)
+      -- La barbe bientôt
+      --SetPedHeadOverlay(playerPed,  1,  Character['beard_1'],  (Character['beard_2'] / 10) + 0.0)    -- Beard
+      --SetPedHeadOverlayColor(playerPed,  1,  1,  Character['beard_3'],  Character['beard_4'])        -- Beard Color
+      SetPedComponentVariation(GetPlayerPed(-1), 0, getOpt("Face"), 0, 2)
+      VMenu.EditFunc(10, "Valider", "vmenu:getclientFace", {getOpt("Sexe"),getOpt("Face"),0}, "Obtenir ce changement")
+    end
+  end
+
 			if VOpts.toUpdate == "EscortM" then
 				if PEscorthandCuffed or PhandCuffed then
 					local pname = GetPlayerName(PlayerId())
@@ -1984,6 +2008,8 @@ Citizen.CreateThread(function()
 		-- 	livery = livery + 1
 		-- end
 
+
+
 		if IsControlPressed(0, 311) then
 			if User.police >= 1 then
 				if talkingTarget ~= -1 then
@@ -2125,7 +2151,9 @@ Citizen.CreateThread(function()
 				if VMenu.barbershop == false then
           getBarberShop()
         end
-
+      elseif (IsNearPoints(Hospital, 4) == true) then
+        VMenu.updatedChar = false
+        TriggerEvent("vmenu:openMenu", 10)
 			elseif (IsNearPoints(Store, 4) == true) then
 				TriggerEvent("vmenu:openMenu", 11)
 			elseif (IsNearPoints(informateur_weed, 3) == true) then
