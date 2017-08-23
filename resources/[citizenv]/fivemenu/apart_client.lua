@@ -594,8 +594,8 @@ AddEventHandler("apart:MenuAppartement",function()
     for i=1, #interiors do
         if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), interiors[i].xe,interiors[i].ye,interiors[i].ze, true) < 1.599 then
             TriggerServerEvent("apart:getAppart", interiors[i].name)
-                  Wait(1000)
             TriggerServerEvent("apart:getlock", interiors[i].name)
+                  Wait(1000)
             if isBuy == 1 and islock == 0 then
                 VMenu.AddFunc(23,'entrer',"apart:Visiter",{},"Visiter")
             elseif isBuy == 1 and islock == 1 then
