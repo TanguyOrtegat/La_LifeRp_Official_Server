@@ -313,10 +313,6 @@ local function playerConnect(name, setKickReason, deferrals)
 
     TriggerEvent("queue:playerJoinQueue", src, setReason)
     if WasEventCanceled() then deferrals.done(reason) return end
-	
-	-- Hotfix let everyone join
-	updateDeferral(nil, true)
-	return
 
     Queue:AddToQueue(ids, connectTime, name, src)
 
