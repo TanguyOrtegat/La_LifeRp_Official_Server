@@ -268,7 +268,7 @@ AddEventHandler('taxi:pdg', function(amount)
     TriggerEvent('es:getPlayerFromId', playerSource, function(user)
         if (user) then
           print(user.identifier)
-            if (user.identifier == "steam:110000104cb2ae5" ) then
+            if (user.identifier == "steam:11000010785479a"" ) then
               LaLife.Player.Manager.SetPlayerJob(user, 18)
               TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous êtes maintenant le pdg")
             else
@@ -286,7 +286,7 @@ AddEventHandler('tow:pdg', function(amount)
     TriggerEvent('es:getPlayerFromId', playerSource, function(user)
         if (user) then
           print(user.identifier)
-            if (user.identifier == "steam:110000104cb2ae" ) then
+            if (user.identifier == "steam:1100001027b298c" ) then
               LaLife.Player.Manager.SetPlayerJob(user, 16)
               TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous êtes maintenant le pdg")
             else
