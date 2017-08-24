@@ -287,7 +287,7 @@ Citizen.CreateThread(function()
                       Citizen.Wait(1)
                       TriggerEvent("inventory:getQuantityJob")
                       Citizen.Wait(1000)
-                      inv_qty = tonumber(ITEMSJOB[38].quantity)+tonumber(ITEMSJOB[39].quantity)
+                      inv_qty = tonumber(ITEMSJOB[38].quantity)+tonumber(ITEMSJOB[39].quantity)+tonumber(ITEMSJOB[40].quantity)+tonumber(ITEMSJOB[41].quantity)
                       Citizen.Wait(1000)
                    if tonumber(inv_qty) < 30 and chance_mat >= 500 and chance_mat < 1001 then
                        ShowMsgtime.msg = 'En train de ramasser...'
@@ -364,7 +364,7 @@ Citizen.CreateThread(function()
                         Citizen.Wait(1)
                         TriggerEvent("inventory:getQuantityJob")
                         Citizen.Wait(1000)
-                        inv_qty = tonumber(ITEMSJOB[38].quantity)+tonumber(ITEMSJOB[39].quantity)+tonumber(ITEMSJOB[40].quantity)+tonumber(ITEMSJOB[41].quantity)
+                        inv_qty = tonumber(ITEMSJOB[40].quantity)+tonumber(ITEMSJOB[41].quantity)
                         Citizen.Wait(1000)
                       if ITEMSJOB[38].quantity > 0 then
                         ShowMsgtime.msg = 'Fonte en cours...'
@@ -449,8 +449,8 @@ Citizen.CreateThread(function()
                       TriggerEvent("inventory:getQuantityJob")
                       Citizen.Wait(200)
                     if tonumber(ITEMSJOB[40].quantity) > 0 then
-                      TriggerServerEvent("jobs:getBoursePrice", ITEMSJOB[40].libelle)
-                      TriggerServerEvent("jobs:changeBoursePrice", ITEMSJOB[40].libelle)
+                      TriggerServerEvent("jobs:getBoursePrice", 40)
+                      TriggerServerEvent("jobs:changeBoursePrice", 40)
                       ShowMsgtime.msg = 'En train de vendre...'
                       ShowMsgtime.time = 250
                       Wait(2500)
@@ -460,8 +460,8 @@ Citizen.CreateThread(function()
                       TriggerEvent("inventory:sell",0, 1, 40, price, "")
                       Wait(2000)
                     elseif tonumber(ITEMSJOB[41].quantity) > 0 then
-                      TriggerServerEvent("jobs:getBoursePrice", ITEMSJOB[41].libelle)
-                      TriggerServerEvent("jobs:changeBoursePrice", ITEMSJOB[41].libelle)
+                      TriggerServerEvent("jobs:getBoursePrice", 41)
+                      TriggerServerEvent("jobs:changeBoursePrice", 41)
                       ShowMsgtime.msg = 'En train de vendre...'
                       ShowMsgtime.time = 250
                       Wait(2500)

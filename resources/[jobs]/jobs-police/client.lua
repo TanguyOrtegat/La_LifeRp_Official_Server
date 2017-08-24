@@ -347,7 +347,7 @@ function ShowBlipsPolice()
   BeginTextCommandSetBlipName("STRING")
   AddTextComponentString('Garage (police)')
   EndTextCommandSetBlipName(BlipGaragePolice)
-  
+
   BlipGarageHelicoPolice = AddBlipForCoord(449.87265014648, -981.50982666016, 43.69164276123)
 
   SetBlipSprite(BlipGarageHelicoPolice, 360)
@@ -356,7 +356,7 @@ function ShowBlipsPolice()
   BeginTextCommandSetBlipName("STRING")
   AddTextComponentString('Héliport (police)')
   EndTextCommandSetBlipName(BlipGarageHelicoPolice)
-  
+
   BlipGarageBateauPolice = AddBlipForCoord(-862.38153076172, -1324.1118164063, 0.605167388916)
 
   SetBlipSprite(BlipGarageBateauPolice, 356)
@@ -365,7 +365,7 @@ function ShowBlipsPolice()
   BeginTextCommandSetBlipName("STRING")
   AddTextComponentString('Port (police)')
   EndTextCommandSetBlipName(BlipGarageBateauPolice)
-  
+
 end
 
 function RemoveBlipsPolice()
@@ -426,6 +426,7 @@ AddEventHandler('jobspolice:cadet', function()
 	SetPedPropIndex(GetPlayerPed(-1), 1, 24, 0, 0)
 	SetPedPropIndex(GetPlayerPed(-1), 2, 2, 0, 0)
   end
+  AddArmourToPed(GetPlayerPed(-1),100)
 end)
 
 RegisterNetEvent("jobspolice:officier")
@@ -449,6 +450,7 @@ AddEventHandler('jobspolice:officier', function()
 	SetPedPropIndex(GetPlayerPed(-1), 1, 24, 0, 0)
 	SetPedPropIndex(GetPlayerPed(-1), 2, 2, 0, 0)
   end
+  AddArmourToPed(GetPlayerPed(-1),100)
 end)
 RegisterNetEvent("jobspolice:sergent")
 AddEventHandler('jobspolice:sergent', function()
@@ -473,6 +475,7 @@ AddEventHandler('jobspolice:sergent', function()
 	SetPedPropIndex(GetPlayerPed(-1), 2, 2, 0, 0)
 	SetPedComponentVariation(GetPlayerPed(-1), 10, 8, 1, 0)
   end
+  AddArmourToPed(GetPlayerPed(-1),100)
 end)
 RegisterNetEvent("jobspolice:lieutenant")
 AddEventHandler('jobspolice:lieutenant', function()
@@ -497,6 +500,7 @@ AddEventHandler('jobspolice:lieutenant', function()
 	SetPedPropIndex(GetPlayerPed(-1), 2, 2, 0, 0)
 	SetPedComponentVariation(GetPlayerPed(-1), 10, 8, 3, 0)
   end
+  AddArmourToPed(GetPlayerPed(-1),100)
 end)
 RegisterNetEvent("jobspolice:capitaine")
 AddEventHandler('jobspolice:capitaine', function()
@@ -521,6 +525,7 @@ AddEventHandler('jobspolice:capitaine', function()
 	SetPedPropIndex(GetPlayerPed(-1), 2, 2, 0, 0)
 	SetPedComponentVariation(GetPlayerPed(-1), 10, 8, 2, 0)
   end
+  AddArmourToPed(GetPlayerPed(-1),100)
 end)
 RegisterNetEvent("jobspolice:commandant")
 AddEventHandler('jobspolice:commandant', function()
@@ -548,4 +553,5 @@ AddEventHandler('jobspolice:commandant', function()
 	SetPedComponentVariation(GetPlayerPed(-1), 10, 8, 2, 0)
 	SetPedComponentVariation(GetPlayerPed(-1), 9, 10, 1, 2)
   end
+  AddArmourToPed(GetPlayerPed(-1),100)
 end)

@@ -54,7 +54,7 @@ RegisterServerEvent('jobs:getBoursePrice')
 AddEventHandler('jobs:getBoursePrice', function(libelle)
 local playerSource = source
 print(libelle)
-  MySQL.Async.fetchAll("SELECT prix FROM bourse WHERE item = @item", {['@item'] = tostring(libelle)}, function (result)
+  MySQL.Async.fetchAll("SELECT prix FROM bourse WHERE item = @item", {['@item'] = tonumber(libelle)}, function (result)
     TriggerClientEvent("jobs:getBoursePrice_c", playerSource, result[1].prix)
   end)
 end)
@@ -66,17 +66,17 @@ print(libelle)
    local randomChange = 0
    MySQL.Async.fetchAll("SELECT * FROM bourse", {}, function (result)
    for i, v in ipairs(result) do
-	randomChange = math.random(7, 20)
+	randomChange = math.random(4, 10)
 	randomChange = randomChange/100
-     if tostring(v.item) ~= tostring(libelle) then
+     if tonumber(v.item) ~= tonumber(libelle) then
         if v.prix <= v.base*2 then
-          MySQL.Async.execute("UPDATE bourse SET `prix` = @prix WHERE item = @item", {['@item'] = tostring(v.item), ['@prix'] = v.prix+randomChange})
-          MySQL.Async.execute("UPDATE bourse SET changement = @changement WHERE item = @item", {['@item'] = tostring(v.item), ['@changement'] = v.changement+randomChange})
+          MySQL.Async.execute("UPDATE bourse SET `prix` = @prix WHERE item = @item", {['@item'] = tonumber(v.item), ['@prix'] = v.prix+randomChange})
+          MySQL.Async.execute("UPDATE bourse SET changement = @changement WHERE item = @item", {['@item'] = tonumber(v.item), ['@changement'] = v.changement+randomChange})
         end
-     elseif tostring(v.item) == tostring(libelle) then
+     elseif tonumber(v.item) == tonumber(libelle) then
       if v.prix >= v.base/4 then
-        MySQL.Async.execute("UPDATE bourse SET `prix` = @prix WHERE item = @item", {['@item'] = tostring(v.item), ['@prix'] = v.prix-0.20})
-          MySQL.Async.execute("UPDATE bourse SET changement = @changement WHERE item = @item", {['@item'] = tostring(v.item), ['@changement'] = v.changement-0.20})
+        MySQL.Async.execute("UPDATE bourse SET `prix` = @prix WHERE item = @item", {['@item'] = tonumber(v.item), ['@prix'] = v.prix-(1/10)})
+          MySQL.Async.execute("UPDATE bourse SET changement = @changement WHERE item = @item", {['@item'] = tonumber(v.item), ['@changement'] = v.changement-(1/10)})
       end
      end
    end
@@ -288,6 +288,24 @@ AddEventHandler('tow:pdg', function(amount)
           print(user.identifier)
             if (user.identifier == "steam:110000104cb2ae" ) then
               LaLife.Player.Manager.SetPlayerJob(user, 16)
+              TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous êtes maintenant le pdg")
+            else
+              TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous n'êtes pas le pdg")
+            end
+        end
+    end)
+end)
+
+RegisterServerEvent('garda:pdg')
+AddEventHandler('garda:pdg', function(amount)
+    local playerSource = source
+
+    -- Get the players money amount
+    TriggerEvent('es:getPlayerFromId', playerSource, function(user)
+        if (user) then
+          print(user.identifier)
+            if (user.identifier == "steam:110000105791fa5" ) then
+              LaLife.Player.Manager.SetPlayerJob(user, 27)
               TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous êtes maintenant le pdg")
             else
               TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous n'êtes pas le pdg")

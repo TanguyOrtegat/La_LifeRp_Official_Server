@@ -18,7 +18,7 @@ AddEventHandler("menutaxi:TaxiOG", function(target, rangTaxi)
 		VMenu.AddFunc(98, "~r~Retour", "vmenu:MainMenuOG", {}, "Retour")
 		VMenu.AddFunc(98, "~o~Commencer/arrêter son dispatch (PNJ)", "menutaxi:startDispatch", {}, "Accéder")
 		VMenu.AddFunc(98, "Annuler l'appel", "call:cancelCall", {}, "Accéder")
-		VMenu.AddNum10(98, "Montant facture", "AmfacTaxi", 0, 1000, "La facturation vous permet d'envoyer directement l'argent dans le coffre")
+		VMenu.AddNum10(98, "Montant facture", "AmfacTaxi", 0, 10000, "La facturation vous permet d'envoyer directement l'argent dans le coffre")
 		VMenu.AddFunc(98, "Donner facture", "menutaxi:givefac", {getOpt("AmfacTaxi")}, "Accéder")
 		if rangTaxi == 18 then
 			VMenu.AddSep(98, "~y~Gestion administrative~w~")

@@ -337,8 +337,8 @@ Citizen.CreateThread(function()
         Citizen.Wait(1000)
           if ITEMSDRUGS[8].quantity > 0 then
 			if tonumber(inv_qty) <= 30 then
-				TriggerServerEvent("drugs:getBoursePrice", ITEMSDRUGS[8].libelle)
-                TriggerServerEvent("drugs:changeBoursePrice", ITEMSDRUGS[8].libelle)
+				TriggerServerEvent("drugs:getBoursePrice", 8)
+                TriggerServerEvent("drugs:changeBoursePrice", 8)
 				ShowMsgtime.msg = 'En train de vendre...'
 				ShowMsgtime.time = 250
 				Wait(2500)

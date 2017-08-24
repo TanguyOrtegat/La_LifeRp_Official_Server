@@ -6,7 +6,7 @@ local police = 0
 RegisterServerEvent('drugs:getBoursePrice')
 AddEventHandler('drugs:getBoursePrice', function(libelle)
 local playerSource = source
-  MySQL.Async.fetchAll("SELECT prix FROM bourse WHERE item = @item", {['@item'] = tostring(libelle)}, function (result)
+  MySQL.Async.fetchAll("SELECT prix FROM bourse WHERE item = @item", {['@item'] = tonumber(libelle)}, function (result)
     TriggerClientEvent("drugs:getBoursePrice_c", playerSource, result[1].prix)
   end)
 end)
@@ -14,19 +14,19 @@ end)
 RegisterServerEvent('drugs:changeBoursePrice')
 AddEventHandler('drugs:changeBoursePrice', function(libelle)
 local playerSource = source
-   local randomChange = math.random(1, 4)
+   local randomChange = math.random(4, 10)
    randomChange = randomChange/100
-   MySQL.Async.fetchAll("SELECT * FROM bourse", {}, function (result) 
+   MySQL.Async.fetchAll("SELECT * FROM bourse", {}, function (result)
    for i, v in ipairs(result) do
-     if tostring(v.item) ~= tostring(libelle) then
+     if tonumber(v.item) ~= tonumber(libelle) then
         if v.prix <= v.base*2 then
-          MySQL.Async.execute("UPDATE bourse SET prix = @prix WHERE item = @item", {['@item'] = tostring(v.item), ['@prix'] = v.prix+randomChange})
-          MySQL.Async.execute("UPDATE bourse SET changement = @changement WHERE item = @item", {['@item'] = tostring(v.item), ['@changement'] = v.changement+randomChange})
+          MySQL.Async.execute("UPDATE bourse SET prix = @prix WHERE item = @item", {['@item'] = tonumber(v.item), ['@prix'] = v.prix+randomChange})
+          MySQL.Async.execute("UPDATE bourse SET changement = @changement WHERE item = @item", {['@item'] = tonumber(v.item), ['@changement'] = v.changement+randomChange})
         end
-     elseif tostring(v.item) == tostring(libelle) then
+     elseif tonumber(v.item) == tonumber(libelle) then
       if v.prix >= v.base/4 then
-        MySQL.Async.execute("UPDATE bourse SET prix = @prix WHERE item = @item", {['@item'] = tostring(v.item), ['@prix'] = v.prix-0.07})
-          MySQL.Async.execute("UPDATE bourse SET changement = @changement WHERE item = @item", {['@item'] = tostring(v.item), ['@changement'] = v.changement-0.07})
+        MySQL.Async.execute("UPDATE bourse SET prix = @prix WHERE item = @item", {['@item'] = tonumber(v.item), ['@prix'] = v.prix-(1/10)})
+          MySQL.Async.execute("UPDATE bourse SET changement = @changement WHERE item = @item", {['@item'] = tonumber(v.item), ['@changement'] = v.changement-(1/10)})
       end
      end
    end
@@ -107,4 +107,3 @@ local function GetPolice()
 end
 
 GetPolice()
-

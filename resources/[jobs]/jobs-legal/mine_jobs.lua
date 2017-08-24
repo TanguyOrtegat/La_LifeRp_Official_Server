@@ -472,8 +472,8 @@ Citizen.CreateThread(function()
                       Citizen.Trace(tostring(ITEMSJOB[22].quantity))
                       Citizen.Wait(200)
                     if tonumber(ITEMSJOB[24].quantity) > 0 then
-                      TriggerServerEvent("jobs:getBoursePrice", ITEMSJOB[24].libelle)
-                      TriggerServerEvent("jobs:changeBoursePrice", ITEMSJOB[24].libelle)
+                      TriggerServerEvent("jobs:getBoursePrice", 24)
+                      TriggerServerEvent("jobs:changeBoursePrice", 24)
                       ShowMsgtime.msg = 'En train de vendre...'
                       ShowMsgtime.time = 250
                       Wait(2500)
@@ -483,8 +483,8 @@ Citizen.CreateThread(function()
                       TriggerEvent("inventory:sell",0, 1, 24, price, "")
                       Wait(2000)
                     elseif tonumber(ITEMSJOB[20].quantity) > 0 then
-                      TriggerServerEvent("jobs:getBoursePrice", ITEMSJOB[20].libelle)
-                      TriggerServerEvent("jobs:changeBoursePrice", ITEMSJOB[20].libelle)
+                      TriggerServerEvent("jobs:getBoursePrice", 20)
+                      TriggerServerEvent("jobs:changeBoursePrice", 20)
                       ShowMsgtime.msg = 'En train de vendre...'
                       ShowMsgtime.time = 250
                       Wait(2500)
@@ -494,8 +494,8 @@ Citizen.CreateThread(function()
                       TriggerEvent("inventory:sell",0, 1, 20, price, "")
                       Wait(2000)
                     elseif tonumber(ITEMSJOB[21].quantity) > 0 then
-                      TriggerServerEvent("jobs:getBoursePrice", ITEMSJOB[21].libelle)
-                      TriggerServerEvent("jobs:changeBoursePrice", ITEMSJOB[21].libelle)
+                      TriggerServerEvent("jobs:getBoursePrice", 21)
+                      TriggerServerEvent("jobs:changeBoursePrice", 21)
                       ShowMsgtime.msg = 'En train de vendre...'
                       ShowMsgtime.time = 250
                       Wait(2500)
@@ -572,8 +572,8 @@ Citizen.CreateThread(function()
                       Citizen.Trace(tostring(ITEMSJOB[22].quantity))
                       Citizen.Wait(200)
                     if tonumber(ITEMSJOB[22].quantity) > 0 then
-                      TriggerServerEvent("jobs:getBoursePrice", ITEMSJOB[22].libelle)
-                      TriggerServerEvent("jobs:changeBoursePrice", ITEMSJOB[22].libelle)
+                      TriggerServerEvent("jobs:getBoursePrice", 22)
+                      TriggerServerEvent("jobs:changeBoursePrice", 22)
                       ShowMsgtime.msg = 'En train de vendre...'
                       ShowMsgtime.time = 250
                       Wait(2500)

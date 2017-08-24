@@ -966,67 +966,67 @@ AddEventHandler("vmenu:bourse", function(roche, rochechange, cuivre, cuivrechang
         DrawRect(0.862, 0.322, 0.18, 0.4, 0, 0, 0, 150)
         DrawAdvancedText(0.922000000000001, 0.200, 0.005, 0.0028, 0.9, "~h~~g~Bourse", 255, 255, 255, 255, 1, 1)
         if rochechange < 0 then
-          DrawAdvancedText(0.874000000000001, 0.278, 0.005, 0.0028, 0.4, "Roche: ~w~" .. math.ceil(roche) .. "$ (~r~" ..math.floor(rochechange).."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.278, 0.005, 0.0028, 0.4, "Roche: ~w~" .. math.ceil(roche) .. "$ (~r~" ..math.ceil(rochechange).."$~w~)", 255, 255, 255, 255, 6, 1)
         else
           DrawAdvancedText(0.874000000000001, 0.278, 0.005, 0.0028, 0.4, "Roche: ~w~" .. math.ceil(roche) .. "$ (~g~+" ..math.floor(rochechange).."$~w~)", 255, 255, 255, 255, 6, 1)
         end
         if cuivrechange < 0 then
-          DrawAdvancedText(0.874000000000001, 0.298, 0.005, 0.0028, 0.4, "Cuivre: ~w~" ..math.ceil(cuivre).. "$ (~r~" ..math.floor(cuivrechange).."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.298, 0.005, 0.0028, 0.4, "Cuivre: ~w~" ..math.ceil(cuivre).. "$ (~r~" ..math.ceil(cuivrechange).."$~w~)", 255, 255, 255, 255, 6, 1)
         else
           DrawAdvancedText(0.874000000000001, 0.298, 0.005, 0.0028, 0.4, "Cuivre: ~w~" ..math.ceil(cuivre).. "$ (~g~+" ..math.floor(cuivrechange).."$~w~)", 255, 255, 255, 255, 6, 1)
         end
         if ferchange < 0 then
-          DrawAdvancedText(0.874000000000001, 0.318, 0.005, 0.0028, 0.4, "Fer: ~w~" ..math.ceil(fer).. "$ (~r~" ..math.floor(ferchange).."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.318, 0.005, 0.0028, 0.4, "Fer: ~w~" ..math.ceil(fer).. "$ (~r~" ..math.ceil(ferchange).."$~w~)", 255, 255, 255, 255, 6, 1)
         else
           DrawAdvancedText(0.874000000000001, 0.318, 0.005, 0.0028, 0.4, "Fer: ~w~" ..math.ceil(fer).. "$ ( ~g~+" ..math.floor(ferchange).."$~w~)", 255, 255, 255, 255, 6, 1)
         end
         if diamantchange < 0 then
-          DrawAdvancedText(0.874000000000001, 0.338, 0.005, 0.0028, 0.4, "Diamant: ~w~" ..math.ceil(diamant).. "$ (~r~" ..math.floor(diamantchange).."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.338, 0.005, 0.0028, 0.4, "Diamant: ~w~" ..math.ceil(diamant).. "$ (~r~" ..math.ceil(diamantchange).."$~w~)", 255, 255, 255, 255, 6, 1)
         else
           DrawAdvancedText(0.874000000000001, 0.338, 0.005, 0.0028, 0.4, "Diamant: ~w~" ..math.ceil(diamant).. "$ (~g~+" ..math.floor(diamantchange).."$~w~)", 255, 255, 255, 255, 6, 1)
         end
         if diamantchange < 0 then
-          DrawAdvancedText(0.874000000000001, 0.338, 0.005, 0.0028, 0.4, "Diamant: ~w~" ..math.ceil(diamant).. "$ (~r~" ..math.floor(diamantchange).."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.338, 0.005, 0.0028, 0.4, "Diamant: ~w~" ..math.ceil(diamant).. "$ (~r~" ..math.ceil(diamantchange).."$~w~)", 255, 255, 255, 255, 6, 1)
         else
           DrawAdvancedText(0.874000000000001, 0.338, 0.005, 0.0028, 0.4, "Diamant: ~w~" ..math.ceil(diamant).. "$ (~g~+" ..math.floor(diamantchange).."$~w~)", 255, 255, 255, 255, 6, 1)
         end
         if moruechange < 0 then
-          DrawAdvancedText(0.874000000000001, 0.358, 0.005, 0.0028, 0.4, "Morue: ~w~" ..math.ceil(morue).. "$ (~r~" ..math.floor(moruechange).."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.358, 0.005, 0.0028, 0.4, "Morue: ~w~" ..math.ceil(morue).. "$ (~r~" ..math.ceil(moruechange).."$~w~)", 255, 255, 255, 255, 6, 1)
         else
           DrawAdvancedText(0.874000000000001, 0.358, 0.005, 0.0028, 0.4, "Morue: ~w~" ..math.ceil(morue).. "$ (~g~+" ..math.floor(moruechange).."$~w~)", 255, 255, 255, 255, 6, 1)
         end
         if sardinechange < 0 then
-          DrawAdvancedText(0.874000000000001, 0.378, 0.005, 0.0028, 0.4, "Sardine: ~w~" ..math.ceil(sardine).. "$ (~r~" ..math.floor(sardinechange).."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.378, 0.005, 0.0028, 0.4, "Sardine: ~w~" ..math.ceil(sardine).. "$ (~r~" ..math.ceil(sardinechange).."$~w~)", 255, 255, 255, 255, 6, 1)
         else
           DrawAdvancedText(0.874000000000001, 0.378, 0.005, 0.0028, 0.4, "Sardine: ~w~" ..math.ceil(sardine).. "$ (~g~+" ..math.floor(sardinechange).."$~w~)", 255, 255, 255, 255, 6, 1)
         end
         if dauradechange < 0 then
-          DrawAdvancedText(0.874000000000001, 0.398, 0.005, 0.0028, 0.4, "Daurade: ~w~" ..math.ceil(daurade).. "$ (~r~" ..math.floor(dauradechange).."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.398, 0.005, 0.0028, 0.4, "Daurade: ~w~" ..math.ceil(daurade).. "$ (~r~" ..math.ceil(dauradechange).."$~w~)", 255, 255, 255, 255, 6, 1)
         else
           DrawAdvancedText(0.874000000000001, 0.398, 0.005, 0.0028, 0.4, "Daurade: ~w~" ..math.ceil(daurade).. "$ (~g~+" ..math.floor(dauradechange).."$~w~)", 255, 255, 255, 255, 6, 1)
         end
         if saumonchange < 0 then
-          DrawAdvancedText(0.874000000000001, 0.418, 0.005, 0.0028, 0.4, "Saumon: ~w~" ..math.ceil(saumon).. "$ (~r~" ..math.floor(saumonchange).."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.418, 0.005, 0.0028, 0.4, "Saumon: ~w~" ..math.ceil(saumon).. "$ (~r~" ..math.ceil(saumonchange).."$~w~)", 255, 255, 255, 255, 6, 1)
         else
           DrawAdvancedText(0.874000000000001, 0.418, 0.005, 0.0028, 0.4, "Saumon: ~w~" ..math.ceil(saumon).. "$ (~g~+" ..math.floor(saumonchange).."$~w~)", 255, 255, 255, 255, 6, 1)
         end
         if vinchange < 0 then
-          DrawAdvancedText(0.874000000000001, 0.438, 0.005, 0.0028, 0.4, "Vin: ~w~" ..math.ceil(vin).. "$ (~r~" ..math.floor(vinchange).."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.438, 0.005, 0.0028, 0.4, "Vin: ~w~" ..math.ceil(vin).. "$ (~r~" ..math.ceil(vinchange).."$~w~)", 255, 255, 255, 255, 6, 1)
         else
           DrawAdvancedText(0.874000000000001, 0.438, 0.005, 0.0028, 0.4, "Vin: ~w~" ..math.ceil(vin).. "$ (~g~+" ..math.floor(vinchange).."$~w~)", 255, 255, 255, 255, 6, 1)
         end
         if bcuivrechange < 0 then
-          DrawAdvancedText(0.874000000000001, 0.458, 0.005, 0.0028, 0.4, "Bobine de cuivre: ~w~" ..math.ceil(bcuivre).. "$ (~r~" ..math.floor(bcuivrechange).."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.458, 0.005, 0.0028, 0.4, "Bobine de cuivre: ~w~" ..math.ceil(bcuivre).. "$ (~r~" ..math.ceil(bcuivrechange).."$~w~)", 255, 255, 255, 255, 6, 1)
         else
           DrawAdvancedText(0.874000000000001, 0.458, 0.005, 0.0028, 0.4, "Bobine de cuivre: ~w~" ..math.ceil(bcuivre).. "$ (~g~+" ..math.floor(bcuivrechange).."$~w~)", 255, 255, 255, 255, 6, 1)
         end
         if pferchange < 0 then
-          DrawAdvancedText(0.874000000000001, 0.478, 0.005, 0.0028, 0.4, "Plaque de fer: ~w~" ..math.ceil(pfer).. "$ (~r~" ..math.floor(pferchange).."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.478, 0.005, 0.0028, 0.4, "Plaque de fer: ~w~" ..math.ceil(pfer).. "$ (~r~" ..math.ceil(pferchange).."$~w~)", 255, 255, 255, 255, 6, 1)
         else
           DrawAdvancedText(0.874000000000001, 0.478, 0.005, 0.0028, 0.4, "Plaque de fer: ~w~" ..math.ceil(pfer).. "$ (~g~+" ..math.floor(pferchange).."$~w~)", 255, 255, 255, 255, 6, 1)
         end
         if patatechange < 0 then
-          DrawAdvancedText(0.874000000000001, 0.498, 0.005, 0.0028, 0.4, "Sac de pommes de terre: ~w~" ..math.ceil(patate).. "$ (~r~" ..math.floor(patatechange).."$~w~)", 255, 255, 255, 255, 6, 1)
+          DrawAdvancedText(0.874000000000001, 0.498, 0.005, 0.0028, 0.4, "Sac de pommes de terre: ~w~" ..math.ceil(patate).. "$ (~r~" ..math.ceil(patatechange).."$~w~)", 255, 255, 255, 255, 6, 1)
         else
           DrawAdvancedText(0.874000000000001, 0.498, 0.005, 0.0028, 0.4, "Sac de pommes de terre: ~w~" ..math.ceil(patate).. "$ (~g~+" ..math.floor(patatechange).."$~w~)", 255, 255, 255, 255, 6, 1)
         end
@@ -1261,7 +1261,7 @@ function Construct()
       if User.police >= 3 then
         VMenu.AddFunc(menu, "Suberban K9", "vmenu:getGarage", {"police6"}, "Obtenir cette voiture")
       end
-      if User.police >= 4 then
+      if User.police >= 3 then
         VMenu.AddFunc(menu, "Taho banalisée", "vmenu:getGarage", {"fbi2"}, "Obtenir cette voiture")
         VMenu.AddFunc(menu, "Charger banalisée", "vmenu:getGarage", {"fbi"}, "Obtenir cette voiture")
       end
@@ -1475,6 +1475,9 @@ function getMainMenu()
 		if tonumber(User.job) == 17 or tonumber(User.job) == 18 then
 			VMenu.AddFunc(98, "Menu taxi", "menutaxi:TaxiOG", {User.job}, lang.common.access)
 		end
+    if tonumber(User.job) == 26 or tonumber(User.job) == 27 then
+      VMenu.AddFunc(98, "Menu GardaLife", "menugarda:menuOG", {User.job}, lang.common.access)
+    end
 		if tonumber(User.job) == 14 then
 			VMenu.AddFunc(98, "Menu président", "menupres:MayorOG", {}, lang.common.access)
 		end
@@ -1533,12 +1536,12 @@ function getGaragePolice()
         if User.police >= 3 then
             VMenu.AddFunc(7, "Ford Explorer", "vmenu:getGarage", {"police3"}, "Obtenir cette voiture")
             VMenu.AddFunc(7, "Chevrolet Impala", "vmenu:getGarage", {"police8"}, "Obtenir cette voiture")
-			VMenu.AddFunc(7, "Moto de police", "vmenu:getGarage", {"policebike"}, "Obtenir cette voiture")
+			         VMenu.AddFunc(7, "Moto de police", "vmenu:getGarage", {"policebike"}, "Obtenir cette voiture")
+               VMenu.AddFunc(7, "Dodge Charger Banalisé", "vmenu:getGarage", {"fbi"}, "Obtenir cette voiture")
+               VMenu.AddFunc(7, "Chevrolet Tahoe Banalisé", "vmenu:getGarage", {"fbi2"}, "Obtenir cette voiture")
         end
         if User.police >= 4 then
             VMenu.AddFunc(7, "Ford Raptor", "vmenu:getGarage", {"police"}, "Obtenir ce véhicule")
-            VMenu.AddFunc(7, "Dodge Charger Banalisé", "vmenu:getGarage", {"fbi"}, "Obtenir cette voiture")
-            VMenu.AddFunc(7, "Chevrolet Tahoe Banalisé", "vmenu:getGarage", {"fbi2"}, "Obtenir cette voiture")
         end
 		if User.police >= 6 then
             VMenu.AddFunc(7, "K9", "vmenu:getGarage", {"police6"}, "Obtenir ce véhicule")
@@ -1595,7 +1598,7 @@ function getLockerPolice()
 	VMenu.ResetMenu(5, "", "default")
 	VMenu.AddMenu(5, "", "default") -- default = Header "Texte" sur fond bleu
 	VMenu.AddFunc(5, "En service", "vmenu:policeState", {1}, "Être en service")
-	if User.police >= 4 then
+	if User.police >= 3 then
 		VMenu.AddFunc(5, "En service civil", "vmenu:policeStateCivil", {1}, "Être en service")
 	end
 	VMenu.AddFunc(5, "Hors service", "vmenu:policeState", {0}, "Être hors service")
