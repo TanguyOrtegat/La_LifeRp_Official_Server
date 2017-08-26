@@ -508,8 +508,7 @@ AddEventHandler('apart:additem_s', function(id,name)
   end)
 end)
 
-RegisterServerEvent("apart:getinvitem")
-AddEventHandler("apart:getinvitem", function()
+AddEventHandler('onMySQLReady', function ()
   MySQL.Async.fetchAll("SELECT * FROM items", {}, function (result)
     --if (result) then
 --	print(result[1].name)
