@@ -82,6 +82,6 @@ RegisterServerEvent('menutaxi:paidfordispatch')
 AddEventHandler('menutaxi:paidfordispatch', function()
 local playerSource = source
   TriggerEvent('es:getPlayerFromId', playerSource, function(user)
-    LaLife.Player.Manager.AddPlayerMoney(user, math.random(50, 70))
+    LaLife.Player.Manager.AddPlayerMoney(user, 800)
   end)
 end)
