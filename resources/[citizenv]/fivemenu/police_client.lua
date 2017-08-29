@@ -174,8 +174,8 @@ AddEventHandler("menupolice:PoliceOG", function(target, rangPolice) -- 0 rien, 1
 	 	VMenu.AddFunc(98, "Verifier papier", "menupolice:verifp", {}, "Accéder")
 	 	VMenu.AddNum100(98, "Montant contravention", "Amcon", 0, 100000, "Montant de la contravention")
 		VMenu.AddFunc(98, "Donner contravention", "menupolice:givecon", {getOpt("Amcon")}, "Accéder")
-		VMenu.AddFunc(98, "Fouiller le véhicule le plus près", "menupolice:searchveh", {}, "Accéder")
-		VMenu.AddFunc(98, "Fouiller le civil le plus près", "menupolice:searchciv", {}, "Accéder")
+		VMenu.AddFunc(98, "Vérifier la plaque du véhicule", "menupolice:searchveh", {}, "Accéder")
+		VMenu.AddFunc(98, "Fouiller le civil le plus près", "menupolice:verifp", {}, "Accéder")
 		VMenu.AddFunc(98, "Saisir l'argent sale", "menupolice:seizecash", {}, "Accéder")
 		VMenu.AddFunc(98, "Saisir les objets illégaux", "menupolice:seizedrug", {}, "Accéder")
 		VMenu.AddFunc(98, "Saisir les armes illégales", "menupolice:seizeillegalweapons", {}, "Accéder")
@@ -204,6 +204,8 @@ handCuffed = false
 EscorthandCuffed = false
 
 EscortGuy = 0
+
+
 
 RegisterNetEvent("menupolice:f_cuff")
 AddEventHandler('menupolice:f_cuff', function(civitem)
@@ -291,13 +293,18 @@ end)
 local showIdPolice = false
 
 RegisterNetEvent("menupolice:f_verifp")
-AddEventHandler("menupolice:f_verifp", function(name, tel, job, police, entreprise, permis, permisArme, permisBateau, permisPilote)
+AddEventHandler("menupolice:f_verifp", function(name, tel, job, police, entreprise, permis, permisArme, permisBateau, permisPilote,arme,civitems)
 	showIdPolice = true
 		Citizen.Wait(0)
 		if (showIdPolice == true) then
 			TriggerEvent("itinerance:notif", "~h~Carte d'identité")
 			TriggerEvent("itinerance:notif", "~b~Nom: ~w~" ..name)
 			TriggerEvent("itinerance:notif", "~b~Numéro de téléphone: ~w~" ..tel)
+			if arme == "oui" then
+				TriggerEvent("itinerance:notif", "~g~arme: ~r~"..arme)
+			else
+				TriggerEvent("itinerance:notif", "~g~arme: ~g~"..arme)
+			end
 			if tonumber(job) == 1 then
 				TriggerEvent("itinerance:notif", "~y~Métier: ~w~Sans emploi")
 			elseif tonumber(job) == 2 then
@@ -374,10 +381,16 @@ AddEventHandler("menupolice:f_verifp", function(name, tel, job, police, entrepri
 				TriggerEvent("itinerance:notif", "~g~Permis de port d'armes: ~r~Erreur")
 			end
 			if permis == 0 then
-			  DrawAdvancedText(0.874000000000001, 0.318, 0.005, 0.0028, 0.4, "~g~Permis de conduire: ~r~Non", 255, 255, 255, 255, 6, 1)
+			  TriggerEvent("itinerance:notif", "~g~Permis de conduire: ~r~non")
 			elseif permis >= 1 then
-			  DrawAdvancedText(0.874000000000001, 0.318, 0.005, 0.0028, 0.4, "~g~Permis de conduire: ~g~" ..permis, 255, 255, 255, 255, 6, 1)
-		 end
+			  TriggerEvent("itinerance:notif", "~g~Permis de conduire: ~g~"..permis)
+		 	end
+
+			for _, item in pairs(civitems) do
+				if item.valeur > 0 then
+					TriggerEvent("itinerance:notif", item.libelle .. item.valeur)
+				end
+			end
 			-- if permisBateau == 0 then
 				-- DrawAdvancedText(0.874000000000001, 0.378, 0.005, 0.0028, 0.4, "~g~Permis bateau: ~r~Non", 255, 255, 255, 255, 6, 1)
 			-- elseif permisBateau == 1 then

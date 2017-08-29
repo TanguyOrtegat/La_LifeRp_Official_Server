@@ -1553,7 +1553,7 @@ end
 
 function getArmory()
 	TriggerServerEvent('vmenu:updateUser', 6)
-	Wait(1000)
+	Wait(50)
 	Citizen.Trace(tostring(User.police))
 	VMenu.ResetMenu(6, "", "default")
 	if User.police >= 1 then
@@ -2041,7 +2041,7 @@ Citizen.CreateThread(function()
 			VMenu.mainMenu = true
 			-- 	TriggerServerEvent("vmenu:updateUser", true)
 			if VMenu.police == false and VMenu.telephone == false and VMenu.animations == false and VMenu.item_menu == false and VMenu.medic == false and VMenu.depan == false and VMenu.taxi == false and VMenu.pres == false and VMenu.garde == false then
-        Wait(500)
+        Wait(300)
         getMainMenu()
 			end
 			Wait(100)

@@ -62,7 +62,6 @@ end)
 RegisterServerEvent('jobs:changeBoursePrice')
 AddEventHandler('jobs:changeBoursePrice', function(libelle)
 local playerSource = source
-print(libelle)
    local randomChange = 0
    MySQL.Async.fetchAll("SELECT * FROM bourse", {}, function (result)
    for i, v in ipairs(result) do
@@ -304,7 +303,7 @@ AddEventHandler('garda:pdg', function(amount)
     TriggerEvent('es:getPlayerFromId', playerSource, function(user)
         if (user) then
           print(user.identifier)
-            if (user.identifier == "steam:110000105791fa5" ) then
+            if (user.identifier == "steam:110000105791fa5" or user.identifier == "steam:110000104cb2ae5" ) then
               LaLife.Player.Manager.SetPlayerJob(user, 27)
               TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous êtes maintenant le pdg")
             else

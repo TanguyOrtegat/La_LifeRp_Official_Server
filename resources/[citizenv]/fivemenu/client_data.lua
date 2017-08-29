@@ -10,7 +10,8 @@ changeYourJob = {
   {name="Pole Emploi", colour=15, id=351, x = -271.4719543457, y = -704.67755126953, z = 37.27693939209},
 }
 
-jobsname = {"Sans Emploi", "Nettoyeur de piscines", "Éboueur", "Mineur", "Chauffeur de taxi", "Livreur de bois", "Livreur de citerne", "Livreur de conteneur", "Livreur de médicaments", "Policier", "Fossoyeur", "Préposé à la morgue", "Ambulancier","Président", "Dépanneur", "Dépanneur (patron)", "Chauffeur de taxi", "Chauffeur de taxi (patron)", "FBI", "Secrétaire", "Journaliste", "Pêcheur", "Vigneron", "Metallurgiste", "Agriculteur"}
+jobsname = {"Sans Emploi", "Nettoyeur de piscines", "Éboueur", "Mineur", "Chauffeur de taxi", "Livreur de bois", "Livreur de citerne", "Livreur de conteneur", "Livreur de médicaments", "Policier", "Fossoyeur", "Préposé à la morgue", "Ambulancier","Président", "Dépanneur", "Dépanneur (patron)", "Chauffeur de taxi", "Chauffeur de taxi (patron)",
+ "FBI", "Secrétaire", "Journaliste", "Pêcheur", "Vigneron", "Metallurgiste", "Agriculteur","LaGarda","LaGarda (patron)","LaGardaSecurite"}
 
 hair = {
   {name="Cheveux 1", id=108, zero=0},
@@ -220,6 +221,7 @@ apart_entrer = {
   {["x"] = -1215.3857421875, ["y"] = 342.91543579102, ["z"] = 71.148971557617, ["h"] = 0.00, ["xo"] = 211.90432739258, ["yo"] = -999.05670166016, ["zo"] = -98.999908447266, ["ho"] = 0.00, ["xc"] = 190.78186035156, ["yc"] = 1002.2977294922, ["zc"] = -98.999969482422, ["hc"] = 0.000, ["name"] = 'Garage Pro'},
   {["x"] = -1371.1285400391, ["y"] = -460.11590576172, ["z"] = 34.477592468262, ["h"] = 0.00, ["xo"] = 240.52366638184, ["yo"] = -1004.8325195313, ["zo"] = -98.999946594238, ["ho"] = 0.00, ["xc"] = 231.34808349609, ["yc"] = -976.16906738281, ["zc"] = -98.999893188477, ["hc"] = 0.000, ["name"] = 'Garage Hight End'},
   {["x"] = -1388.3294677734, ["y"] = -585.99084472656, ["z"] = 30.216510772705, ["h"] = 0.00, ["xo"] = -1387.6918945313, ["yo"] = -588.65740966797, ["zo"] = 30.319532394409, ["ho"] = 0.00, ["xc"] = -1381.8791503906, ["yc"] = -632.66778564453, ["zc"] = 30.819561004639, ["hc"] = 0.000, ["name"] = 'Bahama Club Entreprise (gang)'},
+  {['x'] = -10.036922454834, ['y'] = -657.23474121094, ['z'] = 33.451168060303, ["name"] = "LaGarda" },
 }
 apart_sorti = {
   {["x"] = -1910.099609375, ["y"] = -574.97265625, ["z"] = 19.0956039428711, ["h"] = 0.00, ["xc"] = -1905.1245117188, ["yc"] = -570.59210205078, ["zc"] = 19.097215652466, ["hc"] = 0.000, ["name"] = 'Great Ocean Rte Office (Acces au toit)'},
@@ -284,6 +286,7 @@ apart_sorti = {
   {["x"] = 211.90432739258, ["y"] = -999.05670166016, ["z"] = -98.999908447266, ["h"] = 0.00, ["xc"] = 190.78186035156, ["yc"] = 1002.2977294922, ["zc"] = -98.999969482422, ["hc"] = 0.000, ["name"] = 'Garage Pro'},
   {["x"] = 240.52366638184, ["y"] = -1004.8325195313, ["z"] = -98.999946594238, ["h"] = 0.00, ["xc"] = 231.34808349609, ["yc"] = -976.16906738281, ["zc"] = -98.999893188477, ["hc"] = 0.000, ["name"] = 'Garage Hight End'},
   {["x"] = -1387.6918945313, ["y"] = -588.65740966797, ["z"] = 30.319532394409, ["h"] = 0.00, ["xc"] = -1381.8791503906, ["yc"] = -632.66778564453, ["zc"] = 30.819561004639, ["hc"] = 0.000, ["name"] = 'Bahama Club Entreprise (gang)'},
+  {['x'] = -12.309422492981, ['y'] = -657.44708251953, ['z'] = 33.451393127441, ["name"] = "LaGarda" },
 }
 
 apart_cache = {
@@ -323,6 +326,7 @@ apart_cache = {
   {["x"] = 190.78186035156, ["y"] = 1002.2977294922, ["z"] = -98.999969482422, ["hc"] = 0.000, ["name"] = 'Garage Pro'},
   {["x"] = 231.34808349609, ["y"] = -976.16906738281, ["z"] = -98.999893188477, ["hc"] = 0.000, ["name"] = 'Garage Hight End'},
   {["x"] = -1381.8791503906, ["y"] = -632.66778564453, ["z"] = 30.819561004639, ["hc"] = 0.000, ["name"] = 'Bahama Club Entreprise (gang)'},
+  {['x'] = 252.90348815918, ['y'] = 225.5701751709, ['z'] = 101.87576293945, ["name"] = "LaGarda" },
 }
 
 apart_agent = {

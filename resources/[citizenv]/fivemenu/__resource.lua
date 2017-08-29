@@ -19,7 +19,8 @@ server_script {
 	'menutaxi_server.lua',
 	'menugarde_server.lua',
 	'menupres_server.lua',
-	'apart_server.lua'
+	'apart_server.lua',
+	'menugarda_server.lua'
 }
 
 client_script {
@@ -42,6 +43,7 @@ client_script {
 	'menutaxi_client.lua',
 	'menugarde_client.lua',
 	'menupres_client.lua',
-	'apart_client.lua'
+	'apart_client.lua',
+	'menugarda_client.lua'
 	--'GUI.lua'
 }

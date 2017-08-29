@@ -203,7 +203,7 @@ Citizen.CreateThread(function()
       while not HasModelLoaded(car) do
         Citizen.Wait(0)
       end
-      veh = CreateVehicle(car, -859.32885742188, -1327.5693359375, 0.61249089241028, 109.81607055664, true, false)
+      veh = CreateVehicle(car, 449.87265014648, -981.50982666016, 43.69164276123, 109.81607055664, true, false)
       SetVehicleNumberPlateText(veh, plate)
       SetVehicleOnGroundProperly(veh)
       SetVehicleHasBeenOwnedByPlayer(veh,true)

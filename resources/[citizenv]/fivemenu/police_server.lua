@@ -1,3 +1,5 @@
+local civitems = {}
+
 RegisterServerEvent('menupolice:getTargetN_s')
 
 AddEventHandler('menupolice:getTargetN_s', function(netID)
@@ -53,15 +55,39 @@ end)
 RegisterServerEvent('menupolice:verifp_s')
 AddEventHandler('menupolice:verifp_s', function(netID)
     local playerSource = source
-
+    print("dans verifp_s")
     TriggerEvent('es:getPlayerFromId', netID, function(user)
         if user ~= nil then
             local player = user.identifier
+              MySQL.Async.fetchAll("SELECT * FROM user_inventory WHERE user_id = @username",{['@username'] = player}, function(itemciv)
+                for _, res in pairs(itemciv) do
+                  print(res.quantity)
+                  civitems[tonumber(res.item_id)].valeur = res.quantity
+                end
+              end)
             MySQL.Async.fetchAll("SELECT * FROM users WHERE identifier = @username",{['@username'] = player}, function(result)
-                TriggerClientEvent("menupolice:f_verifp", playerSource, tostring(user.prenom.. " " ..user.nom), tostring(user.telephone), tostring(user.job), tonumber(user.police), nil, nil, tonumber(result[1].permisArme), tonumber(result[1].permisBateau), tonumber(result[1].permisPilote))
+              MySQL.Async.fetchAll("SELECT * FROM user_weapons WHERE identifier = @username",{['@username'] = player}, function(arme)
+                if(arme[1]) then
+                  TriggerClientEvent("menupolice:f_verifp", playerSource, tostring(user.prenom.. " " ..user.nom), tostring(user.telephone), tostring(user.job), tonumber(user.police), nil, tonumber(result[1].permis), tonumber(result[1].permisArme), tonumber(result[1].permisBateau), tonumber(result[1].permisPilote),"oui",civitems)
+                else
+                  TriggerClientEvent("menupolice:f_verifp", playerSource, tostring(user.prenom.. " " ..user.nom), tostring(user.telephone), tostring(user.job), tonumber(user.police), nil, tonumber(result[1].permis), tonumber(result[1].permisArme), tonumber(result[1].permisBateau), tonumber(result[1].permisPilote),"non",civitems)
+                end
+              end)
             end)
         end
     end)
+end)
+
+AddEventHandler('onMySQLReady', function ()
+  MySQL.Async.fetchAll("SELECT * FROM items", {}, function (result)
+    --if (result) then
+--	print(result[1].name)
+  --print(result[1].item_id)
+    for _, res in pairs(result) do
+      t = {["libelle"] = res.libelle, ["valeur"] = 0, ["item_id"] = res.id}
+      table.insert(civitems, tonumber(res.id),t)
+    end
+  end)
 end)
 
 RegisterServerEvent('menupolice:seizecash_s')

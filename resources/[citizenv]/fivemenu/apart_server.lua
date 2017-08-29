@@ -312,7 +312,6 @@ AddEventHandler('apart:buyAppart', function(name, price)
     local price = price
     if (tonumber(user.money) >= tonumber(price)) then
         LaLife.Player.Manager.RemovePlayerMoney(user, price)
-		print('lolilol avant sql apart')
       if (mode == "Async") then
     	  MySQL.Async.execute("INSERT INTO user_appartement (`identifier`, `name`, `price`) VALUES (@username, @name, @price)", {['@username'] = player, ['@name'] = name, ['@price'] = price})
 		  for _, item in pairs(items) do
@@ -324,7 +323,6 @@ AddEventHandler('apart:buyAppart', function(name, price)
       -- TriggerClientEvent("es_freeroam:notify", source, "CHAR_SIMEON", 1, "Stephane", false, txt[lang]['welcome']) --(FOR FREEROAM)
 	    TriggerClientEvent("citizenv:notify", playersource, "CHAR_SIMEON", 1, "Stephane", false, txt[lang]['welcome']) --WITH LALIFE SCRIPTS
     	TriggerClientEvent('apart:isMine', playersource)
-		print('lolilol apart acheter')
     else
     	-- TriggerClientEvent("es_freeroam:notify", source, "CHAR_SIMEON", 1, "Stephane", false, txt[lang]['nocash']) --(FOR FREEROAM)
     	TriggerClientEvent("citizenv:notify", playersource, "CHAR_SIMEON", 1, "Stephane", false, txt[lang]['nocash']) --WITH LALIFE SCRIPTS
