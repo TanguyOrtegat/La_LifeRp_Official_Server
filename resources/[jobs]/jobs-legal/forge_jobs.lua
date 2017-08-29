@@ -180,7 +180,7 @@ Citizen.CreateThread(function()
                 SetPedIntoVehicle(GetPlayerPed(-1), vehicle, -1)
                 SetVehicleEngineOn(vehicle, true, false, false)
                 Wait(100)
-                ShowBlipForge()
+                ShowBlipsMetal()
             else
               TriggerEvent("itinerance:notif", "~r~Vous devez être métallurgiste !")
             end
