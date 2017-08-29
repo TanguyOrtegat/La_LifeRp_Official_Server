@@ -9,7 +9,7 @@ local vehicle
 local vehicleSorti = false
 local Blip_tombe
 local tombe = 1
-local Price = 300
+local Price = 250
 -- -900.0, -3002.0, 13.0
 -- -800.0, -3002.0, 13.0
 -- -1078.0, -3002.0, 13.0
