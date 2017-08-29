@@ -5,7 +5,7 @@ AddEventHandler('menutow:hire_s', function(netID)
 	local tIdentifier = GetPlayerIdentifiers(netID)
   	local identifier = tIdentifier[1]
 	if (user) then
-		MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 5, ['@identifier'] = tostring(identifier)})
+		MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 15, ['@identifier'] = tostring(identifier)})
 		LaLife.Player.Manager.SetPlayerJob(user, 15)
     	TriggerClientEvent("itinerance:notif", playerSource, "~g~Action effectuée!")
 		TriggerClientEvent("itinerance:notif", netID, "~g~Vous avez été engagé en tant que dépanneur !")

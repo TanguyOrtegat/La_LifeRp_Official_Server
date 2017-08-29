@@ -45,7 +45,7 @@ AddEventHandler('menugarda:promote_s', function(netID)
 	local identifier = tIdentifier[1]
 	local tIdentifiern = GetPlayerIdentifiers(playerSource)
 	local identifiern = tIdentifiern[1]
-		if (tonumber(user.job)) == 15 then
+		if (tonumber(user.job)) == 26 then
 			MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 27, ['@identifier'] = tostring(identifier)})
 			LaLife.Player.Manager.SetPlayerJob(user, 27)
 			MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 26, ['@identifier'] = tostring(identifiern)})
