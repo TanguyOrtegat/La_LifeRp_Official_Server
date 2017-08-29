@@ -53,7 +53,6 @@ local items = {
 RegisterServerEvent('jobs:getBoursePrice')
 AddEventHandler('jobs:getBoursePrice', function(libelle)
 local playerSource = source
-print(libelle)
   MySQL.Async.fetchAll("SELECT prix FROM bourse WHERE item = @item", {['@item'] = tonumber(libelle)}, function (result)
     TriggerClientEvent("jobs:getBoursePrice_c", playerSource, result[1].prix)
   end)
@@ -266,7 +265,7 @@ AddEventHandler('taxi:pdg', function(amount)
     -- Get the players money amount
     TriggerEvent('es:getPlayerFromId', playerSource, function(user)
         if (user) then
-          print(user.identifier)
+          --print(user.identifier)
             if (user.identifier == "steam:11000010785479a" ) then
               LaLife.Player.Manager.SetPlayerJob(user, 18)
               TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous êtes maintenant le pdg")
@@ -284,7 +283,7 @@ AddEventHandler('tow:pdg', function(amount)
     -- Get the players money amount
     TriggerEvent('es:getPlayerFromId', playerSource, function(user)
         if (user) then
-          print(user.identifier)
+          --print(user.identifier)
             if (user.identifier == "steam:1100001027b298c" ) then
               LaLife.Player.Manager.SetPlayerJob(user, 16)
               TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous êtes maintenant le pdg")
@@ -302,7 +301,7 @@ AddEventHandler('garda:pdg', function(amount)
     -- Get the players money amount
     TriggerEvent('es:getPlayerFromId', playerSource, function(user)
         if (user) then
-          print(user.identifier)
+          --print(user.identifier)
             if (user.identifier == "steam:110000105791fa5" or user.identifier == "steam:110000104cb2ae5" ) then
               LaLife.Player.Manager.SetPlayerJob(user, 27)
               TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous êtes maintenant le pdg")
