@@ -51,6 +51,7 @@ local isDead = false
 local isKO = false
 local isRes = false
 local emergencyComes = false
+local inService = "patate"
 
 
 --[[
@@ -170,6 +171,14 @@ AddEventHandler('es_em:cl_respawn',
     end
 )
 
+RegisterNetEvent('call:s_GetService')
+AddEventHandler('call:s_GetService',
+    function(service)
+      Citizen.Trace("s_GetService")
+        inService = service
+    end
+)
+
 --[[
 ################################
         BUSINESS METHODS
@@ -236,7 +245,10 @@ function OnPlayerDied(playerId, reasonID, reason)
                 Citizen.Wait(1)
 
                 if (IsControlJustReleased(1, Keys['E'])) and not emergencyCalled then
-                    if not isDocConnected then
+                  TriggerServerEvent("call:GetService","medic")
+                  Wait(200)
+                  Citizen.Trace(inService)
+                    if inService == "non" then
                         SendNotification("Aucun médécin en ville, appyuer sur ~b~X~s~ pour aller à l'hôpital")
                     else
                         notifReceivedAt = GetGameTimer()
@@ -247,12 +259,22 @@ function OnPlayerDied(playerId, reasonID, reason)
 
                     emergencyCalled = true
                 elseif (IsControlJustReleased(1, Keys['X'])) then
+                  TriggerServerEvent("call:GetService","medic")
+                  Wait(200)
+                  Citizen.Trace(inService)
                     local askReleaseAt =  GetGameTimer() / 1000
-
-                    if ((askReleaseAt - diedAt) < 30) then
-                        SendNotification("Veuillez attendre avant de pouvoir aller à l'hôpital")
-                    else
+                    if inService == "non" then
+                      if ((askReleaseAt - diedAt) < 60) then
+                        SendNotification("Aucun médecin en ville,veuillez attendre 1 minutes avant de pouvoir aller à l'hôpital")
+                      else
                         ResPlayer()
+                      end
+                    else
+                      if ((askReleaseAt - diedAt) < 540) then
+                        SendNotification("veuillez attendre 5 minutes avant de pouvoir aller à l'hôpital")
+                      else
+                        ResPlayer()
+                      end
                     end
                 end
 

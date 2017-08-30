@@ -205,6 +205,8 @@ Citizen.CreateThread(function()
                 SetPedIntoVehicle(GetPlayerPed(-1), vehicle, -1)
                 SetVehicleEngineOn(vehicle, true, false, false)
                 SetEntityAsMissionEntity(vehicle, true, true)
+                WashDecalsFromVehicle(vehicle, 1.0)
+                SetVehicleDirtLevel(vehicle, 0.0)
                 Wait(100)
                 Citizen.Wait(1)
                 camionSortie = true
@@ -304,7 +306,7 @@ Citizen.CreateThread(function()
             TriggerServerEvent("poleemploi:getjobs")
             Wait(200)
             if myjob == 28 or myjob == 27 then
-			           if serviceOn == true then
+			           --if serviceOn == true then
                 local car = GetHashKey("contender")
                 RequestModel(car)
                 while not HasModelLoaded(car) do
@@ -313,22 +315,33 @@ Citizen.CreateThread(function()
                 vehicle =  CreateVehicle(car, Positions.spawnVoiture.x, Positions.spawnVoiture.y, Positions.spawnVoiture.z , 0.0, true, false)
                 MISSION.truck = vehicle
                 SetVehicleOnGroundProperly(vehicle)
-				        SetVehicleNumberPlateText(vehicle, job.plate)
+				        --SetVehicleNumberPlateText(vehicle, job.plate)
 				        Wait(100)
 				        SetVehicleHasBeenOwnedByPlayer(vehicle,true)
                 SetVehRadioStation(vehicle, "OFF")
-                SetVehicleColours(vehicle, 25, 25)
+                SetVehicleColours(vehicle, 0, 0)
                 SetVehicleLivery(vehicle, 4)
                 SetPedIntoVehicle(GetPlayerPed(-1), vehicle, -1)
                 SetVehicleEngineOn(vehicle, true, false, false)
                 SetEntityAsMissionEntity(vehicle, true, true)
+                WashDecalsFromVehicle(vehicle, 1.0)
+                SetVehicleDirtLevel(vehicle, 0.0)
+                SetVehicleExtra(vehicle,1,0)
+                SetVehicleExtra(vehicle,2,0)
+                SetVehicleExtra(vehicle,3,0)
+                SetVehicleExtra(vehicle,4,0)
+                SetVehicleExtra(vehicle,5,0)
+                SetVehicleExtra(vehicle,6,0)
+                SetVehicleExtra(vehicle,7,0)
+                SetVehicleExtra(vehicle,8,0)
+                SetVehicleExtra(vehicle,9,0)
                 Wait(100)
                 Citizen.Wait(1)
                 camionSortie = true
 				        onJobLegal = 1
-			else
-				TriggerEvent("itinerance:notif", "~r~Vous n'êtes pas en service !")
-			end
+			--else
+			--	TriggerEvent("itinerance:notif", "~r~Vous n'êtes pas en service !")
+			--end
             else
               TriggerEvent("itinerance:notif", "~r~Vous devez être un employé !")
             end

@@ -77,6 +77,20 @@ AddEventHandler("call:getCall", function(job)
     end
 end)
 
+RegisterServerEvent("call:GetService")
+AddEventHandler("call:GetService", function(job)
+  local playerSource = source
+  local count = 0
+  for _, player in pairs(inService[job]) do
+    count = count + 1
+  end
+  if count == 0 then
+    TriggerClientEvent("call:s_GetService", playerSource , "non")
+  else
+    TriggerClientEvent("call:s_GetService", playerSource , "oui")
+  end
+end)
+
 function removeService(player, job)
     for i,val in pairs(inService[job]) do
         if val == player then

@@ -1,7 +1,7 @@
 --====================================================================================
 -- #Author: Jonathan D @ Gannon
 --====================================================================================
- 
+
 -- Configuration
 local KeyToucheCloseEvent = {
   { code = 172, event = 'ArrowUp' },
@@ -19,9 +19,9 @@ local myPhoneNumber = ''
 local isDead = false
 local numberMsgs = 0
 --====================================================================================
---  
+--
 --====================================================================================
- 
+
 Citizen.CreateThread(function()
   while true do
     Citizen.Wait(0)
@@ -39,10 +39,10 @@ Citizen.CreateThread(function()
     end
   end
 end)
- 
-function DeadCheck() 
+
+function DeadCheck()
   local dead = IsEntityDead(GetPlayerPed(-1))
-  if dead ~= isDead then 
+  if dead ~= isDead then
     isDead = dead
     SendNUIMessage({event = 'updateDead', isDead = isDead})
   end
@@ -76,7 +76,7 @@ AddEventHandler("gcPhone:receiveMessage", function(message)
   table.insert(messages, message)
   SendNUIMessage({event = 'updateMessages', messages = messages})
   Citizen.Trace("TEST RECEIVE")
-  if message.owner == 0 then 
+  if message.owner == 0 then
     SetNotificationTextEntry("STRING")
     numberMsgs = numberMsgs + 1
     AddTextComponentString('~y~Vous avez ' ..numberMsgs.. ' nouveau(x) message(s).')
@@ -91,11 +91,11 @@ end)
 --====================================================================================
 --  Function client | Contacts
 --====================================================================================
-function addContact(display, num) 
+function addContact(display, num)
   TriggerServerEvent('gcPhone:addContact', display, num)
 end
 
-function deleteContact(num) 
+function deleteContact(num)
   TriggerServerEvent('gcPhone:deleteContact', num)
 end
 --====================================================================================
@@ -108,7 +108,7 @@ end
 function deleteMessage(msgId)
   Citizen.Trace('deleteMessage' .. msgId)
   TriggerServerEvent('gcPhone:deleteMessage', msgId)
-  for k, v in ipairs(messages) do 
+  for k, v in ipairs(messages) do
     if v.id == msgId then
       table.remove(messages, k)
       SendNUIMessage({event = 'updateMessages', messages = messages})
@@ -127,7 +127,7 @@ end
 
 function setReadMessageNumber(num)
   TriggerServerEvent('gcPhone:setReadMessageNumber', num)
-  for k, v in ipairs(messages) do 
+  for k, v in ipairs(messages) do
     if v.transmitter == num then
       v.isRead = true
     end
@@ -143,7 +143,7 @@ function requestAllContact()
 end
 --====================================================================================
 --  Gestion des evenements NUI
---==================================================================================== 
+--====================================================================================
 RegisterNUICallback('log', function(data, cb)
   Citizen.Trace('NUI Log | ' .. json.encode(data))
   cb()
@@ -160,7 +160,7 @@ RegisterNUICallback('reponseText', function(data, cb)
 Citizen.Trace('call reponseText | ' .. json.encode(data))
   local limit = data.limit or 255
   local text = data.text or ''
-  
+
   DisplayOnscreenKeyboard(1, "FMMC_MPM_NA", "", text, "", "", "", limit)
   while (UpdateOnscreenKeyboard() == 0) do
       DisableAllControlActions(0);
@@ -238,7 +238,7 @@ end)
 RegisterNUICallback('callEvent', function(data, cb)
   local plyPos = GetEntityCoords(GetPlayerPed(-1), true)
   if data.eventName ~= 'cancel' then
-    if data.data ~= nil then 
+    if data.data ~= nil then
       --TriggerServerEvent("call:makeCall", "police", {x=plyPos.x,y=plyPos.y,z=plyPos.z},ResultMotifAdd,GetPlayerServerId(player))
       TriggerServerEvent("call:makeCall", data.eventName, {x=plyPos.x,y=plyPos.y,z=plyPos.z}, text)
         if data.eventName == "police" then
@@ -293,10 +293,10 @@ RegisterNUICallback('deleteALL', function(data, cb)
   cb()
 end)
 
-function TooglePhone() 
+function TooglePhone()
   menuIsOpen = not menuIsOpen
   SendNUIMessage({show = menuIsOpen})
-  if menuIsOpen == true then 
+  if menuIsOpen == true then
     Citizen.Trace('open')
     numberMsgs = 0
     ePhoneInAnim()

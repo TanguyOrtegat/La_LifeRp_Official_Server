@@ -213,7 +213,7 @@ AddEventHandler('es_em:SpawnAmbulance', function(plateveh)
 	while not HasModelLoaded(vehiclen) do
 		Wait(1)
 	end
-	
+
 	local spawned_car = CreateVehicle(vehiclen, 328.90274047852, -1471.5634765625, 29.518379211426, 231.70222473145, true, false)
 	SetVehicleLivery(spawned_car, 1)
 	SetVehicleOnGroundProperly(spawned_car)
@@ -334,7 +334,7 @@ function ShowBlipsAmbulance()
 	BeginTextCommandSetBlipName("STRING")
 	AddTextComponentString('Garage (ambulance)')
 	EndTextCommandSetBlipName(BlipGarageAmbulance)
-	
+
 	BlipGarageHelicoAmbulance = AddBlipForCoord(313.223, -1464.935, 46.509)
 
 	SetBlipSprite(BlipGarageHelicoAmbulance, 360)
@@ -343,7 +343,7 @@ function ShowBlipsAmbulance()
 	BeginTextCommandSetBlipName("STRING")
 	AddTextComponentString('Héliport (ambulance)')
 	EndTextCommandSetBlipName(BlipGarageHelicoAmbulance)
-	
+
 end
 
 function RemoveBlipsAmbulance()

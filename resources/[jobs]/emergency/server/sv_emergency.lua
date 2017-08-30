@@ -66,7 +66,7 @@ AddEventHandler('es_em:sv_getDocConnected', function()
 
         for i,v in pairs(players) do
             if (v.identifier ~= nil) then
-                local connectedCount = MySQL.Sync.fetchScalar("SELECT COUNT(1) FROM users LEFT JOIN jobs ON jobs.job_id = users.job WHERE users.identifier = @identifier AND job_id = 13", {['@identifier'] = v.identifier})
+                local connectedCount = MySQL.Sync.fetchScalar("SELECT COUNT(1) FROM users WHERE users.identifier = @identifier AND job = 13", {['@identifier'] = v.identifier})
                 isConnected = connectedCount ~= 0
             end
         end
