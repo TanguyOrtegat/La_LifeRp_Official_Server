@@ -14,7 +14,7 @@ end)
 RegisterServerEvent('drugs:changeBoursePrice')
 AddEventHandler('drugs:changeBoursePrice', function(libelle)
 local playerSource = source
-   local randomChange = math.random(4, 10)
+   local randomChange = math.random(4, 8)
    randomChange = randomChange/100
    MySQL.Async.fetchAll("SELECT * FROM bourse", {}, function (result)
    for i, v in ipairs(result) do
@@ -25,8 +25,8 @@ local playerSource = source
         end
      elseif tonumber(v.item) == tonumber(libelle) then
       if v.prix >= v.base/4 then
-        MySQL.Async.execute("UPDATE bourse SET prix = @prix WHERE item = @item", {['@item'] = tonumber(v.item), ['@prix'] = v.prix-(1/10)})
-          MySQL.Async.execute("UPDATE bourse SET changement = @changement WHERE item = @item", {['@item'] = tonumber(v.item), ['@changement'] = v.changement-(1/10)})
+        MySQL.Async.execute("UPDATE bourse SET prix = @prix WHERE item = @item", {['@item'] = tonumber(v.item), ['@prix'] = v.prix-(2/10)})
+          MySQL.Async.execute("UPDATE bourse SET changement = @changement WHERE item = @item", {['@item'] = tonumber(v.item), ['@changement'] = v.changement-(2/10)})
       end
      end
    end

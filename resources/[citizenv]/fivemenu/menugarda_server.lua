@@ -8,7 +8,7 @@ AddEventHandler('menugarda:hire_s', function(netID)
 		MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 26, ['@identifier'] = tostring(identifier)})
 		LaLife.Player.Manager.SetPlayerJob(user, 26)
     	TriggerClientEvent("itinerance:notif", playerSource, "~g~Action effectuée!")
-		TriggerClientEvent("itinerance:notif", netID, "~g~Vous avez été engagé en tant que dépanneur !")
+		TriggerClientEvent("itinerance:notif", netID, "~g~Vous avez été engagé en tant que LaGarda !")
 	else
 		TriggerClientEvent("itinerance:notif", playerSource, "~o~Une erreur de sync s'est produite !")
 	end

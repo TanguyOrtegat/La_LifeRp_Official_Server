@@ -136,6 +136,7 @@ end)
 
 ----------------------------------
 AddEventHandler("vmenu:MainMenuOG", function(target)
+	VMenu.garda = false
 	VMenu.police = false
 	VMenu.telephone = false
 	VMenu.animations = false

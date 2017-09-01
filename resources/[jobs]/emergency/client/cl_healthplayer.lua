@@ -29,8 +29,8 @@ local txt = {
         ['ambIsComming'] = 'Une ~b~ambulance~s~ est en route !',
         ['res'] = 'Vous avez été réanimé',
         ['ko'] = 'Vous êtes KO !',
-        ['callAmb'] = 'Appuyez sur ~g~E~s~ pour appeler une ambulance et ~r~X~s~ pour respawn.',
-        ['respawn'] = 'Appuyez sur ~g~E~s~ pour appeler une ambulance et ~b~X~s~ pour respawn.',
+        ['callAmb'] = 'Appuyez sur ~r~X~s~ pour respawn ou appuyez sur ~g~F2~s~ pour appeler une ambulance .',
+        ['respawn'] = 'Appuyez sur ~r~X~s~ pour respawn ou appuyez sur ~g~F2~s~ pour appeler une ambulance .',
         ['youCallAmb'] = 'Vous avez appelé une ~b~ambulance~s~ !'
     },
 
@@ -244,7 +244,7 @@ function OnPlayerDied(playerId, reasonID, reason)
             while not isRes do
                 Citizen.Wait(1)
 
-                if (IsControlJustReleased(1, Keys['E'])) and not emergencyCalled then
+[[                if (IsControlJustReleased(1, Keys['E'])) and not emergencyCalled then
                   TriggerServerEvent("call:GetService","medic")
                   Wait(200)
                   Citizen.Trace(inService)
@@ -257,8 +257,8 @@ function OnPlayerDied(playerId, reasonID, reason)
                         TriggerServerEvent("call:makeCall", "medic", {x=plyPos.x,y=plyPos.y,z=plyPos.z}, "~r~HOMME DANS LE COMA !")
                     end
 
-                    emergencyCalled = true
-                elseif (IsControlJustReleased(1, Keys['X'])) then
+                    emergencyCalled = true]]
+                if (IsControlJustReleased(1, Keys['X'])) then
                   TriggerServerEvent("call:GetService","medic")
                   Wait(200)
                   Citizen.Trace(inService)
@@ -270,7 +270,7 @@ function OnPlayerDied(playerId, reasonID, reason)
                         ResPlayer()
                       end
                     else
-                      if ((askReleaseAt - diedAt) < 540) then
+                      if ((askReleaseAt - diedAt) < 300) then
                         SendNotification("veuillez attendre 5 minutes avant de pouvoir aller à l'hôpital")
                       else
                         ResPlayer()

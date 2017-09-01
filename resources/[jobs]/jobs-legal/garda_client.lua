@@ -109,7 +109,7 @@ Citizen.CreateThread(function()
           if IsControlJustPressed(1,38) then
             TriggerServerEvent("poleemploi:getjobs")
             Wait(200)
-            if myjob == 26 or myjob == 27 then
+            if myjob == 26 or myjob == 27 or myjob == 28 then
                 Wait(100)
                 Citizen.Wait(1)
 		              OutfitTrans()

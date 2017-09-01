@@ -109,6 +109,7 @@ VMenu = {
 	pres = false,
 	garde = false,
 	jobs = false,
+  garda = false,
 
 	Cuffedkeys = {167, 168},
 	------------------ FIN AJOUT
@@ -1456,7 +1457,7 @@ end
 ----- FUNCTION PERSO
 
 function getMainMenu()
-	if VMenu.police == false and VMenu.telephone == false and VMenu.animations == false and VMenu.item_menu == false and VMenu.medic == false and VMenu.depan == false and VMenu.taxi == false and VMenu.pres == false and VMenu.garde == false then
+	if VMenu.police == false and VMenu.telephone == false and VMenu.animations == false and VMenu.item_menu == false and VMenu.medic == false and VMenu.depan == false and VMenu.taxi == false and VMenu.pres == false and VMenu.garde == false and VMenu.garda == false then
 		TriggerServerEvent('vmenu:updateUser', 98)
 		TriggerServerEvent("inventory:getItems_s")
 		VMenu.ResetMenu(98, "", "default")
@@ -1475,7 +1476,7 @@ function getMainMenu()
 		if tonumber(User.job) == 17 or tonumber(User.job) == 18 then
 			VMenu.AddFunc(98, "Menu taxi", "menutaxi:TaxiOG", {User.job}, lang.common.access)
 		end
-    if tonumber(User.job) == 26 or tonumber(User.job) == 27 then
+    if tonumber(User.job) == 26 or tonumber(User.job) == 27 or tonumber(User.job) == 28 then
       VMenu.AddFunc(98, "Menu GardaLife", "menugarda:menuOG", {User.job}, lang.common.access)
     end
 		if tonumber(User.job) == 14 then
@@ -1868,6 +1869,11 @@ Citizen.CreateThread(function()
 					VMenu.EditFunc(98, "Donner facture", "menutaxi:givefac", {getOpt("AmfacTaxi")}, "Accéder")
 				end
 			end
+      if VMenu.garda then
+        if VOpts.toUpdate == "AmfacGarda" then
+          VMenu.EditFunc(98, "Donner facture", "menugarda:givefac", {getOpt("AmfacGarda")}, "Accéder")
+        end
+      end
       if VMenu.barbershop then
       if GetEntityModel(GetPlayerPed(-1)) == 1885233650 then
         if VOpts.toUpdate == "Barbe" or VOpts.toUpdate == "BarbeColor" then
@@ -2040,7 +2046,7 @@ Citizen.CreateThread(function()
 			TriggerEvent("vmenu:openMenu", 98)
 			VMenu.mainMenu = true
 			-- 	TriggerServerEvent("vmenu:updateUser", true)
-			if VMenu.police == false and VMenu.telephone == false and VMenu.animations == false and VMenu.item_menu == false and VMenu.medic == false and VMenu.depan == false and VMenu.taxi == false and VMenu.pres == false and VMenu.garde == false then
+			if VMenu.police == false and VMenu.telephone == false and VMenu.animations == false and VMenu.item_menu == false and VMenu.medic == false and VMenu.depan == false and VMenu.taxi == false and VMenu.pres == false and VMenu.garde == false and VMenu.garda == false then
         Wait(300)
         getMainMenu()
 			end
