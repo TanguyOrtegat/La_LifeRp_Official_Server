@@ -3,8 +3,8 @@ AddEventHandler('menugarda:hire_s', function(netID)
 	local playerSource = source
   TriggerEvent('es:getPlayerFromId', netID, function(user)
 	local tIdentifier = GetPlayerIdentifiers(netID)
-  	local identifier = tIdentifier[1]
 	if (user) then
+		local identifier = user.identifier
 		MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 26, ['@identifier'] = tostring(identifier)})
 		LaLife.Player.Manager.SetPlayerJob(user, 26)
     	TriggerClientEvent("itinerance:notif", playerSource, "~g~Action effectuée!")
@@ -28,7 +28,7 @@ local playerSource = source
     	TriggerClientEvent("itinerance:notif", playerSource, "~g~Action effectuée!")
 		TriggerClientEvent("itinerance:notif", netID, "~r~Vous avez été licencié !")
 		else
-		TriggerClientEvent("itinerance:notif", playerSource, "~r~La cible n'est pas dépanneur !")
+		TriggerClientEvent("itinerance:notif", playerSource, "~r~La cible n'est pas chez LaGarda !")
 		end
 	else
 		TriggerClientEvent("itinerance:notif", playerSource, "~o~Une erreur de sync s'est produite !")
@@ -53,25 +53,33 @@ AddEventHandler('menugarda:promote_s', function(netID)
 			TriggerClientEvent("itinerance:notif", playerSource, "~g~Action effectuée ! Vous avez été retrogradé.")
 			TriggerClientEvent("itinerance:notif", netID, "~g~Vous avez été promu !")
 		else
-			TriggerClientEvent("itinerance:notif", playerSource, "~r~La cible n'est pas dépanneur !")
+			TriggerClientEvent("itinerance:notif", playerSource, "~r~La cible n'est pas chez LaGarda !")
 		end
   end)
   end)
 end)
 
+function bankBalance(player)
+    return tonumber(MySQL.Sync.fetchScalar("SELECT bankbalance FROM users WHERE identifier = @name", {['@name'] = player}))
+end
+
 RegisterServerEvent('menugarda:givefac_s')
 AddEventHandler('menugarda:givefac_s', function(netID, amount)
 	local playerSource = source
 	local target = netID
-  TriggerEvent('es:getPlayerFromId', netID, function(user)
-  if user.money >= amount then
-    MySQL.Async.fetchAll("SELECT money FROM user_appartement WHERE name = @name", {['@name'] = 'GardaLife'}, function (result)
-      LaLife.Player.Manager.RemovePlayerMoney(user, amount)
-      MySQL.Async.execute("UPDATE user_appartement SET `money`=@value WHERE name = @identifier", {['@value'] = (tonumber(result[1].money)+tonumber(amount)), ['@identifier'] = 'GardaLife'})
+  TriggerEvent('es:getPlayerFromId', target, function(user)
+--  if user.money >= amount then
+		local player = user.identifier
+		local bankbalance = bankBalance(user.identifier)
+		local new_balance = bankbalance - amount
+		print(new_balance)
+		MySQL.Async.execute("UPDATE users SET `bankbalance`=@value WHERE identifier = @identifier", {['@value'] = new_balance, ['@identifier'] = player})
+    MySQL.Async.fetchAll("SELECT money FROM user_appartement WHERE name = @name", {['@name'] = 'LaGarda'}, function (result)
+      MySQL.Async.execute("UPDATE user_appartement SET `money`=@value WHERE name = @identifier", {['@value'] = (tonumber(result[1].money)+tonumber(amount)), ['@identifier'] = 'Remorqueur Garage'})
       TriggerClientEvent("itinerance:notif", target, "Vous avez reçu une facture de ~r~".. amount.."$~w~.")
     end)
-  else
-    TriggerClientEvent("itinerance:notif", playerSource, "~r~La cible n'a pas assez d'argent.")
-  end
+--  else
+--    TriggerClientEvent("itinerance:notif", playerSource, "~r~La cible n'a pas assez d'argent.")
+--  end
   end)
 end)
