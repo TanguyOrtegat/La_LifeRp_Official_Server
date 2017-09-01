@@ -244,7 +244,7 @@ function OnPlayerDied(playerId, reasonID, reason)
             while not isRes do
                 Citizen.Wait(1)
 
-[[                if (IsControlJustReleased(1, Keys['E'])) and not emergencyCalled then
+--[[                if (IsControlJustReleased(1, Keys['E'])) and not emergencyCalled then
                   TriggerServerEvent("call:GetService","medic")
                   Wait(200)
                   Citizen.Trace(inService)
@@ -257,7 +257,7 @@ function OnPlayerDied(playerId, reasonID, reason)
                         TriggerServerEvent("call:makeCall", "medic", {x=plyPos.x,y=plyPos.y,z=plyPos.z}, "~r~HOMME DANS LE COMA !")
                     end
 
-                    emergencyCalled = true]]
+                    emergencyCalled = true]]--
                 if (IsControlJustReleased(1, Keys['X'])) then
                   TriggerServerEvent("call:GetService","medic")
                   Wait(200)
