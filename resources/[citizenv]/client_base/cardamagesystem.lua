@@ -7,7 +7,7 @@ Citizen.CreateThread(function()
 		local damage = GetVehicleEngineHealth(vehicle)
 		if IsPedInAnyVehicle(ped, false) then
 			SetPlayerVehicleDamageModifier(PlayerId(), 100) -- Seems to not work at the moment --
-			if damage < 900 then
+			if damage < 800 then
 				SetVehicleUndriveable(vehicle, true)
 				TriggerEvent("itinerance:notif", "~r~Votre véhicule est endommagé, appellez un dépanneur.")
 			end
