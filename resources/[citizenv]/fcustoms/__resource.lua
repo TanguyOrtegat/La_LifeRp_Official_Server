@@ -1,0 +1,12 @@
+client_script{
+	'client.lua',
+	'gui.lua',
+}
+server_script{
+	'@mysql-async/lib/MySQL.lua',
+	'@common/lalife.lua',
+	'@common/player/index.lua',
+	'@common/player/manager.lua',
+	'@common/middleware.lua',
+	'server.lua',
+}
