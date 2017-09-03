@@ -304,18 +304,18 @@ function GetService()
 	isInService = not isInService
 
 	if GetEntityModel(GetPlayerPed(-1)) == 1885233650 then -- Male
-		SetPedComponentVariation(GetPlayerPed(-1), 3, 85, 0, 0)
-		SetPedComponentVariation(GetPlayerPed(-1), 4, 0, 14, 0)
-		SetPedComponentVariation(GetPlayerPed(-1), 6, 7, 0, 0)
-		SetPedComponentVariation(GetPlayerPed(-1), 11, 123, 0, 0)
-		SetPedComponentVariation(GetPlayerPed(-1), 7, 1, 0, 0)
-		SetPedComponentVariation(GetPlayerPed(-1), 8, 57, 0, 0)
-	elseif GetEntityModel(GetPlayerPed(-1)) == -1667301416 then -- Female
-		SetPedComponentVariation(GetPlayerPed(-1), 3, 98, 0, 0)
-		SetPedComponentVariation(GetPlayerPed(-1), 4, 11, 5, 0)
-		SetPedComponentVariation(GetPlayerPed(-1), 6, 10, 1, 0)
-		SetPedComponentVariation(GetPlayerPed(-1), 11, 119, 0, 0)
-	end
+         SetPedComponentVariation(GetPlayerPed(-1), 3, 92, 0, 0)
+         SetPedComponentVariation(GetPlayerPed(-1), 4, 10, 0, 0)
+         SetPedComponentVariation(GetPlayerPed(-1), 6, 10, 0, 0)
+         SetPedComponentVariation(GetPlayerPed(-1), 11, 13, 3, 0)
+         SetPedComponentVariation(GetPlayerPed(-1), 7, 0, 0, 0)
+         SetPedComponentVariation(GetPlayerPed(-1), 8, 15, 0, 0)
+     elseif GetEntityModel(GetPlayerPed(-1)) == -1667301416 then -- Female
+         SetPedComponentVariation(GetPlayerPed(-1), 3, 98, 0, 0)
+         SetPedComponentVariation(GetPlayerPed(-1), 4, 47, 0, 0)
+         SetPedComponentVariation(GetPlayerPed(-1), 6, 29, 0, 0)
+         SetPedComponentVariation(GetPlayerPed(-1), 11, 9, 2, 0)
+     end 
 end
 
 --[[

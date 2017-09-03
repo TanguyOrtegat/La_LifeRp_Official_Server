@@ -57,11 +57,11 @@ AddEventHandler('garages:CheckForSpawnVeh', function(veh_id)
     local veh_id = veh_id
     local user = getPlayerID(playerSource)
     MySQL.Async.fetchAll("SELECT * FROM user_vehicle WHERE identifier = @identifier AND id = @id",{['@identifier'] = user, ['@id'] = veh_id}, function(data)
-        TriggerClientEvent('garages:SpawnVehicle', playerSource, data[1].vehicle_model, data[1].vehicle_plate, data[1].vehicle_state, data[1].vehicle_colorprimary, data[1].vehicle_colorsecondary, data[1].vehicle_pearlescentcolor, data[1].vehicle_wheelcolor)
+        TriggerClientEvent('garages:SpawnVehicle', playerSource, data[1].vehicle_model, data[1].vehicle_plate, data[1].vehicle_state, data[1].vehicle_colorprimary, data[1].vehicle_colorsecondary, data[1].vehicle_pearlescentcolor, data[1].vehicle_wheelcolor,data[1].vehicule_damage)
     end)
 end)
 
-AddEventHandler('garages:CheckForVeh', function(plate)
+AddEventHandler('garages:CheckForVeh', function(plate,model,damage)
     local playerSource = source
     local plate = plate
     local state = "Sorti"
@@ -69,7 +69,7 @@ AddEventHandler('garages:CheckForVeh', function(plate)
     local vehicle_plate = tostring(vehiclePlate(plate, playerSource))
     if vehicle_plate == plate then
         local state = "Rentré"
-        MySQL.Sync.execute("UPDATE user_vehicle SET vehicle_state=@state WHERE identifier=@identifier AND vehicle_plate=@plate",{['@identifier'] = user, ['@state'] = state, ['@plate'] = plate})
+        MySQL.Sync.execute("UPDATE user_vehicle SET vehicle_state=@state, vehicule_damage=@damage WHERE identifier=@identifier AND vehicle_plate=@plate AND vehicle_model=@model",{['@identifier'] = user, ['@state'] = state, ['@plate'] = plate,["@model"]=model,["@damage"]=damage})
         TriggerClientEvent('garages:StoreVehicleTrue', playerSource)
     else
         TriggerClientEvent('garages:StoreVehicleFalse', playerSource)

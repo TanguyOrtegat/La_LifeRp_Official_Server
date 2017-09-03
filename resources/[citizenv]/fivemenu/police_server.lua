@@ -55,13 +55,13 @@ end)
 RegisterServerEvent('menupolice:verifp_s')
 AddEventHandler('menupolice:verifp_s', function(netID)
     local playerSource = source
-    print("dans verifp_s")
+    --print("dans verifp_s")
     TriggerEvent('es:getPlayerFromId', netID, function(user)
         if user ~= nil then
             local player = user.identifier
               MySQL.Async.fetchAll("SELECT * FROM user_inventory WHERE user_id = @username",{['@username'] = player}, function(itemciv)
                 for _, res in pairs(itemciv) do
-                  print(res.quantity)
+                  --print(res.quantity)
                   civitems[tonumber(res.item_id)].valeur = res.quantity
                 end
               end)
