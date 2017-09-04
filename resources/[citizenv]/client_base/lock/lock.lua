@@ -42,12 +42,10 @@ AddEventHandler('lock:f_getCar', function(vehicle)
     local platec = vehicle[1]
     local platej = vehicle[2]
     local platep = vehicle[3]
-    print(platec)
     local playerPos = GetEntityCoords( GetPlayerPed(-1), 1 )
     local inFrontOfPlayer = GetOffsetFromEntityInWorldCoords( GetPlayerPed(-1), 0.0, 10.000, 0.0 )
     local v = GetVehicleInDirection( playerPos, inFrontOfPlayer )
     local platev = GetVehicleNumberPlateText(v)
-    print(platev)
 
     if DoesEntityExist(v) then
         platev = GetVehicleNumberPlateText(v)
