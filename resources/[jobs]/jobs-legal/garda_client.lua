@@ -25,8 +25,8 @@ local serviceOn = false
 
 local Positions = {
   spawnCamion={x=-5.4240908622742,y=-670.26330566406,z=31.338108062744 ,distance=8},
-  priseServicePatron={x=-19.634185791016,y=-658.01831054688,z=32.45295715332, distance=10},
-  priseServiceTrans={x=11.6775541305541,y=-661.40563964844,z=32.448764801025, distance=8},
+  priseServicePatron={x=-1.6806819438934,y=-694.05035400391,z=15.130767822266, distance=1},
+  priseServiceTrans={x=-9.3594064712524,y=-691.82720947266,z=15.13060760498, distance=1},
   spawnVoiture={x=-19.072584152222,y=-671.11462402344,z=31.33810043335,distance=8},
 --  priseServiceSecu={x=-636.49652099609,y=-234.8143157959,z=37.921588897705,distance=10},
   spawnEscorte={x=2.3695800304413,y=-671.96942138672,z=31.338062286377,distance=8},
@@ -89,7 +89,7 @@ Citizen.CreateThread(function()
     if DrawMarkerShow then
       DrawMarker(1, Positions.priseServiceTrans.x, Positions.priseServiceTrans.y, Positions.priseServiceTrans.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.5, 20, 165, 255, 75, 0, 0, 2, 0, 0, 0, 0)
       DrawMarker(1, Positions.spawnCamion.x, Positions.spawnCamion.y, Positions.spawnCamion.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.0, 3.0, 1.0, 20, 165, 75, 75, 0, 0, 2, 0, 0, 0, 0)
-      DrawMarker(1, Positions.priseServicePatron.x, Positions.priseServicePatron.y, Positions.priseServicePatron.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 2.0, 1.0, 20, 165, 75, 75, 0, 0, 2, 0, 0, 0, 0)
+      DrawMarker(1, Positions.priseServicePatron.x, Positions.priseServicePatron.y, Positions.priseServicePatron.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.5, 20, 165, 75, 75, 0, 0, 2, 0, 0, 0, 0)
 --      DrawMarker(1, Positions.priseServiceSecu.x, Positions.priseServiceSecu.y, Positions.priseServiceSecu.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 2.0, 1.0, 20, 165, 75, 75, 0, 0, 2, 0, 0, 0, 0)
       DrawMarker(1, Positions.spawnVoiture.x, Positions.spawnVoiture.y, Positions.spawnVoiture.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.0, 3.0, 1.0, 20, 165, 75, 75, 0, 0, 2, 0, 0, 0, 0)
       DrawMarker(1, Positions.spawnEscorte.x, Positions.spawnEscorte.y, Positions.spawnEscorte.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.0, 3.0, 1.0, 20, 165, 75, 75, 0, 0, 2, 0, 0, 0, 0)
