@@ -41,6 +41,7 @@ RegisterNetEvent("lock:f_getCar")
 AddEventHandler('lock:f_getCar', function(vehicle)
     local platec = vehicle[1]
     local platej = vehicle[2]
+    local platep = vehicle[3]
     print(platec)
     local playerPos = GetEntityCoords( GetPlayerPed(-1), 1 )
     local inFrontOfPlayer = GetOffsetFromEntityInWorldCoords( GetPlayerPed(-1), 0.0, 10.000, 0.0 )
@@ -61,7 +62,7 @@ AddEventHandler('lock:f_getCar', function(vehicle)
         if chatMessage then
             DrawNotif("Tu n'as pas de véhicule.")
         end
-    elseif platec == platev or platej == platev then
+    elseif platec == platev or platej == platev or platep == platev then
         local posCar = GetEntityCoords(v, false)
         local carX, carY, carZ = posCar.x, posCar.y, posCar.z
 

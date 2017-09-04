@@ -6,7 +6,8 @@ AddEventHandler('lock:getCar', function(callback)
         if (user) then
             local plateveh = string.upper("CTZN" .. string.sub(user.identifier, -4))
             local plateJob = string.upper("JOBS" .. string.sub(user.identifier, -4))
-            TriggerClientEvent("lock:f_getCar", playerSource, {plateveh, plateJob})
+            local platePolice = string.upper("LSPD" .. string.sub(user.identifier, -4))
+            TriggerClientEvent("lock:f_getCar", playerSource, {plateveh, plateJob,platePolice})
         else
             TriggerEvent("es:desyncMsg", "lock_s.lua GetCar")
         end
