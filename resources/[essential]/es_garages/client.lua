@@ -502,7 +502,7 @@ function configLang(lang)
       menu9 = "Vente",
       menu10 = "~g~E~s~ pour vendre le véhicule à 50% du prix d\'achat",
       menu11 = "Mettre à jour le véhicule",
-      state1 = "Sortit",
+      state1 = "Sorti",
       state2 = "Rentré",
       text1 = "La zone est encombrée",
       text2 = "Ce véhicule n'est pas dans le garage",
@@ -955,7 +955,7 @@ AddEventHandler('ply_garages:SpawnVehicle', function(vehicle,damage, plate, stat
         else
           ToggleVehicleMod(veh, 22, false)
         end
-	SetVehicleWheelType(veh, tonumber(wheeltype))
+				SetVehicleWheelType(veh, tonumber(wheeltype))
         SetVehicleMod(veh, 23, mods23)
         SetVehicleMod(veh, 24, mods24)
         if neon0 == "on" then
