@@ -12,6 +12,7 @@ RegisterNetEvent('ply_garages:UpdateDone')
 
 
 local vehicule = {"verlierer2",
+"jester2",
 "schafter3",
 "schafter4",
 "seven70",
