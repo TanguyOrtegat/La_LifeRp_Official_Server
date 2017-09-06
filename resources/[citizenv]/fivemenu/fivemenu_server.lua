@@ -202,7 +202,7 @@ AddRegisteredUserEventHandler("vmenu:cleanCash_s", function(playerSource, user)
 	if (user) then
 		local dcash = tonumber(user.dirtymoney)
 		local cash = tonumber(user.money)
-		local washedcash = dcash * 0.7
+		local washedcash = dcash * 0.55
         local total = cash + round(washedcash)
 
         LaLife.Player.Manager.SetPlayerDirtyMoney(user, 0)
