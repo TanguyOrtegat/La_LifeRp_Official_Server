@@ -21,7 +21,7 @@ local truck
 local vehicle
 local playerPos
 local distance
-local chance = 10000
+local chance = 5000
 local chance_mat = 50
 local isCheckMine = false
 local isCheckTraitement = false
@@ -264,7 +264,7 @@ Citizen.CreateThread(function()
                       Citizen.Wait(1000)
                       inv_qty = tonumber(ITEMSJOB[23].quantity)+tonumber(ITEMSJOB[17].quantity)+tonumber(ITEMSJOB[18].quantity)+tonumber(ITEMSJOB[19].quantity)+tonumber(ITEMSJOB[24].quantity)+tonumber(ITEMSJOB[20].quantity)+tonumber(ITEMSJOB[21].quantity)+tonumber(ITEMSJOB[22].quantity)
                       Citizen.Wait(1000)
-                   if tonumber(inv_qty) < 30 and chance_mat >= 0 and chance_mat < 5000 then
+                   if tonumber(inv_qty) < 30 and chance_mat >= 0 and chance_mat < 2500 then
                        ShowMsgtime.msg = 'En train de miner...'
                        ShowMsgtime.time = 250
                        TriggerEvent("vmenu:anim" ,"pickup_object", "pickup_low")
@@ -272,7 +272,7 @@ Citizen.CreateThread(function()
                        ShowMsgtime.msg = '+1 roche'
                        ShowMsgtime.time = 150
                        TriggerEvent("player:receiveItem", 23, 1)
-                   elseif tonumber(inv_qty) < 30 and chance_mat >= 5000 and chance_mat < 8000 then
+                   elseif tonumber(inv_qty) < 30 and chance_mat >= 2500 and chance_mat < 4000 then
                        ShowMsgtime.msg = 'En train de miner...'
                        ShowMsgtime.time = 250
                        TriggerEvent("vmenu:anim" ,"pickup_object", "pickup_low")
@@ -280,7 +280,7 @@ Citizen.CreateThread(function()
                        ShowMsgtime.msg = '+1 cuivre'
                        ShowMsgtime.time = 150
                        TriggerEvent("player:receiveItem", 17, 1)
-                   elseif tonumber(inv_qty) < 30 and chance_mat >= 8000 and chance_mat < 9999 then
+                   elseif tonumber(inv_qty) < 30 and chance_mat >= 4000 and chance_mat < 4999 then
                        ShowMsgtime.msg = 'En train de miner...'
                        ShowMsgtime.time = 250
                        TriggerEvent("vmenu:anim" ,"pickup_object", "pickup_low")
@@ -288,7 +288,7 @@ Citizen.CreateThread(function()
                        ShowMsgtime.msg = '+1 fer'
                        ShowMsgtime.time = 150
                        TriggerEvent("player:receiveItem", 18, 1)
-                   elseif tonumber(inv_qty) < 30 and chance_mat >= 9999 and chance_mat <= 10000 then
+                   elseif tonumber(inv_qty) < 30 and chance_mat >= 4999 and chance_mat <= 5000 then
                        ShowMsgtime.msg = 'En train de miner...'
                        ShowMsgtime.time = 250
                        TriggerEvent("vmenu:anim" ,"pickup_object", "pickup_low")
