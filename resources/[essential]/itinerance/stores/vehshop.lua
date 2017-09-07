@@ -763,6 +763,7 @@ AddEventHandler('vehshop:spawnVehicle', function(v)
 		veh = CreateVehicle(car, playerCoords, 0.0, true, false)
 		TaskWarpPedIntoVehicle(playerPed, veh, -1)
 		SetEntityInvincible(veh, true)
+		SetEntityAsMissionEntity(veh, true, true)
 	end
 end)
 

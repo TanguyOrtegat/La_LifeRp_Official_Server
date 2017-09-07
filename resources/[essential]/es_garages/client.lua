@@ -994,6 +994,7 @@ AddEventHandler('ply_garages:SpawnVehicle', function(vehicle,damage, plate, stat
 				SetVehicleIsConsideredByPlayer(veh, true)
         SetEntityInvincible(veh, false)
 				SetVehicleEngineHealth(veh,damage)
+				SetEntityAsMissionEntity(veh, true, true)
         drawNotification(lang_string.text3)
         TriggerServerEvent('ply_garages:SetVehOut', vehicle, plate)
           TriggerServerEvent("ply_garages:CheckGarageForVeh")
