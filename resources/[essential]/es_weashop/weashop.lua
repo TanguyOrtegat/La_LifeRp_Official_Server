@@ -45,7 +45,7 @@ local weashop = {
 				{title = "Pied de Biche", name = "Crowbar", costs = 1750, description = {}, model = "WEAPON_Crowbar"},
 				-- {title = "Club de Golf", name = "Golfclub", costs = 120000, description = {}, model = "WEAPON_Golfclub"},
 				-- {title = "Nightstick", name = "Nightstick", costs = 25000, description = {}, model = "WEAPON_Nightstick"},
-				{title = "Parachute", name = "Parachute", costs = 2500, description = {}, model = "GADGET_PARACHUTE"},
+				{title = "Parachute", name = "Parachute", costs = 500, description = {}, model = "GADGET_PARACHUTE"},
 			}
 		},
 		["Pistolets"] = {
