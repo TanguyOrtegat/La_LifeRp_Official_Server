@@ -1,7 +1,229 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    
-<CVehicleModelInfoVarGlobal> 
-   
+
+<CVehicleModelInfoVarGlobal>
+    <Kits>
+      <Item>
+  <kitName>110_kuruma_modkit</kitName>
+  <id value="110" />
+  <kitType>MKT_SPECIAL</kitType>
+  <visibleMods>
+    <Item>
+      <modelName>kuruma_cage</modelName>
+      <modShopLabel>MNU_CAGE</modShopLabel>
+      <linkedModels />
+      <turnOffBones />
+      <type>VMT_CHASSIS</type>
+      <bone>chassis</bone>
+      <collisionBone>chassis</collisionBone>
+      <cameraPos>VMCP_DEFAULT</cameraPos>
+      <audioApply value="1.000000" />
+      <weight value="3" />
+      <turnOffExtra value="false" />
+      <disableBonnetCamera value="false" />
+      <allowBonnetSlide value="true" />
+    </Item>
+    <Item>
+      <modelName>kuruma_wing1</modelName>
+      <modShopLabel>MNU_WING8</modShopLabel>
+      <linkedModels />
+      <turnOffBones>
+        <Item>misc_b</Item>
+      </turnOffBones>
+      <type>VMT_SPOILER</type>
+      <bone>boot</bone>
+      <collisionBone>mod_col_1</collisionBone>
+      <cameraPos>VMCP_DEFAULT</cameraPos>
+      <audioApply value="1.000000" />
+      <weight value="3" />
+      <turnOffExtra value="false" />
+      <disableBonnetCamera value="false" />
+      <allowBonnetSlide value="true" />
+    </Item>
+    <Item>
+      <modelName>kuruma_wing3</modelName>
+      <modShopLabel>MNU_WING13</modShopLabel>
+      <linkedModels />
+      <turnOffBones>
+        <Item>misc_b</Item>
+      </turnOffBones>
+      <type>VMT_SPOILER</type>
+      <bone>boot</bone>
+      <collisionBone>mod_col_2</collisionBone>
+      <cameraPos>VMCP_DEFAULT</cameraPos>
+      <audioApply value="1.000000" />
+      <weight value="3" />
+      <turnOffExtra value="false" />
+      <disableBonnetCamera value="false" />
+      <allowBonnetSlide value="true" />
+    </Item>
+    <Item>
+      <modelName>kuruma_wing2</modelName>
+      <modShopLabel>MNU_WING12</modShopLabel>
+      <linkedModels />
+       <turnOffBones>
+         <Item>misc_b</Item>
+      </turnOffBones>
+      <type>VMT_SPOILER</type>
+      <bone>boot</bone>
+      <collisionBone>mod_col_2</collisionBone>
+      <cameraPos>VMCP_DEFAULT</cameraPos>
+      <audioApply value="1.000000" />
+      <weight value="3" />
+      <turnOffExtra value="false" />
+      <disableBonnetCamera value="false" />
+      <allowBonnetSlide value="true" />
+    </Item>
+    <Item>
+      <modelName>kuruma_hood_1</modelName>
+      <modShopLabel>MNU_BONV</modShopLabel>
+      <linkedModels />
+      <turnOffBones>
+        <Item>bonnet</Item>
+      </turnOffBones>
+      <type>VMT_BONNET</type>
+      <bone>bonnet</bone>
+      <collisionBone>bonnet</collisionBone>
+      <cameraPos>VMCP_DEFAULT</cameraPos>
+      <audioApply value="1.000000" />
+      <weight value="10" />
+      <turnOffExtra value="false" />
+      <disableBonnetCamera value="true" />
+      <allowBonnetSlide value="true" />
+    </Item>
+    <Item>
+      <modelName>kuruma_hood_2</modelName>
+      <modShopLabel>MNU_BONC</modShopLabel>
+      <linkedModels />
+      <turnOffBones>
+        <Item>bonnet</Item>
+      </turnOffBones>
+      <type>VMT_BONNET</type>
+      <bone>bonnet</bone>
+      <collisionBone>bonnet</collisionBone>
+      <cameraPos>VMCP_DEFAULT</cameraPos>
+      <audioApply value="1.000000" />
+      <weight value="10" />
+      <turnOffExtra value="false" />
+      <disableBonnetCamera value="true" />
+      <allowBonnetSlide value="true" />
+    </Item>
+    <Item>
+      <modelName>kuruma_exh1</modelName>
+      <modShopLabel>MNU_EXH12</modShopLabel>
+      <linkedModels />
+      <turnOffBones>
+        <Item>misc_a</Item>
+        <Item>exhaust</Item>
+        <Item>exhaust_2</Item>
+      </turnOffBones>
+      <type>VMT_EXHAUST</type>
+      <bone>chassis</bone>
+      <collisionBone>chassis</collisionBone>
+      <cameraPos>VMCP_DEFAULT</cameraPos>
+      <audioApply value="1.000000" />
+      <weight value="3" />
+      <turnOffExtra value="false" />
+      <disableBonnetCamera value="false" />
+      <allowBonnetSlide value="true" />
+    </Item>
+    <Item>
+      <modelName>kuruma_exh2</modelName>
+      <modShopLabel>MNU_EXH6</modShopLabel>
+      <linkedModels />
+      <turnOffBones>
+        <Item>misc_a</Item>
+        <Item>exhaust</Item>
+        <Item>exhaust_2</Item>
+      </turnOffBones>
+      <type>VMT_EXHAUST</type>
+      <bone>chassis</bone>
+      <collisionBone>chassis</collisionBone>
+      <cameraPos>VMCP_DEFAULT</cameraPos>
+      <audioApply value="1.000000" />
+      <weight value="3" />
+      <turnOffExtra value="false" />
+      <disableBonnetCamera value="false" />
+      <allowBonnetSlide value="true" />
+    </Item>
+    <Item>
+      <modelName>kuruma_deathproof</modelName>
+      <modShopLabel>SABRE_CAG</modShopLabel>
+      <linkedModels />
+      <turnOffBones />
+      <type>VMT_CHASSIS</type>
+      <bone>chassis</bone>
+      <collisionBone>chassis</collisionBone>
+      <cameraPos>VMCP_DEFAULT</cameraPos>
+      <audioApply value="1.000000" />
+      <weight value="0" />
+      <turnOffExtra value="false" />
+      <disableBonnetCamera value="false" />
+      <allowBonnetSlide value="true" />
+    </Item>
+    <Item>
+      <modelName>kuruma_skirt2</modelName>
+      <modShopLabel>KURUMA_SKIRT2</modShopLabel>
+      <linkedModels />
+      <turnOffBones />
+      <type>VMT_SKIRT</type>
+      <bone>chassis</bone>
+      <collisionBone>chassis</collisionBone>
+      <cameraPos>VMCP_DEFAULT</cameraPos>
+      <audioApply value="1.000000" />
+      <weight value="3" />
+      <turnOffExtra value="false" />
+      <disableBonnetCamera value="false" />
+      <allowBonnetSlide value="true" />
+    </Item>
+    <Item>
+      <modelName>kuruma_split_1</modelName>
+      <modShopLabel>KURUMA_SPLIT1</modShopLabel>
+      <linkedModels />
+      <turnOffBones />
+      <type>VMT_BUMPER_F</type>
+      <bone>bumper_f</bone>
+      <collisionBone>chassis</collisionBone>
+      <cameraPos>VMCP_DEFAULT</cameraPos>
+      <audioApply value="1.000000" />
+      <weight value="3" />
+      <turnOffExtra value="false" />
+      <disableBonnetCamera value="false" />
+      <allowBonnetSlide value="true" />
+    </Item>
+    <Item>
+      <modelName>kuruma_split_1b</modelName>
+      <modShopLabel>KURUMA_SPLIT1B</modShopLabel>
+      <linkedModels />
+      <turnOffBones />
+      <type>VMT_BUMPER_F</type>
+      <bone>bumper_f</bone>
+      <collisionBone>chassis</collisionBone>
+      <cameraPos>VMCP_DEFAULT</cameraPos>
+      <audioApply value="1.000000" />
+      <weight value="3" />
+      <turnOffExtra value="false" />
+      <disableBonnetCamera value="false" />
+      <allowBonnetSlide value="true" />
+    </Item>
+    <Item>
+      <modelName>kuruma_bumr1</modelName>
+      <modShopLabel>MNU_BUMR1</modShopLabel>
+      <linkedModels />
+      <turnOffBones />
+      <type>VMT_BUMPER_R</type>
+      <bone>bumper_r</bone>
+      <collisionBone>chassis</collisionBone>
+      <cameraPos>VMCP_DEFAULT</cameraPos>
+      <audioApply value="1.000000" />
+      <weight value="10" />
+      <turnOffExtra value="false" />
+      <disableBonnetCamera value="false" />
+      <allowBonnetSlide value="true" />
+    </Item>
+  </visibleMods>
+  <linkMods />
+  <statMods>
+    </Kits>
    <Sirens>
 	  <Item>
 		  <id value="15"/> <!--Custom siren settings-->
