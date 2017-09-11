@@ -5,7 +5,7 @@ local blips = {
    {name="Aérodrome", colour=22, scale=0.9, id=251, x=1743.6820, y=3286.2510, z=40.087},
    {name="Aérodrome", colour=22, scale=0.9, id=251, x=2134.0596, y=4789.5847, z=0.00},
    {name="Fourrière", colour=1, scale=0.9, id=225, x=401.0583, y=-1631.46948, z=0.00},
-
+   {name="Agence événementielle", colour=37, scale=0.9, id=127, x=1016.34, y=-2528.27, z=0.00},
    -- barbers
    --{name="Barber", id=71, x=-827.333, y=-190.916, z=37.599},
    --{name="Barber", id=71, x=130.512, y=-1715.535, z=29.226},

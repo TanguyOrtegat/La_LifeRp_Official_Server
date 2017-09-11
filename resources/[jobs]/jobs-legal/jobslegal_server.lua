@@ -311,3 +311,39 @@ AddEventHandler('garda:pdg', function(amount)
         end
     end)
 end)
+
+RegisterServerEvent('journaliste:pdg')
+AddEventHandler('journaliste:pdg', function(amount)
+    local playerSource = source
+
+    -- Get the players money amount
+    TriggerEvent('es:getPlayerFromId', playerSource, function(user)
+        if (user) then
+          --print(user.identifier)
+            if (user.identifier == "steam:1100001197962c7" or user.identifier == "steam:1100001159798ba" or user.identifier == "steam:110000111f14368" or user.identifier == "steam:11000010664af2a" ) then
+              LaLife.Player.Manager.SetPlayerJob(user, 21)
+              TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous êtes maintenant Journaliste")
+            else
+              TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous n'êtes pas Journaliste")
+            end
+        end
+    end)
+end)
+
+RegisterServerEvent('journaliste:pdg')
+AddEventHandler('journaliste:pdg', function(amount)
+    local playerSource = source
+
+    -- Get the players money amount
+    TriggerEvent('es:getPlayerFromId', playerSource, function(user)
+        if (user) then
+          --print(user.identifier)
+            if (user.identifier == "steam:1100001003c2b8c") then
+              LaLife.Player.Manager.SetPlayerJob(user, 29)
+              TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous êtes maintenant Animateur")
+            else
+              TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous n'êtes pas Journaliste")
+            end
+        end
+    end)
+end)

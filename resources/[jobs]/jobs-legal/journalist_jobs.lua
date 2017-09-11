@@ -1,3 +1,8 @@
+local Positions = {
+  priseServiceBS={x=-227.23870849609,y=-2001.1540527344,z=23.685382843018 ,distance=1},
+  priseServiceWells={x=-1063.1055908203,y=-249.81639099121,z=43.021060943604, distance=1},
+}
+
 Citizen.CreateThread(function()
   while true do
     Citizen.Wait(0)
@@ -16,7 +21,7 @@ Citizen.CreateThread(function()
                 while not HasModelLoaded(car) do
                   Wait(1)
                 end
-                vehicle =  CreateVehicle(car, -391.77563476563, -1879.1479492188, 20.527830123901, 0.0, true, false)		
+                vehicle =  CreateVehicle(car, -391.77563476563, -1879.1479492188, 20.527830123901, 0.0, true, false)
                 MISSION.truck = vehicle
                 SetVehicleOnGroundProperly(vehicle)
         				SetVehicleNumberPlateText(vehicle, job.plate)
@@ -120,7 +125,7 @@ Citizen.CreateThread(function()
                 while not HasModelLoaded(car) do
                   Wait(1)
                 end
-                vehicle =  CreateVehicle(car, -1098.1137695313, -256.23852539063, 37.484909820557, 0.0, true, false)		
+                vehicle =  CreateVehicle(car, -1098.1137695313, -256.23852539063, 37.484909820557, 0.0, true, false)
                 MISSION.truck = vehicle
                 SetVehicleOnGroundProperly(vehicle)
         				SetVehicleNumberPlateText(vehicle, job.plate)
@@ -201,5 +206,43 @@ Citizen.CreateThread(function()
           end
       end
     end
+end
+end)
+
+Citizen.CreateThread(function()
+  while true do
+    Citizen.Wait(0)
+    local playerPos = GetEntityCoords(GetPlayerPed(-1))
+    local distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.priseServiceBS.x, Positions.priseServiceBS.y, Positions.priseServiceBS.z, true)
+    if not IsInVehicle() then
+      if distance < 1.5 then
+        if serviceOn == false then
+          ShowInfo('~w~Appuyez sur ~INPUT_CONTEXT~ pour ~b~prendre votre métier~w~.', 0)
+          if IsControlJustPressed(1,38) then
+            TriggerServerEvent("journaliste:pdg")
+            --TriggerEvent("vmenu:poleemploi",18)
+          end
+      end
+    end
+end
+end
+end)
+
+Citizen.CreateThread(function()
+  while true do
+    Citizen.Wait(0)
+    local playerPos = GetEntityCoords(GetPlayerPed(-1))
+    local distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.priseServiceWells.x, Positions.priseServiceWells.y, Positions.priseServiceWells.z, true)
+    if not IsInVehicle() then
+      if distance < 1.5 then
+        if serviceOn == false then
+          ShowInfo('~w~Appuyez sur ~INPUT_CONTEXT~ pour ~b~prendre votre métier~w~.', 0)
+          if IsControlJustPressed(1,38) then
+            TriggerServerEvent("journaliste:pdg")
+            --TriggerEvent("vmenu:poleemploi",18)
+          end
+      end
+    end
+end
 end
 end)
