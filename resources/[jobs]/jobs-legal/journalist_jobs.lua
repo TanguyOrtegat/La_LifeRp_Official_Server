@@ -65,6 +65,8 @@ Citizen.CreateThread(function()
     DrawMarker(1, -391.77563476563, -1879.1479492188, 19.527830123901, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 4.0, 4.0, 1.0, 0, 0, 255, 75, 0, 0, 2, 0, 0, 0, 0)
     DrawMarker(1, -398.56356811523, -1885.6760253906, 20.539499282837, 0, 0, 0, 0, 0, 0, 1.01, 1.01, 0.3, 212, 189, 0, 105, 0, 0, 2, 0, 0, 0, 0)
     DrawMarker(1, -223.96334838867, -2002.7076416016, 23.68529510498, 0, 0, 0, 0, 0, 0, 1.01, 1.01, 0.3, 212, 189, 0, 105, 0, 0, 2, 0, 0, 0, 0)
+    DrawMarker(1, Positions.priseServiceBS.x, Positions.priseServiceBS.y, Positions.priseServiceBS.z, 0, 0, 0, 0, 0, 0, 1.01, 1.01, 0.3, 212, 189, 0, 105, 0, 0, 2, 0, 0, 0, 0)
+    DrawMarker(1, Positions.priseServiceWells.x, Positions.priseServiceWells.y, Positions.priseServiceWells.z, 0, 0, 0, 0, 0, 0, 1.01, 1.01, 0.3, 212, 189, 0, 105, 0, 0, 2, 0, 0, 0, 0)
     end
   end
 end)
@@ -216,13 +218,13 @@ Citizen.CreateThread(function()
     local distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.priseServiceBS.x, Positions.priseServiceBS.y, Positions.priseServiceBS.z, true)
     if not IsInVehicle() then
       if distance < 1.5 then
-        if serviceOn == false then
+--        if serviceOn == false then
           ShowInfo('~w~Appuyez sur ~INPUT_CONTEXT~ pour ~b~prendre votre métier~w~.', 0)
           if IsControlJustPressed(1,38) then
             TriggerServerEvent("journaliste:pdg")
             --TriggerEvent("vmenu:poleemploi",18)
           end
-      end
+--      end
     end
 end
 end
@@ -235,13 +237,13 @@ Citizen.CreateThread(function()
     local distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.priseServiceWells.x, Positions.priseServiceWells.y, Positions.priseServiceWells.z, true)
     if not IsInVehicle() then
       if distance < 1.5 then
-        if serviceOn == false then
+--        if serviceOn == false then
           ShowInfo('~w~Appuyez sur ~INPUT_CONTEXT~ pour ~b~prendre votre métier~w~.', 0)
           if IsControlJustPressed(1,38) then
             TriggerServerEvent("journaliste:pdg")
             --TriggerEvent("vmenu:poleemploi",18)
           end
-      end
+--      end
     end
 end
 end

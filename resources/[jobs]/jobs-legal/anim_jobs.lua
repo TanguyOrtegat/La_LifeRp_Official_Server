@@ -133,6 +133,7 @@ Citizen.CreateThread(function()
     Citizen.Wait(0)
     if DrawMarkerShow then
     DrawMarker(1, 1016.3478393555, -2528.2729492188, 27.301971435547, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.00, 3.00, 0.3, 212, 189, 0, 105, 0, 0, 2, 0, 0, 0, 0)-- Demande véhicule 1
+    DrawMarker(1, Positions.priseServiceAni.x, Positions.priseServiceAni.y, Positions.priseServiceAni.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.00, 1.00, 0.3, 212, 189, 0, 105, 0, 0, 2, 0, 0, 0, 0)
     DrawMarker(1, 1018.6030883789, -2511.8034667969, 27.473833084106, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.00, 3.00, 0.3, 212, 189, 0, 105, 0, 0, 2, 0, 0, 0, 0)-- Demande véhicule 2
     end
   end
@@ -145,13 +146,14 @@ Citizen.CreateThread(function()
     local distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.priseServiceAni.x, Positions.priseServiceAni.y, Positions.priseServiceAni.z, true)
     if not IsInVehicle() then
       if distance < 1.5 then
-        if serviceOn == false then
+--        if serviceOn == false then
           ShowInfo('~w~Appuyez sur ~INPUT_CONTEXT~ pour ~b~prendre votre métier~w~.', 0)
           if IsControlJustPressed(1,38) then
+                Citizen.Trace(distance)
             TriggerServerEvent("ani:pdg")
             --TriggerEvent("vmenu:poleemploi",18)
           end
-      end
+--      end
     end
 end
 end

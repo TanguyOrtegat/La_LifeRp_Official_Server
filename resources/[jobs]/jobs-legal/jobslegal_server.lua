@@ -330,8 +330,8 @@ AddEventHandler('journaliste:pdg', function(amount)
     end)
 end)
 
-RegisterServerEvent('journaliste:pdg')
-AddEventHandler('journaliste:pdg', function(amount)
+RegisterServerEvent('ani:pdg')
+AddEventHandler('ani:pdg', function(amount)
     local playerSource = source
 
     -- Get the players money amount
@@ -342,7 +342,7 @@ AddEventHandler('journaliste:pdg', function(amount)
               LaLife.Player.Manager.SetPlayerJob(user, 29)
               TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous êtes maintenant Animateur")
             else
-              TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous n'êtes pas Journaliste")
+              TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous n'êtes pas Animateur")
             end
         end
     end)
