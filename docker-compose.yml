@@ -14,6 +14,8 @@ services:
             - 30120:30120/udp
         volumes:
             - ./resources:/opt/cfx-server/resources
+        links:
+            - database
 
     database:
         image: mariadb:10

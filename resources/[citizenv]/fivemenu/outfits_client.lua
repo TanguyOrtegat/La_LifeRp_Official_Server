@@ -11,7 +11,7 @@ AddEventHandler("vmenu:updateChar", function(args)
     RequestModel(model)
     Citizen.Wait(0)
   end
-  Citizen.Trace(args[26].." ".. args[27])
+  --Citizen.Trace(args[26].." ".. args[27])
   SetPlayerModel(PlayerId(), model)
   SetModelAsNoLongerNeeded(model)
   Citizen.Trace("TEST")
@@ -25,15 +25,16 @@ AddEventHandler("vmenu:updateChar", function(args)
   ChangeComponent({7,0,args[15],args[16]})
   ChangeComponent({11,0,args[9],args[10]})
   ChangeComponent({8,0,args[11],args[12]})
-  
+
 	SetPedPropIndex(GetPlayerPed(-1), 0, args[20], args[21], 0)
 	SetPedPropIndex(GetPlayerPed(-1), 1, args[22], args[23], 0)
-	if GetEntityModel(GetPlayerPed(-1)) == 1885233650 then   
+  SetPedHeadOverlay(GetPlayerPed(-1), 2, args[28], 1.0)
+  SetPedHeadOverlayColor(GetPlayerPed(-1), 2, 1,args[29], args[30])
+	if GetEntityModel(GetPlayerPed(-1)) == 1885233650 then
 	 SetPedHeadOverlay(GetPlayerPed(-1), 1, args[26], 1.0)
    SetPedHeadOverlayColor(GetPlayerPed(-1), 1, 1, args[27], 0)
   end
   --SetPedPropIndex(GetPlayerPed(-1), 6, args[24], args[25], 0)
-  
   TriggerServerEvent("weaponshop:GiveWeapons")
   VMenu.updatedChar = true
 end)
@@ -79,7 +80,7 @@ AddEventHandler("vmenu:supdateChar", function(o, t, th, f, fi, s, se, e, n, te, 
   ChangeComponent({7,0,fif,si})
   ChangeComponent({11,0,n,te})
   ChangeComponent({8,0,el,tw})
-  if GetEntityModel(GetPlayerPed(-1)) == 1885233650 then   
+  if GetEntityModel(GetPlayerPed(-1)) == 1885233650 then
     SetPedHeadOverlay(GetPlayerPed(-1), 1, beard, 1.0)
     SetPedHeadOverlayColor(GetPlayerPed(-1), 1, 1, beardtext, 0)
   end
@@ -114,11 +115,13 @@ AddEventHandler("vmenu:updateCharInShop", function(args)
   ChangeComponent({8,0,args[11],args[12]})
   SetPedPropIndex(GetPlayerPed(-1), 0, args[20], args[21], 0)
   SetPedPropIndex(GetPlayerPed(-1), 1, args[22], args[23], 0)
-  if GetEntityModel(GetPlayerPed(-1)) == 1885233650 then   
+  if GetEntityModel(GetPlayerPed(-1)) == 1885233650 then
     SetPedHeadOverlay(GetPlayerPed(-1), 1, args[26], 1.0)
     SetPedHeadOverlayColor(GetPlayerPed(-1), 1, 1, args[27], 0)
   --SetPedPropIndex(GetPlayerPed(-1), 6, args[24], args[25], 0)
   end
+  SetPedHeadOverlay(GetPlayerPed(-1), 2, args[28], 1.0)
+  SetPedHeadOverlayColor(GetPlayerPed(-1), 2, 1,args[29], args[30])
   TriggerServerEvent("weaponshop:GiveWeapons")
   VMenu.updatedChar = true
 end)

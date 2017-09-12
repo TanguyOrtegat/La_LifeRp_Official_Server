@@ -121,7 +121,7 @@ RegisterNUICallback('login', function(data, cb)
 					TriggerEvent("vmenu:OutfitsVal", target, 84, 175)
 			end
 	    TriggerServerEvent("vmenu:getFace", tonumber(data.gender), data.face, 0)
-	    TriggerServerEvent("vmenu:getHair", tonumber(data.hair), tonumber(data.hairsec), tonumber(data.haircolor), tonumber(data.haircolorsec))
+	    TriggerServerEvent("vmenu:getHair", tonumber(data.hair), tonumber(data.hairsec), tonumber(data.haircolor), tonumber(data.haircolorsec),25,1,1)
 	    DisplayNotification("Votre nom: " .. data.password .. " - Votre prenom: " .. data.username)
 	    DisplayNotification(data.outfit .. " - " .. data.gender)
 	    EnableGui(false)
