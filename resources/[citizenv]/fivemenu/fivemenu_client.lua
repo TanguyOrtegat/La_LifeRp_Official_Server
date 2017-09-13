@@ -161,6 +161,168 @@ User = {
 	telephone = "",
 	gender = ""
 }
+--SetPedDecoration(ped, col, tats)
+local Homme = {
+  Tete = {
+    [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
+    [2] = {["name"] = "MP_Bea_M_Neck_001", ["col"] = "mpbeach_overlays"},
+    [3] = {["name"] = "MP_Bea_M_Neck_000", ["col"] = "mpbeach_overlays"},
+    [4] = {["name"] = "MP_Bea_M_Head_002", ["col"] = "mpbeach_overlays"},
+    [5] = {["name"] = "MP_Bea_M_Head_001", ["col"] = "mpbeach_overlays"},
+    [6] = {["name"] = "MP_Bea_M_Head_000", ["col"] = "mpbeach_overlays"},
+    [7] = {["name"] = "FM_Tat_Award_M_000", ["col"] = "multiplayer_overlays"},
+  },
+  Bras_Gauche = {
+    [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
+    [2] = {["name"] = "MP_Bea_M_LArm_001", ["col"] = "mpbeach_overlays"},
+    [3] = {["name"] = "MP_Bea_M_LArm_000", ["col"] = "mpbeach_overlays"},
+    [4] = {["name"] = "FM_Tat_Award_M_001", ["col"] = "multiplayer_overlays"},
+    [5] = {["name"] = "FM_Tat_Award_M_015", ["col"] = "multiplayer_overlays"},
+    [6] = {["name"] = "FM_Tat_M_005", ["col"] = "multiplayer_overlays"},
+    [7] = {["name"] = "FM_Tat_M_006", ["col"] = "multiplayer_overlays"},
+    [8] = {["name"] = "FM_Tat_M_015", ["col"] = "multiplayer_overlays"},
+    [9] = {["name"] = "FM_Tat_M_031", ["col"] = "multiplayer_overlays"},
+    [10] = {["name"] = "FM_Tat_M_041", ["col"] = "multiplayer_overlays"},
+  },
+  Bras_Droit = {
+    [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
+    [2] = {["name"] = "MP_Bea_M_RArm_000", ["col"] = "mpbeach_overlays"},
+    [3] = {["name"] = "MP_Bea_M_RArm_001", ["col"] = "mpbeach_overlays"},
+    [4] = {["name"] = "FM_Tat_Award_M_00", ["col"] = "multiplayer_overlays"},
+    [5] = {["name"] = "FM_Tat_M_000", ["col"] = "multiplayer_overlays"},
+    [6] = {["name"] = "FM_Tat_M_001", ["col"] = "multiplayer_overlays"},
+    [7] = {["name"] = "FM_Tat_M_003", ["col"] = "multiplayer_overlays"},
+    [8] = {["name"] = "FM_Tat_Award_M_010", ["col"] = "multiplayer_overlays"},
+    [9] = {["name"] = "FM_Tat_M_014", ["col"] = "multiplayer_overlays"},
+    [10] = {["name"] = "FM_Tat_M_018", ["col"] = "multiplayer_overlays"},
+    [11] = {["name"] = "FM_Tat_M_027", ["col"] = "multiplayer_overlays"},
+    [12] = {["name"] = "FM_Tat_M_028", ["col"] = "multiplayer_overlays"},
+    [13] = {["name"] = "FM_Tat_M_038", ["col"] = "multiplayer_overlays"},
+    [14] = {["name"] = "FM_Tat_M_047", ["col"] = "multiplayer_overlays"},
+  },
+
+  Jambe_Droite = {
+    [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
+    [2] = {["name"] = "MP_Bea_M_Rleg_000", ["col"] = "mpbeach_overlays"},
+    [3] = {["name"] = "FM_Tat_Award_M_006", ["col"] = "multiplayer_overlays"},
+    [4] = {["name"] = "FM_Tat_M_007", ["col"] = "multiplayer_overlays"},
+    [5] = {["name"] = "FM_Tat_M_017", ["col"] = "multiplayer_overlays"},
+    [6] = {["name"] = "FM_Tat_M_022", ["col"] = "multiplayer_overlays"},
+    [7] = {["name"] = "FM_Tat_M_039", ["col"] = "multiplayer_overlays"},
+    [8] = {["name"] = "FM_Tat_M_040", ["col"] = "multiplayer_overlays"},
+    [9] = {["name"] = "FM_Tat_M_042", ["col"] = "multiplayer_overlays"},
+    [10] = {["name"] = "FM_Tat_M_043", ["col"] = "multiplayer_overlays"},
+  },
+
+  Jambe_Gauche = {
+    [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
+    [2] = {["name"] = "MP_Bea_M_Lleg_000", ["col"] = "mpbeach_overlays"},
+    [3] = {["name"] = "FM_Tat_Award_M_007", ["col"] = "multiplayer_overlays"},
+    [4] = {["name"] = "FM_Tat_Award_M_009", ["col"] = "multiplayer_overlays"},
+    [5] = {["name"] = "FM_Tat_M_002", ["col"] = "multiplayer_overlays"},
+    [6] = {["name"] = "FM_Tat_M_002", ["col"] = "multiplayer_overlays"},
+    [7] = {["name"] = "FM_Tat_M_008", ["col"] = "multiplayer_overlays"},
+    [8] = {["name"] = "FM_Tat_M_021", ["col"] = "multiplayer_overlays"},
+    [9] = {["name"] = "FM_Tat_M_023", ["col"] = "multiplayer_overlays"},
+    [10] = {["name"] = "FM_Tat_M_026", ["col"] = "multiplayer_overlays"},
+    [11] = {["name"] = "FM_Tat_M_032", ["col"] = "multiplayer_overlays"},
+    [12] = {["name"] = "FM_Tat_M_033", ["col"] = "multiplayer_overlays"},
+    [13] = {["name"] = "FM_Tat_M_035", ["col"] = "multiplayer_overlays"},
+    [14] = {["name"] = "FM_Tat_M_037", ["col"] = "multiplayer_overlays"},
+  },
+
+  Torso = {
+    [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
+    [2] = {["name"] = "MP_Bea_M_Stom_001", ["col"] = "mpbeach_overlays"},
+    [3] = {["name"] = "MP_Bea_M_Stom_000", ["col"] = "mpbeach_overlays"},
+    [4] = {["name"] = "MP_Bea_M_Chest_001", ["col"] = "mpbeach_overlays"},
+    [5] = {["name"] = "MP_Bea_M_Back_000", ["col"] = "mpbeach_overlays"},
+    [6] = {["name"] = "MP_Bea_M_Chest_000", ["col"] = "mpbeach_overlays"},
+    [7] = {["name"] = "FM_Tat_Award_M_003", ["col"] = "multiplayer_overlays"},
+    [8] = {["name"] = "FM_Tat_Award_M_004", ["col"] = "multiplayer_overlays"},
+    [9] = {["name"] = "FM_Tat_Award_M_005", ["col"] = "multiplayer_overlays"},
+    [10] = {["name"] = "FM_Tat_Award_M_008", ["col"] = "multiplayer_overlays"},
+    [11] = {["name"] = "FM_Tat_Award_M_011", ["col"] = "multiplayer_overlays"},
+    [12] = {["name"] = "FM_Tat_Award_M_012", ["col"] = "multiplayer_overlays"},
+    [13] = {["name"] = "FM_Tat_Award_M_013", ["col"] = "multiplayer_overlays"},
+    [14] = {["name"] = "FM_Tat_Award_M_014", ["col"] = "multiplayer_overlays"},
+    [15] = {["name"] = "FM_Tat_Award_M_016", ["col"] = "multiplayer_overlays"},
+    [16] = {["name"] = "FM_Tat_Award_M_017", ["col"] = "multiplayer_overlays"},
+    [17] = {["name"] = "FM_Tat_Award_M_018", ["col"] = "multiplayer_overlays"},
+    [18] = {["name"] = "FM_Tat_Award_M_019", ["col"] = "multiplayer_overlays"},
+    [19] = {["name"] = "FM_Tat_M_004", ["col"] = "multiplayer_overlays"},
+    [20] = {["name"] = "FM_Tat_M_009", ["col"] = "multiplayer_overlays"},
+    [21] = {["name"] = "FM_Tat_M_010", ["col"] = "multiplayer_overlays"},
+    [22] = {["name"] = "FM_Tat_M_011", ["col"] = "multiplayer_overlays"},
+    [23] = {["name"] = "FM_Tat_M_012", ["col"] = "multiplayer_overlays"},
+    [24] = {["name"] = "FM_Tat_M_013", ["col"] = "multiplayer_overlays"},
+    [25] = {["name"] = "FM_Tat_M_016", ["col"] = "multiplayer_overlays"},
+    [26] = {["name"] = "FM_Tat_M_019", ["col"] = "multiplayer_overlays"},
+    [27] = {["name"] = "FM_Tat_M_020", ["col"] = "multiplayer_overlays"},
+    [28] = {["name"] = "FM_Tat_M_024", ["col"] = "multiplayer_overlays"},
+    [29] = {["name"] = "FM_Tat_M_025", ["col"] = "multiplayer_overlays"},
+    [30] = {["name"] = "FM_Tat_M_029", ["col"] = "multiplayer_overlays"},
+    [31] = {["name"] = "FM_Tat_M_030", ["col"] = "multiplayer_overlays"},
+    [32] = {["name"] = "FM_Tat_M_034", ["col"] = "multiplayer_overlays"},
+    [33] = {["name"] = "FM_Tat_M_036", ["col"] = "multiplayer_overlays"},
+    [34] = {["name"] = "FM_Tat_M_044", ["col"] = "multiplayer_overlays"},
+    [35] = {["name"] = "FM_Tat_M_045", ["col"] = "multiplayer_overlays"},
+    [36] = {["name"] = "FM_Tat_M_046", ["col"] = "multiplayer_overlays"},
+  },
+}
+
+local Femme = {
+    Jambe_Droite = {
+      [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
+      [2] = {["name"] = "MP_Bea_F_RLeg_000", ["col"] = "mpbeach_overlays"},
+    	[3] = {["name"] = "FM_Tat_Award_F_006", ["col"] = "multiplayer_overlays"},
+    },
+  	Jambe_Gauche = {
+      [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
+      [2] = {["name"] = "FM_Tat_Award_F_009", ["col"] = "multiplayer_overlays"},
+  	},
+    Bras_Droit = {
+      [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
+      [2] = {["name"] = "MP_Bea_F_RArm_001", ["col"] = "mpbeach_overlays"},
+    	[3] = {["name"] = "FM_Tat_Award_F_002", ["col"] = "multiplayer_overlays"},
+    	[4] = {["name"] = "FM_Tat_Award_F_010", ["col"] = "multiplayer_overlays"},
+    },
+    Bras_Gauche = {
+      [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
+      [2] = {["name"] = "MP_Bea_F_LArm_000", ["col"] = "mpbeach_overlays"},
+      [3] = {["name"] = "MP_Bea_F_LArm_001", ["col"] = "mpbeach_overlays"},
+    	[4] = {["name"] = "FM_Tat_Award_F_001", ["col"] = "multiplayer_overlays"},
+    	[5] = {["name"] = "FM_Tat_Award_F_007", ["col"] = "multiplayer_overlays"},
+    	[6] = {["name"] = "FM_Tat_Award_F_015", ["col"] = "multiplayer_overlays"},
+    },
+    Torso = {
+      [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
+      [2] = {["name"] = "MP_Bea_F_Back_000", ["col"] = "mpbeach_overlays"},
+      [3] = {["name"] = "MP_Bea_F_Back_002", ["col"] = "mpbeach_overlays"},
+      [4] = {["name"] = "MP_Bea_F_Chest_001", ["col"] = "mpbeach_overlays"},
+      [5] = {["name"] = "MP_Bea_F_Chest_002", ["col"] = "mpbeach_overlays"},
+      [6] = {["name"] = "MP_Bea_F_RSide_000", ["col"] = "mpbeach_overlays"},
+      [7] = {["name"] = "MP_Bea_F_Should_000", ["col"] = "mpbeach_overlays"},
+      [8] = {["name"] = "MP_Bea_F_Should_001", ["col"] = "mpbeach_overlays"},
+      [9] = {["name"] = "MP_Bea_F_Stom_000", ["col"] = "mpbeach_overlays"},
+      [10] = {["name"] = "MP_Bea_F_Stom_001", ["col"] = "mpbeach_overlays"},
+      [11] = {["name"] = "MP_Bea_F_Stom_002", ["col"] = "mpbeach_overlays"},
+    	[12] = {["name"] = "FM_Tat_Award_F_003", ["col"] = "multiplayer_overlays"},
+    	[13] = {["name"] = "FM_Tat_Award_F_004", ["col"] = "multiplayer_overlays"},
+    	[14] = {["name"] = "FM_Tat_Award_F_005", ["col"] = "multiplayer_overlays"},
+    	[15] = {["name"] = "FM_Tat_Award_F_008", ["col"] = "multiplayer_overlays"},
+    	[16] = {["name"] = "FM_Tat_Award_F_011", ["col"] = "multiplayer_overlays"},
+    	[17] = {["name"] = "FM_Tat_Award_F_012", ["col"] = "multiplayer_overlays"},
+    	[18] = {["name"] = "FM_Tat_Award_F_013", ["col"] = "multiplayer_overlays"},
+    	[19] = {["name"] = "FM_Tat_Award_F_014", ["col"] = "multiplayer_overlays"},
+      [20] = {["name"] = "FM_Tat_Award_F_016", ["col"] = "multiplayer_overlays"},
+    },
+    Tete = {
+      [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
+      [2] = {["name"] = "MP_Bea_F_Neck_000", ["col"] = "mpbeach_overlays"},
+    	[3] = {["name"] = "FM_Tat_Award_F_000", ["col"] = "multiplayer_overlays"},
+    },
+  }
 
 -- AddEventHandler("playerSpawned", function()
 -- 	TriggerServerEvent('vmenu:sendData_s')
@@ -1034,8 +1196,8 @@ AddEventHandler("vmenu:bourse", function(roche, rochechange, cuivre, cuivrechang
   end
 end)
 
-
 Citizen.CreateThread(function()
+  --    Citizen.InvokeNative(0x5F5D1665E352A839, Citizen.PointerValueIntInitialized(GetPlayerPed(-1)), GetHashKey("mpbeach_overlays"), GetHashKey("mp_bea_tat_m_013"))
 	while true do
 		Citizen.Wait(0)
 		if showId == true then
@@ -1294,12 +1456,18 @@ function Construct()
   VMenu.AddNum(menu, "Barbe", "Barbe", 0, 28, "Changer la barbe")
   VMenu.AddNum(menu, "Couleur", "BarbeColor", 0, 100, "Changer la couleur de la barbe")
   VMenu.AddNum(menu, "Couleur secondaire", "BarbeSec", 0, 100, "Changer la couleur secondaire")
-  VMenu.AddFunc(menu, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec")}, "Valider")
+  VMenu.AddNum(menu, "Eyebrows", "Eyebrows", 0, 33, "Sourcils")
+  VMenu.AddNum(menu, "Eyebrows Couleur Primaire", "Eyebrows_Color", 0, 33, "Couleur Primaire")
+  VMenu.AddNum(menu, "Eyebrows Couleur Secondaire", "Eyebrows_Color_1", 0, 33, "Couleur Secondaire")
+  VMenu.AddFunc(menu, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor"),
+      getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1")}, "Valider")
 
   local menu = 10
   VMenu.AddMenu(menu, "", "default") -- default = Header "Texte" sur fond bleu
   VMenu.AddNum(menu, "Sexe", "Sexe", 0, 1, "Changer de sexe")
   VMenu.AddNum(menu, "Face", "Face", 0, 45, "Changer de face")
+  VMenu.AddNum(menu, "Couleur", "Couleur", 0, 45, "Changer la couleur")
+  VMenu.AddNum(menu, "Yeux", "Yeux", 0, 45, "Changer les yeux")
   VMenu.AddFunc(menu, "Valider", "vmenu:getclientFace", {getOpt("Sexe"),getOpt("Face"),0}, "Obtenir ce changement")
 
   local menu = 11
@@ -1446,6 +1614,12 @@ function Construct()
 
   local menu = 33
     VMenu.AddMenu(menu, "", "default")
+
+  local menu = 50
+    VMenu.AddMenu(menu, "", "default")
+    VMenu.AddSep(menu,"Styliste")
+    VMenu.AddNum(menu, "Tattoos", "tattoos", 1, 33, "Tattoos")
+    --VMenu.AddFunc(menu, "Valider", "vmenu:settattoos", {GetHashKey(Tattoos[getOpt("tattoos")].name)}, "Valider")
 
 	------- MAIN MENU F7
 	local menu = 98
@@ -1686,7 +1860,36 @@ function getBarberShop()
     VMenu.AddNum(9, "Barbe", "Barbe", 0, 28, "Changer la barbe")
     VMenu.AddNum(9, "Couleur", "BarbeColor", 0, 100, "Changer la couleur de la barbe")
   end
-  VMenu.AddFunc(9, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor")}, "Valider")
+  VMenu.AddNum(9, "Sourcil", "Eyebrows", 0, 33, "Sourcils")
+  VMenu.AddNum(9, "Sourcil Couleur Primaire", "Eyebrows_Color", 0, 33, "Couleur Primaire")
+  VMenu.AddNum(9, "Sourcil Couleur Secondaire", "Eyebrows_Color_1", 0, 33, "Couleur Secondaire")
+  VMenu.AddFunc(9, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor"),
+      getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1")}, "Valider")
+end
+
+function getTatsShop()
+  VMenu.AddMenu(50, "", "default")
+  VMenu.AddSep(50,"Styliste")
+  local sexe
+  if(GetEntityModel(GetPlayerPed(-1)) == 1885233650) then
+    sexe = Homme
+    VMenu.AddNum(50, "Torse", "torso", 1, 36, "Tattoos")
+    VMenu.AddNum(50, "Bras Gauche", "bras_g", 1, 10, "Tattoos")
+    VMenu.AddNum(50, "Bras Droit", "bras_d", 1, 14, "Tattoos")
+    VMenu.AddNum(50, "Jambe Gauche", "jambe_g", 1, 14, "Tattoos")
+    VMenu.AddNum(50, "Jambe Droite", "jambe_d", 1, 10, "Tattoos")
+    VMenu.AddNum(50, "Tete", "tete", 1, 6, "Tattoos")
+    VMenu.AddFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete")}, "Valider")
+  else
+    sexe = Femme
+    VMenu.AddNum(50, "Torse", "torso", 1, 20, "Tattoos")
+    VMenu.AddNum(50, "Bras Gauche", "bras_g", 1, 6, "Tattoos")
+    VMenu.AddNum(50, "Bras Droit", "bras_d", 1, 4, "Tattoos")
+    VMenu.AddNum(50, "Jambe Gauche", "jambe_g", 1, 2, "Tattoos")
+    VMenu.AddNum(50, "Jambe Droite", "jambe_d", 1, 3, "Tattoos")
+    VMenu.AddNum(50, "Tete", "tete", 1, 3, "Tattoos")
+    VMenu.AddFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete")}, "Valider")
+  end
 end
 
 function getArmoryGouv()
@@ -1800,11 +2003,19 @@ Citizen.CreateThread(function()
       VMenu.EditFunc(10, "Valider", "vmenu:getclientFace", {getOpt("Sexe"),getOpt("Face"),0}, "Obtenir ce changement")
     elseif VOpts.toUpdate == "Face" or VOpts.toUpdate == "Face_text" then
       -- local id = getOpt("Face")
-      SetPedHeadBlendData(GetPlayerPed(-1), getOpt("Face"), getOpt("Face"), getOpt("Face"), getOpt("Face"), getOpt("Face"), getOpt("Face"), 1.0, 1.0, 1.0, true)
+      SetPedHeadBlendData(GetPlayerPed(-1), getOpt("Face"), getOpt("Face"), getOpt("Face"), getOpt("Couleur"), getOpt("Couleur"), getOpt("Couleur"), 1.0, 1.0, 1.0, true)
       -- La barbe bientôt
       --SetPedHeadOverlay(playerPed,  1,  Character['beard_1'],  (Character['beard_2'] / 10) + 0.0)    -- Beard
       --SetPedHeadOverlayColor(playerPed,  1,  1,  Character['beard_3'],  Character['beard_4'])        -- Beard Color
       SetPedComponentVariation(GetPlayerPed(-1), 0, getOpt("Face"), 0, 2)
+      VMenu.EditFunc(10, "Valider", "vmenu:getclientFace", {getOpt("Sexe"),getOpt("Face"),0}, "Obtenir ce changement")
+    elseif VOpts.toUpdate == "Yeux" then
+      -- local id = getOpt("Face")
+      --SetPedHeadBlendData(GetPlayerPed(-1), getOpt("Face"), getOpt("Face"), getOpt("Face"), getOpt("Couleur"), getOpt("Couleur"), getOpt("Couleur"), 1.0, 1.0, 1.0, true)
+      -- La barbe bientôt
+      --SetPedHeadOverlay(playerPed,  1,  Character['beard_1'],  (Character['beard_2'] / 10) + 0.0)    -- Beard
+      --SetPedHeadOverlayColor(playerPed,  1,  1,  Character['beard_3'],  Character['beard_4'])        -- Beard Color
+      SetPedEyeColor(GetPlayerPed(-1), getOpt("Yeux"))
       VMenu.EditFunc(10, "Valider", "vmenu:getclientFace", {getOpt("Sexe"),getOpt("Face"),0}, "Obtenir ce changement")
     end
   end
@@ -1879,14 +2090,27 @@ Citizen.CreateThread(function()
         if VOpts.toUpdate == "Barbe" or VOpts.toUpdate == "BarbeColor" then
           SetPedHeadOverlay(GetPlayerPed(-1), 1, getOpt("Barbe"), 1.0)
           SetPedHeadOverlayColor(GetPlayerPed(-1), 1, 1, getOpt("BarbeColor"), 0)
-          VMenu.EditFunc(9, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor")}, "Valider")
-        end
+          VMenu.EditFunc(9, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor"),
+              getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1")}, "Valider")
+                    end
+      end
+      if VOpts.toUpdate == "Eyebrows" then
+        Citizen.Trace(getOpt("Eyebrows"))
+        SetPedHeadOverlay(GetPlayerPed(-1), 2, getOpt("Eyebrows"), 1.0)
+        VMenu.EditFunc(9, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor"),
+            getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1")}, "Valider")
+      end
+      if VOpts.toUpdate == "Eyebrows_Color" or VOpts.toUpdate == "Eyebrows_Color_1" then
+        SetPedHeadOverlayColor(GetPlayerPed(-1), 2, 1,getOpt("Eyebrows_Color"), getOpt("Eyebrows_Color_1"))
+          VMenu.EditFunc(9, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor"),
+              getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1")}, "Valider")
       end
         if VOpts.toUpdate == "Hair" or VOpts.toUpdate == "HairSec" or VOpts.toUpdate == "HairColor" or VOpts.toUpdate == "HairColorSec" then
           SetPedComponentVariation(GetPlayerPed(-1), 2, getOpt("Hair"), getOpt("HairSec"), 2)
           SetPedHairColor(GetPlayerPed(-1), getOpt("HairColor"), getOpt("HairColorSec"))
-          VMenu.EditFunc(9, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor")}, "Valider")
-        end
+          VMenu.EditFunc(9, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor"),
+              getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1")}, "Valider")
+                    end
         if VOpts.toUpdate == "Hair" then
           if (getOpt("Hair") == 1) or (getOpt("Hair") == 2) or (getOpt("Hair") == 3) or (getOpt("Hair") == 5) or (getOpt("Hair") == 6) or (getOpt("Hair") == 10) or (getOpt("Hair") == 11) or (getOpt("Hair") == 13) or (getOpt("Hair") == 15) then
             VMenu.EditNum(9, "Couleur", "HairSec", 0, 5, "Change la couleur des cheveux")
@@ -1895,6 +2119,68 @@ Citizen.CreateThread(function()
           else
             VMenu.EditNum(9, "Couleur", "HairSec", 0, 4, "Change la couleur des cheveux")
           end
+        end
+      end
+      if VMenu.tattoos then
+        local sexe
+      if GetEntityModel(GetPlayerPed(-1)) == 1885233650 then
+         sexe = Homme
+      else
+         sexe = Femme
+       end
+        if VOpts.toUpdate == "torso" then
+          Citizen.Trace(getOpt("torso"))
+            local hash = GetHashKey(sexe.Torso[getOpt("torso")].name)
+            local col = GetHashKey(sexe.Torso[getOpt("torso")].col)
+            local ped = GetPlayerPed(-1)
+            ClearPedDecorations(ped)
+            ApplyPedOverlay(ped, col, hash)
+            VMenu.EditFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete")}, "Valider")
+            end
+        if VOpts.toUpdate == "bras_g" then
+          Citizen.Trace(getOpt("bras_g"))
+          local hash = GetHashKey(sexe.Bras_Gauche[getOpt("bras_g")].name)
+          local col = GetHashKey(sexe.Bras_Gauche[getOpt("bras_g")].col)
+          local ped = GetPlayerPed(-1)
+          ClearPedDecorations(ped)
+          ApplyPedOverlay(ped, col, hash)
+          VMenu.EditFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete")}, "Valider")
+        end
+        if VOpts.toUpdate == "bras_d" then
+          Citizen.Trace(getOpt("bras_g"))
+          local hash = GetHashKey(sexe.Bras_Droit[getOpt("bras_d")].name)
+          local col = GetHashKey(sexe.Bras_Droit[getOpt("bras_d")].col)
+          local ped = GetPlayerPed(-1)
+          ClearPedDecorations(ped)
+          ApplyPedOverlay(ped, col, hash)
+          VMenu.EditFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete")}, "Valider")
+        end
+        if VOpts.toUpdate == "jambe_g" then
+          Citizen.Trace(getOpt("bras_g"))
+          local hash = GetHashKey(sexe.Jambe_Gauche[getOpt("jambe_g")].name)
+          local col = GetHashKey(sexe.Jambe_Gauche[getOpt("jambe_g")].col)
+          local ped = GetPlayerPed(-1)
+          ClearPedDecorations(ped)
+          ApplyPedOverlay(ped, col, hash)
+          VMenu.EditFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete")}, "Valider")
+        end
+        if VOpts.toUpdate == "jambe_d" then
+          Citizen.Trace(getOpt("bras_g"))
+          local hash = GetHashKey(sexe.Jambe_Droite[getOpt("jambe_d")].name)
+          local col = GetHashKey(sexe.Jambe_Droite[getOpt("jambe_d")].col)
+          local ped = GetPlayerPed(-1)
+          ClearPedDecorations(ped)
+          ApplyPedOverlay(ped, col, hash)
+          VMenu.EditFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete")}, "Valider")
+        end
+        if VOpts.toUpdate == "tete" then
+          Citizen.Trace(getOpt("bras_g"))
+          local hash = GetHashKey(sexe.Tete[getOpt("tete")].name)
+          local col = GetHashKey(sexe.Tete[getOpt("tete")].col)
+          local ped = GetPlayerPed(-1)
+          ClearPedDecorations(ped)
+          ApplyPedOverlay(ped, col, hash)
+          VMenu.EditFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete")}, "Valider")
         end
       end
 			-- Ne Pas Toucher
@@ -1938,6 +2224,8 @@ Citizen.CreateThread(function()
 
     elseif (IsNearPoints(job_tow, 3) == true) then
 
+    elseif (IsNearPoints(tattoo, 3) == true) then
+        VMenu.tattoos = true
 		elseif (IsNearPoints(JailPolice, 1) == true) then
 
 		elseif (IsNearPoints(lavage_argent, 3) == true) then
@@ -2170,6 +2458,12 @@ Citizen.CreateThread(function()
 			elseif (IsNearPoints(informateur_coke, 3) == true) then
 				TriggerEvent("vmenu:openMenu", 20)
         local menu = 25
+      elseif (IsNearPoints(tattoo, 3) == true) then
+        VMenu.updatedChar = false
+        TriggerEvent("vmenu:openMenu", 50)
+        if VMenu.tattoos == false then
+          getTatsShop()
+        end
       elseif (IsNearPoints(apart_entrer, 1.5) == true) then
         TriggerEvent("vmenu:openMenu",23)
         VMenu.ResetMenu(23, "", "default")
@@ -2246,6 +2540,9 @@ Citizen.CreateThread(function()
 			VMenu.Info("Appuyer sur ~g~F6~s~ pour parler avec l'informateur", false)
 		elseif (IsNearPoints(informateur_organe, 3) == true) then
 			VMenu.Info("Appuyer sur ~g~F6~s~ pour parler avec l'informateur", false)
+    elseif (IsNearPoints(tattoo, 3) == true) then
+      VMenu.tattoos = false
+      VMenu.Info("Appuyer sur ~g~F6~s~ pour voir le magasin", false)
     elseif (IsNearPoints(apart_entrer, 1.5) == true) then
       VMenu.Info("Appuyer sur ~g~F6~s~ accéder à votre porte d'entrer", false)
     elseif (IsNearPoints(apart_sorti, 1.5) == true) then

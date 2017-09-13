@@ -271,6 +271,7 @@ Citizen.CreateThread(function()
                        Wait(2500)
                        ShowMsgtime.msg = '+1 roche'
                        ShowMsgtime.time = 150
+                       chance = chance + 1
                        TriggerEvent("player:receiveItem", 23, 1)
                    elseif tonumber(inv_qty) < 30 and chance_mat >= 2500 and chance_mat < 4000 then
                        ShowMsgtime.msg = 'En train de miner...'
@@ -279,6 +280,7 @@ Citizen.CreateThread(function()
                        Wait(2500)
                        ShowMsgtime.msg = '+1 cuivre'
                        ShowMsgtime.time = 150
+                       chance = chance + 1
                        TriggerEvent("player:receiveItem", 17, 1)
                    elseif tonumber(inv_qty) < 30 and chance_mat >= 4000 and chance_mat < 4999 then
                        ShowMsgtime.msg = 'En train de miner...'
@@ -287,6 +289,7 @@ Citizen.CreateThread(function()
                        Wait(2500)
                        ShowMsgtime.msg = '+1 fer'
                        ShowMsgtime.time = 150
+                       chance = chance + 1
                        TriggerEvent("player:receiveItem", 18, 1)
                    elseif tonumber(inv_qty) < 30 and chance_mat >= 4999 and chance_mat <= 5000 then
                        ShowMsgtime.msg = 'En train de miner...'
@@ -295,6 +298,7 @@ Citizen.CreateThread(function()
                        Wait(2500)
                        ShowMsgtime.msg = '+1 cuivre'
                        ShowMsgtime.time = 150
+                       chance = chance + 1
                        TriggerEvent("player:receiveItem", 19, 1)
                    else
                     TriggerEvent("itinerance:notif", "~r~Votre inventaire est plein !")

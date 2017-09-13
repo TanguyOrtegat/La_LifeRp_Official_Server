@@ -147,6 +147,7 @@ AddEventHandler("vmenu:MainMenuOG", function(target)
 	VMenu.pres = false
 	VMenu.garde = false
 	VMenu.apart = false
+	VMenu.tattoos = false
 end)
 ----------------------------------
 
@@ -412,9 +413,13 @@ AddEventHandler("vmenu:getclientOutfits", function(target, item) -- target = Der
 	end)
 end)
 
-AddEventHandler("vmenu:getclientHair", function(target, hair, hairsec, hairc, haircsec, beard, beardcolor) -- target = Dernier joueur à avoir parlé, pas besoin ici. Mais obligatoire !
-	Citizen.Trace(hair.." ".. hairsec.." ".. hairc.." ".. haircsec.." ".. beard.." ".. beardcolor)
-	TriggerServerEvent("vmenu:getHair", hair, hairsec, hairc, haircsec, beard, beardcolor)
+AddEventHandler("vmenu:getclientHair", function(target, hair, hairsec, hairc, haircsec, beard, beardcolor,sourcil,sourcilcolor,sourcilcolorsec) -- target = Dernier joueur à avoir parlé, pas besoin ici. Mais obligatoire !
+
+	TriggerServerEvent("vmenu:getHair", hair, hairsec, hairc, haircsec, beard, beardcolor,sourcil,sourcilcolor,sourcilcolorsec)
+end)
+
+AddEventHandler("vmenu:settattoos", function(target,torso,bras_g,bras_d,jambe_g,jambe_d,tete) -- target = Dernier joueur à avoir parlé, pas besoin ici. Mais obligatoire !
+		TriggerServerEvent("vmenu:setclienttattoo", torso,bras_g,bras_d,jambe_g,jambe_d,tete)
 end)
 
 AddEventHandler("vmenu:getclientFace", function(target, sex, face, face_text) -- target = Dernier joueur à avoir parlé, pas besoin ici. Mais obligatoire !

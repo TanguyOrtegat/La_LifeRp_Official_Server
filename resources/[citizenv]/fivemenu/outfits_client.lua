@@ -1,4 +1,165 @@
+local Homme = {
+  Tete = {
+    [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
+    [2] = {["name"] = "MP_Bea_M_Neck_001", ["col"] = "mpbeach_overlays"},
+    [3] = {["name"] = "MP_Bea_M_Neck_000", ["col"] = "mpbeach_overlays"},
+    [4] = {["name"] = "MP_Bea_M_Head_002", ["col"] = "mpbeach_overlays"},
+    [5] = {["name"] = "MP_Bea_M_Head_001", ["col"] = "mpbeach_overlays"},
+    [6] = {["name"] = "MP_Bea_M_Head_000", ["col"] = "mpbeach_overlays"},
+    [7] = {["name"] = "FM_Tat_Award_M_000", ["col"] = "multiplayer_overlays"},
+  },
+  Bras_Gauche = {
+    [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
+    [2] = {["name"] = "MP_Bea_M_LArm_001", ["col"] = "mpbeach_overlays"},
+    [3] = {["name"] = "MP_Bea_M_LArm_000", ["col"] = "mpbeach_overlays"},
+    [4] = {["name"] = "FM_Tat_Award_M_001", ["col"] = "multiplayer_overlays"},
+    [5] = {["name"] = "FM_Tat_Award_M_015", ["col"] = "multiplayer_overlays"},
+    [6] = {["name"] = "FM_Tat_M_005", ["col"] = "multiplayer_overlays"},
+    [7] = {["name"] = "FM_Tat_M_006", ["col"] = "multiplayer_overlays"},
+    [8] = {["name"] = "FM_Tat_M_015", ["col"] = "multiplayer_overlays"},
+    [9] = {["name"] = "FM_Tat_M_031", ["col"] = "multiplayer_overlays"},
+    [10] = {["name"] = "FM_Tat_M_041", ["col"] = "multiplayer_overlays"},
+  },
+  Bras_Droit = {
+    [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
+    [2] = {["name"] = "MP_Bea_M_RArm_000", ["col"] = "mpbeach_overlays"},
+    [3] = {["name"] = "MP_Bea_M_RArm_001", ["col"] = "mpbeach_overlays"},
+    [4] = {["name"] = "FM_Tat_Award_M_00", ["col"] = "multiplayer_overlays"},
+    [5] = {["name"] = "FM_Tat_M_000", ["col"] = "multiplayer_overlays"},
+    [6] = {["name"] = "FM_Tat_M_001", ["col"] = "multiplayer_overlays"},
+    [7] = {["name"] = "FM_Tat_M_003", ["col"] = "multiplayer_overlays"},
+    [8] = {["name"] = "FM_Tat_Award_M_010", ["col"] = "multiplayer_overlays"},
+    [9] = {["name"] = "FM_Tat_M_014", ["col"] = "multiplayer_overlays"},
+    [10] = {["name"] = "FM_Tat_M_018", ["col"] = "multiplayer_overlays"},
+    [11] = {["name"] = "FM_Tat_M_027", ["col"] = "multiplayer_overlays"},
+    [12] = {["name"] = "FM_Tat_M_028", ["col"] = "multiplayer_overlays"},
+    [13] = {["name"] = "FM_Tat_M_038", ["col"] = "multiplayer_overlays"},
+    [14] = {["name"] = "FM_Tat_M_047", ["col"] = "multiplayer_overlays"},
+  },
 
+  Jambe_Droite = {
+    [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
+    [2] = {["name"] = "MP_Bea_M_Rleg_000", ["col"] = "mpbeach_overlays"},
+    [3] = {["name"] = "FM_Tat_Award_M_006", ["col"] = "multiplayer_overlays"},
+    [4] = {["name"] = "FM_Tat_M_007", ["col"] = "multiplayer_overlays"},
+    [5] = {["name"] = "FM_Tat_M_017", ["col"] = "multiplayer_overlays"},
+    [6] = {["name"] = "FM_Tat_M_022", ["col"] = "multiplayer_overlays"},
+    [7] = {["name"] = "FM_Tat_M_039", ["col"] = "multiplayer_overlays"},
+    [8] = {["name"] = "FM_Tat_M_040", ["col"] = "multiplayer_overlays"},
+    [9] = {["name"] = "FM_Tat_M_042", ["col"] = "multiplayer_overlays"},
+    [10] = {["name"] = "FM_Tat_M_043", ["col"] = "multiplayer_overlays"},
+  },
+
+  Jambe_Gauche = {
+    [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
+    [2] = {["name"] = "MP_Bea_M_Lleg_000", ["col"] = "mpbeach_overlays"},
+    [3] = {["name"] = "FM_Tat_Award_M_007", ["col"] = "multiplayer_overlays"},
+    [4] = {["name"] = "FM_Tat_Award_M_009", ["col"] = "multiplayer_overlays"},
+    [5] = {["name"] = "FM_Tat_M_002", ["col"] = "multiplayer_overlays"},
+    [6] = {["name"] = "FM_Tat_M_002", ["col"] = "multiplayer_overlays"},
+    [7] = {["name"] = "FM_Tat_M_008", ["col"] = "multiplayer_overlays"},
+    [8] = {["name"] = "FM_Tat_M_021", ["col"] = "multiplayer_overlays"},
+    [9] = {["name"] = "FM_Tat_M_023", ["col"] = "multiplayer_overlays"},
+    [10] = {["name"] = "FM_Tat_M_026", ["col"] = "multiplayer_overlays"},
+    [11] = {["name"] = "FM_Tat_M_032", ["col"] = "multiplayer_overlays"},
+    [12] = {["name"] = "FM_Tat_M_033", ["col"] = "multiplayer_overlays"},
+    [13] = {["name"] = "FM_Tat_M_035", ["col"] = "multiplayer_overlays"},
+    [14] = {["name"] = "FM_Tat_M_037", ["col"] = "multiplayer_overlays"},
+  },
+
+  Torso = {
+    [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
+    [2] = {["name"] = "MP_Bea_M_Stom_001", ["col"] = "mpbeach_overlays"},
+    [3] = {["name"] = "MP_Bea_M_Stom_000", ["col"] = "mpbeach_overlays"},
+    [4] = {["name"] = "MP_Bea_M_Chest_001", ["col"] = "mpbeach_overlays"},
+    [5] = {["name"] = "MP_Bea_M_Back_000", ["col"] = "mpbeach_overlays"},
+    [6] = {["name"] = "MP_Bea_M_Chest_000", ["col"] = "mpbeach_overlays"},
+    [7] = {["name"] = "FM_Tat_Award_M_003", ["col"] = "multiplayer_overlays"},
+    [8] = {["name"] = "FM_Tat_Award_M_004", ["col"] = "multiplayer_overlays"},
+    [9] = {["name"] = "FM_Tat_Award_M_005", ["col"] = "multiplayer_overlays"},
+    [10] = {["name"] = "FM_Tat_Award_M_008", ["col"] = "multiplayer_overlays"},
+    [11] = {["name"] = "FM_Tat_Award_M_011", ["col"] = "multiplayer_overlays"},
+    [12] = {["name"] = "FM_Tat_Award_M_012", ["col"] = "multiplayer_overlays"},
+    [13] = {["name"] = "FM_Tat_Award_M_013", ["col"] = "multiplayer_overlays"},
+    [14] = {["name"] = "FM_Tat_Award_M_014", ["col"] = "multiplayer_overlays"},
+    [15] = {["name"] = "FM_Tat_Award_M_016", ["col"] = "multiplayer_overlays"},
+    [16] = {["name"] = "FM_Tat_Award_M_017", ["col"] = "multiplayer_overlays"},
+    [17] = {["name"] = "FM_Tat_Award_M_018", ["col"] = "multiplayer_overlays"},
+    [18] = {["name"] = "FM_Tat_Award_M_019", ["col"] = "multiplayer_overlays"},
+    [19] = {["name"] = "FM_Tat_M_004", ["col"] = "multiplayer_overlays"},
+    [20] = {["name"] = "FM_Tat_M_009", ["col"] = "multiplayer_overlays"},
+    [21] = {["name"] = "FM_Tat_M_010", ["col"] = "multiplayer_overlays"},
+    [22] = {["name"] = "FM_Tat_M_011", ["col"] = "multiplayer_overlays"},
+    [23] = {["name"] = "FM_Tat_M_012", ["col"] = "multiplayer_overlays"},
+    [24] = {["name"] = "FM_Tat_M_013", ["col"] = "multiplayer_overlays"},
+    [25] = {["name"] = "FM_Tat_M_016", ["col"] = "multiplayer_overlays"},
+    [26] = {["name"] = "FM_Tat_M_019", ["col"] = "multiplayer_overlays"},
+    [27] = {["name"] = "FM_Tat_M_020", ["col"] = "multiplayer_overlays"},
+    [28] = {["name"] = "FM_Tat_M_024", ["col"] = "multiplayer_overlays"},
+    [29] = {["name"] = "FM_Tat_M_025", ["col"] = "multiplayer_overlays"},
+    [30] = {["name"] = "FM_Tat_M_029", ["col"] = "multiplayer_overlays"},
+    [31] = {["name"] = "FM_Tat_M_030", ["col"] = "multiplayer_overlays"},
+    [32] = {["name"] = "FM_Tat_M_034", ["col"] = "multiplayer_overlays"},
+    [33] = {["name"] = "FM_Tat_M_036", ["col"] = "multiplayer_overlays"},
+    [34] = {["name"] = "FM_Tat_M_044", ["col"] = "multiplayer_overlays"},
+    [35] = {["name"] = "FM_Tat_M_045", ["col"] = "multiplayer_overlays"},
+    [36] = {["name"] = "FM_Tat_M_046", ["col"] = "multiplayer_overlays"},
+  },
+}
+
+local Femme = {
+    Jambe_Droite = {
+      [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
+      [2] = {["name"] = "MP_Bea_F_RLeg_000", ["col"] = "mpbeach_overlays"},
+    	[3] = {["name"] = "FM_Tat_Award_F_006", ["col"] = "multiplayer_overlays"},
+    },
+  	Jambe_Gauche = {
+      [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
+      [2] = {["name"] = "FM_Tat_Award_F_009", ["col"] = "multiplayer_overlays"},
+  	},
+    Bras_Droit = {
+      [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
+      [2] = {["name"] = "MP_Bea_F_RArm_001", ["col"] = "mpbeach_overlays"},
+    	[3] = {["name"] = "FM_Tat_Award_F_002", ["col"] = "multiplayer_overlays"},
+    	[4] = {["name"] = "FM_Tat_Award_F_010", ["col"] = "multiplayer_overlays"},
+    },
+    Bras_Gauche = {
+      [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
+      [2] = {["name"] = "MP_Bea_F_LArm_000", ["col"] = "mpbeach_overlays"},
+      [3] = {["name"] = "MP_Bea_F_LArm_001", ["col"] = "mpbeach_overlays"},
+    	[4] = {["name"] = "FM_Tat_Award_F_001", ["col"] = "multiplayer_overlays"},
+    	[5] = {["name"] = "FM_Tat_Award_F_007", ["col"] = "multiplayer_overlays"},
+    	[6] = {["name"] = "FM_Tat_Award_F_015", ["col"] = "multiplayer_overlays"},
+    },
+    Torso = {
+      [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
+      [2] = {["name"] = "MP_Bea_F_Back_000", ["col"] = "mpbeach_overlays"},
+      [3] = {["name"] = "MP_Bea_F_Back_002", ["col"] = "mpbeach_overlays"},
+      [4] = {["name"] = "MP_Bea_F_Chest_001", ["col"] = "mpbeach_overlays"},
+      [5] = {["name"] = "MP_Bea_F_Chest_002", ["col"] = "mpbeach_overlays"},
+      [6] = {["name"] = "MP_Bea_F_RSide_000", ["col"] = "mpbeach_overlays"},
+      [7] = {["name"] = "MP_Bea_F_Should_000", ["col"] = "mpbeach_overlays"},
+      [8] = {["name"] = "MP_Bea_F_Should_001", ["col"] = "mpbeach_overlays"},
+      [9] = {["name"] = "MP_Bea_F_Stom_000", ["col"] = "mpbeach_overlays"},
+      [10] = {["name"] = "MP_Bea_F_Stom_001", ["col"] = "mpbeach_overlays"},
+      [11] = {["name"] = "MP_Bea_F_Stom_002", ["col"] = "mpbeach_overlays"},
+    	[12] = {["name"] = "FM_Tat_Award_F_003", ["col"] = "multiplayer_overlays"},
+    	[13] = {["name"] = "FM_Tat_Award_F_004", ["col"] = "multiplayer_overlays"},
+    	[14] = {["name"] = "FM_Tat_Award_F_005", ["col"] = "multiplayer_overlays"},
+    	[15] = {["name"] = "FM_Tat_Award_F_008", ["col"] = "multiplayer_overlays"},
+    	[16] = {["name"] = "FM_Tat_Award_F_011", ["col"] = "multiplayer_overlays"},
+    	[17] = {["name"] = "FM_Tat_Award_F_012", ["col"] = "multiplayer_overlays"},
+    	[18] = {["name"] = "FM_Tat_Award_F_013", ["col"] = "multiplayer_overlays"},
+    	[19] = {["name"] = "FM_Tat_Award_F_014", ["col"] = "multiplayer_overlays"},
+      [20] = {["name"] = "FM_Tat_Award_F_016", ["col"] = "multiplayer_overlays"},
+    },
+    Tete = {
+      [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
+      [2] = {["name"] = "MP_Bea_F_Neck_000", ["col"] = "mpbeach_overlays"},
+    	[3] = {["name"] = "FM_Tat_Award_F_000", ["col"] = "multiplayer_overlays"},
+    },
+  }
+  local sexe
 function ChangeComponent(args)-- 1:componentID; 2: page; 3: drawbleID; 4: textureID
   SetPedComponentVariation(GetPlayerPed(-1), args[1], args[3], args[4], 2)
 end
@@ -11,7 +172,7 @@ AddEventHandler("vmenu:updateChar", function(args)
     RequestModel(model)
     Citizen.Wait(0)
   end
-  Citizen.Trace(args[26].." ".. args[27])
+  --Citizen.Trace(args[26].." ".. args[27])
   SetPlayerModel(PlayerId(), model)
   SetModelAsNoLongerNeeded(model)
   Citizen.Trace("TEST")
@@ -25,15 +186,27 @@ AddEventHandler("vmenu:updateChar", function(args)
   ChangeComponent({7,0,args[15],args[16]})
   ChangeComponent({11,0,args[9],args[10]})
   ChangeComponent({8,0,args[11],args[12]})
-  
+  Citizen.Trace(args[36])
+  if GetEntityModel(GetPlayerPed(-1)) == 1885233650 then
+     sexe = Homme
+  else
+     sexe = Femme
+   end
+    ApplyPedOverlay(GetPlayerPed(-1), GetHashKey(sexe.Bras_Droit[args[31]].col), GetHashKey(sexe.Bras_Droit[args[31]].name))
+    ApplyPedOverlay(GetPlayerPed(-1), GetHashKey(sexe.Bras_Gauche[args[32]].col), GetHashKey(sexe.Bras_Gauche[args[32]].name))
+    ApplyPedOverlay(GetPlayerPed(-1), GetHashKey(sexe.Jambe_Gauche[args[33]].col), GetHashKey(sexe.Jambe_Gauche[args[33]].name))
+    ApplyPedOverlay(GetPlayerPed(-1), GetHashKey(sexe.Jambe_Droite[args[34]].col), GetHashKey(sexe.Jambe_Droite[args[34]].name))
+    ApplyPedOverlay(GetPlayerPed(-1), GetHashKey(sexe.Tete[args[35]].col), GetHashKey(sexe.Tete[args[35]].name))
+    ApplyPedOverlay(GetPlayerPed(-1), GetHashKey(sexe.Torso[args[36]].col), GetHashKey(sexe.Torso[args[36]].name))
 	SetPedPropIndex(GetPlayerPed(-1), 0, args[20], args[21], 0)
 	SetPedPropIndex(GetPlayerPed(-1), 1, args[22], args[23], 0)
-	if GetEntityModel(GetPlayerPed(-1)) == 1885233650 then   
+  SetPedHeadOverlay(GetPlayerPed(-1), 2, args[28], 1.0)
+  SetPedHeadOverlayColor(GetPlayerPed(-1), 2, 1,args[29], args[30])
+	if GetEntityModel(GetPlayerPed(-1)) == 1885233650 then
 	 SetPedHeadOverlay(GetPlayerPed(-1), 1, args[26], 1.0)
    SetPedHeadOverlayColor(GetPlayerPed(-1), 1, 1, args[27], 0)
   end
   --SetPedPropIndex(GetPlayerPed(-1), 6, args[24], args[25], 0)
-  
   TriggerServerEvent("weaponshop:GiveWeapons")
   VMenu.updatedChar = true
 end)
@@ -79,7 +252,7 @@ AddEventHandler("vmenu:supdateChar", function(o, t, th, f, fi, s, se, e, n, te, 
   ChangeComponent({7,0,fif,si})
   ChangeComponent({11,0,n,te})
   ChangeComponent({8,0,el,tw})
-  if GetEntityModel(GetPlayerPed(-1)) == 1885233650 then   
+  if GetEntityModel(GetPlayerPed(-1)) == 1885233650 then
     SetPedHeadOverlay(GetPlayerPed(-1), 1, beard, 1.0)
     SetPedHeadOverlayColor(GetPlayerPed(-1), 1, 1, beardtext, 0)
   end
@@ -101,7 +274,6 @@ AddEventHandler("vmenu:updateCharInShop", function(args)
   end
   SetPlayerModel(PlayerId(), model)
   SetModelAsNoLongerNeeded(model)
-
   SetPedHeadBlendData(GetPlayerPed(-1), args[1], args[1], args[1], args[1], args[1], args[1], 1.0, 1.0, 1.0, true)
   ChangeComponent({0,0,args[1],args[2]})-- 1:componentID; 2: page; 3: drawbleID; 4: textureID
   ChangeComponent({2,0,args[3],args[4]})
@@ -114,11 +286,26 @@ AddEventHandler("vmenu:updateCharInShop", function(args)
   ChangeComponent({8,0,args[11],args[12]})
   SetPedPropIndex(GetPlayerPed(-1), 0, args[20], args[21], 0)
   SetPedPropIndex(GetPlayerPed(-1), 1, args[22], args[23], 0)
-  if GetEntityModel(GetPlayerPed(-1)) == 1885233650 then   
+  if GetEntityModel(GetPlayerPed(-1)) == 1885233650 then
+     sexe = Homme
+  else
+     sexe = Femme
+   end
+   print(sexe.Torse[args[36]].col)
+   print(sexe.Bras_Gauche[args[32]].col)
+    ApplyPedOverlay(GetPlayerPed(-1), GetHashKey(sexe.Bras_Droit[args[31]].col), GetHashKey(sexe.Bras_Droit[args[31]].name))
+    ApplyPedOverlay(GetPlayerPed(-1), GetHashKey(sexe.Bras_Gauche[args[32]].col), GetHashKey(sexe.Bras_Droit[args[32]].name))
+    ApplyPedOverlay(GetPlayerPed(-1), GetHashKey(sexe.Jambe_Gauche[args[33]].col), GetHashKey(sexe.Bras_Droit[args[33]].name))
+    ApplyPedOverlay(GetPlayerPed(-1), GetHashKey(sexe.Jambe_Droite[args[34]].col), GetHashKey(sexe.Bras_Droit[args[34]].name))
+    ApplyPedOverlay(GetPlayerPed(-1), GetHashKey(sexe.Tete[args[35]].col), GetHashKey(sexe.Bras_Droit[args[35]].name))
+    ApplyPedOverlay(GetPlayerPed(-1), GetHashKey(sexe.Torso[args[36]].col), GetHashKey(sexe.Bras_Droit[args[36]].name))
+  if GetEntityModel(GetPlayerPed(-1)) == 1885233650 then
     SetPedHeadOverlay(GetPlayerPed(-1), 1, args[26], 1.0)
     SetPedHeadOverlayColor(GetPlayerPed(-1), 1, 1, args[27], 0)
   --SetPedPropIndex(GetPlayerPed(-1), 6, args[24], args[25], 0)
   end
+  SetPedHeadOverlay(GetPlayerPed(-1), 2, args[28], 1.0)
+  SetPedHeadOverlayColor(GetPlayerPed(-1), 2, 1,args[29], args[30])
   TriggerServerEvent("weaponshop:GiveWeapons")
   VMenu.updatedChar = true
 end)

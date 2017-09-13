@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PedDecorationCollection>
+  <bRequiredForSync value="true" />
+  <presets>
+    <Item>
+      <uvPos x="0.220000" y="0.380000" />
+      <scale x="0.240000" y="0.200000" />
+      <rotation value="0.000000" />
+      <nameHash>MP_Bea_F_Back_000</nameHash>
+      <txdHash>mp_bea_tat_f_003</txdHash>
+      <txtHash>mp_bea_tat_f_003</txtHash>
+      <zone>ZONE_TORSO</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_FEMALE</gender>
+      <award />
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="0.320000" y="0.700000" />
+      <scale x="0.120000" y="0.120000" />
+      <rotation value="0.000000" />
+      <nameHash>MP_Bea_F_Back_001</nameHash>
+      <txdHash>mp_bea_tat_f_001</txdHash>
+      <txtHash>mp_bea_tat_f_001</txtHash>
+      <zone>ZONE_TORSO</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_FEMALE</gender>
+      <award />
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="0.220000" y="0.330000" />
+      <scale x="0.120000" y="0.080000" />
+      <rotation value="0.000000" />
+      <nameHash>MP_Bea_F_Back_002</nameHash>
+      <txdHash>mp_bea_tat_f_005</txdHash>
+      <txtHash>mp_bea_tat_f_005</txtHash>
+      <zone>ZONE_TORSO</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_FEMALE</gender>
+      <award />
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="0.850000" y="0.680000" />
+      <scale x="0.060000" y="0.060000" />
+      <rotation value="-45.000000" />
+      <nameHash>MP_Bea_F_Chest_000</nameHash>
+      <txdHash>mp_bea_tat_f_012</txdHash>
+      <txtHash>mp_bea_tat_f_012</txtHash>
+      <zone>ZONE_TORSO</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_FEMALE</gender>
+      <award>0</award>
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="0.620000" y="0.680000" />
+      <scale x="0.060000" y="0.060000" />
+      <rotation value="45.000000" />
+      <nameHash>MP_Bea_F_Chest_001</nameHash>
+      <txdHash>mp_bea_tat_f_012</txdHash>
+      <txtHash>mp_bea_tat_f_012</txtHash>
+      <zone>ZONE_TORSO</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_FEMALE</gender>
+      <award>1</award>
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="0.735000" y="0.600000" />
+      <scale x="0.100000" y="0.100000" />
+      <rotation value="0.000000" />
+      <nameHash>MP_Bea_F_Chest_002</nameHash>
+      <txdHash>mp_bea_tat_f_000</txdHash>
+      <txtHash>mp_bea_tat_f_000</txtHash>
+      <zone>ZONE_TORSO</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_FEMALE</gender>
+      <award />
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="0.450000" y="0.400000" />
+      <scale x="0.180000" y="0.160000" />
+      <rotation value="0.000000" />
+      <nameHash>MP_Bea_F_RSide_000</nameHash>
+      <txdHash>mp_bea_tat_f_006</txdHash>
+      <txtHash>mp_bea_tat_f_006</txtHash>
+      <zone>ZONE_TORSO</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_FEMALE</gender>
+      <award />
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="0.750000" y="0.360000" />
+      <scale x="0.200000" y="0.200000" />
+      <rotation value="0.000000" />
+      <nameHash>MP_Bea_F_RLeg_000</nameHash>
+      <txdHash>mp_bea_tat_f_007</txdHash>
+      <txtHash>mp_bea_tat_f_007</txtHash>
+      <zone>ZONE_RIGHT_LEG</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_FEMALE</gender>
+      <award />
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="0.520000" y="0.800000" />
+      <scale x="0.120000" y="0.120000" />
+      <rotation value="7.000000" />
+      <nameHash>MP_Bea_F_RArm_001</nameHash>
+      <txdHash>mp_bea_tat_f_014</txdHash>
+      <txtHash>mp_bea_tat_f_014</txtHash>
+      <zone>ZONE_RIGHT_ARM</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_FEMALE</gender>
+      <award />
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="0.175000" y="0.380000" />
+      <scale x="0.140000" y="0.110000" />
+      <rotation value="0.000000" />
+      <nameHash>MP_Bea_F_Neck_000</nameHash>
+      <txdHash>mp_bea_tat_f_008</txdHash>
+      <txtHash>mp_bea_tat_f_008</txtHash>
+      <zone>ZONE_HEAD</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_FEMALE</gender>
+      <award />
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="0.235000" y="0.700000" />
+      <scale x="0.210000" y="0.180000" />
+      <rotation value="0.000000" />
+      <nameHash>MP_Bea_F_Should_000</nameHash>
+      <txdHash>mp_bea_tat_f_011</txdHash>
+      <txtHash>mp_bea_tat_f_011</txtHash>
+      <zone>ZONE_TORSO</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_FEMALE</gender>
+      <award />
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="1.150000" y="0.720000" />
+      <scale x="0.110000" y="0.120000" />
+      <rotation value="37.080002" />
+      <nameHash>MP_Bea_F_Should_001</nameHash>
+      <txdHash>mp_bea_tat_f_004</txdHash>
+      <txtHash>mp_bea_tat_f_004</txtHash>
+      <zone>ZONE_TORSO</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_FEMALE</gender>
+      <award />
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="0.840000" y="0.340000" />
+      <scale x="0.070000" y="0.070000" />
+      <rotation value="28.080000" />
+      <nameHash>MP_Bea_F_Stom_000</nameHash>
+      <txdHash>mp_bea_tat_f_013</txdHash>
+      <txtHash>mp_bea_tat_f_013</txtHash>
+      <zone>ZONE_TORSO</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_FEMALE</gender>
+      <award />
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="0.650000" y="0.290000" />
+      <scale x="0.060000" y="0.060000" />
+      <rotation value="-45.000000" />
+      <nameHash>MP_Bea_F_Stom_001</nameHash>
+      <txdHash>mp_bea_tat_f_009</txdHash>
+      <txtHash>mp_bea_tat_f_009</txtHash>
+      <zone>ZONE_TORSO</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_FEMALE</gender>
+      <award />
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="0.830000" y="0.310000" />
+      <scale x="0.080000" y="0.080000" />
+      <rotation value="40.000000" />
+      <nameHash>MP_Bea_F_Stom_002</nameHash>
+      <txdHash>mp_bea_tat_f_010</txdHash>
+      <txtHash>mp_bea_tat_f_010</txtHash>
+      <zone>ZONE_TORSO</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_FEMALE</gender>
+      <award />
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="0.700000" y="0.500000" />
+      <scale x="0.060000" y="0.060000" />
+      <rotation value="7.000000" />
+      <nameHash>MP_Bea_F_LArm_000</nameHash>
+      <txdHash>mp_bea_tat_f_002</txdHash>
+      <txtHash>mp_bea_tat_f_002</txtHash>
+      <zone>ZONE_LEFT_ARM</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_FEMALE</gender>
+      <award />
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="0.500000" y="0.800000" />
+      <scale x="0.150000" y="0.150000" />
+      <rotation value="7.000000" />
+      <nameHash>MP_Bea_F_LArm_001</nameHash>
+      <txdHash>mp_bea_tat_f_015</txdHash>
+      <txtHash>mp_bea_tat_f_015</txtHash>
+      <zone>ZONE_LEFT_ARM</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_FEMALE</gender>
+      <award />
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="0.236000" y="0.550000" />
+      <scale x="0.180000" y="0.240000" />
+      <rotation value="0.000000" />
+      <nameHash>MP_Bea_M_Back_000</nameHash>
+      <txdHash>mp_bea_tat_m_001</txdHash>
+      <txtHash>mp_bea_tat_m_001</txtHash>
+      <zone>ZONE_TORSO</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_MALE</gender>
+      <award />
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="0.820000" y="0.585000" />
+      <scale x="0.100000" y="0.120000" />
+      <rotation value="0.000000" />
+      <nameHash>MP_Bea_M_Chest_000</nameHash>
+      <txdHash>mp_bea_tat_m_002</txdHash>
+      <txtHash>mp_bea_tat_m_002</txtHash>
+      <zone>ZONE_TORSO</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_MALE</gender>
+      <award />
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="0.610000" y="0.600000" />
+      <scale x="0.100000" y="0.120000" />
+      <rotation value="-9.360000" />
+      <nameHash>MP_Bea_M_Chest_001</nameHash>
+      <txdHash>mp_bea_tat_m_003</txdHash>
+      <txtHash>mp_bea_tat_m_003</txtHash>
+      <zone>ZONE_TORSO</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_MALE</gender>
+      <award />
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="0.500000" y="0.680000" />
+      <scale x="0.350000" y="0.220000" />
+      <rotation value="0.000000" />
+      <nameHash>MP_Bea_M_Head_000</nameHash>
+      <txdHash>mp_bea_tat_m_004</txdHash>
+      <txtHash>mp_bea_tat_m_004</txtHash>
+      <zone>ZONE_HEAD</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_MALE</gender>
+      <award />
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="0.840000" y="0.680000" />
+      <scale x="0.100000" y="0.100000" />
+      <rotation value="-71.279999" />
+      <nameHash>MP_Bea_M_Head_001</nameHash>
+      <txdHash>mp_bea_tat_m_005</txdHash>
+      <txtHash>mp_bea_tat_m_005</txtHash>
+      <zone>ZONE_HEAD</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_MALE</gender>
+      <award />
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="0.150000" y="0.670000" />
+      <scale x="-0.100000" y="0.120000" />
+      <rotation value="-17.000000" />
+      <nameHash>MP_Bea_M_Head_002</nameHash>
+      <txdHash>mp_bea_tat_m_014</txdHash>
+      <txtHash>mp_bea_tat_m_014</txtHash>
+      <zone>ZONE_HEAD</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_MALE</gender>
+      <award />
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="0.200000" y="0.340000" />
+      <scale x="0.150000" y="0.180000" />
+      <rotation value="0.000000" />
+      <nameHash>MP_Bea_M_Lleg_000</nameHash>
+      <txdHash>mp_bea_tat_m_010</txdHash>
+      <txtHash>mp_bea_tat_m_010</txtHash>
+      <zone>ZONE_LEFT_LEG</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_MALE</gender>
+      <award />
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="0.750000" y="0.340000" />
+      <scale x="0.200000" y="0.200000" />
+      <rotation value="0.000000" />
+      <nameHash>MP_Bea_M_Rleg_000</nameHash>
+      <txdHash>mp_bea_tat_m_008</txdHash>
+      <txtHash>mp_bea_tat_m_008</txtHash>
+      <zone>ZONE_RIGHT_LEG</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_MALE</gender>
+      <award />
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="0.500000" y="0.830000" />
+      <scale x="0.100000" y="0.150000" />
+      <rotation value="0.000000" />
+      <nameHash>MP_Bea_M_RArm_000</nameHash>
+      <txdHash>mp_bea_tat_m_009</txdHash>
+      <txtHash>mp_bea_tat_m_009</txtHash>
+      <zone>ZONE_RIGHT_ARM</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_MALE</gender>
+      <award />
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="0.500000" y="0.850000" />
+      <scale x="0.100000" y="0.120000" />
+      <rotation value="0.000000" />
+      <nameHash>MP_Bea_M_LArm_000</nameHash>
+      <txdHash>mp_bea_tat_m_007</txdHash>
+      <txtHash>mp_bea_tat_m_007</txtHash>
+      <zone>ZONE_LEFT_ARM</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_MALE</gender>
+      <award />
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="0.500000" y="0.880000" />
+      <scale x="0.070000" y="0.100000" />
+      <rotation value="0.000000" />
+      <nameHash>MP_Bea_M_LArm_001</nameHash>
+      <txdHash>mp_bea_tat_m_000</txdHash>
+      <txtHash>mp_bea_tat_m_000</txtHash>
+      <zone>ZONE_LEFT_ARM</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_MALE</gender>
+      <award />
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="0.800000" y="0.350000" />
+      <scale x="0.100000" y="0.100000" />
+      <rotation value="0.000000" />
+      <nameHash>MP_Bea_M_Neck_000</nameHash>
+      <txdHash>mp_bea_tat_m_011</txdHash>
+      <txtHash>mp_bea_tat_m_011</txtHash>
+      <zone>ZONE_HEAD</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_MALE</gender>
+      <award />
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="0.300000" y="0.300000" />
+      <scale x="0.180000" y="0.120000" />
+      <rotation value="-23.400000" />
+      <nameHash>MP_Bea_M_Neck_001</nameHash>
+      <txdHash>mp_bea_tat_m_012</txdHash>
+      <txtHash>mp_bea_tat_m_012</txtHash>
+      <zone>ZONE_HEAD</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_MALE</gender>
+      <award />
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="0.500000" y="0.840000" />
+      <scale x="0.100000" y="0.140000" />
+      <rotation value="0.000000" />
+      <nameHash>MP_Bea_M_RArm_001</nameHash>
+      <txdHash>mp_bea_tat_m_013</txdHash>
+      <txtHash>mp_bea_tat_m_013</txtHash>
+      <zone>ZONE_RIGHT_ARM</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_MALE</gender>
+      <award />
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="0.840000" y="0.220000" />
+      <scale x="0.100000" y="0.100000" />
+      <rotation value="30.000000" />
+      <nameHash>MP_Bea_M_Stom_000</nameHash>
+      <txdHash>mp_bea_tat_m_006</txdHash>
+      <txtHash>mp_bea_tat_m_006</txtHash>
+      <zone>ZONE_TORSO</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_MALE</gender>
+      <award />
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="0.740000" y="0.320000" />
+      <scale x="0.200000" y="0.200000" />
+      <rotation value="0.000000" />
+      <nameHash>MP_Bea_M_Stom_001</nameHash>
+      <txdHash>mp_bea_tat_m_015</txdHash>
+      <txtHash>mp_bea_tat_m_015</txtHash>
+      <zone>ZONE_TORSO</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_MALE</gender>
+      <award />
+      <awardLevel />
+    </Item>
+    <Item>
+      <uvPos x="0.500000" y="0.500000" />
+      <scale x="0.600000" y="0.500000" />
+      <rotation value="0.000000" />
+      <nameHash>FM_Hair_Fuzz</nameHash>
+      <txdHash>mp_hair_fuzz</txdHash>
+      <txtHash>mp_hair_fuzz</txtHash>
+      <zone>ZONE_HEAD</zone>
+      <type>TYPE_TATTOO</type>
+      <faction>FM</faction>
+      <garment>All</garment>
+      <gender>GENDER_DONTCARE</gender>
+      <award />
+      <awardLevel />
+    </Item>
+  </presets>
+  <nameHash>mpBeach_overlays</nameHash>
+  <medalLocations content="vector2_array">
+    0.140000	0.070000	
+    0.370000	0.070000	
+    0.600000	0.070000	
+    0.835000	0.070000	
+    0.140000	0.150000	
+    0.370000	0.150000	
+    0.600000	0.150000	
+    0.835000	0.150000	
+    0.140000	0.230000	
+    0.370000	0.230000	
+    0.600000	0.230000	
+    0.835000	0.230000	
+    0.100000	0.700000	
+    0.300000	0.700000	
+    0.500000	0.700000	
+    0.700000	0.700000	
+  </medalLocations>
+  <medalScale x="0.240000" y="0.100000" />
+</PedDecorationCollection>

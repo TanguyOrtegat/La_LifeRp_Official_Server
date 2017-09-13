@@ -1,3 +1,8 @@
+local Positions = {
+  SortiBateau={x=-473.49890136719,y=6465.5151367188,z=0.8946158885956,distance=10},
+  SpawnBateau={x=-483.42041015625,y=6483.8056640625,z=1.47484564781189,distance=10},
+ }
+
 function DrawNotif(text)
 	SetNotificationTextEntry("STRING")
 	AddTextComponentString(text)
@@ -412,4 +417,68 @@ Citizen.CreateThread(function()
 			showIdPolice = false
 		end
 	end
+end)
+
+Citizen.CreateThread(function()
+  while true do
+    Citizen.Wait(0)
+    local playerPos = GetEntityCoords(GetPlayerPed(-1))
+    local distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Position.Sortibateau.x, Position.Sortibateau.y, Position.Sortibateau.z, true) -- METTRE LA POSITION DU POINT POUR OBTENIR LE BATEAU
+    if not IsInVehicle() then
+      if distance < 5 then
+        if camionSortie == false then
+          ShowInfo('~w~Appuyez sur ~INPUT_CONTEXT~ pour ~b~obtenir votre bateau~w~.', 0)
+          if IsControlJustPressed(1,38) then
+            TriggerServerEvent("poleemploi:getjobs")
+            Wait(200)
+            if user.jobs == 10 then -- METTRE LE METIER DE POLICE
+                local car = GetHashKey("dinghy3") -- J'ai mis le bon bateau
+                RequestModel(car)
+                while not HasModelLoaded(car) do
+                  Wait(1)
+                end
+                vehicle =  CreateVehicle(car, Position.SpawnBateau.x, Position.SpawnBateau.y, Position.SpawnBateau.z, 0.0, true, false)		 -- METTRE LA POSITION DU POINT DE SPAWN DU BATEAU (Différent du point de position pour l'obtenir)
+                MISSION.truck = vehicle
+                SetVehicleOnGroundProperly(vehicle)
+        				SetVehicleNumberPlateText(vehicle, job.plate)
+        				Wait(100)
+        				SetVehicleHasBeenOwnedByPlayer(vehicle,true)
+                SetVehRadioStation(vehicle, "OFF")
+                SetVehicleLivery(vehicle, 4)
+                SetPedIntoVehicle(GetPlayerPed(-1), vehicle, -1)
+                SetVehicleEngineOn(vehicle, true, false, false)
+                SetEntityAsMissionEntity(vehicle, true, true)
+                Wait(100)
+                Citizen.Wait(1)
+                camionSortie = true
+				onJobLegal = 1
+			else
+              TriggerEvent("itinerance:notif", "~r~Vous devez être policier !")
+            end
+          end
+        else
+          ShowInfo('~w~Appuyez sur ~INPUT_CONTEXT~ pour ~b~ranger votre bateau~w~.', 0)
+          if IsControlJustPressed(1,38) then
+            TriggerServerEvent("poleemploi:getjobs")
+            Wait(100)
+            if user.jobs == 10 then
+              camionSortie = false
+			  onJobLegal = 2
+            end
+          end
+        end
+      end
+    end
+end
+end)
+
+local DrawMarkerShow = true
+
+Citizen.CreateThread(function()
+    while true do
+    Citizen.Wait(0)
+    if DrawMarkerShow then
+    DrawMarker(1, Position.Sortibateau.x, Position.Sortibateau.y, Position.Sortibateau.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 4.0, 4.0, 1.0, 0, 0, 255, 75, 0, 0, 2, 0, 0, 0, 0) -- METTRE LA POSITION DU POINT POUR OBTENIR LE BATEAU (marker, et rajoute le blip)
+    end
+  end
 end)
