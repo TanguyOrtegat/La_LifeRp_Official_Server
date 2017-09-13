@@ -161,11 +161,6 @@ User = {
 	telephone = "",
 	gender = ""
 }
---SetPedDecoration(ped, col, tats)
-local Tattoos = {
-  [1] = {["name"] = "Rien"},
-  [2] = {["name"] = "MP_Bea_M_RArm_001"},
-}
 
 -- AddEventHandler("playerSpawned", function()
 -- 	TriggerServerEvent('vmenu:sendData_s')
@@ -1039,8 +1034,8 @@ AddEventHandler("vmenu:bourse", function(roche, rochechange, cuivre, cuivrechang
   end
 end)
 
+
 Citizen.CreateThread(function()
-  --    Citizen.InvokeNative(0x5F5D1665E352A839, Citizen.PointerValueIntInitialized(GetPlayerPed(-1)), GetHashKey("mpbeach_overlays"), GetHashKey("mp_bea_tat_m_013"))
 	while true do
 		Citizen.Wait(0)
 		if showId == true then
@@ -1299,18 +1294,12 @@ function Construct()
   VMenu.AddNum(menu, "Barbe", "Barbe", 0, 28, "Changer la barbe")
   VMenu.AddNum(menu, "Couleur", "BarbeColor", 0, 100, "Changer la couleur de la barbe")
   VMenu.AddNum(menu, "Couleur secondaire", "BarbeSec", 0, 100, "Changer la couleur secondaire")
-  VMenu.AddNum(menu, "Eyebrows", "Eyebrows", 0, 33, "Sourcils")
-  VMenu.AddNum(menu, "Eyebrows Couleur Primaire", "Eyebrows_Color", 0, 33, "Couleur Primaire")
-  VMenu.AddNum(menu, "Eyebrows Couleur Secondaire", "Eyebrows_Color_1", 0, 33, "Couleur Secondaire")
-  VMenu.AddFunc(menu, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor"),
-      getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1")}, "Valider")
+  VMenu.AddFunc(menu, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec")}, "Valider")
 
   local menu = 10
   VMenu.AddMenu(menu, "", "default") -- default = Header "Texte" sur fond bleu
   VMenu.AddNum(menu, "Sexe", "Sexe", 0, 1, "Changer de sexe")
   VMenu.AddNum(menu, "Face", "Face", 0, 45, "Changer de face")
-  VMenu.AddNum(menu, "Couleur", "Couleur", 0, 45, "Changer la couleur")
-  VMenu.AddNum(menu, "Yeux", "Yeux", 0, 45, "Changer les yeux")
   VMenu.AddFunc(menu, "Valider", "vmenu:getclientFace", {getOpt("Sexe"),getOpt("Face"),0}, "Obtenir ce changement")
 
   local menu = 11
@@ -1457,12 +1446,6 @@ function Construct()
 
   local menu = 33
     VMenu.AddMenu(menu, "", "default")
-
-  local menu = 50
-    VMenu.AddMenu(menu, "", "default")
-    VMenu.AddSep(menu,"Styliste")
-    VMenu.AddNum(menu, "Tattoos", "tattoos", 1, 33, "Tattoos")
-    VMenu.AddFunc(menu, "Valider", "vmenu:settattoos", {GetHashKey(Tattoos[getOpt("tattoos")].name)}, "Valider")
 
 	------- MAIN MENU F7
 	local menu = 98
@@ -1703,18 +1686,7 @@ function getBarberShop()
     VMenu.AddNum(9, "Barbe", "Barbe", 0, 28, "Changer la barbe")
     VMenu.AddNum(9, "Couleur", "BarbeColor", 0, 100, "Changer la couleur de la barbe")
   end
-  VMenu.AddNum(9, "Sourcil", "Eyebrows", 0, 33, "Sourcils")
-  VMenu.AddNum(9, "Sourcil Couleur Primaire", "Eyebrows_Color", 0, 33, "Couleur Primaire")
-  VMenu.AddNum(9, "Sourcil Couleur Secondaire", "Eyebrows_Color_1", 0, 33, "Couleur Secondaire")
-  VMenu.AddFunc(9, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor"),
-      getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1")}, "Valider")
-end
-
-function getTatsShop()
-  VMenu.AddMenu(50, "", "default")
-  VMenu.AddSep(50,"Styliste")
-  VMenu.AddNum(50, "Tattoos", "tattoos", 1, 33, "Tattoos")
-  VMenu.AddFunc(50, "Valider", "vmenu:settattoos", {GetHashKey(Tattoos[getOpt("tattoos")].name)}, "Valider")
+  VMenu.AddFunc(9, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor")}, "Valider")
 end
 
 function getArmoryGouv()
@@ -1828,19 +1800,11 @@ Citizen.CreateThread(function()
       VMenu.EditFunc(10, "Valider", "vmenu:getclientFace", {getOpt("Sexe"),getOpt("Face"),0}, "Obtenir ce changement")
     elseif VOpts.toUpdate == "Face" or VOpts.toUpdate == "Face_text" then
       -- local id = getOpt("Face")
-      SetPedHeadBlendData(GetPlayerPed(-1), getOpt("Face"), getOpt("Face"), getOpt("Face"), getOpt("Couleur"), getOpt("Couleur"), getOpt("Couleur"), 1.0, 1.0, 1.0, true)
+      SetPedHeadBlendData(GetPlayerPed(-1), getOpt("Face"), getOpt("Face"), getOpt("Face"), getOpt("Face"), getOpt("Face"), getOpt("Face"), 1.0, 1.0, 1.0, true)
       -- La barbe bientôt
       --SetPedHeadOverlay(playerPed,  1,  Character['beard_1'],  (Character['beard_2'] / 10) + 0.0)    -- Beard
       --SetPedHeadOverlayColor(playerPed,  1,  1,  Character['beard_3'],  Character['beard_4'])        -- Beard Color
       SetPedComponentVariation(GetPlayerPed(-1), 0, getOpt("Face"), 0, 2)
-      VMenu.EditFunc(10, "Valider", "vmenu:getclientFace", {getOpt("Sexe"),getOpt("Face"),0}, "Obtenir ce changement")
-    elseif VOpts.toUpdate == "Yeux" then
-      -- local id = getOpt("Face")
-      --SetPedHeadBlendData(GetPlayerPed(-1), getOpt("Face"), getOpt("Face"), getOpt("Face"), getOpt("Couleur"), getOpt("Couleur"), getOpt("Couleur"), 1.0, 1.0, 1.0, true)
-      -- La barbe bientôt
-      --SetPedHeadOverlay(playerPed,  1,  Character['beard_1'],  (Character['beard_2'] / 10) + 0.0)    -- Beard
-      --SetPedHeadOverlayColor(playerPed,  1,  1,  Character['beard_3'],  Character['beard_4'])        -- Beard Color
-      SetPedEyeColor(GetPlayerPed(-1), getOpt("Yeux"))
       VMenu.EditFunc(10, "Valider", "vmenu:getclientFace", {getOpt("Sexe"),getOpt("Face"),0}, "Obtenir ce changement")
     end
   end
@@ -1915,27 +1879,14 @@ Citizen.CreateThread(function()
         if VOpts.toUpdate == "Barbe" or VOpts.toUpdate == "BarbeColor" then
           SetPedHeadOverlay(GetPlayerPed(-1), 1, getOpt("Barbe"), 1.0)
           SetPedHeadOverlayColor(GetPlayerPed(-1), 1, 1, getOpt("BarbeColor"), 0)
-          VMenu.EditFunc(9, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor"),
-              getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1")}, "Valider")
-                    end
-      end
-      if VOpts.toUpdate == "Eyebrows" then
-        Citizen.Trace(getOpt("Eyebrows"))
-        SetPedHeadOverlay(GetPlayerPed(-1), 2, getOpt("Eyebrows"), 1.0)
-        VMenu.EditFunc(9, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor"),
-            getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1")}, "Valider")
-      end
-      if VOpts.toUpdate == "Eyebrows_Color" or VOpts.toUpdate == "Eyebrows_Color_1" then
-        SetPedHeadOverlayColor(GetPlayerPed(-1), 2, 1,getOpt("Eyebrows_Color"), getOpt("Eyebrows_Color_1"))
-          VMenu.EditFunc(9, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor"),
-              getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1")}, "Valider")
+          VMenu.EditFunc(9, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor")}, "Valider")
+        end
       end
         if VOpts.toUpdate == "Hair" or VOpts.toUpdate == "HairSec" or VOpts.toUpdate == "HairColor" or VOpts.toUpdate == "HairColorSec" then
           SetPedComponentVariation(GetPlayerPed(-1), 2, getOpt("Hair"), getOpt("HairSec"), 2)
           SetPedHairColor(GetPlayerPed(-1), getOpt("HairColor"), getOpt("HairColorSec"))
-          VMenu.EditFunc(9, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor"),
-              getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1")}, "Valider")
-                    end
+          VMenu.EditFunc(9, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor")}, "Valider")
+        end
         if VOpts.toUpdate == "Hair" then
           if (getOpt("Hair") == 1) or (getOpt("Hair") == 2) or (getOpt("Hair") == 3) or (getOpt("Hair") == 5) or (getOpt("Hair") == 6) or (getOpt("Hair") == 10) or (getOpt("Hair") == 11) or (getOpt("Hair") == 13) or (getOpt("Hair") == 15) then
             VMenu.EditNum(9, "Couleur", "HairSec", 0, 5, "Change la couleur des cheveux")
@@ -1946,19 +1897,6 @@ Citizen.CreateThread(function()
           end
         end
       end
-      if VMenu.tattoos then
-      if GetEntityModel(GetPlayerPed(-1)) == 1885233650 then
-        if VOpts.toUpdate == "tattoos" then
-          Citizen.Trace(getOpt("tattoos"))
-            local hash = GetHashKey(Tattoos[getOpt("tattoos")].name)
-            local col = GetHashKey("mpbeach_overlays")
-            local ped = GetPlayerPed(-1)
-            ClearPedDecorations(ped)
-            ApplyPedOverlay(ped, col, hash)
-            VMenu.EditFunc(50, "Valider", "vmenu:settattoos", {hash}, "Valider")
-            end
-      end
-    end
 			-- Ne Pas Toucher
 			VOpts.toUpdate = nil
 		end
@@ -2000,8 +1938,6 @@ Citizen.CreateThread(function()
 
     elseif (IsNearPoints(job_tow, 3) == true) then
 
-    elseif (IsNearPoints(tattoo, 3) == true) then
-        VMenu.tattoos = true
 		elseif (IsNearPoints(JailPolice, 1) == true) then
 
 		elseif (IsNearPoints(lavage_argent, 3) == true) then
@@ -2234,11 +2170,6 @@ Citizen.CreateThread(function()
 			elseif (IsNearPoints(informateur_coke, 3) == true) then
 				TriggerEvent("vmenu:openMenu", 20)
         local menu = 25
-      elseif (IsNearPoints(tattoo, 3) == true) then
-        TriggerEvent("vmenu:openMenu", 50)
-        if VMenu.tattoos == false then
-          getTatsShop()
-        end
       elseif (IsNearPoints(apart_entrer, 1.5) == true) then
         TriggerEvent("vmenu:openMenu",23)
         VMenu.ResetMenu(23, "", "default")
@@ -2315,9 +2246,6 @@ Citizen.CreateThread(function()
 			VMenu.Info("Appuyer sur ~g~F6~s~ pour parler avec l'informateur", false)
 		elseif (IsNearPoints(informateur_organe, 3) == true) then
 			VMenu.Info("Appuyer sur ~g~F6~s~ pour parler avec l'informateur", false)
-    elseif (IsNearPoints(tattoo, 3) == true) then
-      VMenu.tattoos = false
-      VMenu.Info("Appuyer sur ~g~F6~s~ pour voir le magasin", false)
     elseif (IsNearPoints(apart_entrer, 1.5) == true) then
       VMenu.Info("Appuyer sur ~g~F6~s~ accéder à votre porte d'entrer", false)
     elseif (IsNearPoints(apart_sorti, 1.5) == true) then
