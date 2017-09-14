@@ -156,6 +156,7 @@ AddEventHandler("menutow:DepanOG", function(target, rangDepan)
 	VMenu.AddFunc(98, "Attacher/détacher", "menutow:attach", {}, "Accéder")
 	VMenu.AddFunc(98, "Réparer le véhicule", "menutow:repair", {}, "Accéder")
 	VMenu.AddFunc(98, "Nettoyer le véhicule", "menutow:wash", {}, "Accéder")
+	VMenu.AddFunc(98, "Crocheter la serrure du véhicule", "menupolice:unlock", {}, "Accéder")
 	VMenu.AddNum10(98, "Montant facture", "AmfacTow", 0, 10000, "La facturation vous permet d'envoyer directement l'argent dans le coffre")
 	VMenu.AddFunc(98, "Donner facture", "menutow:givefac", {getOpt("AmfacTow")}, "Accéder")
 	if rangDepan == 16 then
