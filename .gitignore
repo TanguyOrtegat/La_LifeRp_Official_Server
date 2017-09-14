@@ -5,6 +5,7 @@ env.cfg
 
 CitizenFX.log
 ghostsessiondebug.txt
+desktop.ini
 
 .ftpconfig
 .remote-sync.json
