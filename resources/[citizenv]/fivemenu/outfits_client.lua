@@ -892,7 +892,6 @@ AddEventHandler("vmenu:updateChar", function(args)
   TriggerServerEvent("weaponshop:GiveWeapons")
   VMenu.updatedChar = true
 end)
-
 RegisterNetEvent("vmenu:changeGender")
 AddEventHandler("vmenu:changeGender", function(gender)
   model = GetHashKey("mp_m_freemode_01")

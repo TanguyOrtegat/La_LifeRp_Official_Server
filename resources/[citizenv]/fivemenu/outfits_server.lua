@@ -1,4 +1,4 @@
-function updateHair(player, e, v, t, y, g, h,a,b,c,d,f,z)
+function updateHair(player, e, v, t, y, g, h,a,b,c)
     local hair = e
     local hairsec = v
     local haircolor = t
@@ -8,9 +8,6 @@ function updateHair(player, e, v, t, y, g, h,a,b,c,d,f,z)
     local sourcil = a
     local sourcilcolor = b
     local sourcilcolorsec = c
-    local makeup = d
-    local lipstick = f
-    local lipstick_color = z
     print()
     print(lipstick_color)
     MySQL.Async.execute("UPDATE outfits SET `hair`=@hair WHERE identifier=@user",{['@hair'] = hair, ['@user'] = player})
@@ -22,20 +19,41 @@ function updateHair(player, e, v, t, y, g, h,a,b,c,d,f,z)
     MySQL.Async.execute("UPDATE outfits SET `sourcil`=@sourcil WHERE identifier=@user",{['@sourcil'] = sourcil, ['@user'] = player})
     MySQL.Async.execute("UPDATE outfits SET `sourcilcolor`=@sourcilcolor WHERE identifier=@user",{['@sourcilcolor'] = sourcilcolor, ['@user'] = player})
     MySQL.Async.execute("UPDATE outfits SET `sourcilcolorsec`=@sourcilcolorsec WHERE identifier=@user",{['@sourcilcolorsec'] = sourcilcolorsec, ['@user'] = player})
-    MySQL.Async.execute("UPDATE outfits SET `makeup`=@makeup WHERE identifier=@user",{['@makeup'] = makeup, ['@user'] = player})
-    MySQL.Async.execute("UPDATE outfits SET `lipstick`=@lipstick WHERE identifier=@user",{['@lipstick'] = lipstick, ['@user'] = player})
-    MySQL.Async.execute("UPDATE outfits SET `lipstick_color`=@lipstick_color WHERE identifier=@user",{['@lipstick_color'] = lipstick_color, ['@user'] = player})
 
 end
 
+function updatemakeup(player,a,b,c)
+    print(a)
+    print(b)
+    print(c)
+    MySQL.Async.execute("UPDATE outfits SET `makeup`=@makeup WHERE identifier=@user",{['@makeup'] = a, ['@user'] = player})
+    MySQL.Async.execute("UPDATE outfits SET `lipstick`=@lipstick WHERE identifier=@user",{['@lipstick'] = b, ['@user'] = player})
+    MySQL.Async.execute("UPDATE outfits SET `lipstick_color`=@lipstick_color WHERE identifier=@user",{['@lipstick_color'] = c, ['@user'] = player})
+end
+
+RegisterServerEvent('vmenu:getmake')
+AddEventHandler("vmenu:getmake", function(makeup,lipstick,lipstick_color) -- target = Dernier joueur à avoir parlé, pas besoin ici. Mais obligatoire !
+    local playerSource = source
+    TriggerEvent('es:getPlayerFromId', playerSource, function(user)
+        if (user) then
+            local player = user.identifier
+            updatemakeup(player,makeup,lipstick,lipstick_color)
+            --print(sourcil)
+            --print(sourcilcolor)
+        else
+            TriggerEvent("es:desyncMsg")
+        end
+    end)
+end)
+
 RegisterServerEvent('vmenu:getHair')
-AddEventHandler('vmenu:getHair', function(hair, hairsec, haircolor, haircolorsec, beard, beardcolor,sourcil,sourcilcolor,sourcilcolorsec,makeup,lipstick,lipstick_color)
+AddEventHandler('vmenu:getHair', function(hair, hairsec, haircolor, haircolorsec, beard, beardcolor,sourcil,sourcilcolor,sourcilcolorsec)
     local playerSource = source
     print(lipstick_color)
     TriggerEvent('es:getPlayerFromId', playerSource, function(user)
         if (user) then
             local player = user.identifier
-            updateHair(player, hair, hairsec, haircolor, haircolorsec, beard, beardcolor,sourcil,sourcilcolor,sourcilcolorsec,makeup,lipstick,lipstick_color)
+            updateHair(player, hair, hairsec, haircolor, haircolorsec, beard, beardcolor,sourcil,sourcilcolor,sourcilcolorsec)
             --print(sourcil)
             --print(sourcilcolor)
         else

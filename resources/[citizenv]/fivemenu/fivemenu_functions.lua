@@ -147,6 +147,7 @@ AddEventHandler("vmenu:MainMenuOG", function(target)
 	VMenu.garde = false
 	VMenu.apart = false
 	VMenu.tattoos = false
+	VMenu.makeup = false
 end)
 ----------------------------------
 
@@ -412,8 +413,12 @@ AddEventHandler("vmenu:getclientOutfits", function(target, item) -- target = Der
 	end)
 end)
 
-AddEventHandler("vmenu:getclientHair", function(target, hair, hairsec, hairc, haircsec, beard, beardcolor,sourcil,sourcilcolor,sourcilcolorsec,makeup,lipstick,lipstick_color) -- target = Dernier joueur à avoir parlé, pas besoin ici. Mais obligatoire !
-	TriggerServerEvent("vmenu:getHair", hair, hairsec, hairc, haircsec, beard, beardcolor,sourcil,sourcilcolor,sourcilcolorsec,makeup,lipstick,lipstick_color)
+AddEventHandler("vmenu:getclientHair", function(target, hair, hairsec, hairc, haircsec, beard, beardcolor,sourcil,sourcilcolor,sourcilcolorsec) -- target = Dernier joueur à avoir parlé, pas besoin ici. Mais obligatoire !
+	TriggerServerEvent("vmenu:getHair", hair, hairsec, hairc, haircsec, beard, beardcolor,sourcil,sourcilcolor,sourcilcolorsec)
+end)
+
+AddEventHandler("vmenu:getclientmake", function(target, makeup,lipstick,lipstick_color) -- target = Dernier joueur à avoir parlé, pas besoin ici. Mais obligatoire !
+	TriggerServerEvent("vmenu:getmake", makeup, lipstick, lipstick_color)
 end)
 
 AddEventHandler("vmenu:settattoos", function(target,torso,bras_g,bras_d,jambe_g,jambe_d,tete) -- target = Dernier joueur à avoir parlé, pas besoin ici. Mais obligatoire !
