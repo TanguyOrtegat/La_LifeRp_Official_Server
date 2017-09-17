@@ -22,17 +22,20 @@ function updateHair(player, e, v, t, y, g, h,a,b,c,d,f,z)
     MySQL.Async.execute("UPDATE outfits SET `sourcil`=@sourcil WHERE identifier=@user",{['@sourcil'] = sourcil, ['@user'] = player})
     MySQL.Async.execute("UPDATE outfits SET `sourcilcolor`=@sourcilcolor WHERE identifier=@user",{['@sourcilcolor'] = sourcilcolor, ['@user'] = player})
     MySQL.Async.execute("UPDATE outfits SET `sourcilcolorsec`=@sourcilcolorsec WHERE identifier=@user",{['@sourcilcolorsec'] = sourcilcolorsec, ['@user'] = player})
+    MySQL.Async.execute("UPDATE outfits SET `makeup`=@makeup WHERE identifier=@user",{['@makeup'] = makeup, ['@user'] = player})
+    MySQL.Async.execute("UPDATE outfits SET `lipstick`=@lipstick WHERE identifier=@user",{['@lipstick'] = lipstick, ['@user'] = player})
+    MySQL.Async.execute("UPDATE outfits SET `lipstick_color`=@lipstick_color WHERE identifier=@user",{['@lipstick_color'] = lipstick_color, ['@user'] = player})
 
 end
 
 RegisterServerEvent('vmenu:getHair')
-AddEventHandler('vmenu:getHair', function(hair, hairsec, haircolor, haircolorsec, beard, beardcolor,sourcil,sourcilcolor,sourcilcolorsec)
+AddEventHandler('vmenu:getHair', function(hair, hairsec, haircolor, haircolorsec, beard, beardcolor,sourcil,sourcilcolor,sourcilcolorsec,makeup,lipstick,lipstick_color)
     local playerSource = source
     print(lipstick_color)
     TriggerEvent('es:getPlayerFromId', playerSource, function(user)
         if (user) then
             local player = user.identifier
-            updateHair(player, hair, hairsec, haircolor, haircolorsec, beard, beardcolor,sourcil,sourcilcolor,sourcilcolorsec)
+            updateHair(player, hair, hairsec, haircolor, haircolorsec, beard, beardcolor,sourcil,sourcilcolor,sourcilcolorsec,makeup,lipstick,lipstick_color)
             --print(sourcil)
             --print(sourcilcolor)
         else
@@ -42,7 +45,7 @@ AddEventHandler('vmenu:getHair', function(hair, hairsec, haircolor, haircolorsec
 end)
 
 RegisterServerEvent('vmenu:setclienttattoo')
-AddEventHandler('vmenu:setclienttattoo', function(torso,bras_g,bras_d,jambe_g,jambe_d,tete,makeup,lipstick,lipstick_color,money)
+AddEventHandler('vmenu:setclienttattoo', function(torso,bras_g,bras_d,jambe_g,jambe_d,tete,money)
     local playerSource = source
     local price = money
     TriggerEvent('es:getPlayerFromId', playerSource, function(user)
@@ -51,7 +54,7 @@ AddEventHandler('vmenu:setclienttattoo', function(torso,bras_g,bras_d,jambe_g,ja
             if (user.money >= price) then
                 LaLife.Player.Manager.RemovePlayerMoney(user,price)
                 local player = user.identifier
-                updatetats(player, torso,bras_g,bras_d,jambe_g,jambe_d,tete,makeup,lipstick,lipstick_color)
+                updatetats(player, torso,bras_g,bras_d,jambe_g,jambe_d,tete)
                 MySQL.Async.fetchAll("SELECT money FROM user_appartement WHERE name = @name", {['@name'] = 'Tattoo'}, function (result)
 
                     local new_balance = (result[1].money + price)/2
@@ -84,7 +87,7 @@ function updateFace(player, e, v, t)
     MySQL.Async.execute("UPDATE outfits SET `face_text`=@face_text WHERE identifier=@user",{['@face_text'] = face_text, ['@user'] = player})
 end
 
-function updatetats(player,torso,bras_g,bras_d,jambe_g,jambe_d,tete,makeup,lipstick,lipstick_color)
+function updatetats(player,torso,bras_g,bras_d,jambe_g,jambe_d,tete)
     local face = v
     local face_text = t
     MySQL.Async.execute("UPDATE outfits SET `tattoo_torso`=@tattoo WHERE identifier=@user",{['@tattoo'] = torso, ['@user'] = player})
@@ -93,9 +96,6 @@ function updatetats(player,torso,bras_g,bras_d,jambe_g,jambe_d,tete,makeup,lipst
     MySQL.Async.execute("UPDATE outfits SET `tattoo_jambe_g`=@tattoo WHERE identifier=@user",{['@tattoo'] = jambe_g, ['@user'] = player})
     MySQL.Async.execute("UPDATE outfits SET `tattoo_jambe_d`=@tattoo WHERE identifier=@user",{['@tattoo'] = jambe_d, ['@user'] = player})
     MySQL.Async.execute("UPDATE outfits SET `tattoo_tete`=@tattoo WHERE identifier=@user",{['@tattoo'] = tete, ['@user'] = player})
-    MySQL.Async.execute("UPDATE outfits SET `makeup`=@makeup WHERE identifier=@user",{['@makeup'] = makeup, ['@user'] = player})
-    MySQL.Async.execute("UPDATE outfits SET `lipstick`=@lipstick WHERE identifier=@user",{['@lipstick'] = lipstick, ['@user'] = player})
-    MySQL.Async.execute("UPDATE outfits SET `lipstick_color`=@lipstick_color WHERE identifier=@user",{['@lipstick_color'] = lipstick_color, ['@user'] = player})
 end
 
 RegisterServerEvent('vmenu:getFace')
