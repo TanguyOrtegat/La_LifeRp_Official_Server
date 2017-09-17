@@ -1665,9 +1665,8 @@ function getVoteMenu()
   TriggerServerEvent('vmenu:updateUser', 28)
   Wait(100)
   VMenu.ResetMenu(28, "", "default")
-  VMenu.AddFunc(28, "Une Merde", "vmenu:takevote", {"Une merde"}, lang.common.access)
-  VMenu.AddFunc(28, "Shakir Darwish", "vmenu:takevote", {"Shakir"}, lang.common.access)
-  VMenu.AddFunc(28, "Montecristo", "vmenu:takevote", {"Monte"}, lang.common.access)
+  VMenu.AddFunc(28, "Frey Marx", "vmenu:takevote", {"Frey"}, lang.common.access)
+  VMenu.AddFunc(28, "Guatain Prinptemps", "vmenu:takevote", {"Printemps"}, lang.common.access)
 end
 
 RegisterNetEvent("vmenu:takevote")

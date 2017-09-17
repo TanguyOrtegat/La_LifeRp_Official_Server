@@ -6440,8 +6440,8 @@
             See also: [Resource manifest](https://wiki.fivem.net/wiki/Resource_manifest)
             </summary>
             <param name="index">The value index, in a range from [0..GET_NUM_RESOURCE_METDATA-1].</param>
-            <param name="resourceName">The resource name.</param>
             <param name="metadataKey">The key in the resource manifest.</param>
+            <param name="resourceName">The resource name.</param>
         </member>
         <member name="M:CitizenFX.Core.Native.API.IsDuplicityVersion">
             <summary>
@@ -6464,10 +6464,10 @@
             Writes the specified data to a file in the specified resource.
             Using a length of `-1` will automatically detect the length assuming the data is a C string.
             </summary>
-            <param name="fileName">The name of the file.</param>
             <param name="dataLength">The length of the written data.</param>
-            <param name="resourceName">The name of the resource.</param>
             <param name="data">The data to write to the file.</param>
+            <param name="fileName">The name of the file.</param>
+            <param name="resourceName">The name of the resource.</param>
             <returns>A value indicating if the write succeeded.</returns>
         </member>
         <member name="M:CitizenFX.Core.Native.API.TriggerClientEventInternal(System.String,System.String,System.String,System.Int32)">

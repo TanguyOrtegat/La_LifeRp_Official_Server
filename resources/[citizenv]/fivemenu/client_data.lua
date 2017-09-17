@@ -152,7 +152,7 @@ informateur_organe = {
 }
 
 lavage_argent = {
-  {name="Lave le cash", x = 3426.9228515625, y = 5174.5190429688, z = 5.0005192756653},
+  {name="Lave le cash", x = -2190.1015625, y = 257.74072265625, z = 194.60456848145},
 }
 
 apart_entrer = {
