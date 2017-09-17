@@ -1,5 +1,6 @@
 local threads = {}
 local curThread
+local curThreadIndex
 
 function Citizen.CreateThread(threadFunction)
 	table.insert(threads, {
@@ -32,6 +33,7 @@ function Citizen.CreateThreadNow(threadFunction)
 
 	local result, err = coroutine.resume(coro)
 
+	local resumedThread = curThread
 	-- restore last thread
 	curThread = oldThread
 
@@ -39,9 +41,42 @@ function Citizen.CreateThreadNow(threadFunction)
 		error('Failed to execute thread: ' .. debug.traceback(coro, err))
 	end
 
-	if coroutine.status(coro) ~= 'dead' then
+	if resumedThread and coroutine.status(coro) ~= 'dead' then
 		table.insert(threads, t)
 	end
+end
+
+function Citizen.Await(promise)
+	if not curThread then
+		error("Current execution context is not in the scheduler, you should use CreateThread / SetTimeout or Event system (AddEventHandler) to be able to Await")
+	end
+
+	-- Remove current thread from the pool (avoid resume from the loop)
+	if curThreadIndex then
+		table.remove(threads, curThreadIndex)
+	end
+
+	curThreadIndex = nil
+	local resumableThread = curThread
+
+	promise:next(function (result)
+		-- Reattach thread
+		table.insert(threads, resumableThread)
+
+		curThread = resumableThread
+		curThreadIndex = #threads
+
+		local result, err = coroutine.resume(resumableThread.coroutine, result)
+
+		if err then
+			error('Failed to resume thread: ' .. debug.traceback(resumableThread.coroutine, err))
+		end
+
+		return result
+	end)
+
+	curThread = nil
+	return coroutine.yield()
 end
 
 -- SetTimeout
@@ -64,6 +99,7 @@ Citizen.SetTickRoutine(function()
 
 		if curTime >= thread.wakeTime then
 			curThread = thread
+			curThreadIndex = i
 
 			local status = coroutine.status(thread.coroutine)
 
@@ -80,6 +116,9 @@ Citizen.SetTickRoutine(function()
 			end
 		end
 	end
+
+	curThread = nil
+	curThreadIndex = nil
 end)
 
 local alwaysSafeEvents = {
@@ -185,7 +224,7 @@ if IsDuplicityVersion() then
 
 		return TriggerClientEventInternal(eventName, playerId, payload, payload:len())
 	end
-	
+
 	RegisterServerEvent = RegisterNetEvent
 	RconPrint = Citizen.Trace
 	GetPlayerEP = GetPlayerEndpoint
@@ -359,6 +398,9 @@ local function getExportEventName(resource, name)
 	return string.format('__cfx_export_%s_%s', resource, name)
 end
 
+-- callback cache to avoid extra call to serialization / deserialization process at each time getting an export
+local exportsCallbackCache = {}
+
 local exportKey = (IsDuplicityVersion() and 'server_export' or 'export')
 
 AddEventHandler(('on%sResourceStart'):format(IsDuplicityVersion() and 'Server' or 'Client'), function(resource)
@@ -376,6 +418,11 @@ AddEventHandler(('on%sResourceStart'):format(IsDuplicityVersion() and 'Server' o
 	end
 end)
 
+-- Remove cache when resource stop to avoid calling unexisting exports
+AddEventHandler(('on%sResourceStop'):format(IsDuplicityVersion() and 'Server' or 'Client'), function(resource)
+	exportsCallbackCache[resource] = {}
+end)
+
 -- invocation bit
 exports = {}
 
@@ -385,18 +432,28 @@ setmetatable(exports, {
 
 		return setmetatable({}, {
 			__index = function(t, k)
-				local value
+				if not exportsCallbackCache[resource] then
+					exportsCallbackCache[resource] = {}
+				end
 
-				TriggerEvent(getExportEventName(resource, k), function(exportData)
-					value = exportData
-				end)
+				if not exportsCallbackCache[resource][k] then
+					TriggerEvent(getExportEventName(resource, k), function(exportData)
+						exportsCallbackCache[resource][k] = exportData
+					end)
 
-				if not value then
-					error('No such export ' .. k .. ' in resource ' .. resource)
+					if not exportsCallbackCache[resource][k] then
+						error('No such export ' .. k .. ' in resource ' .. resource)
+					end
 				end
 
 				return function(self, ...)
-					return value(...)
+					local status, result = pcall(exportsCallbackCache[resource][k], ...)
+
+					if not status then
+						error('An error happened while calling export ' .. k .. ' of resource ' .. resource .. ' (' .. result .. '), see above for details')
+					end
+
+					return result
 				end
 			end,
 

@@ -47,6 +47,9 @@ client_script {
 	'menugarda_client.lua'
 	--'GUI.lua'
 }
+dependencies {
+    "mysql-async"
+}
 
 dependencies {
     "mysql-async"
