@@ -33,7 +33,6 @@ local arme_swat = {
 "WEAPON_SPECIALCARBINE",
 "WEAPON_PUMPSHOTGUN",
 }
-
 function DrawNotif(text)
 	SetNotificationTextEntry("STRING")
 	AddTextComponentString(text)
@@ -413,13 +412,32 @@ AddEventHandler("vmenu:getclientOutfits", function(target, item) -- target = Der
 	end)
 end)
 
-AddEventHandler("vmenu:getclientHair", function(target, hair, hairsec, hairc, haircsec, beard, beardcolor,sourcil,sourcilcolor,sourcilcolorsec) -- target = Dernier joueur à avoir parlé, pas besoin ici. Mais obligatoire !
-
-	TriggerServerEvent("vmenu:getHair", hair, hairsec, hairc, haircsec, beard, beardcolor,sourcil,sourcilcolor,sourcilcolorsec)
+AddEventHandler("vmenu:getclientHair", function(target, hair, hairsec, hairc, haircsec, beard, beardcolor,sourcil,sourcilcolor,sourcilcolorsec,makeup,lipstick,lipstick_color) -- target = Dernier joueur à avoir parlé, pas besoin ici. Mais obligatoire !
+	TriggerServerEvent("vmenu:getHair", hair, hairsec, hairc, haircsec, beard, beardcolor,sourcil,sourcilcolor,sourcilcolorsec,makeup,lipstick,lipstick_color)
 end)
 
 AddEventHandler("vmenu:settattoos", function(target,torso,bras_g,bras_d,jambe_g,jambe_d,tete) -- target = Dernier joueur à avoir parlé, pas besoin ici. Mais obligatoire !
-		TriggerServerEvent("vmenu:setclienttattoo", torso,bras_g,bras_d,jambe_g,jambe_d,tete)
+		local price = tonumber(0)
+		if(tonumber(torso) > 1) then
+			price = price + 800
+		end
+		if (tonumber(bras_g) > 1) then
+			price = price + 800
+		end
+		if (tonumber(bras_d) > 1) then
+			price = price + 800
+		end
+		if (tonumber(jambe_g) > 1) then
+			price = price + 800
+		end
+		if (tonumber(jambe_d) > 1) then
+			price = price + 800
+		end
+		if (tonumber(tete) > 1) then
+			price = price + 800
+		end
+		Citizen.Trace(price)
+		TriggerServerEvent("vmenu:setclienttattoo", torso,bras_g,bras_d,jambe_g,jambe_d,tete,price)
 end)
 
 AddEventHandler("vmenu:getclientFace", function(target, sex, face, face_text) -- target = Dernier joueur à avoir parlé, pas besoin ici. Mais obligatoire !

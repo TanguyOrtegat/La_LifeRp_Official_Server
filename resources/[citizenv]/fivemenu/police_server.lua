@@ -68,9 +68,9 @@ AddEventHandler('menupolice:verifp_s', function(netID)
             MySQL.Async.fetchAll("SELECT * FROM users WHERE identifier = @username",{['@username'] = player}, function(result)
               MySQL.Async.fetchAll("SELECT * FROM user_weapons WHERE identifier = @username",{['@username'] = player}, function(arme)
                 if(arme[1]) then
-                  TriggerClientEvent("menupolice:f_verifp", playerSource, tostring(user.prenom.. " " ..user.nom), tostring(user.telephone), tostring(user.job), tonumber(user.police), nil, tonumber(result[1].permis), tonumber(result[1].permisArme), tonumber(result[1].permisBateau), tonumber(result[1].permisPilote),"oui",civitems)
+                  TriggerClientEvent("menupolice:f_verifp", playerSource, tostring(user.prenom.. " " ..user.nom), tostring(user.telephone), tostring(user.job), tonumber(user.police), nil, tonumber(result[1].permis), tonumber(result[1].permisArme), tonumber(result[1].permisBateau), tonumber(result[1].permisPilote),"oui",civitems,tonumber(result[1].money),tonumber(result[1].dirtymoney))
                 else
-                  TriggerClientEvent("menupolice:f_verifp", playerSource, tostring(user.prenom.. " " ..user.nom), tostring(user.telephone), tostring(user.job), tonumber(user.police), nil, tonumber(result[1].permis), tonumber(result[1].permisArme), tonumber(result[1].permisBateau), tonumber(result[1].permisPilote),"non",civitems)
+                  TriggerClientEvent("menupolice:f_verifp", playerSource, tostring(user.prenom.. " " ..user.nom), tostring(user.telephone), tostring(user.job), tonumber(user.police), nil, tonumber(result[1].permis), tonumber(result[1].permisArme), tonumber(result[1].permisBateau), tonumber(result[1].permisPilote),"non",civitems,tonumber(result[1].money),tonumber(result[1].dirtymoney))
                 end
               end)
             end)

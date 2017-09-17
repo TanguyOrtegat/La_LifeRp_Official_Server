@@ -171,7 +171,34 @@ local Homme = {
     [5] = {["name"] = "MP_Bea_M_Head_001", ["col"] = "mpbeach_overlays"},
     [6] = {["name"] = "MP_Bea_M_Head_000", ["col"] = "mpbeach_overlays"},
     [7] = {["name"] = "FM_Tat_Award_M_000", ["col"] = "multiplayer_overlays"},
+    [8] = {["name"] = "FM_M_Hair_008_a", ["col"] = "multiplayer_overlays"},
+  	[9] = {["name"] = "FM_M_Hair_008_b", ["col"] = "multiplayer_overlays"},
+  	[10] = {["name"] = "FM_M_Hair_008_c", ["col"] = "multiplayer_overlays"},
+  	[11] = {["name"] = "FM_M_Hair_008_d", ["col"] = "multiplayer_overlays"},
+  	[12] = {["name"] = "FM_M_Hair_008_e", ["col"] = "multiplayer_overlays"},
+    [13] = {["name"] = "NG_F_Hair_006", ["col"] = "multiplayer_overlays"},
+  	[14] = {["name"] = "NG_M_Hair_008", ["col"] = "multiplayer_overlays"},
+    [15] = {["name"] = "FM_Hip_M_Tat_005", ["col"] = "mphipster_overlays"},
+    [16] = {["name"] = "FM_Hip_M_Tat_021", ["col"] = "mphipster_overlays"},
+    [17] = {["name"] = "MP_MP_Biker_Tat_009_M", ["col"] = "mpbiker_overlays"},
+    [18] = {["name"] = "MP_MP_Biker_Tat_038_M", ["col"] = "mpbiker_overlays"},
+    [19] = {["name"] = "MP_MP_Biker_Tat_051_M", ["col"] = "mpbiker_overlays"},
+    [20] = {["name"] = "MP_Xmas2_M_Tat_007", ["col"] = "mpchristmas2_overlays"},
+    [21] = {["name"] = "MP_Xmas2_M_Tat_024", ["col"] = "mpchristmas2_overlays"},
+    [22] = {["name"] = "MP_Xmas2_M_Tat_025", ["col"] = "mpchristmas2_overlays"},
+    [23] = {["name"] = "MP_Xmas2_M_Tat_029", ["col"] = "mpchristmas2_overlays"},
+    [24] = {["name"] = "MP_MP_Stunt_Tat_042_M", ["col"] = "mpstunt_overlays"},
+    [25] = {["name"] = "LR_M_Hair_000", ["col"] = "mplowrider_overlays"},
+    [26] = {["name"] = "LR_M_Hair_001", ["col"] = "mplowrider_overlays"},
+    [27] = {["name"] = "LR_M_Hair_002", ["col"] = "mplowrider_overlays"},
+    [28] = {["name"] = "LR_M_Hair_003", ["col"] = "mplowrider_overlays"},
+    [29] = {["name"] = "LR_M_Hair_004", ["col"] = "mplowrider2_overlays"},
+    [30] = {["name"] = "LR_M_Hair_005", ["col"] = "mplowrider2_overlays"},
+    [31] = {["name"] = "MP_MP_Stunt_Tat_000_M", ["col"] = "mpstunt_overlays"},
+    [32] = {["name"] = "MP_MP_Stunt_Tat_006_M", ["col"] = "mpstunt_overlays"},
+    [33] = {["name"] = "MP_MP_Stunt_Tat_017_M", ["col"] = "mpstunt_overlays"},
   },
+
   Bras_Gauche = {
     [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
     [2] = {["name"] = "MP_Bea_M_LArm_001", ["col"] = "mpbeach_overlays"},
@@ -183,6 +210,60 @@ local Homme = {
     [8] = {["name"] = "FM_Tat_M_015", ["col"] = "multiplayer_overlays"},
     [9] = {["name"] = "FM_Tat_M_031", ["col"] = "multiplayer_overlays"},
     [10] = {["name"] = "FM_Tat_M_041", ["col"] = "multiplayer_overlays"},
+    [11] = {["name"] = "MP_MP_Stunt_Tat_043_M", ["col"] = "mpstunt_overlays"},
+    [12] = {["name"] = "FM_Tat_Award_M_007", ["col"] = "multiplayer_overlays"},
+    [13] = {["name"] = "FM_Hip_M_Tat_007", ["col"] = "mphipster_overlays"},
+    [14] = {["name"] = "MP_MP_Biker_Tat_025_M", ["col"] = "mpbiker_overlays"},
+    [15] = {["name"] = "FM_Hip_M_Tat_016", ["col"] = "mphipster_overlays"},
+    [16] = {["name"] = "FM_Hip_M_Tat_026", ["col"] = "mphipster_overlays"},
+    [17] = {["name"] = "FM_Hip_M_Tat_027", ["col"] = "mphipster_overlays"},
+    [18] = {["name"] = "FM_Hip_M_Tat_028", ["col"] = "mphipster_overlays"},
+    [19] = {["name"] = "FM_Hip_M_Tat_034", ["col"] = "mphipster_overlays"},
+    [20] = {["name"] = "FM_Hip_M_Tat_037", ["col"] = "mphipster_overlays"},
+    [21] = {["name"] = "FM_Hip_M_Tat_039", ["col"] = "mphipster_overlays"},
+    [22] = {["name"] = "FM_Hip_M_Tat_043", ["col"] = "mphipster_overlays"},
+    [23] = {["name"] = "FM_Hip_M_Tat_048", ["col"] = "mphipster_overlays"},
+    [24] = {["name"] = "MP_MP_Biker_Tat_012_M", ["col"] = "mpbiker_overlays"},
+    [25] = {["name"] = "MP_MP_Biker_Tat_016_M", ["col"] = "mpbiker_overlays"},
+    [26] = {["name"] = "MP_MP_Biker_Tat_020_M", ["col"] = "mpbiker_overlays"},
+    [27] = {["name"] = "MP_MP_Biker_Tat_035_M", ["col"] = "mpbiker_overlays"},
+    [28] = {["name"] = "MP_MP_Stunt_Tat_035_M", ["col"] = "mpstunt_overlays"},
+    [29] = {["name"] = "MP_MP_Stunt_Tat_039_M", ["col"] = "mpstunt_overlays"},
+    [30] = {["name"] = "MP_MP_Biker_Tat_045_M", ["col"] = "mpbiker_overlays"},
+    [31] = {["name"] = "MP_MP_Biker_Tat_053_M", ["col"] = "mpbiker_overlays"},
+    [32] = {["name"] = "MP_MP_Biker_Tat_055_M", ["col"] = "mpbiker_overlays"},
+    [33] = {["name"] = "MP_Xmas2_M_Tat_000", ["col"] = "mpchristmas2_overlays"},
+    [34] = {["name"] = "MP_Xmas2_M_Tat_010", ["col"] = "mpchristmas2_overlays"},
+    [35] = {["name"] = "MP_Xmas2_M_Tat_012", ["col"] = "mpchristmas2_overlays"},
+    [36] = {["name"] = "MP_Xmas2_M_Tat_020", ["col"] = "mpchristmas2_overlays"},
+    [37] = {["name"] = "MP_Xmas2_M_Tat_021", ["col"] = "mpchristmas2_overlays"},
+    [38] = {["name"] = "MP_Gunrunning_Tattoo_004_M", ["col"] = "mpgunrunning_overlays"},
+    [39] = {["name"] = "MP_Gunrunning_Tattoo_008_M", ["col"] = "mpgunrunning_overlays"},
+    [40] = {["name"] = "MP_Gunrunning_Tattoo_015_M", ["col"] = "mpgunrunning_overlays"},
+    [41] = {["name"] = "MP_Gunrunning_Tattoo_016_M", ["col"] = "mpgunrunning_overlays"},
+    [42] = {["name"] = "MP_Gunrunning_Tattoo_025_M", ["col"] = "mpgunrunning_overlays"},
+    [43] = {["name"] = "MP_Gunrunning_Tattoo_027_M", ["col"] = "mpgunrunning_overlays"},
+    [44] = {["name"] = "MP_MP_ImportExport_Tat_004_M", ["col"] = "mpimportexport_overlays"},
+    [45] = {["name"] = "MP_MP_ImportExport_Tat_008_M", ["col"] = "mpimportexport_overlays"},
+    [46] = {["name"] = "MP_LR_Tat_005_M", ["col"] = "mplowrider_overlays"},
+    [47] = {["name"] = "MP_LR_Tat_027_M", ["col"] = "mplowrider_overlays"},
+    [48] = {["name"] = "MP_LR_Tat_033_M", ["col"] = "mplowrider_overlays"},
+    [49] = {["name"] = "MP_LR_Tat_006_M", ["col"] = "mplowrider2_overlays"},
+    [50] = {["name"] = "MP_LR_Tat_018_M", ["col"] = "mplowrider2_overlays"},
+    [51] = {["name"] = "MP_LR_Tat_022_M", ["col"] = "mplowrider2_overlays"},
+    [52] = {["name"] = "MP_LUXE_TAT_009_M", ["col"] = "mpluxe_overlays"},
+    [53] = {["name"] = "MP_LUXE_TAT_020_M", ["col"] = "mpluxe_overlays"},
+    [54] = {["name"] = "MP_LUXE_TAT_021_M", ["col"] = "mpluxe_overlays"},
+    [55] = {["name"] = "MP_LUXE_TAT_005_M", ["col"] = "mpluxe2_overlays"},
+	[56] = {["name"] = "MP_LUXE_TAT_016_M", ["col"] = "mpluxe2_overlays"},
+    [57] = {["name"] = "MP_LUXE_TAT_018_M", ["col"] = "mpluxe2_overlays"},
+    [58] = {["name"] = "MP_LUXE_TAT_028_M", ["col"] = "mpluxe2_overlays"},
+    [59] = {["name"] = "MP_LUXE_TAT_031_M", ["col"] = "mpluxe2_overlays"},
+    [60] = {["name"] = "MP_MP_Stunt_Tat_001_M", ["col"] = "mpstunt_overlays"},
+    [61] = {["name"] = "MP_MP_Stunt_Tat_002_M", ["col"] = "mpstunt_overlays"},
+    [62] = {["name"] = "MP_MP_Stunt_Tat_008_M", ["col"] = "mpstunt_overlays"},
+    [63] = {["name"] = "MP_MP_Stunt_Tat_022_M", ["col"] = "mpstunt_overlays"},
+    [64] = {["name"] = "MP_MP_Stunt_Tat_023_M", ["col"] = "mpstunt_overlays"},
   },
   Bras_Droit = {
     [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
@@ -199,6 +280,50 @@ local Homme = {
     [12] = {["name"] = "FM_Tat_M_028", ["col"] = "multiplayer_overlays"},
     [13] = {["name"] = "FM_Tat_M_038", ["col"] = "multiplayer_overlays"},
     [14] = {["name"] = "FM_Tat_M_047", ["col"] = "multiplayer_overlays"},
+    [15] = {["name"] = "MP_MP_Stunt_Tat_049_M", ["col"] = "mpstunt_overlays"},
+    [16] = {["name"] = "FM_Hip_M_Tat_004", ["col"] = "mphipster_overlays"},
+    [17] = {["name"] = "MP_MP_Stunt_Tat_038_M", ["col"] = "mpstunt_overlays"},
+    [18] = {["name"] = "FM_Hip_M_Tat_010", ["col"] = "mphipster_overlays"},
+    [19] = {["name"] = "FM_Hip_M_Tat_014", ["col"] = "mphipster_overlays"},
+    [20] = {["name"] = "FM_Hip_M_Tat_017", ["col"] = "mphipster_overlays"},
+    [21] = {["name"] = "FM_Hip_M_Tat_018", ["col"] = "mphipster_overlays"},
+    [22] = {["name"] = "FM_Hip_M_Tat_020", ["col"] = "mphipster_overlays"},
+    [23] = {["name"] = "MP_LUXE_TAT_030_M", ["col"] = "mpluxe2_overlays"},
+    [24] = {["name"] = "MP_MP_Stunt_Tat_009_M", ["col"] = "mpstunt_overlays"},
+    [25] = {["name"] = "MP_MP_Stunt_Tat_010_M", ["col"] = "mpstunt_overlays"},
+    [26] = {["name"] = "MP_MP_Stunt_Tat_016_M", ["col"] = "mpstunt_overlays"},
+    [27] = {["name"] = "FM_Hip_M_Tat_045", ["col"] = "mphipster_overlays"},
+    [28] = {["name"] = "MP_MP_Biker_Tat_007_M", ["col"] = "mpbiker_overlays"},
+    [29] = {["name"] = "MP_MP_Biker_Tat_014_M", ["col"] = "mpbiker_overlays"},
+    [30] = {["name"] = "MP_MP_Biker_Tat_033_M", ["col"] = "mpbiker_overlays"},
+    [31] = {["name"] = "MP_MP_Biker_Tat_042_M", ["col"] = "mpbiker_overlays"},
+    [32] = {["name"] = "MP_MP_Biker_Tat_046_M", ["col"] = "mpbiker_overlays"},
+    [33] = {["name"] = "MP_MP_Biker_Tat_047_M", ["col"] = "mpbiker_overlays"},
+    [34] = {["name"] = "MP_MP_Biker_Tat_049_M", ["col"] = "mpbiker_overlays"},
+    [35] = {["name"] = "MP_MP_Biker_Tat_054_M", ["col"] = "mpbiker_overlays"},
+    [36] = {["name"] = "MP_MP_Stunt_Tat_036_M", ["col"] = "mpstunt_overlays"},
+    [37] = {["name"] = "MP_Xmas2_M_Tat_004", ["col"] = "mpchristmas2_overlays"},
+    [38] = {["name"] = "MP_Xmas2_M_Tat_008", ["col"] = "mpchristmas2_overlays"},
+    [39] = {["name"] = "MP_LUXE_TAT_026_M", ["col"] = "mpluxe2_overlays"},
+    [40] = {["name"] = "MP_Xmas2_M_Tat_023", ["col"] = "mpchristmas2_overlays"},
+    [41] = {["name"] = "MP_LUXE_TAT_017_M", ["col"] = "mpluxe2_overlays"},
+    [42] = {["name"] = "MP_Xmas2_M_Tat_027", ["col"] = "mpchristmas2_overlays"},
+    [43] = {["name"] = "MP_Gunrunning_Tattoo_002_M", ["col"] = "mpgunrunning_overlays"},
+    [44] = {["name"] = "MP_Gunrunning_Tattoo_021_M", ["col"] = "mpgunrunning_overlays"},
+    [45] = {["name"] = "MP_Gunrunning_Tattoo_024_M", ["col"] = "mpgunrunning_overlays"},
+    [46] = {["name"] = "MP_MP_ImportExport_Tat_003_M", ["col"] = "mpimportexport_overlays"},
+    [47] = {["name"] = "MP_MP_ImportExport_Tat_005_M", ["col"] = "mpimportexport_overlays"},
+    [48] = {["name"] = "MP_MP_ImportExport_Tat_006_M", ["col"] = "mpimportexport_overlays"},
+    [49] = {["name"] = "MP_MP_ImportExport_Tat_007_M", ["col"] = "mpimportexport_overlays"},
+    [50] = {["name"] = "MP_LR_Tat_015_M", ["col"] = "mplowrider_overlays"},
+    [51] = {["name"] = "MP_LR_Tat_003_M", ["col"] = "mplowrider2_overlays"},
+    [52] = {["name"] = "MP_LR_Tat_028_M", ["col"] = "mplowrider2_overlays"},
+    [53] = {["name"] = "MP_LR_Tat_035_M", ["col"] = "mplowrider2_overlays"},
+    [54] = {["name"] = "MP_LUXE_TAT_004_M", ["col"] = "mpluxe_overlays"},
+    [55] = {["name"] = "MP_LUXE_TAT_013_M", ["col"] = "mpluxe_overlays"},
+    [56] = {["name"] = "MP_LUXE_TAT_019_M", ["col"] = "mpluxe_overlays"},
+    [57] = {["name"] = "MP_LUXE_TAT_010_M", ["col"] = "mpluxe2_overlays"},
+
   },
 
   Jambe_Droite = {
@@ -212,23 +337,66 @@ local Homme = {
     [8] = {["name"] = "FM_Tat_M_040", ["col"] = "multiplayer_overlays"},
     [9] = {["name"] = "FM_Tat_M_042", ["col"] = "multiplayer_overlays"},
     [10] = {["name"] = "FM_Tat_M_043", ["col"] = "multiplayer_overlays"},
+    [11] = {["name"] = "MP_MP_Biker_Tat_004_M", ["col"] = "mpbiker_overlays"},
+    [12] = {["name"] = "MP_MP_Stunt_Tat_045_M", ["col"] = "mpstunt_overlays"},
+    [13] = {["name"] = "MP_MP_Stunt_Tat_047_M", ["col"] = "mpstunt_overlays"},
+    [14] = {["name"] = "MP_MP_Biker_Tat_022_M", ["col"] = "mpbiker_overlays"},
+    [15] = {["name"] = "MP_MP_Biker_Tat_028_M", ["col"] = "mpbiker_overlays"},
+    [16] = {["name"] = "MP_MP_Biker_Tat_040_M", ["col"] = "mpbiker_overlays"},
+    [17] = {["name"] = "MP_MP_Biker_Tat_048_M", ["col"] = "mpbiker_overlays"},
+    [18] = {["name"] = "MP_Xmas2_M_Tat_014", ["col"] = "mpchristmas2_overlays"},
+    [19] = {["name"] = "MP_Gunrunning_Tattoo_006_M", ["col"] = "mpgunrunning_overlays"},
+    [20] = {["name"] = "MP_Gunrunning_Tattoo_026_M", ["col"] = "mpgunrunning_overlays"},
+    [21] = {["name"] = "MP_Gunrunning_Tattoo_030_M", ["col"] = "mpgunrunning_overlays"},
+    [22] = {["name"] = "MP_LR_Tat_017_M", ["col"] = "mplowrider_overlays"},
+    [23] = {["name"] = "MP_LR_Tat_023_M", ["col"] = "mplowrider_overlays"},
+    [24] = {["name"] = "MP_LR_Tat_030_M", ["col"] = "mplowrider2_overlays"},
+    [25] = {["name"] = "MP_LUXE_TAT_001_M", ["col"] = "mpluxe_overlays"},
+    [26] = {["name"] = "MP_LUXE_TAT_023_M", ["col"] = "mpluxe2_overlays"},
+    [27] = {["name"] = "MP_MP_Stunt_Tat_015_M", ["col"] = "mpstunt_overlays"},
+    [28] = {["name"] = "MP_MP_Stunt_Tat_020_M", ["col"] = "mpstunt_overlays"},
+    [29] = {["name"] = "MP_MP_Stunt_Tat_025_M", ["col"] = "mpstunt_overlays"},
+    [30] = {["name"] = "MP_MP_Stunt_Tat_032_M", ["col"] = "mpstunt_overlays"},
   },
 
   Jambe_Gauche = {
     [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
     [2] = {["name"] = "MP_Bea_M_Lleg_000", ["col"] = "mpbeach_overlays"},
-    [3] = {["name"] = "FM_Tat_Award_M_007", ["col"] = "multiplayer_overlays"},
-    [4] = {["name"] = "FM_Tat_Award_M_009", ["col"] = "multiplayer_overlays"},
-    [5] = {["name"] = "FM_Tat_M_002", ["col"] = "multiplayer_overlays"},
-    [6] = {["name"] = "FM_Tat_M_002", ["col"] = "multiplayer_overlays"},
-    [7] = {["name"] = "FM_Tat_M_008", ["col"] = "multiplayer_overlays"},
-    [8] = {["name"] = "FM_Tat_M_021", ["col"] = "multiplayer_overlays"},
-    [9] = {["name"] = "FM_Tat_M_023", ["col"] = "multiplayer_overlays"},
-    [10] = {["name"] = "FM_Tat_M_026", ["col"] = "multiplayer_overlays"},
-    [11] = {["name"] = "FM_Tat_M_032", ["col"] = "multiplayer_overlays"},
-    [12] = {["name"] = "FM_Tat_M_033", ["col"] = "multiplayer_overlays"},
-    [13] = {["name"] = "FM_Tat_M_035", ["col"] = "multiplayer_overlays"},
-    [14] = {["name"] = "FM_Tat_M_037", ["col"] = "multiplayer_overlays"},
+    [3] = {["name"] = "FM_Tat_Award_M_009", ["col"] = "multiplayer_overlays"},
+    [4] = {["name"] = "FM_Tat_M_002", ["col"] = "multiplayer_overlays"},
+    [5] = {["name"] = "MP_MP_Stunt_Tat_021_M", ["col"] = "mpstunt_overlays"},
+    [6] = {["name"] = "FM_Tat_M_008", ["col"] = "multiplayer_overlays"},
+    [7] = {["name"] = "FM_Tat_M_021", ["col"] = "multiplayer_overlays"},
+    [8] = {["name"] = "FM_Tat_M_023", ["col"] = "multiplayer_overlays"},
+    [9] = {["name"] = "FM_Tat_M_026", ["col"] = "multiplayer_overlays"},
+    [10] = {["name"] = "FM_Tat_M_032", ["col"] = "multiplayer_overlays"},
+    [11] = {["name"] = "FM_Tat_M_033", ["col"] = "multiplayer_overlays"},
+    [12] = {["name"] = "FM_Tat_M_035", ["col"] = "multiplayer_overlays"},
+    [13] = {["name"] = "FM_Tat_M_037", ["col"] = "multiplayer_overlays"},
+    [14] = {["name"] = "MP_MP_Stunt_Tat_028_M", ["col"] = "mpstunt_overlays"},
+    [15] = {["name"] = "FM_Hip_M_Tat_019", ["col"] = "mphipster_overlays"},
+    [16] = {["name"] = "FM_Hip_M_Tat_040", ["col"] = "mphipster_overlays"},
+    [17] = {["name"] = "MP_MP_Biker_Tat_002_M", ["col"] = "mpbiker_overlays"},
+    [18] = {["name"] = "MP_MP_Biker_Tat_015_M", ["col"] = "mpbiker_overlays"},
+    [19] = {["name"] = "MP_MP_Biker_Tat_027_M", ["col"] = "mpbiker_overlays"},
+    [20] = {["name"] = "MP_MP_Biker_Tat_036_M", ["col"] = "mpbiker_overlays"},
+    [21] = {["name"] = "MP_MP_Biker_Tat_037_M", ["col"] = "mpbiker_overlays"},
+    [22] = {["name"] = "MP_MP_Biker_Tat_044_M", ["col"] = "mpbiker_overlays"},
+    [23] = {["name"] = "MP_MP_Biker_Tat_056_M", ["col"] = "mpbiker_overlays"},
+    [24] = {["name"] = "MP_MP_Biker_Tat_057_M", ["col"] = "mpbiker_overlays"},
+    [25] = {["name"] = "MP_Xmas2_M_Tat_001", ["col"] = "mpchristmas2_overlays"},
+    [26] = {["name"] = "MP_Xmas2_M_Tat_002", ["col"] = "mpchristmas2_overlays"},
+    [27] = {["name"] = "MP_Gunrunning_Tattoo_005_M", ["col"] = "mpgunrunning_overlays"},
+    [28] = {["name"] = "MP_Gunrunning_Tattoo_007_M", ["col"] = "mpgunrunning_overlays"},
+    [29] = {["name"] = "MP_Gunrunning_Tattoo_011_M", ["col"] = "mpgunrunning_overlays"},
+    [30] = {["name"] = "MP_Gunrunning_Tattoo_023_M", ["col"] = "mpgunrunning_overlays"},
+    [31] = {["name"] = "MP_LR_Tat_007_M", ["col"] = "mplowrider_overlays"},
+    [32] = {["name"] = "MP_LR_Tat_020_M", ["col"] = "mplowrider_overlays"},
+    [33] = {["name"] = "MP_LR_Tat_029_M", ["col"] = "mplowrider2_overlays"},
+    [34] = {["name"] = "MP_LUXE_TAT_000_M", ["col"] = "mpluxe_overlays"},
+    [35] = {["name"] = "MP_LUXE_TAT_011_M", ["col"] = "mpluxe2_overlays"},
+    [36] = {["name"] = "MP_MP_Stunt_Tat_007_M", ["col"] = "mpstunt_overlays"},
+    [37] = {["name"] = "MP_MP_Stunt_Tat_013_M", ["col"] = "mpstunt_overlays"},
   },
 
   Torso = {
@@ -242,12 +410,12 @@ local Homme = {
     [8] = {["name"] = "FM_Tat_Award_M_004", ["col"] = "multiplayer_overlays"},
     [9] = {["name"] = "FM_Tat_Award_M_005", ["col"] = "multiplayer_overlays"},
     [10] = {["name"] = "FM_Tat_Award_M_008", ["col"] = "multiplayer_overlays"},
-    [11] = {["name"] = "FM_Tat_Award_M_011", ["col"] = "multiplayer_overlays"},
+    [11] = {["name"] = "MP_MP_Stunt_Tat_046_M", ["col"] = "mpstunt_overlays"},
     [12] = {["name"] = "FM_Tat_Award_M_012", ["col"] = "multiplayer_overlays"},
     [13] = {["name"] = "FM_Tat_Award_M_013", ["col"] = "multiplayer_overlays"},
     [14] = {["name"] = "FM_Tat_Award_M_014", ["col"] = "multiplayer_overlays"},
-    [15] = {["name"] = "FM_Tat_Award_M_016", ["col"] = "multiplayer_overlays"},
-    [16] = {["name"] = "FM_Tat_Award_M_017", ["col"] = "multiplayer_overlays"},
+    [15] = {["name"] = "MP_MP_Stunt_Tat_041_M", ["col"] = "mpstunt_overlays"},
+    [16] = {["name"] = "MP_MP_Stunt_Tat_044_M", ["col"] = "mpstunt_overlays"},
     [17] = {["name"] = "FM_Tat_Award_M_018", ["col"] = "multiplayer_overlays"},
     [18] = {["name"] = "FM_Tat_Award_M_019", ["col"] = "multiplayer_overlays"},
     [19] = {["name"] = "FM_Tat_M_004", ["col"] = "multiplayer_overlays"},
@@ -268,62 +436,569 @@ local Homme = {
     [34] = {["name"] = "FM_Tat_M_044", ["col"] = "multiplayer_overlays"},
     [35] = {["name"] = "FM_Tat_M_045", ["col"] = "multiplayer_overlays"},
     [36] = {["name"] = "FM_Tat_M_046", ["col"] = "multiplayer_overlays"},
+    [37] = {["name"] = "FM_Hip_M_Tat_000", ["col"] = "mphipster_overlays"},
+    [38] = {["name"] = "MP_MP_Stunt_Tat_040_M", ["col"] = "mpstunt_overlays"},
+    [39] = {["name"] = "FM_Hip_M_Tat_006", ["col"] = "mphipster_overlays"},
+    [40] = {["name"] = "FM_Hip_M_Tat_013", ["col"] = "mphipster_overlays"},
+    [41] = {["name"] = "FM_Hip_M_Tat_024", ["col"] = "mphipster_overlays"},
+    [42] = {["name"] = "FM_Hip_M_Tat_025", ["col"] = "mphipster_overlays"},
+    [43] = {["name"] = "FM_Hip_M_Tat_041", ["col"] = "mphipster_overlays"},
+    [44] = {["name"] = "FM_Hip_M_Tat_046", ["col"] = "mphipster_overlays"},
+    [45] = {["name"] = "FM_Hip_M_Tat_047", ["col"] = "mphipster_overlays"},
+    [46] = {["name"] = "MP_MP_Biker_Tat_000_M", ["col"] = "mpbiker_overlays"},
+    [47] = {["name"] = "MP_MP_Biker_Tat_001_M", ["col"] = "mpbiker_overlays"},
+    [48] = {["name"] = "MP_MP_Biker_Tat_003_M", ["col"] = "mpbiker_overlays"},
+    [49] = {["name"] = "MP_MP_Biker_Tat_005_M", ["col"] = "mpbiker_overlays"},
+    [50] = {["name"] = "MP_MP_Biker_Tat_006_M", ["col"] = "mpbiker_overlays"},
+    [51] = {["name"] = "MP_MP_Biker_Tat_008_M", ["col"] = "mpbiker_overlays"},
+    [52] = {["name"] = "MP_MP_Biker_Tat_010_M", ["col"] = "mpbiker_overlays"},
+    [53] = {["name"] = "MP_MP_Biker_Tat_011_M", ["col"] = "mpbiker_overlays"},
+    [54] = {["name"] = "MP_MP_Biker_Tat_013_M", ["col"] = "mpbiker_overlays"},
+    [55] = {["name"] = "MP_MP_Biker_Tat_017_M", ["col"] = "mpbiker_overlays"},
+    [56] = {["name"] = "MP_MP_Biker_Tat_018_M", ["col"] = "mpbiker_overlays"},
+    [57] = {["name"] = "MP_MP_Biker_Tat_019_M", ["col"] = "mpbiker_overlays"},
+    [58] = {["name"] = "MP_MP_Biker_Tat_021_M", ["col"] = "mpbiker_overlays"},
+    [59] = {["name"] = "MP_MP_Stunt_Tat_048_M", ["col"] = "mpstunt_overlays"},
+    [60] = {["name"] = "MP_MP_Biker_Tat_023_M", ["col"] = "mpbiker_overlays"},
+    [61] = {["name"] = "MP_MP_Biker_Tat_029_M", ["col"] = "mpbiker_overlays"},
+    [62] = {["name"] = "MP_MP_Biker_Tat_030_M", ["col"] = "mpbiker_overlays"},
+    [63] = {["name"] = "MP_MP_Biker_Tat_031_M", ["col"] = "mpbiker_overlays"},
+    [64] = {["name"] = "MP_MP_Biker_Tat_032_M", ["col"] = "mpbiker_overlays"},
+    [65] = {["name"] = "MP_MP_Biker_Tat_034_M", ["col"] = "mpbiker_overlays"},
+    [66] = {["name"] = "MP_MP_Biker_Tat_039_M", ["col"] = "mpbiker_overlays"},
+    [67] = {["name"] = "MP_MP_Biker_Tat_041_M", ["col"] = "mpbiker_overlays"},
+    [68] = {["name"] = "MP_MP_Biker_Tat_043_M", ["col"] = "mpbiker_overlays"},
+    [69] = {["name"] = "MP_MP_Biker_Tat_050_M", ["col"] = "mpbiker_overlays"},
+    [70] = {["name"] = "MP_MP_Biker_Tat_052_M", ["col"] = "mpbiker_overlays"},
+    [71] = {["name"] = "MP_MP_Biker_Tat_058_M", ["col"] = "mpbiker_overlays"},
+    [72] = {["name"] = "MP_MP_Biker_Tat_059_M", ["col"] = "mpbiker_overlays"},
+    [73] = {["name"] = "MP_MP_Biker_Tat_060_M", ["col"] = "mpbiker_overlays"},
+    [74] = {["name"] = "MP_Xmas2_M_Tat_006", ["col"] = "mpchristmas2_overlays"},
+    [75] = {["name"] = "MP_Xmas2_M_Tat_009", ["col"] = "mpchristmas2_overlays"},
+    [76] = {["name"] = "MP_Xmas2_M_Tat_011", ["col"] = "mpchristmas2_overlays"},
+    [77] = {["name"] = "MP_Xmas2_M_Tat_013", ["col"] = "mpchristmas2_overlays"},
+    [78] = {["name"] = "MP_Xmas2_M_Tat_015", ["col"] = "mpchristmas2_overlays"},
+    [79] = {["name"] = "MP_Xmas2_M_Tat_017", ["col"] = "mpchristmas2_overlays"},
+    [80] = {["name"] = "MP_Xmas2_M_Tat_019", ["col"] = "mpchristmas2_overlays"},
+    [81] = {["name"] = "MP_Xmas2_M_Tat_028", ["col"] = "mpchristmas2_overlays"},
+    [82] = {["name"] = "MP_Gunrunning_Tattoo_000_M", ["col"] = "mpgunrunning_overlays"},
+    [83] = {["name"] = "MP_Gunrunning_Tattoo_001_M", ["col"] = "mpgunrunning_overlays"},
+    [84] = {["name"] = "MP_Gunrunning_Tattoo_009_M", ["col"] = "mpgunrunning_overlays"},
+    [85] = {["name"] = "MP_Gunrunning_Tattoo_010_M", ["col"] = "mpgunrunning_overlays"},
+    [86] = {["name"] = "MP_Gunrunning_Tattoo_012_M", ["col"] = "mpgunrunning_overlays"},
+    [87] = {["name"] = "MP_Gunrunning_Tattoo_013_M", ["col"] = "mpgunrunning_overlays"},
+    [88] = {["name"] = "MP_Gunrunning_Tattoo_014_M", ["col"] = "mpgunrunning_overlays"},
+    [89] = {["name"] = "MP_Gunrunning_Tattoo_018_M", ["col"] = "mpgunrunning_overlays"},
+    [90] = {["name"] = "MP_Gunrunning_Tattoo_019_M", ["col"] = "mpgunrunning_overlays"},
+    [91] = {["name"] = "MP_Gunrunning_Tattoo_020_M", ["col"] = "mpgunrunning_overlays"},
+    [92] = {["name"] = "MP_Gunrunning_Tattoo_022_M", ["col"] = "mpgunrunning_overlays"},
+    [93] = {["name"] = "MP_Gunrunning_Tattoo_029_M", ["col"] = "mpgunrunning_overlays"},
+    [94] = {["name"] = "MP_MP_ImportExport_Tat_000_M", ["col"] = "mpimportexport_overlays"},
+    [95] = {["name"] = "MP_MP_ImportExport_Tat_001_M", ["col"] = "mpimportexport_overlays"},
+    [96] = {["name"] = "MP_MP_ImportExport_Tat_002_M", ["col"] = "mpimportexport_overlays"},
+    [97] = {["name"] = "MP_MP_ImportExport_Tat_009_M", ["col"] = "mpimportexport_overlays"},
+    [98] = {["name"] = "MP_MP_ImportExport_Tat_010_M", ["col"] = "mpimportexport_overlays"},
+    [99] = {["name"] = "MP_MP_ImportExport_Tat_011_M", ["col"] = "mpimportexport_overlays"},
+    [100] = {["name"] = "MP_LR_Tat_001_M", ["col"] = "mplowrider_overlays"},
+    [101] = {["name"] = "MP_LR_Tat_002_M", ["col"] = "mplowrider_overlays"},
+	[102] = {["name"] = "MP_LR_Tat_004_M", ["col"] = "mplowrider_overlays"},
+    [103] = {["name"] = "MP_LR_Tat_009_M", ["col"] = "mplowrider_overlays"},
+    [104] = {["name"] = "MP_LR_Tat_010_M", ["col"] = "mplowrider_overlays"},
+    [105] = {["name"] = "MP_LR_Tat_013_M", ["col"] = "mplowrider_overlays"},
+    [106] = {["name"] = "MP_LR_Tat_014_M", ["col"] = "mplowrider_overlays"},
+    [107] = {["name"] = "MP_LR_Tat_021_M", ["col"] = "mplowrider_overlays"},
+    [108] = {["name"] = "MP_LR_Tat_026_M", ["col"] = "mplowrider_overlays"},
+    [109] = {["name"] = "MP_LR_Tat_000_M", ["col"] = "mplowrider2_overlays"},
+    [110] = {["name"] = "MP_LR_Tat_008_M", ["col"] = "mplowrider2_overlays"},
+    [111] = {["name"] = "MP_LR_Tat_011_M", ["col"] = "mplowrider2_overlays"},
+    [112] = {["name"] = "MP_LR_Tat_012_M", ["col"] = "mplowrider2_overlays"},
+    [113] = {["name"] = "MP_LR_Tat_016_M", ["col"] = "mplowrider2_overlays"},
+    [114] = {["name"] = "MP_LR_Tat_019_M", ["col"] = "mplowrider2_overlays"},
+    [115] = {["name"] = "MP_LR_Tat_031_M", ["col"] = "mplowrider2_overlays"},
+    [116] = {["name"] = "MP_LR_Tat_032_M", ["col"] = "mplowrider2_overlays"},
+    [117] = {["name"] = "MP_LUXE_TAT_003_M", ["col"] = "mpluxe_overlays"},
+    [118] = {["name"] = "MP_LUXE_TAT_006_M", ["col"] = "mpluxe_overlays"},
+    [119] = {["name"] = "MP_LUXE_TAT_007_M", ["col"] = "mpluxe_overlays"},
+    [120] = {["name"] = "MP_LUXE_TAT_008_M", ["col"] = "mpluxe_overlays"},
+    [121] = {["name"] = "MP_LUXE_TAT_014_M", ["col"] = "mpluxe_overlays"},
+    [122] = {["name"] = "MP_LUXE_TAT_015_M", ["col"] = "mpluxe_overlays"},
+    [123] = {["name"] = "MP_LUXE_TAT_024_M", ["col"] = "mpluxe_overlays"},
+    [124] = {["name"] = "MP_LUXE_TAT_002_M", ["col"] = "mpluxe2_overlays"},
+    [125] = {["name"] = "MP_LUXE_TAT_012_M", ["col"] = "mpluxe2_overlays"},
+    [126] = {["name"] = "MP_LUXE_TAT_022_M", ["col"] = "mpluxe2_overlays"},
+    [127] = {["name"] = "MP_LUXE_TAT_025_M", ["col"] = "mpluxe2_overlays"},
+    [128] = {["name"] = "MP_LUXE_TAT_027_M", ["col"] = "mpluxe2_overlays"},
+    [129] = {["name"] = "MP_LUXE_TAT_029_M", ["col"] = "mpluxe2_overlays"},
+    [130] = {["name"] = "MP_MP_Stunt_Tat_011_M", ["col"] = "mpstunt_overlays"},
+    [131] = {["name"] = "MP_MP_Stunt_Tat_012_M", ["col"] = "mpstunt_overlays"},
+    [132] = {["name"] = "MP_MP_Stunt_Tat_014_M", ["col"] = "mpstunt_overlays"},
+    [133] = {["name"] = "MP_MP_Stunt_Tat_018_M", ["col"] = "mpstunt_overlays"},
+    [134] = {["name"] = "MP_MP_Stunt_Tat_019_M", ["col"] = "mpstunt_overlays"},
+    [135] = {["name"] = "MP_MP_Stunt_Tat_026_M", ["col"] = "mpstunt_overlays"},
+    [136] = {["name"] = "MP_MP_Stunt_Tat_027_M", ["col"] = "mpstunt_overlays"},
+    [137] = {["name"] = "MP_MP_Stunt_Tat_029_M", ["col"] = "mpstunt_overlays"},
+    [138] = {["name"] = "MP_MP_Stunt_Tat_030_M", ["col"] = "mpstunt_overlays"},
+    [139] = {["name"] = "MP_MP_Stunt_Tat_033_M", ["col"] = "mpstunt_overlays"},
+    [140] = {["name"] = "MP_MP_Stunt_Tat_034_M", ["col"] = "mpstunt_overlays"},
+    [141] = {["name"] = "MP_MP_Stunt_Tat_037_M", ["col"] = "mpstunt_overlays"},
   },
 }
+
+
+
+
+
+
+
+
 
 local Femme = {
     Jambe_Droite = {
       [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
       [2] = {["name"] = "MP_Bea_F_RLeg_000", ["col"] = "mpbeach_overlays"},
-    	[3] = {["name"] = "FM_Tat_Award_F_006", ["col"] = "multiplayer_overlays"},
+      [3] = {["name"] = "FM_Tat_Award_F_006", ["col"] = "multiplayer_overlays"},
+      [4] = {["name"] = "FM_Tat_F_017", ["col"] = "multiplayer_overlays"},
+      [5] = {["name"] = "FM_Tat_F_022", ["col"] = "multiplayer_overlays"},
+      [6] = {["name"] = "FM_Tat_F_039", ["col"] = "multiplayer_overlays"},
+      [7] = {["name"] = "FM_Tat_F_040", ["col"] = "multiplayer_overlays"},
+      [8] = {["name"] = "FM_Tat_F_042", ["col"] = "multiplayer_overlays"},
+      [9] = {["name"] = "FM_Tat_F_043", ["col"] = "multiplayer_overlays"},
+      [10] = {["name"] = "FM_Tat_F_007", ["col"] = "multiplayer_overlays"},
+      [11] = {["name"] = "FM_Hip_F_Tat_038", ["col"] = "mphipster_overlays"},
+      [12] = {["name"] = "MP_MP_Stunt_Tat_047_F", ["col"] = "mpstunt_overlays"},
+      [13] = {["name"] = "FM_Hip_F_Tat_042", ["col"] = "mphipster_overlays"},
+      [14] = {["name"] = "MP_MP_Biker_Tat_004_F", ["col"] = "mpbiker_overlays"},
+      [15] = {["name"] = "MP_MP_Biker_Tat_022_F", ["col"] = "mpbiker_overlays"},
+      [16] = {["name"] = "MP_MP_Biker_Tat_028_F", ["col"] = "mpbiker_overlays"},
+      [17] = {["name"] = "MP_MP_Biker_Tat_040_F", ["col"] = "mpbiker_overlays"},
+      [18] = {["name"] = "MP_MP_Biker_Tat_048_F", ["col"] = "mpbiker_overlays"},
+      [19] = {["name"] = "MP_Xmas2_f_Tat_014", ["col"] = "mpchristmas2_overlays"},
+      [20] = {["name"] = "MP_Gunrunning_Tattoo_006_F", ["col"] = "mpgunrunning_overlays"},
+      [21] = {["name"] = "MP_Gunrunning_Tattoo_026_F", ["col"] = "mpgunrunning_overlays"},
+      [22] = {["name"] = "MP_Gunrunning_Tattoo_030_F", ["col"] = "mpgunrunning_overlays"},
+      [23] = {["name"] = "MP_LR_Tat_030_F", ["col"] = "mplowrider2_overlays"},
+      [24] = {["name"] = "MP_LUXE_TAT_023_F", ["col"] = "mpluxe2_overlays"},
+      [25] = {["name"] = "MP_Smuggler_Tattoo_020_F", ["col"] = "mpsmuggler_overlays"},
+      [26] = {["name"] = "MP_MP_Stunt_Tat_005_F", ["col"] = "mpstunt_overlays"},
+      [27] = {["name"] = "MP_MP_Stunt_Tat_015_F", ["col"] = "mpstunt_overlays"},
+      [28] = {["name"] = "MP_MP_Stunt_Tat_020_F", ["col"] = "mpstunt_overlays"},
+      [29] = {["name"] = "MP_MP_Stunt_Tat_025_F", ["col"] = "mpstunt_overlays"},
+      [30] = {["name"] = "MP_MP_Stunt_Tat_032_F", ["col"] = "mpstunt_overlays"},
+      [31] = {["name"] = "MP_MP_Stunt_Tat_045_F", ["col"] = "mpstunt_overlays"},
+      [32] = {["name"] = "MP_LUXE_TAT_001_F", ["col"] = "mpluxe_overlays"},
     },
   	Jambe_Gauche = {
-      [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
-      [2] = {["name"] = "FM_Tat_Award_F_009", ["col"] = "multiplayer_overlays"},
+        [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
+        [2] = {["name"] = "FM_Tat_Award_F_009", ["col"] = "multiplayer_overlays"},
+        [3] = {["name"] = "FM_Tat_F_002", ["col"] = "multiplayer_overlays"},
+        [4] = {["name"] = "FM_Tat_F_008", ["col"] = "multiplayer_overlays"},
+        [5] = {["name"] = "FM_Tat_F_021", ["col"] = "multiplayer_overlays"},
+        [6] = {["name"] = "FM_Tat_F_023", ["col"] = "multiplayer_overlays"},
+        [7] = {["name"] = "FM_Tat_F_026", ["col"] = "multiplayer_overlays"},
+        [8] = {["name"] = "FM_Tat_F_032", ["col"] = "multiplayer_overlays"},
+        [9] = {["name"] = "FM_Tat_F_033", ["col"] = "multiplayer_overlays"},
+        [10] = {["name"] = "FM_Tat_F_035", ["col"] = "multiplayer_overlays"},
+        [11] = {["name"] = "FM_Tat_F_037", ["col"] = "multiplayer_overlays"},
+        [12] = {["name"] = "FM_Hip_F_Tat_009", ["col"] = "mphipster_overlays"},
+        [13] = {["name"] = "FM_Hip_F_Tat_019", ["col"] = "mphipster_overlays"},
+        [14] = {["name"] = "MP_MP_Stunt_Tat_031_F", ["col"] = "mpstunt_overlays"},
+        [15] = {["name"] = "FM_Hip_F_Tat_040", ["col"] = "mphipster_overlays"},
+      	[16] = {["name"] = "MP_MP_Biker_Tat_002_F", ["col"] = "mpbiker_overlays"},
+      	[17] = {["name"] = "MP_MP_Biker_Tat_015_F", ["col"] = "mpbiker_overlays"},
+        [18] = {["name"] = "MP_MP_Biker_Tat_027_F", ["col"] = "mpbiker_overlays"},
+        [19] = {["name"] = "MP_MP_Biker_Tat_036_F", ["col"] = "mpbiker_overlays"},
+        [20] = {["name"] = "MP_MP_Biker_Tat_037_F", ["col"] = "mpbiker_overlays"},
+        [21] = {["name"] = "MP_MP_Biker_Tat_044_F", ["col"] = "mpbiker_overlays"},
+        [22] = {["name"] = "MP_MP_Biker_Tat_056_F", ["col"] = "mpbiker_overlays"},
+        [23] = {["name"] = "MP_MP_Biker_Tat_057_F", ["col"] = "mpbiker_overlays"},
+        [24] = {["name"] = "MP_Xmas2_f_Tat_001", ["col"] = "mpchristmas2_overlays"},
+        [25] = {["name"] = "MP_Xmas2_f_Tat_002", ["col"] = "mpchristmas2_overlays"},
+        [26] = {["name"] = "MP_Gunrunning_Tattoo_005_F", ["col"] = "mpgunrunning_overlays"},
+        [27] = {["name"] = "MP_Gunrunning_Tattoo_007_F", ["col"] = "mpgunrunning_overlays"},
+        [28] = {["name"] = "MP_Gunrunning_Tattoo_011_F", ["col"] = "mpgunrunning_overlays"},
+        [29] = {["name"] = "MP_Gunrunning_Tattoo_023_F", ["col"] = "mpgunrunning_overlays"},
+        [30] = {["name"] = "MP_LR_Tat_007_F", ["col"] = "mplowrider_overlays"},
+        [31] = {["name"] = "MP_LR_Tat_020_F", ["col"] = "mplowrider_overlays"},
+        [32] = {["name"] = "MP_LR_Tat_029_F", ["col"] = "mplowrider2_overlays"},
+        [33] = {["name"] = "MP_LUXE_TAT_000_F", ["col"] = "mpluxe_overlays"},
+        [34] = {["name"] = "MP_LUXE_TAT_011_F", ["col"] = "mpluxe2_overlays"},
+        [35] = {["name"] = "MP_MP_Stunt_Tat_007_F", ["col"] = "mpstunt_overlays"},
+        [36] = {["name"] = "MP_MP_Stunt_Tat_013_F", ["col"] = "mpstunt_overlays"},
+        [37] = {["name"] = "MP_MP_Stunt_Tat_021_F", ["col"] = "mpstunt_overlays"},
+        [38] = {["name"] = "MP_MP_Stunt_Tat_028_F", ["col"] = "mpstunt_overlays"},
   	},
-    Bras_Droit = {
-      [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
-      [2] = {["name"] = "MP_Bea_F_RArm_001", ["col"] = "mpbeach_overlays"},
-    	[3] = {["name"] = "FM_Tat_Award_F_002", ["col"] = "multiplayer_overlays"},
-    	[4] = {["name"] = "FM_Tat_Award_F_010", ["col"] = "multiplayer_overlays"},
+	Bras_Droit = {
+        [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
+        [2] = {["name"] = "MP_Bea_F_RArm_001", ["col"] = "mpbeach_overlays"},
+        [3] = {["name"] = "FM_Tat_Award_F_002", ["col"] = "multiplayer_overlays"},
+        [4] = {["name"] = "FM_Tat_Award_F_010", ["col"] = "multiplayer_overlays"},
+        [5] = {["name"] = "FM_Tat_F_001", ["col"] = "multiplayer_overlays"},
+        [6] = {["name"] = "FM_Tat_F_003", ["col"] = "multiplayer_overlays"},
+        [7] = {["name"] = "FM_Tat_F_018", ["col"] = "multiplayer_overlays"},
+        [8] = {["name"] = "FM_Tat_F_027", ["col"] = "multiplayer_overlays"},
+        [9] = {["name"] = "FM_Tat_F_028", ["col"] = "multiplayer_overlays"},
+        [10] = {["name"] = "FM_Tat_F_038", ["col"] = "multiplayer_overlays"},
+        [11] = {["name"] = "FM_Tat_F_047", ["col"] = "multiplayer_overlays"},
+        [12] = {["name"] = "FM_Hip_F_Tat_001", ["col"] = "mphipster_overlays"},
+        [13] = {["name"] = "FM_Hip_F_Tat_004", ["col"] = "mphipster_overlays"},
+        [14] = {["name"] = "FM_Hip_F_Tat_008", ["col"] = "mphipster_overlays"},
+        [15] = {["name"] = "FM_Hip_F_Tat_010", ["col"] = "mphipster_overlays"},
+        [16] = {["name"] = "FM_Hip_F_Tat_014", ["col"] = "mphipster_overlays"},
+        [17] = {["name"] = "FM_Hip_F_Tat_017", ["col"] = "mphipster_overlays"},
+        [18] = {["name"] = "FM_Hip_F_Tat_018", ["col"] = "mphipster_overlays"},
+        [19] = {["name"] = "FM_Hip_F_Tat_020", ["col"] = "mphipster_overlays"},
+      	[20] = {["name"] = "FM_Hip_F_Tat_022", ["col"] = "mphipster_overlays"},
+      	[21] = {["name"] = "FM_Hip_F_Tat_023", ["col"] = "mphipster_overlays"},
+      	[22] = {["name"] = "FM_Hip_F_Tat_036", ["col"] = "mphipster_overlays"},
+      	[23] = {["name"] = "FM_Hip_F_Tat_044", ["col"] = "mphipster_overlays"},
+      	[24] = {["name"] = "FM_Hip_F_Tat_045", ["col"] = "mphipster_overlays"},
+      	[25] = {["name"] = "MP_MP_Biker_Tat_007_F", ["col"] = "mpbiker_overlays"},
+    	[26] = {["name"] = "MP_MP_Biker_Tat_014_F", ["col"] = "mpbiker_overlays"},
+        [27] = {["name"] = "MP_MP_Biker_Tat_033_F", ["col"] = "mpbiker_overlays"},
+        [28] = {["name"] = "MP_MP_Biker_Tat_042_F", ["col"] = "mpbiker_overlays"},
+        [29] = {["name"] = "MP_MP_Biker_Tat_046_F", ["col"] = "mpbiker_overlays"},
+        [30] = {["name"] = "MP_MP_Biker_Tat_047_F", ["col"] = "mpbiker_overlays"},
+        [31] = {["name"] = "MP_MP_Biker_Tat_049_F", ["col"] = "mpbiker_overlays"},
+        [32] = {["name"] = "MP_MP_Biker_Tat_054_F", ["col"] = "mpbiker_overlays"},
+        [33] = {["name"] = "MP_Xmas2_f_Tat_003", ["col"] = "mpchristmas2_overlays"},
+        [34] = {["name"] = "MP_Xmas2_f_Tat_004", ["col"] = "mpchristmas2_overlays"},
+        [35] = {["name"] = "MP_Xmas2_f_Tat_008", ["col"] = "mpchristmas2_overlays"},
+        [36] = {["name"] = "MP_Xmas2_f_Tat_022", ["col"] = "mpchristmas2_overlays"},
+        [37] = {["name"] = "MP_Xmas2_f_Tat_023", ["col"] = "mpchristmas2_overlays"},
+        [38] = {["name"] = "MP_Xmas2_f_Tat_027", ["col"] = "mpchristmas2_overlays"},
+        [39] = {["name"] = "MP_Gunrunning_Tattoo_002_F", ["col"] = "mpgunrunning_overlays"},
+        [40] = {["name"] = "MP_Gunrunning_Tattoo_021_F", ["col"] = "mpgunrunning_overlays"},
+        [41] = {["name"] = "MP_Gunrunning_Tattoo_024_F", ["col"] = "mpgunrunning_overlays"},
+        [42] = {["name"] = "MP_MP_ImportExport_Tat_003_F", ["col"] = "mpimportexport_overlays"},
+        [43] = {["name"] = "MP_MP_ImportExport_Tat_005_F", ["col"] = "mpimportexport_overlays"},
+        [44] = {["name"] = "MP_MP_ImportExport_Tat_006_F", ["col"] = "mpimportexport_overlays"},
+        [45] = {["name"] = "MP_MP_ImportExport_Tat_007_F", ["col"] = "mpimportexport_overlays"},
+        [46] = {["name"] = "MP_LR_Tat_003_F", ["col"] = "mplowrider2_overlays"},
+        [47] = {["name"] = "MP_LR_Tat_028_F", ["col"] = "mplowrider2_overlays"},
+        [48] = {["name"] = "MP_LUXE_TAT_004_F", ["col"] = "mpluxe_overlays"},
+        [49] = {["name"] = "MP_LUXE_TAT_013_F", ["col"] = "mpluxe_overlays"},
+        [50] = {["name"] = "MP_LUXE_TAT_019_F", ["col"] = "mpluxe_overlays"},
+        [51] = {["name"] = "MP_LUXE_TAT_010_F", ["col"] = "mpluxe2_overlays"},
+        [52] = {["name"] = "MP_LUXE_TAT_017_F", ["col"] = "mpluxe2_overlays"},
+        [53] = {["name"] = "MP_LUXE_TAT_026_F", ["col"] = "mpluxe2_overlays"},
+        [54] = {["name"] = "MP_LUXE_TAT_030_F", ["col"] = "mpluxe2_overlays"},
+        [55] = {["name"] = "MP_MP_Stunt_Tat_003_F", ["col"] = "mpstunt_overlays"},
+        [56] = {["name"] = "MP_MP_Stunt_Tat_009_F", ["col"] = "mpstunt_overlays"},
+        [57] = {["name"] = "MP_MP_Stunt_Tat_010_F", ["col"] = "mpstunt_overlays"},
+        [58] = {["name"] = "MP_MP_Stunt_Tat_016_F", ["col"] = "mpstunt_overlays"},
+        [59] = {["name"] = "MP_MP_Stunt_Tat_036_F", ["col"] = "mpstunt_overlays"},
+        [60] = {["name"] = "MP_MP_Stunt_Tat_038_F", ["col"] = "mpstunt_overlays"},
+        [61] = {["name"] = "MP_MP_Stunt_Tat_049_F", ["col"] = "mpstunt_overlays"},
     },
     Bras_Gauche = {
       [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
       [2] = {["name"] = "MP_Bea_F_LArm_000", ["col"] = "mpbeach_overlays"},
       [3] = {["name"] = "MP_Bea_F_LArm_001", ["col"] = "mpbeach_overlays"},
-    	[4] = {["name"] = "FM_Tat_Award_F_001", ["col"] = "multiplayer_overlays"},
-    	[5] = {["name"] = "FM_Tat_Award_F_007", ["col"] = "multiplayer_overlays"},
-    	[6] = {["name"] = "FM_Tat_Award_F_015", ["col"] = "multiplayer_overlays"},
+      [4] = {["name"] = "FM_Tat_Award_F_001", ["col"] = "multiplayer_overlays"},
+      [5] = {["name"] = "FM_Tat_Award_F_007", ["col"] = "multiplayer_overlays"},
+      [6] = {["name"] = "FM_Tat_Award_F_015", ["col"] = "multiplayer_overlays"},
+      [7] = {["name"] = "FM_Tat_F_005", ["col"] = "multiplayer_overlays"},
+      [8] = {["name"] = "FM_Tat_F_006", ["col"] = "multiplayer_overlays"},
+      [9] = {["name"] = "FM_Hip_F_Tat_003", ["col"] = "mphipster_overlays"},
+      [10] = {["name"] = "FM_Hip_F_Tat_007", ["col"] = "mphipster_overlays"},
+      [11] = {["name"] = "MP_MP_Stunt_Tat_039_F", ["col"] = "mpstunt_overlays"},
+      [12] = {["name"] = "FM_Hip_F_Tat_016", ["col"] = "mphipster_overlays"},
+      [13] = {["name"] = "FM_Hip_F_Tat_026", ["col"] = "mphipster_overlays"},
+      [14] = {["name"] = "FM_Hip_F_Tat_028", ["col"] = "mphipster_overlays"},
+      [15] = {["name"] = "FM_Hip_F_Tat_034", ["col"] = "mphipster_overlays"},
+      [16] = {["name"] = "FM_Hip_F_Tat_037", ["col"] = "mphipster_overlays"},
+      [17] = {["name"] = "FM_Hip_F_Tat_043", ["col"] = "mphipster_overlays"},
+      [18] = {["name"] = "FM_Hip_F_Tat_048", ["col"] = "mphipster_overlays"},
+      [19] = {["name"] = "MP_MP_Biker_Tat_012_F", ["col"] = "mpbiker_overlays"},
+      [20] = {["name"] = "MP_MP_Biker_Tat_016_F", ["col"] = "mpbiker_overlays"},
+      [21] = {["name"] = "MP_MP_Biker_Tat_020_F", ["col"] = "mpbiker_overlays"},
+      [22] = {["name"] = "MP_MP_Biker_Tat_024_F", ["col"] = "mpbiker_overlays"},
+      [23] = {["name"] = "MP_MP_Biker_Tat_025_F", ["col"] = "mpbiker_overlays"},
+      [24] = {["name"] = "MP_MP_Biker_Tat_035_F", ["col"] = "mpbiker_overlays"},
+      [25] = {["name"] = "MP_MP_Biker_Tat_045_F", ["col"] = "mpbiker_overlays"},
+      [26] = {["name"] = "MP_MP_Biker_Tat_053_F", ["col"] = "mpbiker_overlays"},
+      [27] = {["name"] = "MP_MP_Biker_Tat_055_F", ["col"] = "mpbiker_overlays"},
+      [28] = {["name"] = "MP_LUXE_TAT_028_F", ["col"] = "mpluxe2_overlays"},
+      [29] = {["name"] = "MP_LUXE_TAT_009_F", ["col"] = "mpluxe_overlays"},
+      [30] = {["name"] = "MP_Xmas2_f_Tat_000", ["col"] = "mpchristmas2_overlays"},
+      [31] = {["name"] = "MP_Xmas2_f_Tat_010", ["col"] = "mpchristmas2_overlays"},
+      [32] = {["name"] = "MP_Xmas2_f_Tat_012", ["col"] = "mpchristmas2_overlays"},
+      [33] = {["name"] = "MP_Xmas2_f_Tat_020", ["col"] = "mpchristmas2_overlays"},
+      [34] = {["name"] = "MP_Xmas2_f_Tat_021", ["col"] = "mpchristmas2_overlays"},
+      [35] = {["name"] = "MP_Gunrunning_Tattoo_004_F", ["col"] = "mpgunrunning_overlays"},
+      [36] = {["name"] = "MP_Gunrunning_Tattoo_008_F", ["col"] = "mpgunrunning_overlays"},
+      [37] = {["name"] = "MP_Gunrunning_Tattoo_015_F", ["col"] = "mpgunrunning_overlays"},
+      [38] = {["name"] = "MP_Gunrunning_Tattoo_016_F", ["col"] = "mpgunrunning_overlays"},
+      [39] = {["name"] = "MP_Gunrunning_Tattoo_025_F", ["col"] = "mpgunrunning_overlays"},
+      [40] = {["name"] = "MP_Gunrunning_Tattoo_027_F", ["col"] = "mpgunrunning_overlays"},
+      [41] = {["name"] = "MP_MP_ImportExport_Tat_004_F", ["col"] = "mpimportexport_overlays"},
+      [42] = {["name"] = "MP_MP_ImportExport_Tat_008_F", ["col"] = "mpimportexport_overlays"},
+      [43] = {["name"] = "MP_LR_Tat_005_F", ["col"] = "mplowrider_overlays"},
+      [44] = {["name"] = "MP_LR_Tat_027_F", ["col"] = "mplowrider_overlays"},
+      [45] = {["name"] = "MP_LR_Tat_033_F", ["col"] = "mplowrider_overlays"},
+      [46] = {["name"] = "FM_Hip_F_Tat_039", ["col"] = "mphipster_overlays"},
+      [47] = {["name"] = "MP_LR_Tat_006_F", ["col"] = "mplowrider2_overlays"},
+      [48] = {["name"] = "MP_LR_Tat_018_F", ["col"] = "mplowrider2_overlays"},
+      [49] = {["name"] = "MP_LR_Tat_022_F", ["col"] = "mplowrider2_overlays"},
+      [50] = {["name"] = "MP_LUXE_TAT_020_F", ["col"] = "mpluxe_overlays"},
+      [51] = {["name"] = "MP_LUXE_TAT_021_F", ["col"] = "mpluxe_overlays"},
+      [52] = {["name"] = "MP_LUXE_TAT_005_F", ["col"] = "mpluxe2_overlays"},
+      [53] = {["name"] = "MP_LUXE_TAT_016_F", ["col"] = "mpluxe2_overlays"},
+      [54] = {["name"] = "MP_LUXE_TAT_018_F", ["col"] = "mpluxe2_overlays"},
+      [55] = {["name"] = "MP_LUXE_TAT_031_F", ["col"] = "mpluxe2_overlays"},
+      [56] = {["name"] = "MP_MP_Stunt_Tat_001_F", ["col"] = "mpstunt_overlays"},
+      [57] = {["name"] = "MP_MP_Stunt_Tat_002_F", ["col"] = "mpstunt_overlays"},
+      [58] = {["name"] = "MP_MP_Stunt_Tat_008_F", ["col"] = "mpstunt_overlays"},
+      [59] = {["name"] = "MP_MP_Stunt_Tat_022_F", ["col"] = "mpstunt_overlays"},
+      [60] = {["name"] = "MP_MP_Stunt_Tat_023_F", ["col"] = "mpstunt_overlays"},
+      [61] = {["name"] = "MP_MP_Stunt_Tat_035_F", ["col"] = "mpstunt_overlays"},
+      [62] = {["name"] = "MP_MP_Stunt_Tat_043_F", ["col"] = "mpstunt_overlays"},
     },
     Torso = {
-      [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
-      [2] = {["name"] = "MP_Bea_F_Back_000", ["col"] = "mpbeach_overlays"},
-      [3] = {["name"] = "MP_Bea_F_Back_002", ["col"] = "mpbeach_overlays"},
-      [4] = {["name"] = "MP_Bea_F_Chest_001", ["col"] = "mpbeach_overlays"},
-      [5] = {["name"] = "MP_Bea_F_Chest_002", ["col"] = "mpbeach_overlays"},
-      [6] = {["name"] = "MP_Bea_F_RSide_000", ["col"] = "mpbeach_overlays"},
-      [7] = {["name"] = "MP_Bea_F_Should_000", ["col"] = "mpbeach_overlays"},
-      [8] = {["name"] = "MP_Bea_F_Should_001", ["col"] = "mpbeach_overlays"},
-      [9] = {["name"] = "MP_Bea_F_Stom_000", ["col"] = "mpbeach_overlays"},
-      [10] = {["name"] = "MP_Bea_F_Stom_001", ["col"] = "mpbeach_overlays"},
-      [11] = {["name"] = "MP_Bea_F_Stom_002", ["col"] = "mpbeach_overlays"},
-    	[12] = {["name"] = "FM_Tat_Award_F_003", ["col"] = "multiplayer_overlays"},
-    	[13] = {["name"] = "FM_Tat_Award_F_004", ["col"] = "multiplayer_overlays"},
-    	[14] = {["name"] = "FM_Tat_Award_F_005", ["col"] = "multiplayer_overlays"},
-    	[15] = {["name"] = "FM_Tat_Award_F_008", ["col"] = "multiplayer_overlays"},
-    	[16] = {["name"] = "FM_Tat_Award_F_011", ["col"] = "multiplayer_overlays"},
-    	[17] = {["name"] = "FM_Tat_Award_F_012", ["col"] = "multiplayer_overlays"},
-    	[18] = {["name"] = "FM_Tat_Award_F_013", ["col"] = "multiplayer_overlays"},
-    	[19] = {["name"] = "FM_Tat_Award_F_014", ["col"] = "multiplayer_overlays"},
-      [20] = {["name"] = "FM_Tat_Award_F_016", ["col"] = "multiplayer_overlays"},
-    },
+    	[1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
+      	[2] = {["name"] = "MP_Bea_F_Back_000", ["col"] = "mpbeach_overlays"},
+      	[3] = {["name"] = "MP_Bea_F_Back_002", ["col"] = "mpbeach_overlays"},
+      	[4] = {["name"] = "MP_Bea_F_Chest_001", ["col"] = "mpbeach_overlays"},
+      	[5] = {["name"] = "MP_Bea_F_Chest_002", ["col"] = "mpbeach_overlays"},
+      	[6] = {["name"] = "MP_Bea_F_RSide_000", ["col"] = "mpbeach_overlays"},
+      	[7] = {["name"] = "MP_Bea_F_Should_000", ["col"] = "mpbeach_overlays"},
+      	[8] = {["name"] = "MP_Bea_F_Should_001", ["col"] = "mpbeach_overlays"},
+      	[9] = {["name"] = "MP_Bea_F_Stom_000", ["col"] = "mpbeach_overlays"},
+      	[10] = {["name"] = "MP_Bea_F_Stom_001", ["col"] = "mpbeach_overlays"},
+      	[11] = {["name"] = "MP_Bea_F_Stom_002", ["col"] = "mpbeach_overlays"},
+      	[12] = {["name"] = "FM_Tat_Award_F_003", ["col"] = "multiplayer_overlays"},
+      	[13] = {["name"] = "FM_Tat_Award_F_004", ["col"] = "multiplayer_overlays"},
+      	[14] = {["name"] = "FM_Tat_Award_F_005", ["col"] = "multiplayer_overlays"},
+      	[15] = {["name"] = "FM_Tat_Award_F_008", ["col"] = "multiplayer_overlays"},
+      	[16] = {["name"] = "FM_Tat_Award_F_013", ["col"] = "multiplayer_overlays"},
+      	[17] = {["name"] = "FM_Tat_Award_F_014", ["col"] = "multiplayer_overlays"},
+      	[18] = {["name"] = "FM_Tat_Award_F_016", ["col"] = "multiplayer_overlays"},
+      	[19] = {["name"] = "FM_Tat_Award_F_017", ["col"] = "multiplayer_overlays"},
+      	[20] = {["name"] = "FM_Tat_Award_F_018", ["col"] = "multiplayer_overlays"},
+      	[21] = {["name"] = "FM_Tat_Award_F_019", ["col"] = "multiplayer_overlays"},
+      	[22] = {["name"] = "FM_Tat_F_004", ["col"] = "multiplayer_overlays"},
+      	[23] = {["name"] = "FM_Tat_F_009", ["col"] = "multiplayer_overlays"},
+      	[24] = {["name"] = "FM_Tat_F_010", ["col"] = "multiplayer_overlays"},
+      	[25] = {["name"] = "FM_Tat_F_011", ["col"] = "multiplayer_overlays"},
+      	[26] = {["name"] = "FM_Tat_F_012", ["col"] = "multiplayer_overlays"},
+      	[27] = {["name"] = "FM_Tat_F_013", ["col"] = "multiplayer_overlays"},
+      	[28] = {["name"] = "FM_Tat_F_019", ["col"] = "multiplayer_overlays"},
+      	[29] = {["name"] = "FM_Tat_F_020", ["col"] = "multiplayer_overlays"},
+      	[30] = {["name"] = "FM_Tat_F_024", ["col"] = "multiplayer_overlays"},
+      	[31] = {["name"] = "FM_Tat_F_025", ["col"] = "multiplayer_overlays"},
+    	[32] = {["name"] = "FM_Tat_F_029", ["col"] = "multiplayer_overlays"},
+    	[33] = {["name"] = "FM_Tat_F_030", ["col"] = "multiplayer_overlays"},
+    	[34] = {["name"] = "FM_Tat_F_034", ["col"] = "multiplayer_overlays"},
+    	[35] = {["name"] = "FM_Tat_F_036", ["col"] = "multiplayer_overlays"},
+    	[36] = {["name"] = "FM_Tat_F_044", ["col"] = "multiplayer_overlays"},
+    	[37] = {["name"] = "FM_Tat_F_045", ["col"] = "multiplayer_overlays"},
+    	[38] = {["name"] = "FM_Tat_F_046", ["col"] = "multiplayer_overlays"},
+    	[39] = {["name"] = "FM_Tat_F_047", ["col"] = "multiplayer_overlays"},
+    	[40] = {["name"] = "FM_Hip_F_Tat_000", ["col"] = "mphipster_overlays"},
+    	[41] = {["name"] = "FM_Hip_F_Tat_002", ["col"] = "mphipster_overlays"},
+    	[42] = {["name"] = "FM_Hip_F_Tat_006", ["col"] = "mphipster_overlays"},
+    	[43] = {["name"] = "FM_Hip_F_Tat_011", ["col"] = "mphipster_overlays"},
+    	[44] = {["name"] = "FM_Hip_F_Tat_012", ["col"] = "mphipster_overlays"},
+    	[45] = {["name"] = "FM_Hip_F_Tat_024", ["col"] = "mphipster_overlays"},
+    	[46] = {["name"] = "FM_Hip_F_Tat_025", ["col"] = "mphipster_overlays"},
+    	[47] = {["name"] = "FM_Hip_F_Tat_029", ["col"] = "mphipster_overlays"},
+    	[48] = {["name"] = "FM_Hip_F_Tat_030", ["col"] = "mphipster_overlays"},
+    	[49] = {["name"] = "FM_Hip_F_Tat_031", ["col"] = "mphipster_overlays"},
+    	[50] = {["name"] = "FM_Hip_F_Tat_032", ["col"] = "mphipster_overlays"},
+    	[51] = {["name"] = "FM_Hip_F_Tat_033", ["col"] = "mphipster_overlays"},
+    	[52] = {["name"] = "FM_Hip_F_Tat_041", ["col"] = "mphipster_overlays"},
+    	[53] = {["name"] = "FM_Hip_F_Tat_046", ["col"] = "mphipster_overlays"},
+    	[54] = {["name"] = "FM_Hip_F_Tat_047", ["col"] = "mphipster_overlays"},
+    	[55] = {["name"] = "MP_MP_Biker_Tat_001_F", ["col"] = "mpbiker_overlays"},
+    	[56] = {["name"] = "MP_MP_Biker_Tat_003_F", ["col"] = "mpbiker_overlays"},
+    	[57] = {["name"] = "MP_MP_Biker_Tat_005_F", ["col"] = "mpbiker_overlays"},
+    	[58] = {["name"] = "MP_MP_Biker_Tat_006_F", ["col"] = "mpbiker_overlays"},
+    	[59] = {["name"] = "MP_MP_Biker_Tat_008_F", ["col"] = "mpbiker_overlays"},
+    	[60] = {["name"] = "MP_MP_Biker_Tat_010_F", ["col"] = "mpbiker_overlays"},
+    	[61] = {["name"] = "MP_MP_Biker_Tat_011_F", ["col"] = "mpbiker_overlays"},
+    	[62] = {["name"] = "MP_MP_Biker_Tat_012_F", ["col"] = "mpbiker_overlays"},
+    	[63] = {["name"] = "MP_MP_Biker_Tat_013_F", ["col"] = "mpbiker_overlays"},
+    	[64] = {["name"] = "MP_MP_Biker_Tat_017_F", ["col"] = "mpbiker_overlays"},
+    	[65] = {["name"] = "MP_MP_Biker_Tat_018_F", ["col"] = "mpbiker_overlays"},
+        [66] = {["name"] = "MP_MP_Biker_Tat_019_F", ["col"] = "mpbiker_overlays"},
+        [67] = {["name"] = "MP_MP_Biker_Tat_021_F", ["col"] = "mpbiker_overlays"},
+        [68] = {["name"] = "MP_MP_Biker_Tat_023_F", ["col"] = "mpbiker_overlays"},
+        [69] = {["name"] = "MP_MP_Biker_Tat_026_F", ["col"] = "mpbiker_overlays"},
+        [70] = {["name"] = "MP_MP_Biker_Tat_029_F", ["col"] = "mpbiker_overlays"},
+        [71] = {["name"] = "MP_MP_Biker_Tat_030_F", ["col"] = "mpbiker_overlays"},
+        [72] = {["name"] = "MP_MP_Biker_Tat_031_F", ["col"] = "mpbiker_overlays"},
+        [73] = {["name"] = "MP_MP_Biker_Tat_032_F", ["col"] = "mpbiker_overlays"},
+        [74] = {["name"] = "MP_MP_Biker_Tat_034_F", ["col"] = "mpbiker_overlays"},
+        [75] = {["name"] = "MP_MP_Biker_Tat_039_F", ["col"] = "mpbiker_overlays"},
+        [76] = {["name"] = "MP_MP_Biker_Tat_041_F", ["col"] = "mpbiker_overlays"},
+        [77] = {["name"] = "MP_MP_Biker_Tat_043_F", ["col"] = "mpbiker_overlays"},
+        [78] = {["name"] = "MP_MP_Biker_Tat_050_F", ["col"] = "mpbiker_overlays"},
+        [79] = {["name"] = "MP_MP_Biker_Tat_052_F", ["col"] = "mpbiker_overlays"},
+        [80] = {["name"] = "MP_Xmas2_f_Tat_005", ["col"] = "mpchristmas2_overlays"},
+        [81] = {["name"] = "MP_Xmas2_f_Tat_006", ["col"] = "mpchristmas2_overlays"},
+        [82] = {["name"] = "MP_Xmas2_f_Tat_009", ["col"] = "mpchristmas2_overlays"},
+        [83] = {["name"] = "MP_Xmas2_f_Tat_011", ["col"] = "mpchristmas2_overlays"},
+        [84] = {["name"] = "MP_Xmas2_f_Tat_013", ["col"] = "mpchristmas2_overlays"},
+        [85] = {["name"] = "MP_Xmas2_f_Tat_015", ["col"] = "mpchristmas2_overlays"},
+        [86] = {["name"] = "MP_Xmas2_f_Tat_016", ["col"] = "mpchristmas2_overlays"},
+        [87] = {["name"] = "MP_Xmas2_f_Tat_017", ["col"] = "mpchristmas2_overlays"},
+        [88] = {["name"] = "MP_Xmas2_f_Tat_018", ["col"] = "mpchristmas2_overlays"},
+        [89] = {["name"] = "MP_Xmas2_f_Tat_019", ["col"] = "mpchristmas2_overlays"},
+        [90] = {["name"] = "MP_Xmas2_f_Tat_028", ["col"] = "mpchristmas2_overlays"},
+        [91] = {["name"] = "MP_Gunrunning_Tattoo_000_F", ["col"] = "mpgunrunning_overlays"},
+        [92] = {["name"] = "MP_Gunrunning_Tattoo_001_F", ["col"] = "mpgunrunning_overlays"},
+        [93] = {["name"] = "MP_Gunrunning_Tattoo_009_F", ["col"] = "mpgunrunning_overlays"},
+        [94] = {["name"] = "MP_Gunrunning_Tattoo_010_F", ["col"] = "mpgunrunning_overlays"},
+        [95] = {["name"] = "MP_Gunrunning_Tattoo_012_F", ["col"] = "mpgunrunning_overlays"},
+        [96] = {["name"] = "MP_Gunrunning_Tattoo_013_F", ["col"] = "mpgunrunning_overlays"},
+        [97] = {["name"] = "MP_Gunrunning_Tattoo_014_F", ["col"] = "mpgunrunning_overlays"},
+        [98] = {["name"] = "MP_Gunrunning_Tattoo_017_F", ["col"] = "mpgunrunning_overlays"},
+        [99] = {["name"] = "MP_Gunrunning_Tattoo_018_F", ["col"] = "mpgunrunning_overlays"},
+        [100] = {["name"] = "MP_Gunrunning_Tattoo_019_F", ["col"] = "mpgunrunning_overlays"},
+        [101] = {["name"] = "MP_Gunrunning_Tattoo_020_F", ["col"] = "mpgunrunning_overlays"},
+        [102] = {["name"] = "MP_Gunrunning_Tattoo_022_F", ["col"] = "mpgunrunning_overlays"},
+        [103] = {["name"] = "MP_Gunrunning_Tattoo_028_F", ["col"] = "mpgunrunning_overlays"},
+        [104] = {["name"] = "MP_Gunrunning_Tattoo_029_F", ["col"] = "mpgunrunning_overlays"},
+        [105] = {["name"] = "MP_MP_ImportExport_Tat_000_F", ["col"] = "mpimportexport_overlays"},
+        [106] = {["name"] = "MP_MP_ImportExport_Tat_001_F", ["col"] = "mpimportexport_overlays"},
+        [107] = {["name"] = "MP_MP_ImportExport_Tat_002_F", ["col"] = "mpimportexport_overlays"},
+        [108] = {["name"] = "MP_LR_Tat_001_F", ["col"] = "mplowrider_overlays"},
+        [109] = {["name"] = "MP_LR_Tat_002_F", ["col"] = "mplowrider_overlays"},
+        [110] = {["name"] = "MP_LR_Tat_004_F", ["col"] = "mplowrider_overlays"},
+        [111] = {["name"] = "MP_LR_Tat_009_F", ["col"] = "mplowrider_overlays"},
+        [112] = {["name"] = "MP_LR_Tat_021_F", ["col"] = "mplowrider_overlays"},
+        [113] = {["name"] = "MP_LR_Tat_026_F", ["col"] = "mplowrider_overlays"},
+        [114] = {["name"] = "MP_MP_Biker_Tat_059_F", ["col"] = "mpbiker_overlays"},
+    	[115] = {["name"] = "MP_MP_ImportExport_Tat_009_F", ["col"] = "mpimportexport_overlays"},
+      	[116] = {["name"] = "MP_MP_ImportExport_Tat_010_F", ["col"] = "mpimportexport_overlays"},
+      	[117] = {["name"] = "MP_MP_ImportExport_Tat_011_F", ["col"] = "mpimportexport_overlays"},
+        [118] = {["name"] = "MP_LR_Tat_000_F", ["col"] = "mplowrider2_overlays"},
+        [119] = {["name"] = "MP_LR_Tat_008_F", ["col"] = "mplowrider2_overlays"},
+        [120] = {["name"] = "MP_LR_Tat_011_F", ["col"] = "mplowrider2_overlays"},
+        [121] = {["name"] = "MP_LR_Tat_012_F", ["col"] = "mplowrider2_overlays"},
+        [122] = {["name"] = "MP_LR_Tat_016_F", ["col"] = "mplowrider2_overlays"},
+        [123] = {["name"] = "MP_LR_Tat_019_F", ["col"] = "mplowrider2_overlays"},
+        [124] = {["name"] = "MP_LUXE_TAT_003_F", ["col"] = "mpluxe_overlays"},
+        [125] = {["name"] = "MP_LUXE_TAT_006_F", ["col"] = "mpluxe_overlays"},
+        [126] = {["name"] = "MP_LUXE_TAT_007_F", ["col"] = "mpluxe_overlays"},
+        [127] = {["name"] = "MP_LUXE_TAT_008_F", ["col"] = "mpluxe_overlays"},
+        [128] = {["name"] = "MP_LUXE_TAT_014_F", ["col"] = "mpluxe_overlays"},
+        [129] = {["name"] = "MP_LUXE_TAT_015_F", ["col"] = "mpluxe_overlays"},
+        [130] = {["name"] = "MP_LUXE_TAT_024_F", ["col"] = "mpluxe_overlays"},
+        [131] = {["name"] = "MP_LUXE_TAT_002_F", ["col"] = "mpluxe2_overlays"},
+        [132] = {["name"] = "MP_LUXE_TAT_012_F", ["col"] = "mpluxe2_overlays"},
+        [133] = {["name"] = "MP_LUXE_TAT_025_F", ["col"] = "mpluxe2_overlays"},
+        [134] = {["name"] = "MP_LUXE_TAT_029_F", ["col"] = "mpluxe2_overlays"},
+        [135] = {["name"] = "MP_MP_Stunt_Tat_011_F", ["col"] = "mpstunt_overlays"},
+        [136] = {["name"] = "MP_MP_Stunt_Tat_012_F", ["col"] = "mpstunt_overlays"},
+        [137] = {["name"] = "MP_MP_Stunt_Tat_014_F", ["col"] = "mpstunt_overlays"},
+        [138] = {["name"] = "MP_MP_Stunt_Tat_018_F", ["col"] = "mpstunt_overlays"},
+        [139] = {["name"] = "MP_MP_Stunt_Tat_019_F", ["col"] = "mpstunt_overlays"},
+        [140] = {["name"] = "MP_MP_Stunt_Tat_026_F", ["col"] = "mpstunt_overlays"},
+        [141] = {["name"] = "MP_MP_Stunt_Tat_027_F", ["col"] = "mpstunt_overlays"},
+        [142] = {["name"] = "MP_MP_Stunt_Tat_029_F", ["col"] = "mpstunt_overlays"},
+        [143] = {["name"] = "MP_MP_Stunt_Tat_030_F", ["col"] = "mpstunt_overlays"},
+        [144] = {["name"] = "MP_MP_Stunt_Tat_033_F", ["col"] = "mpstunt_overlays"},
+        [145] = {["name"] = "MP_MP_Stunt_Tat_034_F", ["col"] = "mpstunt_overlays"},
+        [146] = {["name"] = "MP_MP_Stunt_Tat_037_F", ["col"] = "mpstunt_overlays"},
+        [147] = {["name"] = "MP_MP_Stunt_Tat_040_F", ["col"] = "mpstunt_overlays"},
+        [148] = {["name"] = "MP_MP_Stunt_Tat_041_F", ["col"] = "mpstunt_overlays"},
+        [149] = {["name"] = "MP_MP_Stunt_Tat_044_F", ["col"] = "mpstunt_overlays"},
+        [150] = {["name"] = "MP_MP_Stunt_Tat_046_F", ["col"] = "mpstunt_overlays"},
+        [151] = {["name"] = "MP_MP_Stunt_Tat_048_F", ["col"] = "mpstunt_overlays"},
+    	[152] = {["name"] = "MP_LUXE_TAT_027_F", ["col"] = "mpluxe2_overlays"},
+        [153] = {["name"] = "MP_LR_Tat_031_F", ["col"] = "mplowrider2_overlays"},
+      	[154] = {["name"] = "MP_LR_Tat_032_F", ["col"] = "mplowrider2_overlays"},
+        [155] = {["name"] = "MP_MP_Biker_Tat_058_F", ["col"] = "mpbiker_overlays"},
+      	[156] = {["name"] = "MP_MP_Biker_Tat_060_F", ["col"] = "mpbiker_overlays"},
+  },
     Tete = {
       [1] = {["name"] = "rien", ["col"] = "mpbeach_overlays"},
       [2] = {["name"] = "MP_Bea_F_Neck_000", ["col"] = "mpbeach_overlays"},
-    	[3] = {["name"] = "FM_Tat_Award_F_000", ["col"] = "multiplayer_overlays"},
+      [3] = {["name"] = "FM_Tat_Award_F_000", ["col"] = "multiplayer_overlays"},
+      [4] = {["name"] = "FM_F_Hair_005_a", ["col"] = "multiplayer_overlays"},
+      [5] = {["name"] = "FM_F_Hair_005_b", ["col"] = "multiplayer_overlays"},
+      [6] = {["name"] = "FM_F_Hair_005_c", ["col"] = "multiplayer_overlays"},
+      [7] = {["name"] = "FM_F_Hair_005_d", ["col"] = "multiplayer_overlays"},
+      [8] = {["name"] = "FM_F_Hair_005_e", ["col"] = "multiplayer_overlays"},
+      [9] = {["name"] = "FM_F_Hair_006_a", ["col"] = "multiplayer_overlays"},
+      [10] = {["name"] = "FM_F_Hair_006_b", ["col"] = "multiplayer_overlays"},
+      [11] = {["name"] = "FM_F_Hair_006_c", ["col"] = "multiplayer_overlays"},
+      [12] = {["name"] = "FM_F_Hair_006_d", ["col"] = "multiplayer_overlays"},
+      [13] = {["name"] = "FM_F_Hair_006_e", ["col"] = "multiplayer_overlays"},
+      [14] = {["name"] = "FM_F_Hair_003_a", ["col"] = "multiplayer_overlays"},
+      [15] = {["name"] = "FM_F_Hair_003_b", ["col"] = "multiplayer_overlays"},
+      [16] = {["name"] = "FM_F_Hair_003_c", ["col"] = "multiplayer_overlays"},
+      [17] = {["name"] = "FM_F_Hair_003_d", ["col"] = "multiplayer_overlays"},
+      [18] = {["name"] = "FM_F_Hair_003_e", ["col"] = "multiplayer_overlays"},
+      [19] = {["name"] = "FM_F_Hair_013_a", ["col"] = "multiplayer_overlays"},
+      [20] = {["name"] = "FM_F_Hair_013_b", ["col"] = "multiplayer_overlays"},
+      [21] = {["name"] = "FM_F_Hair_013_c", ["col"] = "multiplayer_overlays"},
+      [22] = {["name"] = "FM_F_Hair_013_d", ["col"] = "multiplayer_overlays"},
+      [23] = {["name"] = "FM_F_Hair_013_e", ["col"] = "multiplayer_overlays"},
+      [24] = {["name"] = "NG_F_Hair_013", ["col"] = "multiplayer_overlays"},
+      [25] = {["name"] = "NG_F_Hair_012", ["col"] = "multiplayer_overlays"},
+      [26] = {["name"] = "NG_F_Hair_011", ["col"] = "multiplayer_overlays"},
+      [27] = {["name"] = "NG_F_Hair_010", ["col"] = "multiplayer_overlays"},
+      [28] = {["name"] = "NG_F_Hair_009", ["col"] = "multiplayer_overlays"},
+      [29] = {["name"] = "NG_F_Hair_008", ["col"] = "multiplayer_overlays"},
+      [30] = {["name"] = "NG_F_Hair_007", ["col"] = "multiplayer_overlays"},
+      [31] = {["name"] = "NG_F_Hair_006", ["col"] = "multiplayer_overlays"},
+      [32] = {["name"] = "NG_F_Hair_005", ["col"] = "multiplayer_overlays"},
+      [33] = {["name"] = "NG_F_Hair_004", ["col"] = "multiplayer_overlays"},
+      [34] = {["name"] = "NG_F_Hair_003", ["col"] = "multiplayer_overlays"},
+      [35] = {["name"] = "NG_F_Hair_002", ["col"] = "multiplayer_overlays"},
+      [36] = {["name"] = "NG_F_Hair_001", ["col"] = "multiplayer_overlays"},
+      [37] = {["name"] = "NGInd_M_Hair_000", ["col"] = "multiplayer_overlays"},
+      [38] = {["name"] = "NG_M_Hair_001", ["col"] = "multiplayer_overlays"},
+      [39] = {["name"] = "NG_M_Hair_002", ["col"] = "multiplayer_overlays"},
+      [40] = {["name"] = "NG_M_Hair_003", ["col"] = "multiplayer_overlays"},
+      [41] = {["name"] = "NG_M_Hair_004", ["col"] = "multiplayer_overlays"},
+      [42] = {["name"] = "NG_M_Hair_005", ["col"] = "multiplayer_overlays"},
+      [43] = {["name"] = "NG_M_Hair_006", ["col"] = "multiplayer_overlays"},
+      [44] = {["name"] = "NG_M_Hair_007", ["col"] = "multiplayer_overlays"},
+      [45] = {["name"] = "NG_M_Hair_008", ["col"] = "multiplayer_overlays"},
+      [46] = {["name"] = "FM_Hip_F_Hair_000_b", ["col"] = "mphipster_overlays"},
+      [47] = {["name"] = "FM_Hip_F_Hair_000_c", ["col"] = "mphipster_overlays"},
+      [48] = {["name"] = "FM_Hip_F_Hair_000_d", ["col"] = "mphipster_overlays"},
+      [49] = {["name"] = "FM_Hip_F_Hair_000_e", ["col"] = "mphipster_overlays"},
+  	  [50] = {["name"] = "FM_Hip_F_Tat_005", ["col"] = "mphipster_overlays"},
+      [51] = {["name"] = "FM_Hip_F_Tat_021", ["col"] = "mphipster_overlays"},
+      [52] = {["name"] = "FM_F_Hair_017_a", ["col"] = "mphipster_overlays"},
+      [53] = {["name"] = "FM_F_Hair_017_b", ["col"] = "mphipster_overlays"},
+      [54] = {["name"] = "FM_F_Hair_017_c", ["col"] = "mphipster_overlays"},
+      [55] = {["name"] = "FM_F_Hair_017_d", ["col"] = "mphipster_overlays"},
+      [56] = {["name"] = "FM_F_Hair_017_e", ["col"] = "mphipster_overlays"},
+      [57] = {["name"] = "FM_F_Hair_020_a", ["col"] = "mphipster_overlays"},
+      [58] = {["name"] = "FM_F_Hair_020_b", ["col"] = "mphipster_overlays"},
+      [59] = {["name"] = "FM_F_Hair_020_c", ["col"] = "mphipster_overlays"},
+      [60] = {["name"] = "FM_F_Hair_020_d", ["col"] = "mphipster_overlays"},
+      [61] = {["name"] = "FM_F_Hair_020_e", ["col"] = "mphipster_overlays"},
+      [62] = {["name"] = "MP_Biker_Hair_000_F", ["col"] = "mpbiker_overlays"},
+      [63] = {["name"] = "MP_Biker_Hair_001_F", ["col"] = "mpbiker_overlays"},
+      [64] = {["name"] = "MP_Biker_Hair_002_F", ["col"] = "mpbiker_overlays"},
+      [65] = {["name"] = "MP_Biker_Hair_003_F", ["col"] = "mpbiker_overlays"},
+      [66] = {["name"] = "MP_Biker_Hair_004_F", ["col"] = "mpbiker_overlays"},
+      [67] = {["name"] = "MP_Biker_Hair_005_F", ["col"] = "mpbiker_overlays"},
+      [68] = {["name"] = "MP_Biker_Hair_006_F", ["col"] = "mpbiker_overlays"},
+      [69] = {["name"] = "MP_MP_Biker_Tat_009_F", ["col"] = "mpbiker_overlays"},
+      [70] = {["name"] = "MP_MP_Biker_Tat_038_F", ["col"] = "mpbiker_overlays"},
+      [71] = {["name"] = "MP_MP_Biker_Tat_051_F", ["col"] = "mpbiker_overlays"},
+      [72] = {["name"] = "MP_Xmas2_f_Tat_007", ["col"] = "mpchristmas2_overlays"},
+      [73] = {["name"] = "MP_Xmas2_f_Tat_024", ["col"] = "mpchristmas2_overlays"},
+      [74] = {["name"] = "MP_Xmas2_f_Tat_025", ["col"] = "mpchristmas2_overlays"},
+      [75] = {["name"] = "MP_Xmas2_f_Tat_029", ["col"] = "mpchristmas2_overlays"},
+      [76] = {["name"] = "MP_Gunrunning_Hair_F_000_F", ["col"] = "mpgunrunning_overlays"},
+      [77] = {["name"] = "MP_Gunrunning_Hair_F_001_F", ["col"] = "mpgunrunning_overlays"},
+      [78] = {["name"] = "MP_Gunrunning_Tattoo_003_F", ["col"] = "mpgunrunning_overlays"},
+      [79] = {["name"] = "LR_F_Hair_000", ["col"] = "mplowrider_overlays"},
+      [80] = {["name"] = "MP_MP_Stunt_Tat_000_F", ["col"] = "mpstunt_overlays"},
+      [81] = {["name"] = "MP_MP_Stunt_Tat_004_F", ["col"] = "mpstunt_overlays"},
+      [82] = {["name"] = "MP_MP_Stunt_Tat_006_F", ["col"] = "mpstunt_overlays"},
+      [83] = {["name"] = "MP_MP_Stunt_Tat_017_F", ["col"] = "mpstunt_overlays"},
+      [84] = {["name"] = "MP_MP_Stunt_Tat_042_F", ["col"] = "mpstunt_overlays"},
     },
   }
-
 -- AddEventHandler("playerSpawned", function()
 -- 	TriggerServerEvent('vmenu:sendData_s')
 -- end)
@@ -1466,8 +2141,6 @@ function Construct()
   VMenu.AddMenu(menu, "", "default") -- default = Header "Texte" sur fond bleu
   VMenu.AddNum(menu, "Sexe", "Sexe", 0, 1, "Changer de sexe")
   VMenu.AddNum(menu, "Face", "Face", 0, 45, "Changer de face")
-  VMenu.AddNum(menu, "Couleur", "Couleur", 0, 45, "Changer la couleur")
-  VMenu.AddNum(menu, "Yeux", "Yeux", 0, 45, "Changer les yeux")
   VMenu.AddFunc(menu, "Valider", "vmenu:getclientFace", {getOpt("Sexe"),getOpt("Face"),0}, "Obtenir ce changement")
 
   local menu = 11
@@ -1839,9 +2512,8 @@ function getVoteMenu()
   TriggerServerEvent('vmenu:updateUser', 28)
   Wait(100)
   VMenu.ResetMenu(28, "", "default")
-  VMenu.AddFunc(28, "Une Merde", "vmenu:takevote", {"Une merde"}, lang.common.access)
-  VMenu.AddFunc(28, "Shakir Darwish", "vmenu:takevote", {"Shakir"}, lang.common.access)
-  VMenu.AddFunc(28, "Montecristo", "vmenu:takevote", {"Monte"}, lang.common.access)
+  VMenu.AddFunc(28, "Frey Marx", "vmenu:takevote", {"Frey"}, lang.common.access)
+  VMenu.AddFunc(28, "Guatain Prinptemps", "vmenu:takevote", {"Printemps"}, lang.common.access)
 end
 
 RegisterNetEvent("vmenu:takevote")
@@ -1852,9 +2524,9 @@ end)
 
 function getBarberShop()
   VMenu.AddMenu(9, "", "default") -- default = Header "Texte" sur fond bleu
-  VMenu.AddNum(9, "Coiffure", "Hair", 0, 22, "Changer la coiffure")
+  VMenu.AddNum(9, "Coiffure", "Hair", 0, 36, "Changer la coiffure")
   VMenu.AddNum(9, "Coiffure secondaire", "HairSec", 0, 6, "Changer la coiffure")
-  VMenu.AddNum(9, "Couleur", "HairColor", 0, 10, "Changer la couleur des cheveux")
+  VMenu.AddNum(9, "Couleur", "HairColor", 0, 64, "Changer la couleur des cheveux")
   VMenu.AddNum(9, "Couleur secondaire", "HairColorSec", 0, 100, "Changer la couleur des cheveux")
   if GetEntityModel(GetPlayerPed(-1)) == 1885233650 then
     VMenu.AddNum(9, "Barbe", "Barbe", 0, 28, "Changer la barbe")
@@ -1863,8 +2535,11 @@ function getBarberShop()
   VMenu.AddNum(9, "Sourcil", "Eyebrows", 0, 33, "Sourcils")
   VMenu.AddNum(9, "Sourcil Couleur Primaire", "Eyebrows_Color", 0, 33, "Couleur Primaire")
   VMenu.AddNum(9, "Sourcil Couleur Secondaire", "Eyebrows_Color_1", 0, 33, "Couleur Secondaire")
+  VMenu.AddNum(9, "Maquillage", "makeup", 0, 74, "Maquillage")
+  VMenu.AddNum(9, "Baume à lèvre", "Lipstick", 0, 9, "Lipstick")
+  VMenu.AddNum(9, "Couleur du baume", "Lipstick_color", 0, 63, "Lipstick")
   VMenu.AddFunc(9, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor"),
-      getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1")}, "Valider")
+      getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1"),getOpt("makeup"),getOpt("Lipstick"),getOpt("Lipstick_color")}, "Valider")
 end
 
 function getTatsShop()
@@ -1873,21 +2548,21 @@ function getTatsShop()
   local sexe
   if(GetEntityModel(GetPlayerPed(-1)) == 1885233650) then
     sexe = Homme
-    VMenu.AddNum(50, "Torse", "torso", 1, 36, "Tattoos")
-    VMenu.AddNum(50, "Bras Gauche", "bras_g", 1, 10, "Tattoos")
-    VMenu.AddNum(50, "Bras Droit", "bras_d", 1, 14, "Tattoos")
-    VMenu.AddNum(50, "Jambe Gauche", "jambe_g", 1, 14, "Tattoos")
-    VMenu.AddNum(50, "Jambe Droite", "jambe_d", 1, 10, "Tattoos")
-    VMenu.AddNum(50, "Tete", "tete", 1, 6, "Tattoos")
+    VMenu.AddNum(50, "Torse", "torso", 1, 141, "Tattoos")
+    VMenu.AddNum(50, "Bras Gauche", "bras_g", 1, 64, "Tattoos")
+    VMenu.AddNum(50, "Bras Droit", "bras_d", 1, 57, "Tattoos")
+    VMenu.AddNum(50, "Jambe Gauche", "jambe_g", 1, 37, "Tattoos")
+    VMenu.AddNum(50, "Jambe Droite", "jambe_d", 1, 30, "Tattoos")
+    VMenu.AddNum(50, "Tete", "tete", 1, 33, "Tattoos")
     VMenu.AddFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete")}, "Valider")
   else
     sexe = Femme
-    VMenu.AddNum(50, "Torse", "torso", 1, 20, "Tattoos")
-    VMenu.AddNum(50, "Bras Gauche", "bras_g", 1, 6, "Tattoos")
-    VMenu.AddNum(50, "Bras Droit", "bras_d", 1, 4, "Tattoos")
-    VMenu.AddNum(50, "Jambe Gauche", "jambe_g", 1, 2, "Tattoos")
-    VMenu.AddNum(50, "Jambe Droite", "jambe_d", 1, 3, "Tattoos")
-    VMenu.AddNum(50, "Tete", "tete", 1, 3, "Tattoos")
+    VMenu.AddNum(50, "Torse", "torso", 1, 156, "Tattoos")
+    VMenu.AddNum(50, "Bras Gauche", "bras_g", 1, 62, "Tattoos")
+    VMenu.AddNum(50, "Bras Droit", "bras_d", 1, 61, "Tattoos")
+    VMenu.AddNum(50, "Jambe Gauche", "jambe_g", 1, 38, "Tattoos")
+    VMenu.AddNum(50, "Jambe Droite", "jambe_d", 1, 32, "Tattoos")
+    VMenu.AddNum(50, "Tete", "tete", 1, 84, "Tattoos")
     VMenu.AddFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete")}, "Valider")
   end
 end
@@ -2009,14 +2684,6 @@ Citizen.CreateThread(function()
       --SetPedHeadOverlayColor(playerPed,  1,  1,  Character['beard_3'],  Character['beard_4'])        -- Beard Color
       SetPedComponentVariation(GetPlayerPed(-1), 0, getOpt("Face"), 0, 2)
       VMenu.EditFunc(10, "Valider", "vmenu:getclientFace", {getOpt("Sexe"),getOpt("Face"),0}, "Obtenir ce changement")
-    elseif VOpts.toUpdate == "Yeux" then
-      -- local id = getOpt("Face")
-      --SetPedHeadBlendData(GetPlayerPed(-1), getOpt("Face"), getOpt("Face"), getOpt("Face"), getOpt("Couleur"), getOpt("Couleur"), getOpt("Couleur"), 1.0, 1.0, 1.0, true)
-      -- La barbe bientôt
-      --SetPedHeadOverlay(playerPed,  1,  Character['beard_1'],  (Character['beard_2'] / 10) + 0.0)    -- Beard
-      --SetPedHeadOverlayColor(playerPed,  1,  1,  Character['beard_3'],  Character['beard_4'])        -- Beard Color
-      SetPedEyeColor(GetPlayerPed(-1), getOpt("Yeux"))
-      VMenu.EditFunc(10, "Valider", "vmenu:getclientFace", {getOpt("Sexe"),getOpt("Face"),0}, "Obtenir ce changement")
     end
   end
 
@@ -2091,27 +2758,49 @@ Citizen.CreateThread(function()
           SetPedHeadOverlay(GetPlayerPed(-1), 1, getOpt("Barbe"), 1.0)
           SetPedHeadOverlayColor(GetPlayerPed(-1), 1, 1, getOpt("BarbeColor"), 0)
           VMenu.EditFunc(9, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor"),
-              getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1")}, "Valider")
+              getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1"),getOpt("makeup"),getOpt("Lipstick"),getOpt("Lipstick_color")}, "Valider")
                     end
       end
       if VOpts.toUpdate == "Eyebrows" then
-        Citizen.Trace(getOpt("Eyebrows"))
+        --Citizen.Trace(getOpt("Eyebrows"))
         SetPedHeadOverlay(GetPlayerPed(-1), 2, getOpt("Eyebrows"), 1.0)
         VMenu.EditFunc(9, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor"),
-            getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1")}, "Valider")
+            getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1"),getOpt("makeup"),getOpt("Lipstick"),getOpt("Lipstick_color")}, "Valider")
+      end
+      if VOpts.toUpdate == "makeup" then
+        --Citizen.Trace(getOpt("Eyebrows"))
+        Citizen.Trace(getOpt("makeup"))
+        SetPedHeadOverlay(GetPlayerPed(-1), 4, getOpt("makeup"), 1.0)
+        VMenu.EditFunc(9, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor"),
+            getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1"),getOpt("makeup"),getOpt("Lipstick"),getOpt("Lipstick_color")}, "Valider")
+      end
+      if VOpts.toUpdate == "Lipstick" then
+        --Citizen.Trace(getOpt("Eyebrows"))
+        Citizen.Trace(getOpt("Lipstick"))
+        SetPedHeadOverlay(GetPlayerPed(-1), 8, getOpt("Lipstick"), 1.0)
+        VMenu.EditFunc(9, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor"),
+            getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1"),getOpt("makeup"),getOpt("Lipstick"),getOpt("Lipstick_color")}, "Valider")
+      end
+      if VOpts.toUpdate == "Lipstick_color" then
+        --Citizen.Trace(getOpt("Eyebrows"))
+        Citizen.Trace(getOpt("Lipstick"))
+        SetPedHeadOverlayColor(GetPlayerPed(-1), 8, 2,getOpt("Lipstick_color"), getOpt("Lipstick_color"))
+        VMenu.EditFunc(9, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor"),
+            getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1"),getOpt("makeup"),getOpt("Lipstick"),getOpt("Lipstick_color")}, "Valider")
       end
       if VOpts.toUpdate == "Eyebrows_Color" or VOpts.toUpdate == "Eyebrows_Color_1" then
         SetPedHeadOverlayColor(GetPlayerPed(-1), 2, 1,getOpt("Eyebrows_Color"), getOpt("Eyebrows_Color_1"))
-          VMenu.EditFunc(9, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor"),
-              getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1")}, "Valider")
+        VMenu.EditFunc(9, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor"),
+            getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1"),getOpt("makeup"),getOpt("Lipstick"),getOpt("Lipstick_color")}, "Valider")
       end
         if VOpts.toUpdate == "Hair" or VOpts.toUpdate == "HairSec" or VOpts.toUpdate == "HairColor" or VOpts.toUpdate == "HairColorSec" then
           SetPedComponentVariation(GetPlayerPed(-1), 2, getOpt("Hair"), getOpt("HairSec"), 2)
           SetPedHairColor(GetPlayerPed(-1), getOpt("HairColor"), getOpt("HairColorSec"))
           VMenu.EditFunc(9, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor"),
-              getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1")}, "Valider")
+              getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1"),getOpt("makeup"),getOpt("Lipstick"),getOpt("Lipstick_color")}, "Valider")
                     end
         if VOpts.toUpdate == "Hair" then
+            --Citizen.Trace(getOpt("Hair"))
           if (getOpt("Hair") == 1) or (getOpt("Hair") == 2) or (getOpt("Hair") == 3) or (getOpt("Hair") == 5) or (getOpt("Hair") == 6) or (getOpt("Hair") == 10) or (getOpt("Hair") == 11) or (getOpt("Hair") == 13) or (getOpt("Hair") == 15) then
             VMenu.EditNum(9, "Couleur", "HairSec", 0, 5, "Change la couleur des cheveux")
           elseif (getOpt("Hair") == 4) or (getOpt("Hair") == 7) or (getOpt("Hair") == 9) then
@@ -2129,7 +2818,7 @@ Citizen.CreateThread(function()
          sexe = Femme
        end
         if VOpts.toUpdate == "torso" then
-          Citizen.Trace(getOpt("torso"))
+          --Citizen.Trace(getOpt("torso"))
             local hash = GetHashKey(sexe.Torso[getOpt("torso")].name)
             local col = GetHashKey(sexe.Torso[getOpt("torso")].col)
             local ped = GetPlayerPed(-1)
@@ -2138,7 +2827,7 @@ Citizen.CreateThread(function()
             VMenu.EditFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete")}, "Valider")
             end
         if VOpts.toUpdate == "bras_g" then
-          Citizen.Trace(getOpt("bras_g"))
+          --Citizen.Trace(getOpt("bras_g"))
           local hash = GetHashKey(sexe.Bras_Gauche[getOpt("bras_g")].name)
           local col = GetHashKey(sexe.Bras_Gauche[getOpt("bras_g")].col)
           local ped = GetPlayerPed(-1)
@@ -2147,7 +2836,7 @@ Citizen.CreateThread(function()
           VMenu.EditFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete")}, "Valider")
         end
         if VOpts.toUpdate == "bras_d" then
-          Citizen.Trace(getOpt("bras_g"))
+          --Citizen.Trace(getOpt("bras_g"))
           local hash = GetHashKey(sexe.Bras_Droit[getOpt("bras_d")].name)
           local col = GetHashKey(sexe.Bras_Droit[getOpt("bras_d")].col)
           local ped = GetPlayerPed(-1)
@@ -2156,7 +2845,7 @@ Citizen.CreateThread(function()
           VMenu.EditFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete")}, "Valider")
         end
         if VOpts.toUpdate == "jambe_g" then
-          Citizen.Trace(getOpt("bras_g"))
+          --Citizen.Trace(getOpt("bras_g"))
           local hash = GetHashKey(sexe.Jambe_Gauche[getOpt("jambe_g")].name)
           local col = GetHashKey(sexe.Jambe_Gauche[getOpt("jambe_g")].col)
           local ped = GetPlayerPed(-1)
@@ -2165,7 +2854,7 @@ Citizen.CreateThread(function()
           VMenu.EditFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete")}, "Valider")
         end
         if VOpts.toUpdate == "jambe_d" then
-          Citizen.Trace(getOpt("bras_g"))
+          --Citizen.Trace(getOpt("bras_g"))
           local hash = GetHashKey(sexe.Jambe_Droite[getOpt("jambe_d")].name)
           local col = GetHashKey(sexe.Jambe_Droite[getOpt("jambe_d")].col)
           local ped = GetPlayerPed(-1)
@@ -2174,7 +2863,7 @@ Citizen.CreateThread(function()
           VMenu.EditFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete")}, "Valider")
         end
         if VOpts.toUpdate == "tete" then
-          Citizen.Trace(getOpt("bras_g"))
+          --Citizen.Trace(getOpt("bras_g"))
           local hash = GetHashKey(sexe.Tete[getOpt("tete")].name)
           local col = GetHashKey(sexe.Tete[getOpt("tete")].col)
           local ped = GetPlayerPed(-1)

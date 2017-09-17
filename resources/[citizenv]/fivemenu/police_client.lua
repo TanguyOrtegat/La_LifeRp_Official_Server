@@ -181,10 +181,10 @@ AddEventHandler("menupolice:PoliceOG", function(target, rangPolice) -- 0 rien, 1
 		VMenu.AddFunc(98, "Saisir les armes illégales", "menupolice:seizeillegalweapons", {}, "Accéder")
 		VMenu.AddFunc(98, "Saisir les armes", "menupolice:seizeweapons", {}, "Accéder")
 		VMenu.AddNum(98, "Nombre de points à retirer", "AmountP", 0, 12, "Retirer les points sur le permis")
-    VMenu.AddFunc(98, "Retirer les points sur le permis", "menupolice:removepp", {getOpt("AmountP")}, "Accéder")
+    	VMenu.AddFunc(98, "Retirer les points sur le permis", "menupolice:removepp", {getOpt("AmountP")}, "Accéder")
 		VMenu.AddFunc(98, "Saisir le permis de port d'armes", "menupolice:removeparme", {}, "Accéder")
 		VMenu.AddFunc(98, "Saisir le permis de conduire", "menupolice:removep", {}, "Accéder")
-    VMenu.AddFunc(98, "Saisir les points du permis de c.", "menupolice:removepp", {}, "Accéder")
+    	VMenu.AddFunc(98, "Saisir les points du permis de c.", "menupolice:removepp", {}, "Accéder")
 		VMenu.AddBool(98, "Escorter un civil menotté", "EscortM", false, "Toggle")
 		VMenu.AddBool(98, "Menotter/Démenotter", "Menotter", false, "Toggle")
 		VMenu.AddFunc(98, "Forcer l'entrée d'un civil dans un véhicule", "menupolice:civtocar", {}, "Accéder")
@@ -293,13 +293,15 @@ end)
 local showIdPolice = false
 
 RegisterNetEvent("menupolice:f_verifp")
-AddEventHandler("menupolice:f_verifp", function(name, tel, job, police, entreprise, permis, permisArme, permisBateau, permisPilote,arme,civitems)
+AddEventHandler("menupolice:f_verifp", function(name, tel, job, police, entreprise, permis, permisArme, permisBateau, permisPilote,arme,civitems,money,dirtymoney)
 	showIdPolice = true
 		Citizen.Wait(0)
 		if (showIdPolice == true) then
 			TriggerEvent("itinerance:notif", "~h~Carte d'identité")
 			TriggerEvent("itinerance:notif", "~b~Nom: ~w~" ..name)
 			TriggerEvent("itinerance:notif", "~b~Numéro de téléphone: ~w~" ..tel)
+			TriggerEvent("itinerance:notif", "~g~Argent: ~w~" ..money)
+			TriggerEvent("itinerance:notif", "~r~Argent Sale: ~w~" ..dirtymoney)
 			if arme == "oui" then
 				TriggerEvent("itinerance:notif", "~g~arme: ~r~"..arme)
 			else
@@ -348,31 +350,16 @@ AddEventHandler("menupolice:f_verifp", function(name, tel, job, police, entrepri
 			elseif tonumber(job) == 21 then
 				TriggerEvent("itinerance:notif", "~y~Métier: ~w~Journaliste")
 			elseif tonumber(job) == 22 then
-        TriggerEvent("itinerance:notif", "~y~Métier: ~w~Pêcheur")
-      elseif tonumber(job) == 23 then
-        TriggerEvent("itinerance:notif", "~y~Métier: ~w~Vigneron")
-      elseif tonumber(job) == 25 then
-        TriggerEvent("itinerance:notif", "~y~Métier: ~w~Metallurgiste")
-      elseif tonumber(job) == 26 then
-        TriggerEvent("itinerance:notif", "~y~Métier: ~w~Agriculteur")
+        		TriggerEvent("itinerance:notif", "~y~Métier: ~w~Pêcheur")
+      		elseif tonumber(job) == 23 then
+        		TriggerEvent("itinerance:notif", "~y~Métier: ~w~Vigneron")
+      		elseif tonumber(job) == 25 then
+        		TriggerEvent("itinerance:notif", "~y~Métier: ~w~Metallurgiste")
+      		elseif tonumber(job) == 26 then
+        		TriggerEvent("itinerance:notif", "~y~Métier: ~w~Agriculteur")
 			else
 				TriggerEvent("itinerance:notif", "~y~Métier: ~r~Erreur")
 			end
-			-- elseif entreprise >= 1 then
-				-- if entreprise == 1 then
-					-- DrawAdvancedText(0.874000000000001, 0.318, 0.005, 0.0028, 0.4, "~y~Métier: ~w~" ..job.. " - Stagiaire", 255, 255, 255, 255, 6, 1)
-				-- elseif entreprise == 2 then
-					-- DrawAdvancedText(0.874000000000001, 0.318, 0.005, 0.0028, 0.4, "~y~Métier: ~w~" ..job.. " - Employé", 255, 255, 255, 255, 6, 1)
-				-- elseif entreprise == 3 then
-					-- DrawAdvancedText(0.874000000000001, 0.318, 0.005, 0.0028, 0.4, "~y~Métier: ~w~" ..job.. " - Chef de service", 255, 255, 255, 255, 6, 1)
-				-- elseif entreprise == 4 then
-					-- DrawAdvancedText(0.874000000000001, 0.318, 0.005, 0.0028, 0.4, "~y~Métier: ~w~" ..job.. " - Directeur", 255, 255, 255, 255, 6, 1)
-				-- elseif entreprise == 5 then
-					-- DrawAdvancedText(0.874000000000001, 0.318, 0.005, 0.0028, 0.4, "~y~Métier: ~w~" ..job.. " - Comptable", 255, 255, 255, 255, 6, 1)
-				-- elseif entreprise == 6 then
-					-- DrawAdvancedText(0.874000000000001, 0.318, 0.005, 0.0028, 0.4, "~y~Métier: ~w~" ..job.. " - PDG", 255, 255, 255, 255, 6, 1)
-				-- end
-			-- DrawAdvancedText(0.874000000000001, 0.338, 0.005, 0.0028, 0.4, "~g~Permis de conduire (points): ~w~" ..permis, 255, 255, 255, 255, 6, 1)
 			if tonumber(permisArme) == 0 then
 				TriggerEvent("itinerance:notif", "~g~Permis de port d'armes: ~r~Non")
 			elseif tonumber(permisArme) == 1 then
@@ -391,16 +378,6 @@ AddEventHandler("menupolice:f_verifp", function(name, tel, job, police, entrepri
 					TriggerEvent("itinerance:notif", item.libelle .. item.valeur)
 				end
 			end
-			-- if permisBateau == 0 then
-				-- DrawAdvancedText(0.874000000000001, 0.378, 0.005, 0.0028, 0.4, "~g~Permis bateau: ~r~Non", 255, 255, 255, 255, 6, 1)
-			-- elseif permisBateau == 1 then
-				-- DrawAdvancedText(0.874000000000001, 0.378, 0.005, 0.0028, 0.4, "~g~Permis bateau: ~g~Oui", 255, 255, 255, 255, 6, 1)
-			-- end
-			-- if permisPilote == 0 then
-				-- DrawAdvancedText(0.874000000000001, 0.398, 0.005, 0.0028, 0.4, "~g~Permis de pilote: ~r~Non", 255, 255, 255, 255, 6, 1)
-			-- elseif permisPilote == 1 then
-				-- DrawAdvancedText(0.874000000000001, 0.398, 0.005, 0.0028, 0.4, "~g~Permis de pilote: ~g~Oui", 255, 255, 255, 255, 6, 1)
-			-- end
 		end
 end)
 

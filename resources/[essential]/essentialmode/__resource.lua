@@ -37,3 +37,6 @@ files {
 --    'addCommand',
 --    'addGroupCommand'
 --}
+dependencies {
+    "mysql-async"
+}

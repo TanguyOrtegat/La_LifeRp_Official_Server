@@ -17,6 +17,7 @@ local blips = {
    {name="Gouvernement", scale=0.9, id=419, x = -1581.0, y = -558.0, z = 34.952938079834},
    {name="Bureau de vote", colour=81, scale=0.9, id=409, x = -257.30624389648, y = -2031.6326904297, z = 29.946046829224},
    {name="Studio TV", colour=1, scale=0.9, id=135, x = -391.77563476563, y = -1879.1479492188, z = 20.527830123901},
+   {name="Tattoo Shop", colour=9, scale=0.9, id=75, x = 322.39450073242, y = 180.48550415039, z = 103.58648681641},
    --{name="Barber", id=71, x=-30.109, y=-141.693, z=57.041},
    --{name="Barber", id=71, x=-285.238, y=6236.365, z=31.455},
    -- House
