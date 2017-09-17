@@ -2535,6 +2535,8 @@ function getBarberShop()
   VMenu.AddNum(9, "Sourcil", "Eyebrows", 0, 33, "Sourcils")
   VMenu.AddNum(9, "Sourcil Couleur Primaire", "Eyebrows_Color", 0, 33, "Couleur Primaire")
   VMenu.AddNum(9, "Sourcil Couleur Secondaire", "Eyebrows_Color_1", 0, 33, "Couleur Secondaire")
+  VMenu.AddFunc(9, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor"),
+             getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1")}, "Valider")
 end
 
 function getTatsShop()
