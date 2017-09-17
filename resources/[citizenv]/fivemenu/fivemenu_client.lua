@@ -2535,11 +2535,8 @@ function getBarberShop()
   VMenu.AddNum(9, "Sourcil", "Eyebrows", 0, 33, "Sourcils")
   VMenu.AddNum(9, "Sourcil Couleur Primaire", "Eyebrows_Color", 0, 33, "Couleur Primaire")
   VMenu.AddNum(9, "Sourcil Couleur Secondaire", "Eyebrows_Color_1", 0, 33, "Couleur Secondaire")
-  VMenu.AddNum(9, "Maquillage", "makeup", 0, 74, "Maquillage")
-  VMenu.AddNum(9, "Baume à lèvre", "Lipstick", 0, 9, "Lipstick")
-  VMenu.AddNum(9, "Couleur du baume", "Lipstick_color", 0, 63, "Lipstick")
   VMenu.AddFunc(9, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor"),
-      getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1"),getOpt("makeup"),getOpt("Lipstick"),getOpt("Lipstick_color")}, "Valider")
+      getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1")}, "Valider")
 end
 
 function getTatsShop()
@@ -2548,13 +2545,17 @@ function getTatsShop()
   local sexe
   if(GetEntityModel(GetPlayerPed(-1)) == 1885233650) then
     sexe = Homme
+    Citizen.Trace("salut")
     VMenu.AddNum(50, "Torse", "torso", 1, 141, "Tattoos")
     VMenu.AddNum(50, "Bras Gauche", "bras_g", 1, 64, "Tattoos")
     VMenu.AddNum(50, "Bras Droit", "bras_d", 1, 57, "Tattoos")
     VMenu.AddNum(50, "Jambe Gauche", "jambe_g", 1, 37, "Tattoos")
     VMenu.AddNum(50, "Jambe Droite", "jambe_d", 1, 30, "Tattoos")
     VMenu.AddNum(50, "Tete", "tete", 1, 33, "Tattoos")
-    VMenu.AddFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete")}, "Valider")
+    VMenu.AddNum(50, "Maquillage", "makeup", 0, 74, "Maquillage")
+    VMenu.AddNum(50, "Baume à lèvre", "Lipstick", 0, 9, "Lipstick")
+    VMenu.AddNum(50, "Couleur du baume", "Lipstick_color", 0, 63, "Lipstick")
+    VMenu.AddFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete"),getOpt("makeup"),getOpt("Lipstick"),getOpt("Lipstick_color")}, "Valider")
   else
     sexe = Femme
     VMenu.AddNum(50, "Torse", "torso", 1, 156, "Tattoos")
@@ -2563,7 +2564,10 @@ function getTatsShop()
     VMenu.AddNum(50, "Jambe Gauche", "jambe_g", 1, 38, "Tattoos")
     VMenu.AddNum(50, "Jambe Droite", "jambe_d", 1, 32, "Tattoos")
     VMenu.AddNum(50, "Tete", "tete", 1, 84, "Tattoos")
-    VMenu.AddFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete")}, "Valider")
+    VMenu.AddNum(50, "Maquillage", "makeup", 0, 74, "Maquillage")
+    VMenu.AddNum(50, "Baume à lèvre", "Lipstick", 0, 9, "Lipstick")
+    VMenu.AddNum(50, "Couleur du baume", "Lipstick_color", 0, 63, "Lipstick")
+    VMenu.AddFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete"),getOpt("makeup"),getOpt("Lipstick"),getOpt("Lipstick_color")}, "Valider")
   end
 end
 
@@ -2767,27 +2771,6 @@ Citizen.CreateThread(function()
         VMenu.EditFunc(9, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor"),
             getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1"),getOpt("makeup"),getOpt("Lipstick"),getOpt("Lipstick_color")}, "Valider")
       end
-      if VOpts.toUpdate == "makeup" then
-        --Citizen.Trace(getOpt("Eyebrows"))
-        Citizen.Trace(getOpt("makeup"))
-        SetPedHeadOverlay(GetPlayerPed(-1), 4, getOpt("makeup"), 1.0)
-        VMenu.EditFunc(9, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor"),
-            getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1"),getOpt("makeup"),getOpt("Lipstick"),getOpt("Lipstick_color")}, "Valider")
-      end
-      if VOpts.toUpdate == "Lipstick" then
-        --Citizen.Trace(getOpt("Eyebrows"))
-        Citizen.Trace(getOpt("Lipstick"))
-        SetPedHeadOverlay(GetPlayerPed(-1), 8, getOpt("Lipstick"), 1.0)
-        VMenu.EditFunc(9, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor"),
-            getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1"),getOpt("makeup"),getOpt("Lipstick"),getOpt("Lipstick_color")}, "Valider")
-      end
-      if VOpts.toUpdate == "Lipstick_color" then
-        --Citizen.Trace(getOpt("Eyebrows"))
-        Citizen.Trace(getOpt("Lipstick"))
-        SetPedHeadOverlayColor(GetPlayerPed(-1), 8, 2,getOpt("Lipstick_color"), getOpt("Lipstick_color"))
-        VMenu.EditFunc(9, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor"),
-            getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1"),getOpt("makeup"),getOpt("Lipstick"),getOpt("Lipstick_color")}, "Valider")
-      end
       if VOpts.toUpdate == "Eyebrows_Color" or VOpts.toUpdate == "Eyebrows_Color_1" then
         SetPedHeadOverlayColor(GetPlayerPed(-1), 2, 1,getOpt("Eyebrows_Color"), getOpt("Eyebrows_Color_1"))
         VMenu.EditFunc(9, "Valider", "vmenu:getclientHair", {getOpt("Hair"),getOpt("HairSec"),getOpt("HairColor"),getOpt("HairColorSec"),getOpt("Barbe"),getOpt("BarbeColor"),
@@ -2824,7 +2807,7 @@ Citizen.CreateThread(function()
             local ped = GetPlayerPed(-1)
             ClearPedDecorations(ped)
             ApplyPedOverlay(ped, col, hash)
-            VMenu.EditFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete")}, "Valider")
+            VMenu.EditFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete"),getOpt("makeup"),getOpt("Lipstick"),getOpt("Lipstick_color")}, "Valider")
             end
         if VOpts.toUpdate == "bras_g" then
           --Citizen.Trace(getOpt("bras_g"))
@@ -2833,7 +2816,7 @@ Citizen.CreateThread(function()
           local ped = GetPlayerPed(-1)
           ClearPedDecorations(ped)
           ApplyPedOverlay(ped, col, hash)
-          VMenu.EditFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete")}, "Valider")
+          VMenu.AddFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete"),getOpt("makeup"),getOpt("Lipstick"),getOpt("Lipstick_color")}, "Valider")
         end
         if VOpts.toUpdate == "bras_d" then
           --Citizen.Trace(getOpt("bras_g"))
@@ -2842,7 +2825,7 @@ Citizen.CreateThread(function()
           local ped = GetPlayerPed(-1)
           ClearPedDecorations(ped)
           ApplyPedOverlay(ped, col, hash)
-          VMenu.EditFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete")}, "Valider")
+          VMenu.EditFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete"),getOpt("makeup"),getOpt("Lipstick"),getOpt("Lipstick_color")}, "Valider")
         end
         if VOpts.toUpdate == "jambe_g" then
           --Citizen.Trace(getOpt("bras_g"))
@@ -2851,7 +2834,7 @@ Citizen.CreateThread(function()
           local ped = GetPlayerPed(-1)
           ClearPedDecorations(ped)
           ApplyPedOverlay(ped, col, hash)
-          VMenu.EditFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete")}, "Valider")
+          VMenu.EditFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete"),getOpt("makeup"),getOpt("Lipstick"),getOpt("Lipstick_color")}, "Valider")
         end
         if VOpts.toUpdate == "jambe_d" then
           --Citizen.Trace(getOpt("bras_g"))
@@ -2860,7 +2843,7 @@ Citizen.CreateThread(function()
           local ped = GetPlayerPed(-1)
           ClearPedDecorations(ped)
           ApplyPedOverlay(ped, col, hash)
-          VMenu.EditFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete")}, "Valider")
+          VMenu.EditFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete"),getOpt("makeup"),getOpt("Lipstick"),getOpt("Lipstick_color")}, "Valider")
         end
         if VOpts.toUpdate == "tete" then
           --Citizen.Trace(getOpt("bras_g"))
@@ -2869,7 +2852,25 @@ Citizen.CreateThread(function()
           local ped = GetPlayerPed(-1)
           ClearPedDecorations(ped)
           ApplyPedOverlay(ped, col, hash)
-          VMenu.EditFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete")}, "Valider")
+          VMenu.EditFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete"),getOpt("makeup"),getOpt("Lipstick"),getOpt("Lipstick_color")}, "Valider")
+        end
+        if VOpts.toUpdate == "makeup" then
+          --Citizen.Trace(getOpt("Eyebrows"))
+          Citizen.Trace(getOpt("makeup"))
+          SetPedHeadOverlay(GetPlayerPed(-1), 4, getOpt("makeup"), 1.0)
+          VMenu.EditFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete"),getOpt("makeup"),getOpt("Lipstick"),getOpt("Lipstick_color")}, "Valider")
+        end
+        if VOpts.toUpdate == "Lipstick" then
+          --Citizen.Trace(getOpt("Eyebrows"))
+          Citizen.Trace(getOpt("Lipstick"))
+          SetPedHeadOverlay(GetPlayerPed(-1), 8, getOpt("Lipstick"), 1.0)
+          VMenu.EditFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete"),getOpt("makeup"),getOpt("Lipstick"),getOpt("Lipstick_color")}, "Valider")
+        end
+        if VOpts.toUpdate == "Lipstick_color" then
+          --Citizen.Trace(getOpt("Eyebrows"))
+          Citizen.Trace(getOpt("Lipstick"))
+          SetPedHeadOverlayColor(GetPlayerPed(-1), 8, 2,getOpt("Lipstick_color"), getOpt("Lipstick_color"))
+          VMenu.EditFunc(50, "Valider", "vmenu:settattoos", {getOpt("torso"),getOpt("bras_g"),getOpt("bras_d"),getOpt("jambe_g"),getOpt("jambe_d"),getOpt("tete"),getOpt("makeup"),getOpt("Lipstick"),getOpt("Lipstick_color")}, "Valider")
         end
       end
 			-- Ne Pas Toucher
