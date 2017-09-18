@@ -343,7 +343,7 @@ Citizen.CreateThread(function()
 				ShowMsgtime.time = 250
 				Wait(2500)
         --local price = math.ceil(PriceBourse)
-				ShowMsgtime.msg = '~r~-1 cocaïne ~w~/ ~r~+'..300..'$'
+				ShowMsgtime.msg = '~r~-1 cocaïne ~w~/ ~r~+'.. 300 ..'$'
 				ShowMsgtime.time = 150
 				TriggerEvent("player:sellItem", 8, 300)
 			else

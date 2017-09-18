@@ -263,7 +263,7 @@ Citizen.CreateThread(function()
 				ShowMsgtime.time = 250
 				Wait(2500)
         --local price = math.ceil(PriceBourse)
-				ShowMsgtime.msg = '~r~-1 cannabis roulé ~w~/ ~r~+'..150..'$'
+				ShowMsgtime.msg = '~r~-1 cannabis roulé ~w~/ ~r~+'.. 150 ..'$'
 				ShowMsgtime.time = 150
 				TriggerEvent("player:sellItem", 5, 150)
 			else
