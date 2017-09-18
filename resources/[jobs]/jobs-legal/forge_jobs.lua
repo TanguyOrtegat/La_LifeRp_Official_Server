@@ -449,26 +449,26 @@ Citizen.CreateThread(function()
                       TriggerEvent("inventory:getQuantityJob")
                       Citizen.Wait(200)
                     if tonumber(ITEMSJOB[40].quantity) > 0 then
-                      TriggerServerEvent("jobs:getBoursePrice", 40)
-                      TriggerServerEvent("jobs:changeBoursePrice", 40)
+                      --TriggerServerEvent("jobs:getBoursePrice", 40)
+                      --TriggerServerEvent("jobs:changeBoursePrice", 40)
                       ShowMsgtime.msg = 'En train de vendre...'
                       ShowMsgtime.time = 250
                       Wait(2500)
-                      local price = math.ceil(PriceBourse)
-                      ShowMsgtime.msg = '~r~-1 Bobine de cuivre ~w~/ ~g~+' .. price .. '$'
+                      --local price = math.ceil(PriceBourse)
+                      ShowMsgtime.msg = '~r~-1 Bobine de cuivre ~w~/ ~g~+' .. 45 .. '$'
                       ShowMsgtime.time = 150
-                      TriggerEvent("inventory:sell",0, 1, 40, price, "")
+                      TriggerEvent("inventory:sell",0, 1, 40, 45, "")
                       Wait(2000)
                     elseif tonumber(ITEMSJOB[41].quantity) > 0 then
-                      TriggerServerEvent("jobs:getBoursePrice", 41)
-                      TriggerServerEvent("jobs:changeBoursePrice", 41)
+                      --TriggerServerEvent("jobs:getBoursePrice", 41)
+                      --TriggerServerEvent("jobs:changeBoursePrice", 41)
                       ShowMsgtime.msg = 'En train de vendre...'
                       ShowMsgtime.time = 250
                       Wait(2500)
-                      local price = math.ceil(PriceBourse)
-                      ShowMsgtime.msg = '~r~-1 Plaque de fer ~w~/ ~g~+' .. price .. '$'
+                      --local price = math.ceil(PriceBourse)
+                      ShowMsgtime.msg = '~r~-1 Plaque de fer ~w~/ ~g~+' .. 60 .. '$'
                       ShowMsgtime.time = 150
-                      TriggerEvent("inventory:sell",0, 1, 41, price, "")
+                      TriggerEvent("inventory:sell",0, 1, 41, 60, "")
                       Wait(2000)
                     else
                       TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de minerais fondus sur vous !")
