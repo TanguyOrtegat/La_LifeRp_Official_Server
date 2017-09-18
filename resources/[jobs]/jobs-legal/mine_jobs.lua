@@ -476,37 +476,37 @@ Citizen.CreateThread(function()
                       Citizen.Trace(tostring(ITEMSJOB[22].quantity))
                       Citizen.Wait(200)
                     if tonumber(ITEMSJOB[24].quantity) > 0 then
-                      --TriggerServerEvent("jobs:getBoursePrice", 24)
-                      --TriggerServerEvent("jobs:changeBoursePrice", 24)
+                      TriggerServerEvent("jobs:getBoursePrice", 24)
+                      TriggerServerEvent("jobs:changeBoursePrice", 24)
                       ShowMsgtime.msg = 'En train de vendre...'
                       ShowMsgtime.time = 250
                       Wait(2500)
-                      --local price = math.ceil(PriceBourse)
-                      ShowMsgtime.msg = '~r~-1 roche traité ~w~/ ~g~+' .. 25 .. '$'
+                      local price = math.ceil(PriceBourse)
+                      ShowMsgtime.msg = '~r~-1 roche traité ~w~/ ~g~+' .. price .. '$'
                       ShowMsgtime.time = 150
-                      TriggerEvent("inventory:sell",0, 1, 24, 25, "")
+                      TriggerEvent("inventory:sell",0, 1, 24, price, "")
                       Wait(2000)
                     elseif tonumber(ITEMSJOB[20].quantity) > 0 then
-                      --TriggerServerEvent("jobs:getBoursePrice", 20)
-                      --TriggerServerEvent("jobs:changeBoursePrice", 20)
+                      TriggerServerEvent("jobs:getBoursePrice", 20)
+                      TriggerServerEvent("jobs:changeBoursePrice", 20)
                       ShowMsgtime.msg = 'En train de vendre...'
                       ShowMsgtime.time = 250
                       Wait(2500)
-                      --local price = math.ceil(PriceBourse)
-                      ShowMsgtime.msg = '~r~-1 cuivre traité ~w~/ ~g~+' .. 35 .. '$'
+                      local price = math.ceil(PriceBourse)
+                      ShowMsgtime.msg = '~r~-1 cuivre traité ~w~/ ~g~+' .. price .. '$'
                       ShowMsgtime.time = 150
-                      TriggerEvent("inventory:sell",0, 1, 20, 35, "")
+                      TriggerEvent("inventory:sell",0, 1, 20, price, "")
                       Wait(2000)
                     elseif tonumber(ITEMSJOB[21].quantity) > 0 then
-                      --TriggerServerEvent("jobs:getBoursePrice", 21)
-                      --TriggerServerEvent("jobs:changeBoursePrice", 21)
+                      TriggerServerEvent("jobs:getBoursePrice", 21)
+                      TriggerServerEvent("jobs:changeBoursePrice", 21)
                       ShowMsgtime.msg = 'En train de vendre...'
                       ShowMsgtime.time = 250
                       Wait(2500)
-                      --local price = math.ceil(PriceBourse)
-                      ShowMsgtime.msg = '~r~-1 fer traité ~w~/ ~g~+' .. 55 .. '$'
+                      local price = math.ceil(PriceBourse)
+                      ShowMsgtime.msg = '~r~-1 fer traité ~w~/ ~g~+' .. price .. '$'
                       ShowMsgtime.time = 150
-                      TriggerEvent("inventory:sell",0, 1, 21, 55, "")
+                      TriggerEvent("inventory:sell",0, 1, 21, price, "")
                       Wait(2000)
                     else
                       TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de minerais traités sur vous !")
@@ -576,15 +576,15 @@ Citizen.CreateThread(function()
                       Citizen.Trace(tostring(ITEMSJOB[22].quantity))
                       Citizen.Wait(200)
                     if tonumber(ITEMSJOB[22].quantity) > 0 then
-                      --TriggerServerEvent("jobs:getBoursePrice", 22)
-                      --TriggerServerEvent("jobs:changeBoursePrice", 22)
+                      TriggerServerEvent("jobs:getBoursePrice", 22)
+                      TriggerServerEvent("jobs:changeBoursePrice", 22)
                       ShowMsgtime.msg = 'En train de vendre...'
                       ShowMsgtime.time = 250
                       Wait(2500)
-                      --local price = math.ceil(PriceBourse)
-                      ShowMsgtime.msg = '~r~-1 diamant traité ~w~/ ~g~+' .. 500 .. '$'
+                      local price = math.ceil(PriceBourse)
+                      ShowMsgtime.msg = '~r~-1 diamant traité ~w~/ ~g~+' .. price .. '$'
                       ShowMsgtime.time = 150
-                      TriggerEvent("inventory:sell",0, 1, 22, 500, "")
+                      TriggerEvent("inventory:sell",0, 1, 22, price, "")
                       Wait(2000)
                     else
                       TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de minerais traités sur vous !")

@@ -401,15 +401,15 @@ Citizen.CreateThread(function()
         Citizen.Wait(1000)
           if ITEMSDRUGS[12].quantity > 0 then
 			if tonumber(inv_qty) <= 30 then
-				--TriggerServerEvent("drugs:getBoursePrice", 12)
-                --TriggerServerEvent("drugs:changeBoursePrice", 12)
+				TriggerServerEvent("drugs:getBoursePrice", 12)
+                TriggerServerEvent("drugs:changeBoursePrice", 12)
 				ShowMsgtime.msg = 'En train de vendre...'
 				ShowMsgtime.time = 250
 				Wait(2500)
-        --local price = math.ceil(PriceBourse)
-				ShowMsgtime.msg = '~r~-1 méthemphétamine ~w~/ ~r~+'..500..'$'
+        local price = math.ceil(PriceBourse)
+				ShowMsgtime.msg = '~r~-1 méthemphétamine ~w~/ ~r~+'..price..'$'
 				ShowMsgtime.time = 150
-				TriggerEvent("player:sellItem", 12, 500)
+				TriggerEvent("player:sellItem", 12, price)
 			else
 				TriggerEvent("itinerance:notif", "~r~Vous devez avoir moins de 31 méthemphétamine pour vendre !")
 			end
