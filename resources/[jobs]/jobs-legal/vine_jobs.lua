@@ -469,15 +469,15 @@ Citizen.CreateThread(function()
                       TriggerEvent("inventory:getQuantityJob")
                       Citizen.Wait(200)
                     if tonumber(ITEMSJOB[37].quantity) > 0 then
-                      TriggerServerEvent("jobs:getBoursePrice", 37)
-                      TriggerServerEvent("jobs:changeBoursePrice", 37)
+                      --TriggerServerEvent("jobs:getBoursePrice", 37)
+                      --TriggerServerEvent("jobs:changeBoursePrice", 37)
                       ShowMsgtime.msg = 'Vente en cours...'
                       ShowMsgtime.time = 250
                       Wait(2500)
-                      local price = math.ceil(PriceBourse)
-                      ShowMsgtime.msg = '~r~-1 Vin ~w~/ ~g~+' .. price .. '$'
+                      --local price = math.ceil(PriceBourse)
+                      ShowMsgtime.msg = '~r~-1 Vin ~w~/ ~g~+' .. 40 .. '$'
                       ShowMsgtime.time = 150
-                      TriggerEvent("inventory:sell",0, 1, 37, price, "")
+                      TriggerEvent("inventory:sell",0, 1, 37, 40, "")
                       Wait(2000)
                     else
                       TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de vin sur vous !")

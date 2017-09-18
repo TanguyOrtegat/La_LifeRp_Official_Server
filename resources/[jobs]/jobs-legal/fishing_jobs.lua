@@ -548,48 +548,48 @@ Citizen.CreateThread(function()
                       TriggerEvent("inventory:getQuantityJob")
                       Citizen.Wait(200)
                     if tonumber(ITEMSJOB[32].quantity) > 0 then
-					  TriggerServerEvent("jobs:getBoursePrice", 32)
-                      TriggerServerEvent("jobs:changeBoursePrice", 32)
+					  --TriggerServerEvent("jobs:getBoursePrice", 32)
+                      --TriggerServerEvent("jobs:changeBoursePrice", 32)
                       ShowMsgtime.msg = 'En train de vendre...'
                       ShowMsgtime.time = 250
                       Wait(2500)
                       local price = math.ceil(PriceBourse)
-                      ShowMsgtime.msg = '~r~-1 Morue surgelée ~w~/ ~g~+' .. price .. '$'
+                      ShowMsgtime.msg = '~r~-1 Morue surgelée ~w~/ ~g~+' .. 20 .. '$'
                       ShowMsgtime.time = 150
-                      TriggerEvent("inventory:sell",0, 1, 32, price, "")
+                      TriggerEvent("inventory:sell",0, 1, 32, 20, "")
                       Wait(2000)
                     elseif tonumber(ITEMSJOB[33].quantity) > 0 then
-					TriggerServerEvent("jobs:getBoursePrice", 33)
-                      TriggerServerEvent("jobs:changeBoursePrice", 32)
+					--TriggerServerEvent("jobs:getBoursePrice", 33)
+                      --TriggerServerEvent("jobs:changeBoursePrice", 32)
                       ShowMsgtime.msg = 'En train de vendre...'
                       ShowMsgtime.time = 250
                       Wait(2500)
                       local price = math.ceil(PriceBourse)
-                      ShowMsgtime.msg = '~r~-1 Sardine surgelée ~w~/ ~g~+' .. price .. '$'
+                      ShowMsgtime.msg = '~r~-1 Sardine surgelée ~w~/ ~g~+' .. 50 .. '$'
                       ShowMsgtime.time = 150
-                      TriggerEvent("inventory:sell",0, 1, 33, price, "")
+                      TriggerEvent("inventory:sell",0, 1, 33, 50, "")
                       Wait(2000)
                     elseif tonumber(ITEMSJOB[34].quantity) > 0 then
-					TriggerServerEvent("jobs:getBoursePrice", 34)
-                      TriggerServerEvent("jobs:changeBoursePrice", 34)
+					--TriggerServerEvent("jobs:getBoursePrice", 34)
+                      --TriggerServerEvent("jobs:changeBoursePrice", 34)
                       ShowMsgtime.msg = 'En train de vendre...'
                       ShowMsgtime.time = 250
                       Wait(2500)
                       local price = math.ceil(PriceBourse)
-                      ShowMsgtime.msg = '~r~-1 Daurade surgelée ~w~/ ~g~+' .. price .. '$'
+                      ShowMsgtime.msg = '~r~-1 Daurade surgelée ~w~/ ~g~+' .. 60 .. '$'
                       ShowMsgtime.time = 150
-                      TriggerEvent("inventory:sell",0, 1, 34, price, "")
+                      TriggerEvent("inventory:sell",0, 1, 34, 60, "")
                       Wait(2000)
                     elseif tonumber(ITEMSJOB[35].quantity) > 0 then
-					TriggerServerEvent("jobs:getBoursePrice", 35)
-                      TriggerServerEvent("jobs:changeBoursePrice", 35)
+					--TriggerServerEvent("jobs:getBoursePrice", 35)
+                      --TriggerServerEvent("jobs:changeBoursePrice", 35)
                       ShowMsgtime.msg = 'En train de vendre...'
                       ShowMsgtime.time = 250
                       Wait(2500)
                       local price = math.ceil(PriceBourse)
-                      ShowMsgtime.msg = '~r~-1 Saumon surgelé ~w~/ ~g~+' .. price .. '$'
+                      ShowMsgtime.msg = '~r~-1 Saumon surgelé ~w~/ ~g~+' .. 80 .. '$'
                       ShowMsgtime.time = 150
-                      TriggerEvent("inventory:sell",0, 1, 35, price, "")
+                      TriggerEvent("inventory:sell",0, 1, 35, 80, "")
                       Wait(2000)
                     else
                       TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de poisson surgelé sur vous !")
