@@ -29,7 +29,7 @@ end
 
 function debugMsg(msg)
   if(settings.defaultSettings.debugInformation and msg)then
-    print("ES_DEBUG: " .. msg)
+    --print("ES_DEBUG: " .. msg)
   end
 end
 

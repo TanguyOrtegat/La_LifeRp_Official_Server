@@ -54,13 +54,13 @@ end
 function LaLife.Middleware.Logger(eventName, next)
     return function (...)
         if LaLife.Debug then
-            print('Begin calling event "' .. eventName .. "' with " .. TableToString({...}))
+            --print('Begin calling event "' .. eventName .. "' with " .. TableToString({...}))
         end
 
         next(...)
 
         if LaLife.Debug then
-            print('End calling event "' .. eventName .. '"')
+            --print('End calling event "' .. eventName .. '"')
         end
     end
 end

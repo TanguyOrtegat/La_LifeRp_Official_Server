@@ -21,7 +21,7 @@ AddEventHandler('itinerance:info', function(lestring)
 end)
 
 AddEventHandler('onClientMapStart', function()
-    print('yolo')
+    --print('yolo')
     exports.spawnmanager:setAutoSpawn(true)
     exports.spawnmanager:forceRespawn()
 end)

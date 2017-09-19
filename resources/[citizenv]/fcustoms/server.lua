@@ -53,18 +53,18 @@ AddEventHandler('customs:lock', function(b,garage)
 	currentgarage = garage
 	tbl[tonumber(garage)].locked = b
 	TriggerClientEvent('customs:lock',-1,tbl)
-	print("LS Customs status: "..json.encode(tbl))
+	--print("LS Customs status: "..json.encode(tbl))
 end)
 RegisterServerEvent('customs:getgarageinfos')
 AddEventHandler('customs:getgarageinfos', function()
 TriggerClientEvent('customs:lock',-1,tbl)
-print("LS Customs status: "..json.encode(tbl))
+--print("LS Customs status: "..json.encode(tbl))
 end)
 
 AddEventHandler('playerDropped', function()
 	if ingarage == true then
 		tbl[tonumber(currentgarage)].locked = false
 		TriggerClientEvent('customs:lock',-1,tbl)
-		print("LS Customs status: "..json.encode(tbl))
+		--print("LS Customs status: "..json.encode(tbl))
 	end
 end)

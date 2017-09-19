@@ -138,7 +138,7 @@ AddEventHandler('vmenu:bourse_s', function()
     local roche, rochechange, cuivre, cuivrechange, fer, ferchange, diamant, diamantchange, morue, moruechange, sardine, sardinechange, daurade, dauradechange, saumon, saumonchange, vin, vinchange, bcuivre, bcuivrechange, pfer, pferchange, patate, patatechange = nil
 
     MySQL.Async.fetchAll("SELECT * FROM bourse",{}, function (result)
-    print(tostring(result[1].changement))
+    --print(tostring(result[1].changement))
       roche = result[1].prix
       rochechange = tonumber(result[1].changement)
       cuivre = result[2].prix

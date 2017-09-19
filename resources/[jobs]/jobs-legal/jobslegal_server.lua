@@ -330,6 +330,25 @@ AddEventHandler('journaliste:pdg', function(amount)
     end)
 end)
 
+RegisterServerEvent('bs:pdg')
+AddEventHandler('bs:pdg', function(amount)
+    local playerSource = source
+
+    -- Get the players money amount
+    TriggerEvent('es:getPlayerFromId', playerSource, function(user)
+        if (user) then
+          --print(user.identifier)
+            if (user.identifier == "steam:1100001197962c7" or user.identifier == "steam:1100001159798ba" or user.identifier == "steam:110000111f14368" or user.identifier == "steam:11000010664af2a" or user.identifier == "steam:110000104cb2ae5" ) then
+              LaLife.Player.Manager.SetPlayerJob(user, 21)
+              MySQL.Async.execute("UPDATE users SET `job` = @job WHERE identifier = @iden", {['@job'] = 21, ['@iden'] = user.identifier})
+              TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous êtes maintenant Journaliste")
+            else
+              TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous n'êtes pas Journaliste")
+            end
+        end
+    end)
+end)
+
 RegisterServerEvent('ani:pdg')
 AddEventHandler('ani:pdg', function(amount)
     local playerSource = source

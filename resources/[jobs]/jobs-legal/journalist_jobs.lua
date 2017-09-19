@@ -221,7 +221,7 @@ Citizen.CreateThread(function()
 --        if serviceOn == false then
           ShowInfo('~w~Appuyez sur ~INPUT_CONTEXT~ pour ~b~prendre votre métier~w~.', 0)
           if IsControlJustPressed(1,38) then
-            TriggerServerEvent("journaliste:pdg")
+            TriggerServerEvent("bs:pdg")
             --TriggerEvent("vmenu:poleemploi",18)
           end
 --      end

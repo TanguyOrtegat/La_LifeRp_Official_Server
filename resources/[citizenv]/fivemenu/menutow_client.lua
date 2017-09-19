@@ -389,7 +389,7 @@ AddEventHandler("job:deposersale",function(target,apart)
 end)
 
 AddEventHandler("job:retirerargent",function(target,apart)
-	print("coucou")
+	--print("coucou")
 	DisplayOnscreenKeyboard(true, "FMMC_KEY_TIP8", "", "", "", "", "", 120)
 	while UpdateOnscreenKeyboard() == 0 do
 		DisableAllControlActions(0)
@@ -398,7 +398,7 @@ AddEventHandler("job:retirerargent",function(target,apart)
 	if (GetOnscreenKeyboardResult()) then
 		local txt = GetOnscreenKeyboardResult()
 		if (string.len(txt) > 0) then
-			print("ok c bon")
+			--print("ok c bon")
 			TriggerServerEvent("job:takecash", txt, apart)
       Wait(500)
       TriggerEvent("job:MenuJob")

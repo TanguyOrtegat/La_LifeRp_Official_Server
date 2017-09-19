@@ -892,7 +892,7 @@ AddEventHandler("customs:receive2",function(title, data, value, back)
         for colour in string.gmatch(value, '([^,]+)') do
             table.insert(neoncolour, colour)
         end
-        print("1."..neoncolour[1].." 2."..neoncolour[2].." 3."..neoncolour[3])
+        --print("1."..neoncolour[1].." 2."..neoncolour[2].." 3."..neoncolour[3])
         Vehicledata[title] = neoncolour
     else
         Vehicledata[title] = value
@@ -1223,7 +1223,7 @@ function displayCustomsLights(title,data,back)
                         local neoncolour = {}
                         for colour in string.gmatch(value, '([^,]+)') do
                             table.insert(neoncolour, colour)
-                            print("1."..neoncolour[1].." 2."..neoncolour[2].." 3."..neoncolour[3])
+                            --print("1."..neoncolour[1].." 2."..neoncolour[2].." 3."..neoncolour[3])
                         end
                         Vehicledata[title] = neoncolour
                     else
@@ -1575,7 +1575,7 @@ Citizen.CreateThread(function()
 				if title == "Spoiler" or title == "Front Bumper" or title == "Rear Bumper" or title == "Skirts" or title == "Exhaust" or title == "Roll Cage" or title == "Grille" or title == "Hood" or title == "Left Fender" or title == "Right Fender" or title == "Roof" or title == "Suspension" or title == "Transmission" or title == "Engine" or title == "Brakes" or title == "Armour" or title == "Horn" or title == "Windows" or title == "Plate" or title == "Turbo" or title == "Xenon" or title == "NeonColours" or title == "Layout" then
 					for i = 1, #currentCategory.data do
 						if currentOption == i then
-                            print("Current title is "..title)
+                            --print("Current title is "..title)
 							if title == "Windows" then
 								SetVehicleWindowTint(currentvehicle, currentCategory.data[i].tint)
 							elseif title == "Plate" then
@@ -1584,7 +1584,7 @@ Citizen.CreateThread(function()
 								SetVehicleModKit(currentvehicle,0)
 								ToggleVehicleMod(currentvehicle, currentCategory.data[i].mt, currentCategory.data[i].bool)
 							elseif title == "NeonColours" then
-                                print("Setting Neons")
+                                --print("Setting Neons")
 								SetVehicleNeonLightsColour(currentvehicle,currentCategory.data[i].colour[1],currentCategory.data[i].colour[2],currentCategory.data[i].colour[3])
 							elseif title == "Layout" then
 								SetVehicleNeonLightEnabled(currentvehicle,0,currentCategory.data[i].b1)

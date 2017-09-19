@@ -266,20 +266,22 @@ RegisterNUICallback('callEvent', function(data, cb)
         if (GetOnscreenKeyboardResult()) then
             text = GetOnscreenKeyboardResult()
         end
-        TriggerServerEvent("call:makeCall", data.eventName, {x=plyPos.x,y=plyPos.y,z=plyPos.z}, text, GetPlayerServerId(player))
-        if data.eventName == "police" then
-          TriggerEvent("itinerance:notif", "~h~Vous avez appelé la ~b~POLICE")
-        elseif data.eventName == "taxi" then
-          TriggerEvent("itinerance:notif", "~h~Vous avez appelé un ~y~TAXI")
-        elseif data.eventName == "depan" then
-          TriggerEvent("itinerance:notif", "~h~Vous avez appelé un ~o~DEPANNEUR")
-        elseif data.eventName == "BSTV" then
-          TriggerEvent("itinerance:notif", "~h~Vous avez appelé la ~p~BSTV")
-        elseif data.eventName == "medic" then
-          TriggerEvent("itinerance:notif", "~h~Vous avez appelé un ~r~AMBULANCIER")
-        elseif data.eventName == "brinks" then
-          TriggerEvent("itinerance:notif", "~h~Vous avez appelé un ~g~agent de la BRINKS")
-        end
+         if data.eventName ~= 'cancel' then
+                TriggerServerEvent("call:makeCall", data.eventName, {x=plyPos.x,y=plyPos.y,z=plyPos.z}, text, GetPlayerServerId(player))
+                    if data.eventName == "police" then
+                        TriggerEvent("itinerance:notif", "~h~Vous avez appelé la ~b~POLICE")
+                    elseif data.eventName == "taxi" then
+                        TriggerEvent("itinerance:notif", "~h~Vous avez appelé un ~y~TAXI")
+                    elseif data.eventName == "depan" then
+                        TriggerEvent("itinerance:notif", "~h~Vous avez appelé un ~o~DEPANNEUR")
+                    elseif data.eventName == "BSTV" then
+                        TriggerEvent("itinerance:notif", "~h~Vous avez appelé la ~p~BSTV")
+                    elseif data.eventName == "medic" then
+                        TriggerEvent("itinerance:notif", "~h~Vous avez appelé un ~r~AMBULANCIER")
+                    elseif data.eventName == "brinks" then
+                        TriggerEvent("itinerance:notif", "~h~Vous avez appelé un ~g~agent de la BRINKS")
+                    end
+            end
       else
         TriggerEvent('es_em:cl_respawn')
       end

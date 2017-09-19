@@ -77,7 +77,7 @@ local items = {
 }
 RegisterServerEvent("apart:getAppart")
 AddEventHandler('apart:getAppart', function(name)
-print(name)
+--print(name)
 local playersource = source
   TriggerEvent('es:getPlayerFromId', source, function(user)
     local player = user.identifier
@@ -459,7 +459,7 @@ AddEventHandler('apart:user_getitem', function(name)
 		--	print(result[1].name)
 			--print(result[1].item_id)
         for _, res in pairs(result) do
-          print(res.item_id)
+          --print(res.item_id)
           items[res.item_id].valeur = res.quantity
         end
           TriggerClientEvent("apart:user_getitem_f", playersource, items)
@@ -492,7 +492,7 @@ AddEventHandler('apart:additem_s', function(id,name)
 	  TriggerEvent('es:getPlayerFromId', source, function(user)
     local player = user.identifier
     local name = name
-    print("addItem_s")
+    --print("addItem_s")
     if (mode == "Async") then
       MySQL.Async.fetchAll("SELECT * FROM appartement_item WHERE name = @nom and item_id = @id ", {['@nom'] = tostring(name),['@id'] = tostring(id)}, function (result)
         if (result[1]) then

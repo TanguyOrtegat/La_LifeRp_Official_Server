@@ -11,10 +11,10 @@ local inService = {
     ["garda"] = {},
 }
 local callActive = {
-    ["police"] = {taken = false},
-    ["medic"] = {taken = false},
-    ["taxi"] = {taken = false},
-	["tow"] = {taken = false},
+    ["police"] = {["taken"] = false},
+    ["medic"] = {["taken"] = false},
+    ["taxi"] = {["taken"] = false},
+	["tow"] = {["taken"] = false},
 }
 local timing = 60000
 
@@ -38,6 +38,7 @@ end)
 -- Receive call event
 AddEventHandler("call:makeCall", function(job, pos, message)
 local playerSource = source
+   if callActive[job] ~= nil then
 	TriggerEvent('es:getPlayerFromId', playerSource, function(user)
     -- Players can't call simultanously the same service
 	local name = tostring(user.prenom.. " " ..user.nom)
@@ -60,6 +61,7 @@ local playerSource = source
         callActive[job].taken = false
     end)
 	end)
+end
 end)
 
 AddEventHandler("call:getCall", function(job)

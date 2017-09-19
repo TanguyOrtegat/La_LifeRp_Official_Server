@@ -19,7 +19,7 @@ AddEventHandler('logs:onPlayerKilled', function(t,killer, kilerT) -- t : 0 = NPC
        if(kilerT.killerinveh) then
          local model = kilerT.killervehname
          if file then
-             print("["..local_hour.."] "..GetPlayerName(source).." ("..getPlayerID(source)..") has been killed by  : "..GetPlayerName(killer).." ("..getPlayerID(killer)..") | Vehicle : "..model)
+             --print("["..local_hour.."] "..GetPlayerName(source).." ("..getPlayerID(source)..") has been killed by  : "..GetPlayerName(killer).." ("..getPlayerID(killer)..") | Vehicle : "..model)
 
              file:write("["..local_hour.."] "..GetPlayerName(source).." ("..getPlayerID(source)..") has been killed by : "..GetPlayerName(killer).." ("..getPlayerID(killer)..") | Vehicle : "..model)
              file:write("\n")
@@ -27,7 +27,7 @@ AddEventHandler('logs:onPlayerKilled', function(t,killer, kilerT) -- t : 0 = NPC
 
        else
           if file then
-             print("["..local_hour.."] "..GetPlayerName(source).." ("..getPlayerID(source)..") has been killed by : "..GetPlayerName(killer).." ("..getPlayerID(killer)..")")
+             --print("["..local_hour.."] "..GetPlayerName(source).." ("..getPlayerID(source)..") has been killed by : "..GetPlayerName(killer).." ("..getPlayerID(killer)..")")
 
              file:write("["..local_hour.."] "..GetPlayerName(source).." ("..getPlayerID(source)..") has been killed by : "..GetPlayerName(killer).." ("..getPlayerID(killer)..")")
              file:write("\n")
@@ -35,7 +35,7 @@ AddEventHandler('logs:onPlayerKilled', function(t,killer, kilerT) -- t : 0 = NPC
        end
     end
   else
-    print("["..local_hour.."] "..GetPlayerName(source).." ("..getPlayerID(source)..") has been killed by a NPC or vehicle")
+    --print("["..local_hour.."] "..GetPlayerName(source).." ("..getPlayerID(source)..") has been killed by a NPC or vehicle")
     file:write("["..local_hour.."] "..GetPlayerName(source).." ("..getPlayerID(source)..") has been killed by a NPC or vehicle")
     file:write("\n")
   end
@@ -46,7 +46,7 @@ end)
 RegisterServerEvent("logs:sendPoliceLog")
 AddEventHandler("logs:sendPoliceLog", function(model)
   local local_hour = os_date("%x:%I:%M:%S")
-    print("["..local_hour.."] "..GetPlayerName(source).." ("..getPlayerID(source)..") : "..model)
+    --print("["..local_hour.."] "..GetPlayerName(source).." ("..getPlayerID(source)..") : "..model)
     file = io.open("resources/[essential]/logs/PoliceVehicleLogs.txt", "a")
     if file then
       file:write("["..local_hour.."] "..GetPlayerName(source).." ("..getPlayerID(source)..") : "..model)
@@ -62,7 +62,7 @@ AddEventHandler("logs:sendBlackListedLogs", function(model)
   local local_hour = os_date("%x:%I:%M:%S")
   file = io.open("resources/[essential]/logs/BlackListedLogs.txt", "a")
   if file then
-    print("["..local_hour.."] "..GetPlayerName(source).." ("..getPlayerID(source)..") : "..model)
+    --print("["..local_hour.."] "..GetPlayerName(source).." ("..getPlayerID(source)..") : "..model)
      file:write("["..local_hour.."] "..GetPlayerName(source).." ("..getPlayerID(source)..") : "..model)
      file:write("\n")
   end
@@ -77,7 +77,7 @@ AddEventHandler("logs:sendBlackListedWeapon", function(wea)
 local local_hour = os_date("%x:%I:%M:%S")
   file = io.open("resources/[essential]/logs/BlackListedWeaponLogs.txt", "a")
   if file then
-    print("["..local_hour.."] "..GetPlayerName(source).." ("..getPlayerID(source)..") have a blacklisted weapon : "..hashToWeapon[wea])
+    --print("["..local_hour.."] "..GetPlayerName(source).." ("..getPlayerID(source)..") have a blacklisted weapon : "..hashToWeapon[wea])
      file:write("["..local_hour.."] "..GetPlayerName(source).." ("..getPlayerID(source)..") have a blacklisted weapon : "..hashToWeapon[wea])
      file:write("\n")
   end
@@ -93,7 +93,7 @@ AddEventHandler("playerDropped", function(reason)
 		local local_hour = os_date("%x:%H:%M:%S")
 	  	 file = io.open("resources/[essential]/logs/Connections.txt", "a")
 	  	if file then
-	    	print("["..local_hour.."] "..GetPlayerName(source).." ("..getPlayerID(source)..") disconnected.")
+	    --	print("["..local_hour.."] "..GetPlayerName(source).." ("..getPlayerID(source)..") disconnected.")
 	    	 file:write("["..local_hour.."] "..GetPlayerName(source).." ("..getPlayerID(source)..") disconnected.")
 	    	 file:write("\n")
 	  	end
@@ -108,7 +108,7 @@ AddEventHandler("logs:playerConnected", function()
 	if(LogConnect) then
 		local local_hour = os_date("%x:%I:%M:%S")
       file = io.open("resources/[essential]/logs/Connections.txt", "a")
-     print(file)
+     --print(file)
   		if file then
    			print("["..local_hour.."] "..GetPlayerName(source).." ("..getPlayerID(source)..") connected.")
     		file:write("["..local_hour.."] "..GetPlayerName(source).." ("..getPlayerID(source)..") connected.")

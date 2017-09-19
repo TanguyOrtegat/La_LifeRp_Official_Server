@@ -121,7 +121,7 @@ Citizen.CreateThread(function()
             end
 
             if not found then
-                print('Player ' .. user.identifier .. ' timed out')
+                --print('Player ' .. user.identifier .. ' timed out')
                 LaLife.Player.SourceIdentifierMapping[user.source] = nil
                 LaLife.Player.IdentifierSourceMapping[identifier] = nil
                 LaLife.Player.UserRegistry[identifier] = nil
@@ -129,4 +129,3 @@ Citizen.CreateThread(function()
         end
     end
 end)
-

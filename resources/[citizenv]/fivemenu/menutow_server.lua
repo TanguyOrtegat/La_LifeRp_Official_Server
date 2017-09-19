@@ -72,7 +72,7 @@ AddEventHandler('menutow:givefac_s', function(netID, amount)
 		local player = user.identifier
 		local bankbalance = bankBalance(user.identifier)
 		local new_balance = bankbalance - amount
-		print(new_balance)
+		--print(new_balance)
 		MySQL.Async.execute("UPDATE users SET `bankbalance`=@value WHERE identifier = @identifier", {['@value'] = new_balance, ['@identifier'] = player})
     MySQL.Async.fetchAll("SELECT money FROM user_appartement WHERE name = @name", {['@name'] = 'Remorqueur Garage'}, function (result)
       MySQL.Async.execute("UPDATE user_appartement SET `money`=@value WHERE name = @identifier", {['@value'] = (tonumber(result[1].money)+tonumber(amount)), ['@identifier'] = 'Remorqueur Garage'})
