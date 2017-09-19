@@ -450,7 +450,7 @@ local function checkTimeOuts()
                 table_remove(Queue.QueueList, i)
                 Queue:DebugPrint(tostring(data.name) .. "[" .. tostring(data.ids[1]) .. "] was removed from the queue because it had invalid data")
 
-            elseif (GetPlayerLastMsg(data.source) == 0 or GetPlayerLastMsg(data.source) >= 25000) and data.source ~= "debug" and os_time() - data.firstconnect > 5 then
+            elseif GetPlayerLastMsg(data.source) >= 25000 and data.source ~= "debug" and os_time() - data.firstconnect > 5 then
 
                 -- remove by source incase they rejoined and were duped in the queue somehow
                 Queue:RemoveFromQueue(data.source, true)
@@ -466,7 +466,7 @@ local function checkTimeOuts()
         while i <= Queue:ConnectingSize() do
             local data = Queue.Connecting[i]
 
-            if not Queue:IsConnecting(data.ids) and data.source ~= "debug" and os_time() - data.firstconnect > 5 then
+            if GetPlayerLastMsg(data.source) >= 25000 and data.source ~= "debug" and os_time() - data.firstconnect > 5 then
                 Queue:RemoveFromQueue(data.ids)
                 Queue:RemoveFromConnecting(data.ids)
                 Queue:DebugPrint(data.name .. "[" .. data.ids[1] .. "] was removed from the connecting queue because they timed out")
