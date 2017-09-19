@@ -256,7 +256,7 @@ end
 
 local function playerConnect(name, setKickReason, deferrals)
     maxPlayers = GetConvarInt("sv_maxclients", 30)
-    debug = GetConvar("sv_debugqueue", "true") == "true" and true or false
+    debug = GetConvar("sv_debugqueue", "false") == "true"
     displayQueue = GetConvar("sv_displayqueue", "true") == "true" and true or false
     initHostName = not initHostName and GetConvar("sv_hostname") or initHostName
 
