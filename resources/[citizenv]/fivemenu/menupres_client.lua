@@ -12,6 +12,6 @@ AddEventHandler("menupres:MayorOG", function(target)
 		VMenu.AddFunc(98, "~r~Retour", "vmenu:MainMenuOG", {}, "Retour")
 		VMenu.AddFunc(98, "Engager en tant que secrétaire", "menupres:hiresec", {}, "Accéder")
 		VMenu.AddFunc(98, "Engager en tant qu'agent du FBI", "menupres:hiregarde", {}, "Accéder")
-		VMenu.AddFunc(98, "Licencier", "menupres:hiresec", {}, "Accéder")
+		VMenu.AddFunc(98, "Licencier", "menupres:fire", {}, "Accéder")
 
 end)
