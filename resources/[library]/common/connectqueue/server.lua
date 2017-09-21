@@ -470,7 +470,7 @@ local function checkTimeOuts()
             local data = Queue.Connecting[i]
 
             if GetPlayerLastMsg(data.source) >= 25000 and data.source ~= "debug" and os_time() - data.firstconnect > 10 then
-                print(GetPlayerLastMsg(data.ids))
+                print(GetPlayerLastMsg(data.source))
                 print(tostring(os_time() - data.firstconnect))
                 print(data.name .. 'A crash')
 
