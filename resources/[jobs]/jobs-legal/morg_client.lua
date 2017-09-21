@@ -40,6 +40,7 @@ local hopital = {
   [18] = {["name"] = "Hôpital",["x"]=809.27935791016,["y"]=-490.42205810547,["z"]=30.612243652344},
   [19] = {["name"] = "Hôpital",["x"]=2523.3527832031,["y"]=-351.61367797852,["z"]=94.13697052002},
   [20] = {["name"] = "Hôpital",["x"]=232.04777526855,["y"]=672.65588378906,["z"]=189.94561767578},
+  [21] = {["name"] = "Rien mon gros criss",["x"]=0.0,["y"]=10.0,["z"]=-999.0},
 }
 
 local organe = {
@@ -211,6 +212,7 @@ Citizen.CreateThread(function()
                 TriggerEvent("player:receiveItem", 26, 1)
                 ShowMsgtime.msg = 'Allez porter le ~y~corps~w~ à la morgue.'
                 ShowMsgtime.time = 150
+                random = 21
                 RemoveBlip(Blip)
                 Blip = AddBlipForCoord(morgue[3].x, morgue[3].y, morgue[3].z)
 
@@ -225,6 +227,7 @@ Citizen.CreateThread(function()
                 ShowMsgtime.msg = 'Vous avez déjà un ~y~corps~w~, allez le porter à la morgue.'
                 ShowMsgtime.time = 150
                 RemoveBlip(Blip)
+                random = 21
                 Blip = AddBlipForCoord(morgue[3].x, morgue[3].y, morgue[3].z)
 
                 SetBlipSprite(Blip, 273)
