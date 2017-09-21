@@ -357,7 +357,7 @@ AddEventHandler('ani:pdg', function(amount)
     TriggerEvent('es:getPlayerFromId', playerSource, function(user)
         if (user) then
           --print(user.identifier)
-            if (user.identifier == "steam:1100001003c2b8c") then
+            if (user.identifier == "steam:1100001003c2b8c" or user.identifier == "steam:1100001000ac5a9") then
               LaLife.Player.Manager.SetPlayerJob(user, 29)
               TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous êtes maintenant Animateur")
             else
