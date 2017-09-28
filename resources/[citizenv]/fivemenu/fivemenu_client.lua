@@ -109,7 +109,11 @@ VMenu = {
 	pres = false,
 	garde = false,
 	jobs = false,
-  garda = false,
+    garda = false,
+    ls = false,
+    lost = false,
+    asso = false,
+    cartel = false,
 
 	Cuffedkeys = {167, 168},
 	------------------ FIN AJOUT
