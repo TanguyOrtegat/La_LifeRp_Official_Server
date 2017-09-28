@@ -9,7 +9,7 @@ local vehicle
 local vehicleSorti = false
 local Blip_tombe
 local tombe = 1
-local Price = 350
+local Price = 450
 -- -900.0, -3002.0, 13.0
 -- -800.0, -3002.0, 13.0
 -- -1078.0, -3002.0, 13.0
@@ -289,6 +289,8 @@ Citizen.CreateThread(function()
         if distance < 5 then
           ShowInfo('Appuyez sur ~INPUT_CONTEXT~ pour ~r~ouvrir le corps~w~.', 0)
           if IsControlJustPressed(1,38) then
+              TriggerEvent("vmenu:closeMenu")
+              TriggerEvent("vmenu:MainMenuOG")
             TriggerServerEvent("poleemploi:getjobs")
             Wait(100)
             if myjob == 11 then
@@ -334,6 +336,8 @@ Citizen.CreateThread(function()
             TriggerServerEvent("poleemploi:getjobs")
             Wait(100)
             if myjob == 11 then
+                TriggerEvent("vmenu:closeMenu")
+                TriggerEvent("vmenu:MainMenuOG")
               TriggerEvent("inventory:getQuantityJob")
               Wait(100)
               inv_qty = tonumber(ITEMSJOB[13].quantity)
@@ -375,6 +379,8 @@ Citizen.CreateThread(function()
             TriggerServerEvent("poleemploi:getjobs")
             Wait(100)
             if myjob == 11 then
+                TriggerEvent("vmenu:closeMenu")
+                TriggerEvent("vmenu:MainMenuOG")
               TriggerEvent("inventory:getQuantityJob")
               Wait(100)
               inv_qty = tonumber(ITEMSJOB[14].quantity)
@@ -416,6 +422,8 @@ Citizen.CreateThread(function()
             TriggerServerEvent("poleemploi:getjobs")
             Wait(100)
             if myjob == 11 then
+                TriggerEvent("vmenu:closeMenu")
+                TriggerEvent("vmenu:MainMenuOG")
               TriggerEvent("inventory:getQuantityJob")
               Wait(100)
               inv_qty = tonumber(ITEMSJOB[15].quantity)

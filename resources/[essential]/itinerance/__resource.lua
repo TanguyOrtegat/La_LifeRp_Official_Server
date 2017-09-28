@@ -9,7 +9,7 @@ client_scripts {
     "map.lua",
     "main.lua",
     "stores/vehshop.lua",
-    "stores/stripclub.lua"
+    "stores/stripclub.lua",
 }
 
 server_scripts {

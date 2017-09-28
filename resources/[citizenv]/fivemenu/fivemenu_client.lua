@@ -2304,8 +2304,9 @@ end
 ----- FUNCTION PERSO
 
 function getMainMenu()
-	if VMenu.police == false and VMenu.telephone == false and VMenu.animations == false and VMenu.item_menu == false and VMenu.medic == false and VMenu.depan == false and VMenu.taxi == false and VMenu.pres == false and VMenu.garde == false and VMenu.garda == false then
-		TriggerServerEvent('vmenu:updateUser', 98)
+	if VMenu.police == false and VMenu.telephone == false and VMenu.animations == false and VMenu.item_menu == false and VMenu.medic == false and VMenu.depan == false and VMenu.taxi == false and VMenu.pres == false and VMenu.garde == false and VMenu.garda == false and VMenu.ls == false and VMenu.lost == false
+    and VMenu.asso == false and VMenu.cartel == false then
+        TriggerServerEvent('vmenu:updateUser', 98)
 		TriggerServerEvent("inventory:getItems_s")
 		VMenu.ResetMenu(98, "", "default")
 		Wait(10)
@@ -2325,6 +2326,30 @@ function getMainMenu()
 		end
     if tonumber(User.job) == 26 or tonumber(User.job) == 27 or tonumber(User.job) == 28 then
       VMenu.AddFunc(98, "Menu GardaLife", "menugarda:menuOG", {User.job}, lang.common.access)
+    end
+    if tonumber(User.job) == 30 or tonumber(User.job) == 31 then
+      VMenu.AddFunc(98, "Menu Custom", "menuls1:menuOG", {User.job}, lang.common.access)
+    end
+    if tonumber(User.job) == 32 or tonumber(User.job) == 33 then
+      VMenu.AddFunc(98, "Menu Custom", "menuls2:menuOG", {User.job}, lang.common.access)
+    end
+    if tonumber(User.job) == 34 or tonumber(User.job) == 35 then
+      VMenu.AddFunc(98, "Menu Custom", "menuls3:menuOG", {User.job}, lang.common.access)
+    end
+    if tonumber(User.job) == 36 or tonumber(User.job) == 37 then
+      VMenu.AddFunc(98, "Menu Custom", "menuls4:menuOG", {User.job}, lang.common.access)
+    end
+    if tonumber(User.job) == 38 or tonumber(User.job) == 39 then
+      VMenu.AddFunc(98, "Menu Custom", "menuls5:menuOG", {User.job}, lang.common.access)
+    end
+    if tonumber(User.job) == 42 then
+    VMenu.AddFunc(98, "Menu TheLost", "menulost:menuOG", {User.job}, lang.common.access)
+    end
+    if tonumber(User.job) == 43 then
+    VMenu.AddFunc(98, "Menu Motard", "menuasso:menuOG", {User.job}, lang.common.access)
+    end
+    if tonumber(User.job) == 47 then
+    VMenu.AddFunc(98, "Menu Cartel", "menucartel:menuOG", {User.job}, lang.common.access)
     end
 		if tonumber(User.job) == 14 then
 			VMenu.AddFunc(98, "Menu président", "menupres:MayorOG", {}, lang.common.access)
@@ -3033,7 +3058,7 @@ Citizen.CreateThread(function()
 			TriggerEvent("vmenu:openMenu", 98)
 			VMenu.mainMenu = true
 			-- 	TriggerServerEvent("vmenu:updateUser", true)
-			if VMenu.police == false and VMenu.telephone == false and VMenu.animations == false and VMenu.item_menu == false and VMenu.medic == false and VMenu.depan == false and VMenu.taxi == false and VMenu.pres == false and VMenu.garde == false and VMenu.garda == false then
+			if VMenu.police == false and VMenu.telephone == false and VMenu.animations == false and VMenu.item_menu == false and VMenu.medic == false and VMenu.depan == false and VMenu.taxi == false and VMenu.pres == false and VMenu.garde == false and VMenu.garda == false and VMenu.ls == false and VMenu.lost == false and VMenu.asso == false and VMenu.cartel == false then
         Wait(300)
         getMainMenu()
 			end

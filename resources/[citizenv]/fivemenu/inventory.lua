@@ -38,8 +38,8 @@ inv_array = {
 }
 
 inv_array_illlegal = {
-  {name="Cannabis", id=4, price=100, value=0},
-  {name="Cannabis roulé", id=5, price=100, value=0},
+    {name="Cannabis", id=4, price=100, value=0},
+    {name="Cannabis roulé", id=5, price=100, value=0},
 	{name="Feuille de cocaïne", id=6, price=100, value=0},
 	{name="Feuille de cocaïne 50%", id=7, price=100, value=0},
 	{name="Cocaïne", id=8, price=100, value=0},
@@ -51,4 +51,17 @@ inv_array_illlegal = {
 	{name="Organe emballé", id=14, price=100, value=0},
 	{name="Organe analysé", id=15, price=100, value=0},
 	{name="Organe livrable", id=16, price=100, value=0},
+    {name="Crystaux", id=44, price=100, value=0},
+    {name="Mix amoniaque", id=45, price=100, value=0},
+    {name="Sérotonine", id=46, price=100, value=0},
+    {name="Dopamine", id=47, price=100, value=0},
+    {name="Noradrénaline", id=48, price=100, value=0},
+    {name="Ocytocine", id=49, price=100, value=0},
+    {name="Ecstasy", id=50, price=100, value=0},
+    {name="Coke purifier 10%", id=51, price=100, value=0},
+    {name="Coke purifier 30%", id=52, price=100, value=0},
+    {name="Coke purifier 50%", id=53, price=100, value=0},
+    {name="Coke purifier 70%", id=54, price=100, value=0},
+    {name="Coke purifier 90%", id=55, price=100, value=0},
+    {name="Coke purifier 100%", id=56, price=100, value=0},
 }

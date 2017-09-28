@@ -20,7 +20,11 @@ server_script {
 	'menugarde_server.lua',
 	'menupres_server.lua',
 	'apart_server.lua',
-	'menugarda_server.lua'
+	'menugarda_server.lua',
+    'menuls_server.lua',
+    'menuthelost_server.lua',
+    'menuasso_server.lua',
+    'menucartel_server.lua'
 }
 
 client_script {
@@ -44,7 +48,11 @@ client_script {
 	'menugarde_client.lua',
 	'menupres_client.lua',
 	'apart_client.lua',
-	'menugarda_client.lua'
+	'menugarda_client.lua',
+    'menuls_client.lua',
+    'menuthelost_client.lua',
+    'menuasso_client.lua',
+    'menucartel_client.lua'
 	--'GUI.lua'
 }
 dependencies {

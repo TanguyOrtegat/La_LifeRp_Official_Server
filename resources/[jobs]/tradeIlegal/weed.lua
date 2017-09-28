@@ -115,6 +115,8 @@ Citizen.CreateThread(function()
     distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.recolte.x, Positions.recolte.y, Positions.recolte.z, true)
     if distance < Positions.recolte.distance then
       if isMine == true then
+          TriggerEvent("vmenu:closeMenu")
+          TriggerEvent("vmenu:MainMenuOG")
         Citizen.Wait(1)
         TriggerServerEvent('drogue:getweed')
         TriggerEvent("inventory:getQuantityDrugs")
@@ -184,6 +186,8 @@ Citizen.CreateThread(function()
     distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.traitement.x, Positions.traitement.y, Positions.traitement.z, true)
     if distance < Positions.traitement.distance then
       if isProc == true then
+          TriggerEvent("vmenu:closeMenu")
+          TriggerEvent("vmenu:MainMenuOG")
         Citizen.Wait(1)
         TriggerEvent("inventory:getQuantityDrugs")
         Citizen.Wait(1000)
@@ -250,6 +254,8 @@ Citizen.CreateThread(function()
     distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.vente.x, Positions.vente.y, Positions.vente.z, true)
     if distance < Positions.vente.distance then
       if isSell == true then
+          TriggerEvent("vmenu:closeMenu")
+          TriggerEvent("vmenu:MainMenuOG")
         Citizen.Wait(1)
         TriggerEvent("inventory:getQuantityDrugs")
         Citizen.Wait(1000)
@@ -257,15 +263,15 @@ Citizen.CreateThread(function()
         Citizen.Wait(1000)
           if ITEMSDRUGS[5].quantity >= 0 then
 			if tonumber(inv_qty) <= 30 then
-				--TriggerServerEvent("drugs:getBoursePrice", 5)
-                --TriggerServerEvent("drugs:changeBoursePrice", 5)
+				TriggerServerEvent("drugs:getBoursePrice", 5)
+                TriggerServerEvent("drugs:changeBoursePrice", 5)
 				ShowMsgtime.msg = 'En train de vendre...'
 				ShowMsgtime.time = 250
 				Wait(2500)
-        --local price = math.ceil(PriceBourse)
-				ShowMsgtime.msg = '~r~-1 cannabis roulé ~w~/ ~r~+'.. 150 ..'$'
+                local price = math.ceil(PriceBourse)
+				ShowMsgtime.msg = '~r~-1 cannabis roulé ~w~/ ~r~+'.. price ..'$'
 				ShowMsgtime.time = 150
-				TriggerEvent("player:sellItem", 5, 150)
+				TriggerEvent("player:sellItem", 5, price)
 			else
 				TriggerEvent("itinerance:notif", "~r~Vous devez avoir moins de 31 cannabis roulés pour vendre !")
 			end

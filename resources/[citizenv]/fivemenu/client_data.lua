@@ -11,7 +11,8 @@ changeYourJob = {
 }
 
 jobsname = {"Sans Emploi", "Nettoyeur de piscines", "Éboueur", "Mineur", "Chauffeur de taxi", "Livreur de bois", "Livreur de citerne", "Livreur de conteneur", "Livreur de médicaments", "Policier", "Fossoyeur", "Préposé à la morgue", "Ambulancier","Président", "Dépanneur", "Dépanneur (patron)", "Chauffeur de taxi", "Chauffeur de taxi (patron)",
- "FBI", "Secrétaire", "Journaliste", "Pêcheur", "Vigneron", "Metallurgiste", "Agriculteur","LaGarda","LaGarda (patron)","LaGardaSecurite","Animateur"}
+ "FBI", "Secrétaire", "Journaliste", "Pêcheur", "Vigneron", "Metallurgiste", "Agriculteur","LaGarda","LaGarda (patron)","LaGardaSecurite","Animateur","LsCustom 1/5 (patron)","LsCustom 1/5","LsCustom 2/5 (patron)","LsCustom 2/5","LsCustom 3/5 (patron)","LsCustom 3/5","LsCustom 4/5 (patron)","LsCustom 4/5","LsCustom 5/5 (patron)","LsCustom 5/5",
+"TheLost Prospect","TheLost Membre","TheLost Patron","Association Motar Propriétaire","Association Motar","1","2","3"}
 
 hair = {
   {name="Cheveux 1", id=108, zero=0},
@@ -226,6 +227,8 @@ apart_entrer = {
   {['x'] = -2290.1474609375, ['y'] = 7998.083984375, ['z'] = 1315.0134277344, ["name"] = 'LSCustom Coffre 1/5' },
   {['x'] = -2289.80859375, ['y'] = 7998.001953125, ['z'] = 1209.5228271484, ["name"] = 'LSCustom Coffre 2/5' },
   {['x'] = -2291.2082519531, ['y'] = 7996.046875, ['z'] = 994.78265380859, ["name"] = 'LSCustom Coffre 3/5' },
+  {['x'] = 1026.0834960938, ['y'] = -3016.1506347656, ['z'] = -32.993156433105, ["name"] = 'TheLost' },
+  {['x'] = 1052.6751708984, ['y'] = -35.938674926758, ['z'] = 59.845184326172 },
 }
 apart_sorti = {
   {["x"] = -1910.099609375, ["y"] = -574.97265625, ["z"] = 19.0956039428711, ["h"] = 0.00, ["xc"] = -1905.1245117188, ["yc"] = -570.59210205078, ["zc"] = 19.097215652466, ["hc"] = 0.000, ["name"] = 'Great Ocean Rte Office (Acces au toit)'},
@@ -295,6 +298,8 @@ apart_sorti = {
   {['x'] = -2292.4743652344, ['y'] = 7993.9086914063, ['z'] = 873.53247070313, ["name"] = 'LSCustom Coffre 1/5' },
   {['x'] = -2292.75390625, ['y'] = 7991.6401367188, ['z'] = 762.01226806641, ["name"] = 'LSCustom Coffre 2/5' },
   {['x'] = -2292.5600585983, ['y'] = 7989.0771484375, ['z'] = 645.17755126953, ["name"] = 'LSCustom Coffre 3/5' },
+  {['x'] = 1058.7902832031, ['y'] = -3138.4250488281, ['z'] = -32.993156433105, ["name"] = 'TheLost' },
+  {['x'] = 976.87249755859, ['y'] = -104.18993377686, ['z'] = 59.845184326172 },
 }
 
 apart_cache = {
@@ -339,6 +344,8 @@ apart_cache = {
   {["x"] = -344.76776123047, ["y"] = -124.76931762695, ["z"] = 39.009658813477, ["hc"] = 0.000, ["name"] = 'LSCustom Coffre 1/5'},
   {['x'] = -1141.5, ['y'] = -2005.6994628906, ['z'] = 13.180261611938, ["name"] = 'LSCustom Coffre 2/5' },
   {['x'] = 725.61590576172, ['y'] = -1066.7745361328, ['z'] = 28.311010360718, ["name"] = 'LSCustom Coffre 3/5' },
+  {['x'] = 998.01782226563, ['y'] = -3200.7097167969, ['z'] = -38.993160247803, ["name"] = 'TheLost' },
+  {['x'] = 976.78576660156, ['y'] = -104.14051818848, ['z'] = 74.845184326172 },
 }
 
 apart_agent = {

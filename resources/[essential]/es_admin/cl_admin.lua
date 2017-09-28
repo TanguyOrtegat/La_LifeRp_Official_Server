@@ -8,10 +8,10 @@ RegisterNetEvent('es_admin:changeModel')
 AddEventHandler('es_admin:changeModel', function(skinName)
         -- Get model hash.
 	    local modelhashed = GetHashKey(skinName)
-    
+
         -- Request the model, and wait further triggering untill fully loaded.
 	    RequestModel(modelhashed)
-	    while not HasModelLoaded(modelhashed) do 
+	    while not HasModelLoaded(modelhashed) do
 	    	RequestModel(modelhashed)
 	    	Citizen.Wait(0)
 	    end
@@ -45,8 +45,17 @@ end)
 RegisterNetEvent('es_admin:loadprops')
 AddEventHandler('es_admin:loadprops', function(loadprops)
         local hash = GetInteriorFromEntity(GetPlayerPed(-1))
-        EnableInteriorProp(tonumber(hash),loadprops)
-        RefreshInterior(tonumber(hash))
+		--Citizen.Trace(hash)
+        EnableInteriorProp(tonumber(247041),loadprops)
+        RefreshInterior(tonumber(247041))
+end)
+
+RegisterNetEvent('es_admin:loadpropscoke')
+AddEventHandler('es_admin:loadpropscoke', function(loadprops)
+        local hash = GetInteriorFromEntity(GetPlayerPed(-1))
+		--Citizen.Trace(hash)
+        EnableInteriorProp(tonumber(247553),loadprops)
+        RefreshInterior(tonumber(247553))
 end)
 
 RegisterNetEvent('es_admin:unloadprops')

@@ -1,4 +1,4 @@
-local corp = 0;
+local corp = 1;
 
 RegisterServerEvent("org:addcorp")
 AddEventHandler("org:addcorp", function()

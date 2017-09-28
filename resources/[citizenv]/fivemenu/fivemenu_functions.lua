@@ -30,7 +30,7 @@ local arme_swat = {
 "WEAPON_PISTOL",
 "WEAPON_FlASHLIGHT",
 "WEAPON_SMOKEGRENADE",
-"WEAPON_SPECIALCARBINE",
+"WEAPON_SMG_MK2",
 "WEAPON_PUMPSHOTGUN",
 }
 function DrawNotif(text)
@@ -148,6 +148,10 @@ AddEventHandler("vmenu:MainMenuOG", function(target)
 	VMenu.apart = false
 	VMenu.tattoos = false
 	VMenu.makeup = false
+	VMenu.ls = false
+	VMenu.lost = false
+	VMenu.asso = false
+	VMenu.cartel = false
 end)
 ----------------------------------
 
@@ -315,9 +319,6 @@ AddEventHandler("vmenu:getArmory", function(target, idGun) -- target = Dernier j
         end
 		GiveWeaponComponentToPed(GetPlayerPed(-1), GetHashKey("WEAPON_PISTOL"), 0x359B7AAE)--Flashlight
 		GiveWeaponComponentToPed(GetPlayerPed(-1), GetHashKey("WEAPON_PUMPSHOTGUN"), 0x7BC4CDDC)--Flashlight
-		GiveWeaponComponentToPed(GetPlayerPed(-1), GetHashKey("WEAPON_SPECIALCARBINE"), 0x7BC4CDDC)--Flashlight
-		GiveWeaponComponentToPed(GetPlayerPed(-1), GetHashKey("WEAPON_SPECIALCARBINE"), 0xA0D89C42)
-		GiveWeaponComponentToPed(GetPlayerPed(-1), GetHashKey("WEAPON_SPECIALCARBINE"), 0xA73D4664)--Silencieux
 	end
 end)
 

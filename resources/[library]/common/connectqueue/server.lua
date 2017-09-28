@@ -57,6 +57,46 @@ function Queue:HexIdToSteamId(hexId)
     return sid
 end
 
+AddEventHandler("queue:playerJoinQueue", function(source, setKickReason)
+    local steamIdentifier = GetPlayerIdentifiers(source)[1]
+    local results = MySQL.Sync.fetchAll('SELECT * FROM whitelist WHERE steam_id = @identifier', {
+        identifier = steamIdentifier,
+    });
+
+    if #results ~= 1 then
+        setKickReason("Vous n'etes pas sur la whitelist")
+        CancelEvent()
+
+        return
+    end
+
+    local connected = results[1]
+
+    if connected.banned ~= 0 then
+        setKickReason("Vous etes bannis : " .. connected.banned_reason)
+        CancelEvent()
+
+        return
+    end
+    --AddPriority(connected.identifier,connected.priority)
+    print(connected.priority)
+end)
+
+local function setPriorities()
+    MySQL.Async.fetchAll('SELECT * FROM whitelist WHERE banned = 0', {}, function (whitelisted)
+        for key, user in ipairs(whitelisted) do
+            AddPriority(user.steam_id, user.priority)
+        end
+    end)
+
+    SetTimeout(60000, setPriorities)
+end
+
+AddEventHandler('onMySQLReady', function ()
+    setPriorities()
+end)
+
+
 function Queue:DebugPrint(msg)
     if debug then
         msg = "QUEUE: " .. tostring(msg)
@@ -253,6 +293,16 @@ end
 function RemovePriority(id)
     return Queue:RemovePriority(id)
 end
+
+AddEventHandler("playerDropped", function()
+    local src = source
+    local ids = Queue:GetIds(src)
+    local connectTime = os_time()
+    if Queue:IsInQueue(ids) then
+        Queue:RemoveFromQueue(ids)
+        print("C'est fait kick de la queue car il as crash")
+    end
+end)
 
 local function playerConnect(name, setKickReason, deferrals)
     maxPlayers = GetConvarInt("sv_maxclients", 30)
@@ -451,9 +501,9 @@ local function checkTimeOuts()
                 Queue:DebugPrint(tostring(data.name) .. "[" .. tostring(data.ids[1]) .. "] was removed from the queue because it had invalid data")
 
             elseif GetPlayerLastMsg(data.source) >= 25000 and data.source ~= "debug" and os_time() - data.firstconnect > 10 then
-                print(GetPlayerLastMsg(data.source)
-                print(tostring(os_time() - data.firstconnect))
-                print(data.name .. 'A crash')
+                --print(GetPlayerLastMsg(data.source))
+                --print(tostring(os_time() - data.firstconnect))
+                --print(data.name .. 'A crash')
 
                 -- remove by source incase they rejoined and were duped in the queue somehow
                 Queue:RemoveFromQueue(data.source, true)
@@ -470,9 +520,9 @@ local function checkTimeOuts()
             local data = Queue.Connecting[i]
 
             if GetPlayerLastMsg(data.source) >= 25000 and data.source ~= "debug" and os_time() - data.firstconnect > 10 then
-                print(GetPlayerLastMsg(data.source))
-                print(tostring(os_time() - data.firstconnect))
-                print(data.name .. 'A crash')
+                --print(GetPlayerLastMsg(data.source))
+                --print(tostring(os_time() - data.firstconnect))
+                --print(data.name .. 'A crash')
 
                 Queue:RemoveFromQueue(data.ids)
                 Queue:RemoveFromConnecting(data.ids)

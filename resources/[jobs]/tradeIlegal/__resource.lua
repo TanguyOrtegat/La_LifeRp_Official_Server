@@ -1,6 +1,11 @@
-client_script 'weed.lua'
-client_script 'coke.lua'
-client_script 'meth.lua'
+client_scripts {
+    'weed.lua',
+    'coke.lua',
+    'meth.lua',
+    'mdma.lua',
+    'coke_pure.lua',
+    'cartelshop.lua',
+}
 server_scripts {
     '@mysql-async/lib/MySQL.lua',
     '@common/lalife.lua',

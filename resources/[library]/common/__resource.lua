@@ -10,7 +10,7 @@ server_scripts {
     '@common/player/manager.lua',
     '@common/player/events.lua',
     '@common/connectqueue/server.lua',
-    '@common/connectqueue/whitelist.lua'
+    --'@common/connectqueue/whitelist.lua'
 }
 
 client_scripts {

@@ -14,7 +14,7 @@ Citizen.CreateThread(function()
 
         -- Create head display (this is safe to be spammed)
         if GetPlayerPed( id ) ~= GetPlayerPed( -1 ) then
-          headDisplayId = N_0xbfefe3321a3f5015(ped, ".", false, false, "", false )
+          headDisplayId = N_0xbfefe3321a3f5015(ped, "", false, false, "", false )
         else
           headDisplayId = N_0xbfefe3321a3f5015(ped, "", false, false, "", false )
         end
