@@ -1,6 +1,6 @@
 local DrawMarkerShow = true
 local DrawBlipTradeShow = true
-
+local tenu = true
 local isMine = false
 local isProc = false
 local isProc2 = false
