@@ -13,7 +13,11 @@ function delete(arg)
 	local itemId = tonumber(arg[1])
 	local qty = arg[2]
 	local item = ITEMS[itemId]
-	item.quantity = item.quantity - qty
+	if item.quantity - qty < 0 then
+		item.quantity = 0
+	else
+		item.quantity = item.quantity - qty
+	end
 	TriggerServerEvent("inventory:updateQuantity_sf", item.quantity, itemId)
 	--TriggerServerEvent("inventory:getItems_s")
 end
@@ -140,7 +144,7 @@ AddEventHandler("inventory:dropItem", function(target, id, name, quantity, quant
 	Citizen.Wait(100)
 	TriggerEvent("vmenu:MainMenuOG", source)
 	getMainMenu()
-	
+
   else
     TriggerEvent("itinerance:notif", "~r~Une erreur s'est produite.")
   end
