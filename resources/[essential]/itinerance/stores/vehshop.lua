@@ -3,7 +3,23 @@
 RegisterNetEvent('FinishMoneyCheckForVeh')
 RegisterNetEvent('vehshop:spawnVehicle')
 
-
+User = {
+    Spawned = false,
+    Loaded = false,
+    group = "0",
+    permission_level = 0,
+    money = 0,
+    dirtymoney = 0,
+    job = 0,
+    police = 0,
+    enService = 0,
+    nom = "",
+    prenom = "",
+    vehicle = "",
+    identifier = nil,
+    telephone = "",
+    gender = ""
+}
 
 --[[Local/Global]]--
 
@@ -32,6 +48,7 @@ local vehshop = {
 			buttons = {
 				{name = "Vehicles", description = ""},
 				{name = "Motorcycles", description = ""},
+                {name = "Gang", description = ""},
 			}
 		},
 		["vehicles"] = {
@@ -274,6 +291,58 @@ local vehshop = {
 				{name = "Vader", costs = 9000, description = {}, model = "vader"},
 			}
 		},
+        ["gang"] = {
+    			title = "GANG",
+    			name = "gang",
+    			buttons = {
+                    {name = "Chimera", costs = 75000, description = {}, model = "Chimera"},
+                    {name = "Sanctus", costs = 200000, description = {}, model = "Sanctus"},
+                    {name = "Rat Bike", costs = 15000, description = {}, model = "RatBike"},
+                    {name = "Daemon", costs = 15000, description = {}, model = "Daemon"},
+                    {name = "Zombie Bobber", costs = 75000, description = {}, model = "zombiea"},
+                    {name = "Zombie Chopper", costs = 75000, description = {}, model = "zombieb"},
+                    {name = "Cliffhanger", costs = 175000, description = {}, model = "cliffhanger"},
+                    {name = "Wolfsbane", costs = 75000, description = {}, model = "Wolfsbane"},
+                    {name = "Nightblade", costs = 200000, description = {}, model = "Nightblade"},
+                    {name = "Avarus", costs = 75000, description = {}, model = "Avarus"},
+                    {name = "Gargoyle", costs = 120000, description = {}, model = "gargoyle"},
+                    {name = "Hexer", costs = 30000, description = {}, model = "hexer"},
+                    {name = "Sovereign", costs = 90000, description = {}, model = "sovereign"},
+                    {name = "Innovation", costs = 90000, description = {}, model = "innovation"},
+                    {name = "Sanchez", costs = 90000, description = {}, model = "Sanchez2"},
+                    {name = "Thrust", costs = 100000, description = {}, model = "thrust"},
+                    {name = "Vindicator", costs = 600000, description = {}, model = "vindicator"},
+                    {name = "Bison", costs = 30000, description = {}, model = "bison"},
+    				{name = "Bobcat XL", costs = 23000, description = {}, model = "bobcatxl"},
+    				{name = "Gang Burrito", costs = 75000, description = {}, model = "gburrito"},
+                    {name = "Burrito", costs = 65000, description = {}, model = "gburrito2"},
+    				{name = "Journey", costs = 15000, description = {}, model = "journey"},
+    				{name = "Minivan", costs = 30000, description = {}, model = "minivan"},
+    				{name = "Paradise", costs = 25000, description = {}, model = "paradise"},
+    				{name = "Rumpo", costs = 13000, description = {}, model = "rumpo"},
+                    {name = "Vapid Guardian", costs = 36000, description = {}, model = "guardian"},
+    				{name = "Surfer", costs = 11000, description = {}, model = "surfer"},
+    				{name = "Youga", costs = 16000, description = {}, model = "youga"},
+                    {name = "Voodoo", costs = 29000, description = {}, model = "Voodoo2"},
+    				{name = "Phoenix", costs = 75000, description = {}, model = "Phoenix"},
+    				{name = "Ruiner", costs = 30000, description = {}, model = "Ruiner"},
+    				{name = "Slamvan", costs = 35000, description = {}, model = "Slamvan"},
+    				{name = "RatLoader2", costs = 62000, description = {}, model = "RatLoader2"},
+    				{name = "Voodoo ", costs = 40000, description = {}, model = "Voodoo"},
+    				{name = "Slamvan", costs = 90000, description = {}, model = "Slamvan3"},
+    				{name = "Slamvan", costs = 36000, description = {}, model = "Slamvan2"},
+                    {name = "Sabre gt", costs = 25000, description = {}, model = "Sabregt2"},
+                    {name = "Stalion", costs = 36000, description = {}, model = "stalion"},
+                    {name = "Stalion", costs = 36000, description = {}, model = "stalion2"},
+                    {name = "Tornado", costs = 36000, description = {}, model = "tornado1"},
+                    {name = "Tornado", costs = 36000, description = {}, model = "tornado2"},
+                    {name = "Tornado", costs = 36000, description = {}, model = "tornado4"},
+                    {name = "Tornado", costs = 36000, description = {}, model = "tornado6"},
+                    {name = "Futo", costs = 36000, description = {}, model = "Futo"},
+                    {name = "Blista", costs = 36000, description = {}, model = "Blista2"},
+                    {name = "Blista", costs = 36000, description = {}, model = "Blista3"},
+    			}
+    	},
 	}
 }
 
@@ -557,6 +626,12 @@ function ButtonSelected(button)
 			OpenMenu('vehicles')
 		elseif btn == "Motorcycles" then
 			OpenMenu('motorcycles')
+        elseif btn == "Gang" then
+            if (User.job == 40 or User.job == 41 or User.job == 42 or User.job == 43 or User.job == 44) then
+                OpenMenu('gang')
+            else
+            	TriggerEvent("itinerance:notif", "~r~Vous n'avez pas acces a ça")
+            end
 		end
 	elseif this == "vehicles" then
 		if btn == "Sports" then
@@ -580,7 +655,7 @@ function ButtonSelected(button)
 		elseif btn == "Vans" then
 			OpenMenu('vans')
 		end
-	elseif this == "compacts" or this == "coupes" or this == "sedans" or this == "sports" or this == "sportsclassics" or this == "super" or this == "muscle" or this == "offroad" or this == "suvs" or this == "vans" or this == "industrial" or this == "cycles" or this == "motorcycles" then
+	elseif this == "compacts" or this == "coupes" or this == "sedans" or this == "sports" or this == "sportsclassics" or this == "super" or this == "muscle" or this == "offroad" or this == "suvs" or this == "vans" or this == "industrial" or this == "cycles" or this == "motorcycles" or this == "gang" then
 		TriggerServerEvent('CheckMoneyForVeh',button.name, button.model, button.costs)
 	end
 end
@@ -592,6 +667,8 @@ function OpenMenu(menu)
 		vehshop.lastmenu = "main"
 	elseif menu == "bikes"  then
 		vehshop.lastmenu = "main"
+    elseif menu == "gang"  then
+        vehshop.lastmenu = "main"
 	elseif menu == 'race_create_objects' then
 		vehshop.lastmenu = "main"
 	elseif menu == "race_create_objects_spawn" then
@@ -610,7 +687,7 @@ function Back()
 	backlock = true
 	if vehshop.currentmenu == "main" then
 		CloseCreator()
-	elseif vehshop.currentmenu == "compacts" or vehshop.currentmenu == "coupes" or vehshop.currentmenu == "sedans" or vehshop.currentmenu == "sports" or vehshop.currentmenu == "sportsclassics" or vehshop.currentmenu == "super" or vehshop.currentmenu == "muscle" or vehshop.currentmenu == "offroad" or vehshop.currentmenu == "suvs" or vehshop.currentmenu == "vans" or vehshop.currentmenu == "industrial" or vehshop.currentmenu == "cycles" or vehshop.currentmenu == "motorcycles" then
+	elseif vehshop.currentmenu == "compacts" or vehshop.currentmenu == "coupes" or vehshop.currentmenu == "sedans" or vehshop.currentmenu == "sports" or vehshop.currentmenu == "sportsclassics" or vehshop.currentmenu == "super" or vehshop.currentmenu == "muscle" or vehshop.currentmenu == "offroad" or vehshop.currentmenu == "suvs" or vehshop.currentmenu == "vans" or vehshop.currentmenu == "industrial" or vehshop.currentmenu == "cycles" or vehshop.currentmenu == "motorcycles" or vehshop.currentmenu == "gang" then
 		if DoesEntityExist(fakecar.car) then
 			Citizen.InvokeNative(0xEA386986E786A54F, Citizen.PointerValueIntInitialized(fakecar.car))
 		end
@@ -654,14 +731,14 @@ Citizen.CreateThread(function()
 					end
 					drawMenuButton(button,vehshop.menu.x,y,selected)
 					if button.costs ~= nil then
-						if vehshop.currentmenu == "compacts" or vehshop.currentmenu == "coupes" or vehshop.currentmenu == "sedans" or vehshop.currentmenu == "sports" or vehshop.currentmenu == "sportsclassics" or vehshop.currentmenu == "super" or vehshop.currentmenu == "muscle" or vehshop.currentmenu == "offroad" or vehshop.currentmenu == "suvs" or vehshop.currentmenu == "vans" or vehshop.currentmenu == "industrial" or vehshop.currentmenu == "cycles" or vehshop.currentmenu == "motorcycles" then
+						if vehshop.currentmenu == "compacts" or vehshop.currentmenu == "coupes" or vehshop.currentmenu == "sedans" or vehshop.currentmenu == "sports" or vehshop.currentmenu == "sportsclassics" or vehshop.currentmenu == "super" or vehshop.currentmenu == "muscle" or vehshop.currentmenu == "offroad" or vehshop.currentmenu == "suvs" or vehshop.currentmenu == "vans" or vehshop.currentmenu == "industrial" or vehshop.currentmenu == "cycles" or vehshop.currentmenu == "motorcycles" or vehshop.currentmenu == "gang" then
 							DoesPlayerHaveVehicle(button.model,button,y,selected)
 						else
 						drawMenuRight(button.costs.."$",vehshop.menu.x,y,selected)
 						end
 					end
 					y = y + 0.04
-					if vehshop.currentmenu == "compacts" or vehshop.currentmenu == "coupes" or vehshop.currentmenu == "sedans" or vehshop.currentmenu == "sports" or vehshop.currentmenu == "sportsclassics" or vehshop.currentmenu == "super" or vehshop.currentmenu == "muscle" or vehshop.currentmenu == "offroad" or vehshop.currentmenu == "suvs" or vehshop.currentmenu == "vans" or vehshop.currentmenu == "industrial" or vehshop.currentmenu == "cycles" or vehshop.currentmenu == "motorcycles" then
+					if vehshop.currentmenu == "compacts" or vehshop.currentmenu == "coupes" or vehshop.currentmenu == "sedans" or vehshop.currentmenu == "sports" or vehshop.currentmenu == "sportsclassics" or vehshop.currentmenu == "super" or vehshop.currentmenu == "muscle" or vehshop.currentmenu == "offroad" or vehshop.currentmenu == "suvs" or vehshop.currentmenu == "vans" or vehshop.currentmenu == "industrial" or vehshop.currentmenu == "cycles" or vehshop.currentmenu == "motorcycles" or vehshop.currentmenu == "gang" then
 						if selected then
 							if fakecar.model ~= button.model then
 								if DoesEntityExist(fakecar.car) then
@@ -774,4 +851,11 @@ AddEventHandler('playerSpawned', function(spawn)
 		RequestIpl('shutter_closed')
 		firstspawn = 1
 	end
+end)
+
+RegisterNetEvent("vmenu:setUser")
+AddEventHandler("vmenu:setUser", function(infos)
+    for k,v in pairs(infos) do
+        User[k] = v
+    end
 end)

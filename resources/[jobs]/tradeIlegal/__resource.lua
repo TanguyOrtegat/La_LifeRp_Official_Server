@@ -4,7 +4,6 @@ client_scripts {
     'meth.lua',
     'mdma.lua',
     'coke_pure.lua',
-    'cartelshop.lua',
 }
 server_scripts {
     '@mysql-async/lib/MySQL.lua',
