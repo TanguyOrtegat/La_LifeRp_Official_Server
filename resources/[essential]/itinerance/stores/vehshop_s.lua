@@ -18,7 +18,7 @@ AddEventHandler('CheckMoneyForVeh', function(name, vehicle, price)
                     for _ in pairs(result) do
                         count = count + 1
                     end
-                    if count == 5 then
+                    if count == 10 then
                         TriggerClientEvent("es_freeroam:notify", playerSource, "CHAR_SIMEON", 1, "Simeon", false, "Garage plein!\n")
                     else
                         if (tonumber(user.money) >= tonumber(price)) then
