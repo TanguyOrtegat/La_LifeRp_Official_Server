@@ -193,7 +193,7 @@ Citizen.CreateThread(function()
         Citizen.Wait(1000)
         inv_qty = tonumber(ITEMSDRUGS[4].quantity)+tonumber(ITEMSDRUGS[5].quantity)
         Citizen.Wait(1000)
-          if ITEMSDRUGS[4].quantity >= 0 then
+          if ITEMSDRUGS[4].quantity > 0 then
 			if tonumber(inv_qty) <= 30 then
 				ShowMsgtime.msg = 'En train de traiter...'
 				ShowMsgtime.time = 250
@@ -261,7 +261,7 @@ Citizen.CreateThread(function()
         Citizen.Wait(1000)
         inv_qty = tonumber(ITEMSDRUGS[4].quantity)+tonumber(ITEMSDRUGS[5].quantity)
         Citizen.Wait(1000)
-          if ITEMSDRUGS[5].quantity >= 0 then
+          if ITEMSDRUGS[5].quantity > 0 then
 			if tonumber(inv_qty) <= 30 then
 				--TriggerServerEvent("drugs:getBoursePrice", 5)
                 --TriggerServerEvent("drugs:changeBoursePrice", 5)
