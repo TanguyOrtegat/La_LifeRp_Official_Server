@@ -1,6 +1,6 @@
 local DrawMarkerShow = true
 local DrawBlipTradeShow = true
-local camionSorti = false
+local camionSortie = false
 local isMine = false
 local isProc = false
 local isSell = false
