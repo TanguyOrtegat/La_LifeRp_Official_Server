@@ -11,6 +11,11 @@ local strippers = {
     {type=5, hash=0x780c01bd, x=128.900, y=-1283.211, z=29.273, a=123.98},
   }
 
+  local drink = {
+      {x=988.82940673828, y=-94.084037780762, z=74.845024108887,money=20,name="asso"},
+      {x=128.900, y=-1283.211, z=29.273,money=20,name="strip"}
+  }
+
 -- Configure the coordinates for the bartenders.
 local bouncers = {
   {type=4, hash=0x9fd4292d, x=130.328, y=-1298.409, z=29.233, a=211.486},
@@ -69,7 +74,7 @@ Citizen.CreateThread(function()
   -- Spawn the bouncers to the coordinates
   for _, item in pairs(bouncers) do
     ped =  CreatePed(item.type, item.hash, item.x, item.y, item.z, item.a, false, true)
-    GiveWeaponToPed(ped, 0x1B06D571, 2800, false, true)
+    --GiveWeaponToPed(ped, 0x1B06D571, 2800, false, true)
     SetPedCombatAttributes(ped, 46, true)
     SetPedFleeAttributes(ped, 0, 0)
     SetPedArmour(ped, 100)
@@ -84,7 +89,7 @@ Citizen.CreateThread(function()
   -- Spawn the strippers to the coordinates
   for _, item in pairs(strippers) do
     stripper =  CreatePed(item.type, item.hash, item.x, item.y, item.z, item.a, false, true)
-    GiveWeaponToPed(stripper, 0x99B507EA, 2800, false, true)
+    --GiveWeaponToPed(stripper, 0x99B507EA, 2800, false, true)
     SetPedCombatAttributes(stripper, 46, true)
     SetPedFleeAttributes(stripper, 0, 0)
     SetPedArmour(stripper, 200)
@@ -105,23 +110,25 @@ Citizen.CreateThread(function()
        Wait(0)
        playerPed = GetPlayerPed(-1)
        playerCoords = GetEntityCoords(playerPed, 0)
-
-       if(GetDistanceBetweenCoords(playerCoords, 128.900, -1283.21, 29.273) < 2) then
-         if(showStartText == false) then
-           StartText()
-         end
+       for _,loc in pairs(drink) do
+           if(GetDistanceBetweenCoords(playerCoords, loc.x, loc.y, loc.z) < 2) then
+               if(showStartText == false) then
+                   StartText()
+            end
 
          -- Start mission
-         if(IsControlPressed(1, 38)) then
-           TriggerServerEvent("es_freeroam:pay", tonumber(50))
-           Toxicated()
-           Citizen.Wait(120000)
-           reality()
-         end
-       else
-         showStartText = false
-       end --if GetDistanceBetweenCoords ...
-    end
+            if(IsControlPressed(1, 38)) then
+                TriggerServerEvent("es_freeroam:pay", tonumber(50))
+                TriggerServerEvent("drink:addmoney",loc.money,loc.name)
+                Toxicated()
+                Citizen.Wait(120000)
+                reality()
+            end
+        else
+            showStartText = false
+        end --if GetDistanceBetweenCoords ...
+        end
+end
 end)
 
 

@@ -49,6 +49,7 @@ local vehshop = {
 				{name = "Vehicles", description = ""},
 				{name = "Motorcycles", description = ""},
                 {name = "Gang", description = ""},
+                {name = "Cartel", description = ""},
 			}
 		},
 		["vehicles"] = {
@@ -342,6 +343,24 @@ local vehshop = {
                     {name = "Blista", costs = 36000, description = {}, model = "Blista3"},
     			}
     	},
+        ["cartel"] = {
+                title = "CARTEL",
+                name = "cartel",
+                buttons = {
+                    {name = "Pfister Comet", costs = 1500000, description = {}, model = "comet3"},
+                    {name = "Albany buccaneer", costs = 1000000, description = {}, model = "buccaneer2"},
+                    {name = "Bennefactor xls", costs = 350000, description = {}, model = "xls"},
+                    {name = "Pegassi vortex", costs = 750000, description = {}, model = "vortex"},
+                    {name = "Shitzu Hakuchou", costs = 350000, description = {}, model = "Hakuchou2"},
+                    {name = "Vapid trophytruck", costs = 350000, description = {}, model = "trophytruck2"},
+                    {name = "Dewbauchee seven70", costs = 1000000, description = {}, model = "seven70"},
+                    {name = "Canis Mesa", costs = 350000, description = {}, model = "Mesa3"},
+                    {name = "Dewbauchee specter", costs = 350000, description = {}, model = "specter2"},
+                    {name = "Gallivanter baller", costs = 350000, description = {}, model = "baller3"},
+                    {name = "Truffade Nero", costs = 2800000, description = {}, model = "Nero2"},
+                    {name = "Hijak Ruston", costs = 400000, description = {}, model = "Ruston"},
+                }
+        },
 	}
 }
 
@@ -631,6 +650,12 @@ function ButtonSelected(button)
             else
             	TriggerEvent("itinerance:notif", "~r~Vous n'avez pas acces a ça")
             end
+        elseif btn == "Cartel" then
+            if (User.job == 45 or User.job == 46 or User.job == 47) then
+                OpenMenu('cartel')
+            else
+                TriggerEvent("itinerance:notif", "~r~Vous n'avez pas acces a ça")
+            end
 		end
 	elseif this == "vehicles" then
 		if btn == "Sports" then
@@ -654,7 +679,7 @@ function ButtonSelected(button)
 		elseif btn == "Vans" then
 			OpenMenu('vans')
 		end
-	elseif this == "compacts" or this == "coupes" or this == "sedans" or this == "sports" or this == "sportsclassics" or this == "super" or this == "muscle" or this == "offroad" or this == "suvs" or this == "vans" or this == "industrial" or this == "cycles" or this == "motorcycles" or this == "gang" then
+	elseif this == "compacts" or this == "coupes" or this == "sedans" or this == "sports" or this == "sportsclassics" or this == "super" or this == "muscle" or this == "offroad" or this == "suvs" or this == "vans" or this == "industrial" or this == "cycles" or this == "motorcycles" or this == "gang" or this == "cartel" then
 		TriggerServerEvent('CheckMoneyForVeh',button.name, button.model, button.costs)
 	end
 end
@@ -667,6 +692,8 @@ function OpenMenu(menu)
 	elseif menu == "bikes"  then
 		vehshop.lastmenu = "main"
     elseif menu == "gang"  then
+        vehshop.lastmenu = "main"
+    elseif menu == "cartel"  then
         vehshop.lastmenu = "main"
 	elseif menu == 'race_create_objects' then
 		vehshop.lastmenu = "main"
@@ -686,7 +713,7 @@ function Back()
 	backlock = true
 	if vehshop.currentmenu == "main" then
 		CloseCreator()
-	elseif vehshop.currentmenu == "compacts" or vehshop.currentmenu == "coupes" or vehshop.currentmenu == "sedans" or vehshop.currentmenu == "sports" or vehshop.currentmenu == "sportsclassics" or vehshop.currentmenu == "super" or vehshop.currentmenu == "muscle" or vehshop.currentmenu == "offroad" or vehshop.currentmenu == "suvs" or vehshop.currentmenu == "vans" or vehshop.currentmenu == "industrial" or vehshop.currentmenu == "cycles" or vehshop.currentmenu == "motorcycles" or vehshop.currentmenu == "gang" then
+	elseif vehshop.currentmenu == "compacts" or vehshop.currentmenu == "coupes" or vehshop.currentmenu == "sedans" or vehshop.currentmenu == "sports" or vehshop.currentmenu == "sportsclassics" or vehshop.currentmenu == "super" or vehshop.currentmenu == "muscle" or vehshop.currentmenu == "offroad" or vehshop.currentmenu == "suvs" or vehshop.currentmenu == "vans" or vehshop.currentmenu == "industrial" or vehshop.currentmenu == "cycles" or vehshop.currentmenu == "motorcycles" or vehshop.currentmenu == "gang" or vehshop.currentmenu == "cartel" then
 		if DoesEntityExist(fakecar.car) then
 			Citizen.InvokeNative(0xEA386986E786A54F, Citizen.PointerValueIntInitialized(fakecar.car))
 		end
@@ -730,14 +757,14 @@ Citizen.CreateThread(function()
 					end
 					drawMenuButton(button,vehshop.menu.x,y,selected)
 					if button.costs ~= nil then
-						if vehshop.currentmenu == "compacts" or vehshop.currentmenu == "coupes" or vehshop.currentmenu == "sedans" or vehshop.currentmenu == "sports" or vehshop.currentmenu == "sportsclassics" or vehshop.currentmenu == "super" or vehshop.currentmenu == "muscle" or vehshop.currentmenu == "offroad" or vehshop.currentmenu == "suvs" or vehshop.currentmenu == "vans" or vehshop.currentmenu == "industrial" or vehshop.currentmenu == "cycles" or vehshop.currentmenu == "motorcycles" or vehshop.currentmenu == "gang" then
+						if vehshop.currentmenu == "compacts" or vehshop.currentmenu == "coupes" or vehshop.currentmenu == "sedans" or vehshop.currentmenu == "sports" or vehshop.currentmenu == "sportsclassics" or vehshop.currentmenu == "super" or vehshop.currentmenu == "muscle" or vehshop.currentmenu == "offroad" or vehshop.currentmenu == "suvs" or vehshop.currentmenu == "vans" or vehshop.currentmenu == "industrial" or vehshop.currentmenu == "cycles" or vehshop.currentmenu == "motorcycles" or vehshop.currentmenu == "gang" or vehshop.currentmenu == "cartel" then
 							DoesPlayerHaveVehicle(button.model,button,y,selected)
 						else
 						drawMenuRight(button.costs.."$",vehshop.menu.x,y,selected)
 						end
 					end
 					y = y + 0.04
-					if vehshop.currentmenu == "compacts" or vehshop.currentmenu == "coupes" or vehshop.currentmenu == "sedans" or vehshop.currentmenu == "sports" or vehshop.currentmenu == "sportsclassics" or vehshop.currentmenu == "super" or vehshop.currentmenu == "muscle" or vehshop.currentmenu == "offroad" or vehshop.currentmenu == "suvs" or vehshop.currentmenu == "vans" or vehshop.currentmenu == "industrial" or vehshop.currentmenu == "cycles" or vehshop.currentmenu == "motorcycles" or vehshop.currentmenu == "gang" then
+					if vehshop.currentmenu == "compacts" or vehshop.currentmenu == "coupes" or vehshop.currentmenu == "sedans" or vehshop.currentmenu == "sports" or vehshop.currentmenu == "sportsclassics" or vehshop.currentmenu == "super" or vehshop.currentmenu == "muscle" or vehshop.currentmenu == "offroad" or vehshop.currentmenu == "suvs" or vehshop.currentmenu == "vans" or vehshop.currentmenu == "industrial" or vehshop.currentmenu == "cycles" or vehshop.currentmenu == "motorcycles" or vehshop.currentmenu == "gang" or vehshop.currentmenu == "cartel" then
 						if selected then
 							if fakecar.model ~= button.model then
 								if DoesEntityExist(fakecar.car) then

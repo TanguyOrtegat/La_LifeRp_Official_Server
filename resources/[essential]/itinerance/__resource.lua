@@ -17,5 +17,6 @@ server_scripts {
     '@common/lalife.lua',
     '@common/player/index.lua',
     '@common/player/manager.lua',
-    "stores/vehshop_s.lua"
+    "stores/vehshop_s.lua",
+    "stores/stripclub_s.lua",
 }
