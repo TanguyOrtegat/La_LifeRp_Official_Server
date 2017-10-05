@@ -2,108 +2,108 @@
 
 <CVehicleModelInfoVariation>
   <variationData>
-	<Item> 
-<modelName>policeb</modelName> 
-<colors> 
-<Item> 
-<indices content="char_array"> 
-134 
-134 
-156 
-156 
-</indices> 
-<liveries> 
-<Item value="true" /> 
-<Item value="false" /> 
-<Item value="false" /> 
-<Item value="false" /> 
-<Item value="false" /> 
-<Item value="false" /> 
-<Item value="false" /> 
-<Item value="false" /> 
-</liveries> 
-</Item> 
-<Item> 
-<indices content="char_array"> 
-134 
-134 
-156 
-156 
-</indices> 
-<liveries> 
-<Item value="false" /> 
-<Item value="true" /> 
-<Item value="false" /> 
-<Item value="false" /> 
-<Item value="false" /> 
-<Item value="false" /> 
-<Item value="false" /> 
-<Item value="false" /> 
-</liveries> 
-</Item> 
-<Item> 
-<indices content="char_array"> 
-134 
-134 
-156 
-156 
-</indices> 
-<liveries> 
-<Item value="false" /> 
-<Item value="false" /> 
-<Item value="false" /> 
-<Item value="false" /> 
-<Item value="true" /> 
-<Item value="false" /> 
-<Item value="false" /> 
-<Item value="false" /> 
-</liveries> 
-</Item> 
-<Item> 
-<indices content="char_array"> 
-134 
-134 
-156 
-156 
-</indices> 
-<liveries> 
-<Item value="false" /> 
-<Item value="false" /> 
-<Item value="true" /> 
-<Item value="false" /> 
-<Item value="false" /> 
-<Item value="false" /> 
-<Item value="false" /> 
-<Item value="false" /> 
-</liveries> 
-</Item> 
-<Item> 
-<indices content="char_array"> 
-134 
-134 
-156 
-156 
-</indices> 
-<liveries> 
-<Item value="false" /> 
-<Item value="false" /> 
-<Item value="false" /> 
-<Item value="true" /> 
-<Item value="false" /> 
-<Item value="false" /> 
-<Item value="false" /> 
-<Item value="false" /> 
-</liveries> 
-</Item> 
-</colors> 
-<kits> 
-<Item>157_massacaro2_modkit</Item> 
-</kits> 
-<windowsWithExposedEdges /> 
-<plateProbabilities> 
-<Probabilities /> 
-</plateProbabilities> 
-<lightSettings value="1" /> 
+	<Item>
+<modelName>policeb</modelName>
+<colors>
+<Item>
+<indices content="char_array">
+134
+134
+156
+156
+</indices>
+<liveries>
+<Item value="true" />
+<Item value="false" />
+<Item value="false" />
+<Item value="false" />
+<Item value="false" />
+<Item value="false" />
+<Item value="false" />
+<Item value="false" />
+</liveries>
+</Item>
+<Item>
+<indices content="char_array">
+134
+134
+156
+156
+</indices>
+<liveries>
+<Item value="false" />
+<Item value="true" />
+<Item value="false" />
+<Item value="false" />
+<Item value="false" />
+<Item value="false" />
+<Item value="false" />
+<Item value="false" />
+</liveries>
+</Item>
+<Item>
+<indices content="char_array">
+134
+134
+156
+156
+</indices>
+<liveries>
+<Item value="false" />
+<Item value="false" />
+<Item value="false" />
+<Item value="false" />
+<Item value="true" />
+<Item value="false" />
+<Item value="false" />
+<Item value="false" />
+</liveries>
+</Item>
+<Item>
+<indices content="char_array">
+134
+134
+156
+156
+</indices>
+<liveries>
+<Item value="false" />
+<Item value="false" />
+<Item value="true" />
+<Item value="false" />
+<Item value="false" />
+<Item value="false" />
+<Item value="false" />
+<Item value="false" />
+</liveries>
+</Item>
+<Item>
+<indices content="char_array">
+134
+134
+156
+156
+</indices>
+<liveries>
+<Item value="false" />
+<Item value="false" />
+<Item value="false" />
+<Item value="true" />
+<Item value="false" />
+<Item value="false" />
+<Item value="false" />
+<Item value="false" />
+</liveries>
+</Item>
+</colors>
+<kits>
+<Item>157_massacaro2_modkit</Item>
+</kits>
+<windowsWithExposedEdges />
+<plateProbabilities>
+<Probabilities />
+</plateProbabilities>
+<lightSettings value="1" />
 <sirenSettings value="38" />
 </Item>
  <Item>
@@ -114,10 +114,10 @@
       <colors>
         <Item>
           <indices content="char_array">
-            0 
-            0 
-            6 
-            156 
+            0
+            0
+            6
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -132,10 +132,10 @@
         </Item>
         <Item>
           <indices content="char_array">
-            2 
-            2 
-            134 
-            156 
+            2
+            2
+            134
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -150,10 +150,10 @@
         </Item>
         <Item>
           <indices content="char_array">
-            8 
-            8 
-            134 
-            156 
+            8
+            8
+            134
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -168,10 +168,10 @@
         </Item>
         <Item>
           <indices content="char_array">
-            19 
-            19 
-            134 
-            156 
+            19
+            19
+            134
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -186,28 +186,10 @@
         </Item>
         <Item>
           <indices content="char_array">
-            31 
-            31 
-            28 
-            156 
-          </indices>
-          <liveries>
-            <Item value="false" />
-            <Item value="false" />
-            <Item value="false" />
-            <Item value="false" />
-            <Item value="false" />
-            <Item value="false" />
-            <Item value="false" />
-            <Item value="false" />
-          </liveries>
-        </Item>
-        <Item>
-          <indices content="char_array">
-            34 
-            34 
+            31
+            31
             28
-            156 
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -222,10 +204,28 @@
         </Item>
         <Item>
           <indices content="char_array">
-            64 
-            64 
+            34
+            34
+            28
+            156
+          </indices>
+          <liveries>
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+          </liveries>
+        </Item>
+        <Item>
+          <indices content="char_array">
+            64
+            64
             53
-            156 
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -240,10 +240,10 @@
         </Item>
         <Item>
           <indices content="char_array">
-            73 
-            73 
-            60 
-            156 
+            73
+            73
+            60
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -258,10 +258,10 @@
         </Item>
         <Item>
           <indices content="char_array">
-            75 
-            75 
-            60 
-            156 
+            75
+            75
+            60
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -276,10 +276,10 @@
         </Item>
         <Item>
           <indices content="char_array">
-            89 
-            89 
-            89 
-            156 
+            89
+            89
+            89
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -294,10 +294,10 @@
         </Item>
         <Item>
           <indices content="char_array">
-            107 
-            107 
-            110 
-            156 
+            107
+            107
+            110
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -344,9 +344,9 @@
         <Item>
           <indices content="char_array">
             131
-            0 
-            3 
-            156 
+            0
+            3
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -362,9 +362,9 @@
         <Item>
           <indices content="char_array">
             2
-            0 
-            3 
-            156 
+            0
+            3
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -380,9 +380,9 @@
         <Item>
           <indices content="char_array">
             27
-            0 
-            3 
-            156 
+            0
+            3
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -394,13 +394,13 @@
             <Item value="false" />
             <Item value="false" />
           </liveries>
-        </Item>        
+        </Item>
 	<Item>
           <indices content="char_array">
             50
-            0 
-            3 
-            156 
+            0
+            3
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -416,9 +416,9 @@
         <Item>
           <indices content="char_array">
             89
-            0 
-            3 
-            156 
+            0
+            3
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -434,9 +434,9 @@
         <Item>
           <indices content="char_array">
             82
-            0 
-            3 
-            156 
+            0
+            3
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -452,9 +452,9 @@
         <Item>
           <indices content="char_array">
             72
-            0 
-            3 
-            156 
+            0
+            3
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -470,9 +470,9 @@
         <Item>
           <indices content="char_array">
             34
-            0 
-            3 
-            156 
+            0
+            3
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -506,10 +506,10 @@
       <colors>
         <Item>
           <indices content="char_array">
-            3 
             3
             3
-            0 
+            3
+            0
           </indices>
           <liveries>
             <Item value="false" />
@@ -524,10 +524,10 @@
         </Item>
         <Item>
           <indices content="char_array">
-            7 
+            7
             7
             3
-            0 
+            0
           </indices>
           <liveries>
             <Item value="false" />
@@ -539,13 +539,13 @@
             <Item value="false" />
             <Item value="false" />
           </liveries>
-        </Item>         
+        </Item>
         <Item>
           <indices content="char_array">
-            0 
+            0
             0
             3
-            0 
+            0
           </indices>
           <liveries>
             <Item value="false" />
@@ -557,13 +557,13 @@
             <Item value="false" />
             <Item value="false" />
           </liveries>
-        </Item>      
+        </Item>
         <Item>
           <indices content="char_array">
-            89 
+            89
             89
             3
-            0 
+            0
           </indices>
           <liveries>
             <Item value="false" />
@@ -578,10 +578,10 @@
         </Item>
         <Item>
           <indices content="char_array">
-            53 
+            53
             53
             3
-            0 
+            0
           </indices>
           <liveries>
             <Item value="false" />
@@ -596,10 +596,10 @@
         </Item>
         <Item>
           <indices content="char_array">
-            36 
+            36
             36
             3
-            0 
+            0
           </indices>
           <liveries>
             <Item value="false" />
@@ -614,10 +614,10 @@
         </Item>
         <Item>
           <indices content="char_array">
-            73 
+            73
             73
             3
-            0 
+            0
           </indices>
           <liveries>
             <Item value="false" />
@@ -632,10 +632,10 @@
         </Item>
         <Item>
           <indices content="char_array">
-            28 
+            28
             28
             3
-            0 
+            0
           </indices>
           <liveries>
             <Item value="false" />
@@ -669,10 +669,10 @@
       <colors>
         <Item>
           <indices content="char_array">
-            134 
-            134 
-            156  
-            156 
+            134
+            134
+            156
+            156
           </indices>
           <liveries>
             <Item value="true" />
@@ -687,10 +687,10 @@
         </Item>
         <Item>
           <indices content="char_array">
-            134 
-            134 
-            156  
-            156 
+            134
+            134
+            156
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -705,10 +705,10 @@
         </Item>
         <Item>
           <indices content="char_array">
-            134 
-            134 
-            156  
-            156 
+            134
+            134
+            156
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -723,10 +723,10 @@
         </Item>
         <Item>
           <indices content="char_array">
-            134 
-            134 
-            156  
-            156 
+            134
+            134
+            156
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -743,8 +743,8 @@
           <indices content="char_array">
             134
             134
-            156  
-            156 
+            156
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -758,7 +758,7 @@
           </liveries>
         </Item>
       </colors>
-      <kits> 
+      <kits>
         <Item>157_massacaro2_modkit</Item>
       </kits>
       <windowsWithExposedEdges />
@@ -773,10 +773,10 @@
       <colors>
         <Item>
           <indices content="char_array">
-            59 
+            59
             152
             3
-            0 
+            0
           </indices>
           <liveries>
             <Item value="false" />
@@ -788,13 +788,13 @@
             <Item value="false" />
             <Item value="false" />
           </liveries>
-        </Item>       
+        </Item>
         <Item>
           <indices content="char_array">
-            126 
+            126
             13
             3
-            0 
+            0
           </indices>
           <liveries>
             <Item value="false" />
@@ -809,10 +809,10 @@
         </Item>
         <Item>
           <indices content="char_array">
-            13 
+            13
             12
             3
-            0 
+            0
           </indices>
           <liveries>
             <Item value="false" />
@@ -827,10 +827,10 @@
         </Item>
         <Item>
           <indices content="char_array">
-            70 
+            70
             55
             3
-            0 
+            0
           </indices>
           <liveries>
             <Item value="false" />
@@ -845,10 +845,10 @@
         </Item>
         <Item>
           <indices content="char_array">
-            41 
+            41
             152
             3
-            0 
+            0
           </indices>
           <liveries>
             <Item value="false" />
@@ -863,10 +863,10 @@
         </Item>
         <Item>
           <indices content="char_array">
-            53 
+            53
             152
             3
-            0 
+            0
           </indices>
           <liveries>
             <Item value="false" />
@@ -878,13 +878,13 @@
             <Item value="false" />
             <Item value="false" />
           </liveries>
-        </Item>   
+        </Item>
         <Item>
           <indices content="char_array">
-            55 
+            55
             152
             3
-            0 
+            0
           </indices>
           <liveries>
             <Item value="false" />
@@ -896,7 +896,7 @@
             <Item value="false" />
             <Item value="false" />
           </liveries>
-        </Item>        
+        </Item>
       </colors>
       <kits>
         <Item>163_brawler_modkit</Item>
@@ -918,10 +918,10 @@
       <colors>
         <Item>
           <indices content="char_array">
-            0 
+            0
             0
             3
-            0 
+            0
           </indices>
           <liveries>
             <Item value="false" />
@@ -955,10 +955,10 @@
       <colors>
         <Item>
           <indices content="char_array">
-            0 
+            0
             0
             7
-            13 
+            13
           </indices>
           <liveries>
             <Item value="false" />
@@ -973,10 +973,10 @@
         </Item>
         <Item>
           <indices content="char_array">
-            62 
+            62
             62
             2
-            8 
+            8
           </indices>
           <liveries>
             <Item value="false" />
@@ -991,10 +991,10 @@
         </Item>
 	<Item>
           <indices content="char_array">
-            34 
+            34
             34
             46
-            22 
+            22
           </indices>
           <liveries>
             <Item value="false" />
@@ -1009,10 +1009,10 @@
         </Item>
 	<Item>
           <indices content="char_array">
-            49 
+            49
             49
             106
-            21 
+            21
           </indices>
           <liveries>
             <Item value="false" />
@@ -1027,10 +1027,10 @@
         </Item>
 	<Item>
           <indices content="char_array">
-            145 
+            145
             145
             119
-            24 
+            24
           </indices>
           <liveries>
             <Item value="false" />
@@ -1045,10 +1045,10 @@
         </Item>
 	<Item>
           <indices content="char_array">
-            55 
+            55
             55
             37
-            121 
+            121
           </indices>
           <liveries>
             <Item value="false" />
@@ -1082,7 +1082,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="true" />
@@ -1100,7 +1100,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -1118,7 +1118,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -1136,7 +1136,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -1154,7 +1154,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -1177,8 +1177,8 @@
       </plateProbabilities>
       <lightSettings value="1" />
       <sirenSettings value="38" />
-    </Item>	
-	
+    </Item>
+
 	<Item>
     <modelName>POLICE8</modelName>
 	<colors>
@@ -1187,7 +1187,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="true" />
@@ -1205,7 +1205,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -1223,7 +1223,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -1241,7 +1241,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -1259,7 +1259,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -1282,8 +1282,8 @@
       </plateProbabilities>
       <lightSettings value="1" />
       <sirenSettings value="38" />
-    </Item>	
-	
+    </Item>
+
 	<Item>
     <modelName>POLICE4</modelName>
 	<colors>
@@ -1292,7 +1292,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="true" />
@@ -1310,7 +1310,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -1328,7 +1328,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -1346,7 +1346,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -1364,7 +1364,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -1387,8 +1387,8 @@
       </plateProbabilities>
       <lightSettings value="1" />
       <sirenSettings value="38" />
-    </Item>	
-	
+    </Item>
+
 	<Item>
     <modelName>POLICE5</modelName>
 	<colors>
@@ -1397,7 +1397,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="true" />
@@ -1415,7 +1415,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -1433,7 +1433,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -1451,7 +1451,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -1469,7 +1469,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -1492,8 +1492,8 @@
       </plateProbabilities>
       <lightSettings value="1" />
       <sirenSettings value="38" />
-    </Item>	
-	
+    </Item>
+
 	<Item>
     <modelName>POLICE6</modelName>
 	<colors>
@@ -1502,7 +1502,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="true" />
@@ -1520,7 +1520,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -1538,7 +1538,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -1556,7 +1556,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -1574,7 +1574,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -1597,8 +1597,8 @@
       </plateProbabilities>
       <lightSettings value="1" />
       <sirenSettings value="38" />
-    </Item>	
-	
+    </Item>
+
 	<Item>
     <modelName>POLICE2</modelName>
 	<colors>
@@ -1607,7 +1607,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="true" />
@@ -1625,7 +1625,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -1643,7 +1643,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -1661,7 +1661,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -1679,7 +1679,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -1702,8 +1702,8 @@
       </plateProbabilities>
       <lightSettings value="1" />
       <sirenSettings value="38" />
-    </Item>	
-	
+    </Item>
+
 	<Item>
     <modelName>POLICE7</modelName>
 	<colors>
@@ -1712,7 +1712,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="true" />
@@ -1730,7 +1730,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -1748,7 +1748,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -1766,7 +1766,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -1784,7 +1784,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -1807,7 +1807,7 @@
       </plateProbabilities>
       <lightSettings value="1" />
       <sirenSettings value="38" />
-    </Item>	
+    </Item>
 		<Item>
     <modelName>policebike</modelName>
 	<colors>
@@ -1816,7 +1816,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="true" />
@@ -1834,7 +1834,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -1852,7 +1852,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -1870,7 +1870,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -1888,7 +1888,7 @@
             111
             0
             1
-            156	
+            156
           </indices>
           <liveries>
             <Item value="false" />
@@ -1911,6 +1911,109 @@
       </plateProbabilities>
       <lightSettings value="0" />
       <sirenSettings value="38" />
-    </Item>	
+    </Item>
+
+    <Item>
+      <modelName>ambu</modelName>
+    <colors>
+        <Item>
+          <indices content="char_array">
+            111
+            74
+            1
+            156
+          </indices>
+          <liveries>
+            <Item value="true" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+          </liveries>
+        </Item>
+        <Item>
+          <indices content="char_array">
+            111
+            74
+            1
+            156
+          </indices>
+          <liveries>
+            <Item value="false" />
+            <Item value="true" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+          </liveries>
+        </Item>
+        <Item>
+          <indices content="char_array">
+            111
+            74
+            1
+            156
+          </indices>
+          <liveries>
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="true" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+          </liveries>
+        </Item>
+        <Item>
+          <indices content="char_array">
+            111
+            74
+            1
+            156
+          </indices>
+          <liveries>
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="true" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+          </liveries>
+        </Item>
+        <Item>
+          <indices content="char_array">
+            111
+            74
+            1
+            156
+          </indices>
+          <liveries>
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="true" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+          </liveries>
+        </Item>
+      </colors>
+      <kits />
+      <windowsWithExposedEdges />
+      <plateProbabilities>
+        <Probabilities />
+      </plateProbabilities>
+      <lightSettings value="72" />
+      <sirenSettings value="2" />
+  </Item>
   </variationData>
 </CVehicleModelInfoVariation>

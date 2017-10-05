@@ -570,11 +570,11 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de vendre~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isSell == false then
-                if (User.job ~= 41 or User.job ~=42 or User.job ~= 40) then
+                if (User.job == 41 or User.job ==42 or User.job == 40) then
+                    TriggerEvent("itinerance:notif", "~r~Vous devez pas faire parti des TheLost pour vendre !")
+                else
                     Citizen.Wait(1)
                     isSell = true
-                else
-                    TriggerEvent("itinerance:notif", "~r~Vous devez pas faire parti des TheLost pour vendre !")
                 end
             end
             if IsControlJustPressed(1, 38) and isSell == true then

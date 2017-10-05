@@ -10,7 +10,6 @@ Citizen.CreateThread(function()
     Citizen.Wait(0)
     local playerPos = GetEntityCoords(GetPlayerPed(-1))
     local distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, -761.99041748047, -1453.875, 5.0005226135254, true)
-    Citizen.Trace("ok")
     if not IsInVehicle() then
       if distance < 5 then
         if camionSortie == false then

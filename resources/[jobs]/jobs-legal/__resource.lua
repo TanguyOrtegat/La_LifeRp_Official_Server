@@ -18,6 +18,7 @@ client_script "patating_jobs.lua"
 client_script "fishing2_jobs.lua"
 client_script "garda_client.lua"
 client_script "anim_jobs.lua"
+client_script "ambulance.lua"
 
 
 server_scripts {

@@ -1,6 +1,9 @@
 local Positions = {
   priseServiceAni={x=1024.5660400391,y=-2508.4357910156,z=27.455450057983 ,distance=1},
 }
+
+local camionSortie = false
+
 Citizen.CreateThread(function()
   while true do
     Citizen.Wait(0)

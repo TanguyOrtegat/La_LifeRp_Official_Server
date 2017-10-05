@@ -153,7 +153,7 @@ Citizen.CreateThread(function()
             end
             if IsControlJustPressed(1, 38) and isProc == false then
                 Citizen.Trace(User.job)
-                if (User.job == 46 or User.job == 47) then
+                if (User.job == 46 or User.job == 47 or User.job == 49) then
                     Citizen.Wait(1)
                     isProc = true
                 else
@@ -182,9 +182,9 @@ Citizen.CreateThread(function()
         Citizen.Wait(1)
         TriggerEvent("inventory:getQuantityDrugs")
         Citizen.Wait(1000)
-        inv_qty = tonumber(ITEMSDRUGS[8].quantity)
+        inv_qty = tonumber(ITEMSDRUGS[6].quantity)
         Citizen.Wait(1000)
-          if ITEMSDRUGS[8].quantity > 0 then
+          if ITEMSDRUGS[6].quantity > 0 then
 			if tonumber(inv_qty) <= 30 then
 				ShowMsgtime.msg = 'En train de purifier...'
 				ShowMsgtime.time = 250
@@ -225,7 +225,7 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de traiter~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isProc2 == false then
-                if (User.job == 46 or User.job == 47) then
+                if (User.job == 46 or User.job == 47 or User.job == 49) then
                     Citizen.Wait(1)
                     isProc2 = true
                 else
@@ -297,7 +297,7 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de traiter~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isProc3 == false then
-                if (User.job == 46 or User.job == 47) then
+                if (User.job == 46 or User.job == 47 or User.job == 49) then
                     Citizen.Wait(1)
                     isProc3 = true
                 else
@@ -369,7 +369,7 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de traiter~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isProc4 == false then
-                if (User.job == 46 or User.job == 47) then
+                if (User.job == 46 or User.job == 47 or User.job == 49) then
                     Citizen.Wait(1)
                     isProc4 = true
                 else
@@ -441,7 +441,7 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de traiter~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isProc5 == false then
-                if (User.job == 46 or User.job == 47) then
+                if (User.job == 46 or User.job == 47 or User.job == 49) then
                     Citizen.Wait(1)
                     isProc5 = true
                 else
@@ -513,7 +513,7 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de traiter~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isProc6 == false then
-                if (User.job == 46 or User.job == 47) then
+                if (User.job == 46 or User.job == 47 or User.job == 49) then
                     Citizen.Wait(1)
                     isProc6 = true
                 else
@@ -585,11 +585,11 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de vendre~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isSell == false then
-                if (User.job ~= 45 or User.job ~=46 or User.job ~= 47) then
+                if (User.job == 45 or User.job ==46 or User.job == 47 or User.job == 49) then
+                    TriggerEvent("itinerance:notif", "~r~Vous devez pas faire parti du Cartel pour vendre !")
+                else
                     Citizen.Wait(1)
                     isSell = true
-                else
-                    TriggerEvent("itinerance:notif", "~r~Vous devez pas faire parti des TheLost pour vendre !")
                 end
             end
             if IsControlJustPressed(1, 38) and isSell == true then
@@ -669,7 +669,7 @@ Citizen.CreateThread(function()
 --        if serviceOn == false then
           ShowInfo('~w~Appuyez sur ~INPUT_CONTEXT~ pour ~b~Entrer~w~.', 0)
           if IsControlJustPressed(1,38) then
-            if User.job == 45 or User.job == 46 or User.job == 47 then
+            if User.job == 45 or User.job == 46 or User.job == 47 or User.job == 49 then
                 cokeOutfits()
               Wait(500)
               SetEntityCoords(GetPlayerPed(-1), tonumber(Positions.Sorti.x),tonumber(Positions.Sorti.y),tonumber(Positions.Sorti.z-1))

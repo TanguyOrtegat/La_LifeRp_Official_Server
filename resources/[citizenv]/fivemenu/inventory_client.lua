@@ -120,6 +120,7 @@ function getQuantity(itemId)
 	return ITEMS[tonumber(itemId)].quantity
 end
 
+RegisterNetEvent("player:receiveItem")
 AddEventHandler("player:receiveItem", function(item, quantity)
   item = tonumber(item)
   local qty = ITEMS[tonumber(item)].quantity + quantity

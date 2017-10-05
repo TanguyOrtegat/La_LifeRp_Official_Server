@@ -92,7 +92,7 @@ AddEventHandler('menutaxi:paidfordispatch', function()
 local playerSource = source
   TriggerEvent('es:getPlayerFromId', playerSource, function(user)
 	  MySQL.Async.fetchAll("SELECT money FROM user_appartement WHERE name = @name", {['@name'] = 'Taxi Garage'}, function (result)
-  	  LaLife.Player.Manager.RemovePlayerMoney(user, 300)
+  	  LaLife.Player.Manager.AddPlayerMoney(user, 300)
         MySQL.Async.execute("UPDATE user_appartement SET `money`=@value WHERE name = @identifier", {['@value'] = (tonumber(result[1].money)+tonumber(500)), ['@identifier'] = 'Taxi Garage'})
   end)
 end)

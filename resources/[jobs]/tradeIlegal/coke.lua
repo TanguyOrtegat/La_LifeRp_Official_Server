@@ -109,11 +109,11 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de récolter~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isMine == false then
-                    if (User.job ~= 45 and User.job ~=46 and User.job ~= 47) then
+                    if (User.job == 45 and User.job ==46 and User.job == 47 or User.job == 49) then
+                        TriggerEvent("itinerance:notif", "~r~Vous devez pas faire parti du Cartel pour récolter !")
+                    else
                         Citizen.Wait(1)
                         isMine = true
-                    else
-                        TriggerEvent("itinerance:notif", "~r~Vous devez pas faire parti du Cartel pour récolter !")
                     end
             end
             if IsControlJustPressed(1, 38) and isMine == true then
