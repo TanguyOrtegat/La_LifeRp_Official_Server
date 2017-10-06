@@ -127,9 +127,9 @@ function init()
     SetBlipAsShortRange(BLIP1,true)
     SetBlipAsMissionCreatorBlip(BLIP1,true)
     SetBlipScale(BLIP1, 0.8)
-  
+
   ----------------------
-  
+
   local BLIP2 = AddBlipForCoord(TruckingCompany[1]["x"], TruckingCompany[1]["y"], TruckingCompany[1]["z"])
     SetBlipSprite(BLIP2, 85)
     SetBlipColour(BLIP2, 47)
@@ -139,9 +139,9 @@ function init()
     SetBlipAsShortRange(BLIP2,true)
     SetBlipAsMissionCreatorBlip(BLIP2,true)
     SetBlipScale(BLIP2, 1.0)
-  
+
   ----------------------
-  
+
   local BLIP3 = AddBlipForCoord(TruckingCompany[2]["x"], TruckingCompany[2]["y"], TruckingCompany[2]["z"])
     SetBlipSprite(BLIP3, 403)
     SetBlipColour(BLIP3, 46)
@@ -151,9 +151,9 @@ function init()
     SetBlipAsShortRange(BLIP3,true)
     SetBlipAsMissionCreatorBlip(BLIP3,true)
     SetBlipScale(BLIP3, 1.0)
-  
+
   ------------------------
-  
+
   local BLIP4 = AddBlipForCoord(TruckingCompany[3]["x"], TruckingCompany[3]["y"], TruckingCompany[3]["z"])
     SetBlipSprite(BLIP4, 85)
     SetBlipColour(BLIP4, 21)
@@ -163,7 +163,7 @@ function init()
     SetBlipAsShortRange(BLIP4,true)
     SetBlipAsMissionCreatorBlip(BLIP4,true)
     SetBlipScale(BLIP4, 1.0)
-  
+
 end
 
 --Draw Text / Menus
@@ -266,7 +266,7 @@ SetPedComponentVariation(GetPlayerPed(-1), 7, 0, 0, 0)
     end
     if ( GetDistanceBetweenCoords(BLIP.truckReturn[1], BLIP.truckReturn[2], BLIP.truckReturn[3], truckCoords ) < 25 and not IsEntityAttached(MISSION.trailer) and MISSION.toDest) then
       distance = GetDistanceBetweenCoords(BLIP.truckReturn[1], BLIP.truckReturn[2], BLIP.truckReturn[3], currentMission[1], currentMission[2], currentMission[3], true)
-      distance = tonumber(math.floor(distance/15))
+      distance = tonumber(math.floor(distance/10))
       TriggerServerEvent("job:success", distance)
       TriggerServerEvent("vmenu:lastChar")
       --TriggerEvent("mt:missiontext", "Vous êtes arrivé. Vous avez obtenu ~g~$"..distance, 10000)

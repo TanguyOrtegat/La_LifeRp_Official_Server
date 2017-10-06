@@ -311,7 +311,7 @@ Citizen.CreateThread(function()
 									TaskPlayAnim(myPed, dict, animation, 8.0, -8, -1, flags, 0, 0, 0, 0)
 									Wait(2000)
 									DrawMissionTextbin("Vous avez ~g~ramassé~w~ une poubelle !", 5000)
-									TriggerServerEvent('job:success', distance/75)
+									TriggerServerEvent('job:success', distance/50)
 									--TriggerServerEvent('CheckPool')
 									Wait(2000)
 									bin.flag[1] = 1
