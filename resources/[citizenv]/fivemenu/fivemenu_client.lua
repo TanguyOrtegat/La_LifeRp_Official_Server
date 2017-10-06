@@ -2350,7 +2350,7 @@ function getMainMenu()
     if tonumber(User.subjob) == 4 then
     VMenu.AddFunc(98, "Menu TheLost", "menulost:menuOG", {User.subjob}, lang.common.access)
     end
-    if tonumber(User.subjob) == 5 then
+    if tonumber(User.subjob) == 6 then
     VMenu.AddFunc(98, "Menu Motard", "menuasso:menuOG", {User.subjob}, lang.common.access)
     end
     if tonumber(User.subjob) == 9 then
