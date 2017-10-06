@@ -2363,7 +2363,7 @@ function getMainMenu()
 			VMenu.AddFunc(98, "Menu FBI", "menugarde:GardeOG", {}, lang.common.access)
 		end
 		VMenu.AddFunc(98, "~b~Sauvegarder ma position", "vmenu:sync", {}, lang.common.access)
-		VMenu.AddFunc(98, "~g~Afficher la bourse", "vmenu:bourse_check", {}, lang.common.access)
+		--VMenu.AddFunc(98, "~g~Afficher la bourse", "vmenu:bourse_check", {}, lang.common.access)
 		VMenu.AddFunc(98, "Carte d'identité", "vmenu:identity_check", {}, lang.common.access)
 		--VMenu.AddFunc(98, "Répertoire", "menutel:PhoneOG", {}, lang.common.access)
 		VMenu.AddFunc(98, lang.menu.mainmenu.anim, "menuanim:AnimOG", {}, lang.common.access)
