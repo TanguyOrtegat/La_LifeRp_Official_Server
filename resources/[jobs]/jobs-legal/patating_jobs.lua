@@ -494,7 +494,7 @@ Citizen.CreateThread(function()
                       ShowMsgtime.time = 250
                       Wait(2500)
                       --local price = math.ceil(PriceBourse)
-                      ShowMsgtime.msg = '~r~-1 Sac de pommes de terre ~w~/ ~g~+' .. 20 .. '$'
+                      ShowMsgtime.msg = '~r~-1 Sac de pommes de terre ~w~/ ~g~+' .. 35 .. '$'
                       ShowMsgtime.time = 150
                       TriggerEvent("inventory:sell",0, 1, 43, 20, "")
                       Wait(2000)

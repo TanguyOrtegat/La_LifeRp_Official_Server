@@ -554,7 +554,7 @@ Citizen.CreateThread(function()
                       ShowMsgtime.time = 250
                       Wait(2500)
                       --local price = math.ceil(PriceBourse)
-                      ShowMsgtime.msg = '~r~-1 Morue surgelée ~w~/ ~g~+' .. 20 .. '$'
+                      ShowMsgtime.msg = '~r~-1 Morue surgelée ~w~/ ~g~+' .. 30 .. '$'
                       ShowMsgtime.time = 150
                       TriggerEvent("inventory:sell",0, 1, 32, 20, "")
                       Wait(2000)
@@ -565,7 +565,7 @@ Citizen.CreateThread(function()
                       ShowMsgtime.time = 250
                       Wait(2500)
                       --local price = math.ceil(PriceBourse)
-                      ShowMsgtime.msg = '~r~-1 Sardine surgelée ~w~/ ~g~+' .. 50 .. '$'
+                      ShowMsgtime.msg = '~r~-1 Sardine surgelée ~w~/ ~g~+' .. 60 .. '$'
                       ShowMsgtime.time = 150
                       TriggerEvent("inventory:sell",0, 1, 33, 50, "")
                       Wait(2000)
@@ -576,7 +576,7 @@ Citizen.CreateThread(function()
                       ShowMsgtime.time = 250
                       Wait(2500)
                       --local price = math.ceil(PriceBourse)
-                      ShowMsgtime.msg = '~r~-1 Daurade surgelée ~w~/ ~g~+' .. 60 .. '$'
+                      ShowMsgtime.msg = '~r~-1 Daurade surgelée ~w~/ ~g~+' .. 70 .. '$'
                       ShowMsgtime.time = 150
                       TriggerEvent("inventory:sell",0, 1, 34, 60, "")
                       Wait(2000)
@@ -587,7 +587,7 @@ Citizen.CreateThread(function()
                       ShowMsgtime.time = 250
                       Wait(2500)
                       --local price = math.ceil(PriceBourse)
-                      ShowMsgtime.msg = '~r~-1 Saumon surgelé ~w~/ ~g~+' .. 80 .. '$'
+                      ShowMsgtime.msg = '~r~-1 Saumon surgelé ~w~/ ~g~+' ..90 .. '$'
                       ShowMsgtime.time = 150
                       TriggerEvent("inventory:sell",0, 1, 35, 80, "")
                       Wait(2000)
