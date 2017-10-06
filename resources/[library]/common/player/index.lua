@@ -1,6 +1,6 @@
 LaLife.Player = {}
 
-LaLife.Player.New = function(source, permission_level, money, identifier, group, dirtymoney, job, police, nom, prenom, telephone, pos, gender)
+LaLife.Player.New = function(source, permission_level, money, identifier, group, dirtymoney, job, police, nom, prenom, telephone, pos, gender,subjob)
     return {
         source = source,
         permission_level = permission_level,
@@ -20,5 +20,6 @@ LaLife.Player.New = function(source, permission_level, money, identifier, group,
         jobVehicle = 0,
         status = "alive",
         gender = gender,
+        subjob = subjob,
     }
 end

@@ -138,6 +138,7 @@ User = {
     money = 0,
     dirtymoney = 0,
     job = 0,
+    subjob = 0,
     police = 0,
     enService = 0,
     nom = "",

@@ -163,7 +163,8 @@ User = {
 	vehicle = "",
 	identifier = nil,
 	telephone = "",
-	gender = ""
+	gender = "",
+    subjob = 0,
 }
 --SetPedDecoration(ped, col, tats)
 local Homme = {
@@ -2346,14 +2347,14 @@ function getMainMenu()
     if tonumber(User.job) == 38 or tonumber(User.job) == 39 then
       VMenu.AddFunc(98, "Menu Custom", "menuls5:menuOG", {User.job}, lang.common.access)
     end
-    if tonumber(User.job) == 42 then
-    VMenu.AddFunc(98, "Menu TheLost", "menulost:menuOG", {User.job}, lang.common.access)
+    if tonumber(User.subjob) == 4 then
+    VMenu.AddFunc(98, "Menu TheLost", "menulost:menuOG", {User.subjob}, lang.common.access)
     end
-    if tonumber(User.job) == 43 then
-    VMenu.AddFunc(98, "Menu Motard", "menuasso:menuOG", {User.job}, lang.common.access)
+    if tonumber(User.subjob) == 5 then
+    VMenu.AddFunc(98, "Menu Motard", "menuasso:menuOG", {User.subjob}, lang.common.access)
     end
-    if tonumber(User.job) == 47 then
-    VMenu.AddFunc(98, "Menu Cartel", "menucartel:menuOG", {User.job}, lang.common.access)
+    if tonumber(User.subjob) == 9 then
+    VMenu.AddFunc(98, "Menu Cartel", "menucartel:menuOG", {User.subjob}, lang.common.access)
     end
 		if tonumber(User.job) == 14 then
 			VMenu.AddFunc(98, "Menu président", "menupres:MayorOG", {}, lang.common.access)
@@ -2368,6 +2369,7 @@ function getMainMenu()
 		VMenu.AddFunc(98, lang.menu.mainmenu.anim, "menuanim:AnimOG", {}, lang.common.access)
 		VMenu.AddFunc(98, lang.menu.mainmenu.givecash, "vmenu:giveCash", {User.money}, lang.common.access)
 		VMenu.AddFunc(98, lang.menu.mainmenu.givedcash, "vmenu:giveDCash", {User.dirtymoney}, lang.common.access)
+        --VMenu.AddFunc(98, "Jeter l'arme", "lalife:dropWeapon", {}, lang.common.access)
     VMenu.AddFunc(98, "Mettre/Enlever le masque", "vmenu:switchMask", {}, lang.common.access)
 		VMenu.AddSep(98, lang.menu.mainmenu.inventory)
 		for ind, value in ipairs(ITEMS) do

@@ -26,6 +26,7 @@ User = {
     money = 0,
     dirtymoney = 0,
     job = 0,
+    subjob = 0,
     police = 0,
     enService = 0,
     nom = "",
@@ -47,6 +48,7 @@ local Positions = {
     traitement6={ ['x'] = 1006.024597168, ['y'] = -3194.9404296875, ['z'] = -38.993171691895,["distance"] = 1 },
     Sorti={ ['x'] = 997.05859375, ['y'] = -3200.646484375, ['z'] = -37.393688201904,["distance"] = 1 },
     vente={ ['x'] = -2165.9821777344, ['y'] = 5196.9291992188, ['z'] = 16.880392074585,["distance"] = 1 },
+    Couleur={ ['x'] = 983.45251464844, ['y'] = -98.58341217041, ['z'] = 74.845741271973 },
 }
 
 function drawTxt(text,font,centre,x,y,scale,r,g,b,a)
@@ -137,8 +139,7 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de traiter~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isProc == false then
-                Citizen.Trace(User.job)
-                if (User.job == 41 or User.job == 42) and tenu == true then
+                if (User.subjob == 3 or User.subjob == 4) and tenu == true then
                     Citizen.Wait(1)
                     isProc = true
                 else
@@ -210,7 +211,7 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de traiter~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isProc2 == false then
-                if (User.job == 41 or User.job == 42) and tenu == true then
+                if (User.subjob == 3 or User.subjob == 4) and tenu == true then
                     Citizen.Wait(1)
                     isProc2 = true
                 else
@@ -282,7 +283,7 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de traiter~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isProc3 == false then
-                if (User.job == 41 or User.job == 42) and tenu == true then
+                if (User.subjob == 3 or User.subjob == 4) and tenu == true then
                     Citizen.Wait(1)
                     isProc3 = true
                 else
@@ -354,7 +355,7 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de traiter~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isProc4 == false then
-                if (User.job == 41 or User.job == 42) and tenu == true then
+                if (User.subjob == 3 or User.subjob == 4) and tenu == true then
                     Citizen.Wait(1)
                     isProc4 = true
                 else
@@ -426,7 +427,7 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de traiter~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isProc5 == false then
-                if (User.job == 41 or User.job == 42) and tenu == true then
+                if (User.subjob == 3 or User.subjob == 4) and tenu == true then
                     Citizen.Wait(1)
                     isProc5 = true
                 else
@@ -498,7 +499,7 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de traiter~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isProc6 == false then
-                if (User.job == 41 or User.job == 42) and tenu == true then
+                if (User.subjob == 3 or User.subjob == 4) and tenu == true then
                     Citizen.Wait(1)
                     isProc6 = true
                 else
@@ -570,7 +571,7 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de vendre~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isSell == false then
-                if (User.job == 41 or User.job ==42 or User.job == 40) then
+                if (User.subjob == 2 or User.subjob == 3 or User.subjob == 4) then
                     TriggerEvent("itinerance:notif", "~r~Vous devez pas faire parti des TheLost pour vendre !")
                 else
                     Citizen.Wait(1)
@@ -654,7 +655,7 @@ Citizen.CreateThread(function()
 --        if serviceOn == false then
           ShowInfo('~w~Appuyez sur ~INPUT_CONTEXT~ pour ~b~Entrer~w~.', 0)
           if IsControlJustPressed(1,38) then
-            if User.job == 40 or User.job == 41 or User.job == 42 then
+            if (User.subjob == 2 or User.subjob == 3 or User.subjob == 4) then
             mdmaOutfits()
               spawnprops()
               Wait(500)
@@ -668,7 +669,42 @@ Citizen.CreateThread(function()
 end
 end
 end)
-
+--[[
+Citizen.CreateThread(function()
+  while true do
+    Citizen.Wait(0)
+    local playerPos = GetEntityCoords(GetPlayerPed(-1))
+    local distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.Couleur.x, Positions.Couleur.y, Positions.Couleur.z, true)
+    if not IsInVehicle() then
+      if distance < 1.5 then
+--        if serviceOn == false then
+          ShowInfo('~w~Appuyez sur ~INPUT_CONTEXT~ pour prendre vos couleur.', 0)
+          if IsControlJustPressed(1,38) then
+            if (User.subjob == 2 or User.subjob == 3 or User.subjob == 4 or User.subjob == 5 or User.subjob == 6) then
+                ApplyPedOverlay(GetPlayerPed(-1), GetHashKey("mpbiker_overlays"), GetHashKey("MP_Biker_Tee_34_M"))
+                if (User.subjob == 2) then
+                    ApplyPedOverlay(GetPlayerPed(-1), GetHashKey("mpbiker_overlays"), GetHashKey("MP_Biker_Rank_004_M"))
+                end
+                if (User.subjob == 3) then
+                    ApplyPedOverlay(GetPlayerPed(-1), GetHashKey("mpbiker_overlays"), GetHashKey("MP_Biker_Rank_003_M"))
+                end
+                if (User.subjob == 4) then
+                    ApplyPedOverlay(GetPlayerPed(-1), GetHashKey("mpbiker_overlays"), GetHashKey("MP_Biker_Rank_000_M"))
+                end
+                if ( User.subjob == 5 or User.subjob == 6) then
+                    ApplyPedOverlay(GetPlayerPed(-1), GetHashKey("mpbiker_overlays"), GetHashKey("MP_Biker_Rank_017_M"))
+                end
+                TriggerEvent("itinerance:notif", "Voici vos couleur")
+            else
+                TriggerEvent("itinerance:notif", "~r~Et non!")
+            end
+          end
+--      end
+    end
+end
+end
+end)
+]]
  function spawnprops()
     for _,v in pairs(props) do
         TriggerEvent("es_admin:loadprops",v)

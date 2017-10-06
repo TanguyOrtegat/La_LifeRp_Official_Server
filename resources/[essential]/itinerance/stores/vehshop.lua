@@ -11,6 +11,7 @@ User = {
     money = 0,
     dirtymoney = 0,
     job = 0,
+    subjob = 0,
     police = 0,
     enService = 0,
     nom = "",
@@ -272,7 +273,7 @@ local vehshop = {
 			title = "MOTORCYCLES",
 			name = "motorcycles",
 			buttons = {
-				{name = "Akuma", costs = 9000, description = {}, model = "AKUMA"},
+				{name = "Akuma", costs = 9000, description = {}, model = "akuma"},
 				{name = "Bagger", costs = 5000, description = {}, model = "bagger"},
 				{name = "Bati 801", costs = 15000, description = {}, model = "bati"},
 				{name = "Bati 801RR", costs = 15000, description = {}, model = "bati2"},
@@ -296,20 +297,20 @@ local vehshop = {
     			title = "GANG",
     			name = "gang",
     			buttons = {
-                    {name = "Sanctus", costs = 200000, description = {}, model = "Sanctus"},
-                    {name = "Rat Bike", costs = 15000, description = {}, model = "RatBike"},
-                    {name = "Daemon", costs = 15000, description = {}, model = "Daemon"},
+                    {name = "Sanctus", costs = 200000, description = {}, model = "sanctus"},
+                    {name = "Rat Bike", costs = 15000, description = {}, model = "ratBike"},
+                    {name = "Daemon", costs = 15000, description = {}, model = "daemon"},
                     {name = "Zombie Bobber", costs = 75000, description = {}, model = "zombiea"},
                     {name = "Zombie Chopper", costs = 75000, description = {}, model = "zombieb"},
                     {name = "Cliffhanger", costs = 175000, description = {}, model = "cliffhanger"},
-                    {name = "Wolfsbane", costs = 75000, description = {}, model = "Wolfsbane"},
-                    {name = "Nightblade", costs = 200000, description = {}, model = "Nightblade"},
-                    {name = "Avarus", costs = 75000, description = {}, model = "Avarus"},
+                    {name = "Wolfsbane", costs = 75000, description = {}, model = "wolfsbane"},
+                    {name = "Nightblade", costs = 200000, description = {}, model = "nightblade"},
+                    {name = "Avarus", costs = 75000, description = {}, model = "avarus"},
                     {name = "Gargoyle", costs = 120000, description = {}, model = "gargoyle"},
                     {name = "Hexer", costs = 30000, description = {}, model = "hexer"},
                     {name = "Sovereign", costs = 90000, description = {}, model = "sovereign"},
                     {name = "Innovation", costs = 90000, description = {}, model = "innovation"},
-                    {name = "Sanchez", costs = 14000, description = {}, model = "Sanchez2"},
+                    {name = "Sanchez", costs = 14000, description = {}, model = "sanchez2"},
                     {name = "Thrust", costs = 100000, description = {}, model = "thrust"},
                     {name = "Vindicator", costs = 600000, description = {}, model = "vindicator"},
                     {name = "Bison", costs = 30000, description = {}, model = "bison"},
@@ -323,24 +324,24 @@ local vehshop = {
                     {name = "Vapid Guardian", costs = 36000, description = {}, model = "guardian"},
     				{name = "Surfer", costs = 11000, description = {}, model = "surfer"},
     				{name = "Youga", costs = 16000, description = {}, model = "youga"},
-                    {name = "Voodoo", costs = 29000, description = {}, model = "Voodoo2"},
-    				{name = "Phoenix", costs = 75000, description = {}, model = "Phoenix"},
-    				{name = "Ruiner", costs = 30000, description = {}, model = "Ruiner"},
-    				{name = "Slamvan", costs = 35000, description = {}, model = "Slamvan"},
-    				{name = "RatLoader2", costs = 62000, description = {}, model = "RatLoader2"},
-    				{name = "Voodoo ", costs = 40000, description = {}, model = "Voodoo"},
-    				{name = "Slamvan", costs = 90000, description = {}, model = "Slamvan3"},
-    				{name = "Slamvan", costs = 36000, description = {}, model = "Slamvan2"},
-                    {name = "Sabre gt", costs = 25000, description = {}, model = "Sabregt2"},
+                    {name = "Voodoo", costs = 29000, description = {}, model = "voodoo2"},
+    				{name = "Phoenix", costs = 75000, description = {}, model = "phoenix"},
+    				{name = "Ruiner", costs = 30000, description = {}, model = "ruiner"},
+    				{name = "Slamvan", costs = 35000, description = {}, model = "slamvan"},
+    				{name = "RatLoader2", costs = 62000, description = {}, model = "ratLoader2"},
+    				{name = "Voodoo ", costs = 40000, description = {}, model = "voodoo"},
+    				{name = "Slamvan", costs = 90000, description = {}, model = "slamvan3"},
+    				{name = "Slamvan", costs = 36000, description = {}, model = "slamvan2"},
+                    {name = "Sabre gt", costs = 25000, description = {}, model = "sabregt2"},
                     {name = "Stalion", costs = 36000, description = {}, model = "stalion"},
                     {name = "Stalion", costs = 36000, description = {}, model = "stalion2"},
                     {name = "Tornado", costs = 36000, description = {}, model = "tornado"},
                     {name = "Tornado", costs = 36000, description = {}, model = "tornado2"},
                     {name = "Tornado", costs = 36000, description = {}, model = "tornado4"},
                     {name = "Tornado", costs = 36000, description = {}, model = "tornado6"},
-                    {name = "Futo", costs = 36000, description = {}, model = "Futo"},
-                    {name = "Blista", costs = 36000, description = {}, model = "Blista2"},
-                    {name = "Blista", costs = 36000, description = {}, model = "Blista3"},
+                    {name = "Futo", costs = 36000, description = {}, model = "futo"},
+                    {name = "Blista", costs = 36000, description = {}, model = "blista2"},
+                    {name = "Blista", costs = 36000, description = {}, model = "blista3"},
     			}
     	},
         ["cartel"] = {
@@ -351,14 +352,14 @@ local vehshop = {
                     {name = "Albany buccaneer", costs = 1000000, description = {}, model = "buccaneer2"},
                     {name = "Bennefactor xls", costs = 350000, description = {}, model = "xls"},
                     {name = "Pegassi vortex", costs = 750000, description = {}, model = "vortex"},
-                    {name = "Shitzu Hakuchou", costs = 350000, description = {}, model = "Hakuchou2"},
+                    {name = "Shitzu Hakuchou", costs = 350000, description = {}, model = "hakuchou2"},
                     {name = "Vapid trophytruck", costs = 350000, description = {}, model = "trophytruck2"},
                     {name = "Dewbauchee seven70", costs = 1000000, description = {}, model = "seven70"},
-                    {name = "Canis Mesa", costs = 350000, description = {}, model = "Mesa3"},
+                    {name = "Canis Mesa", costs = 350000, description = {}, model = "mesa3"},
                     {name = "Dewbauchee specter", costs = 350000, description = {}, model = "specter2"},
                     {name = "Gallivanter baller", costs = 350000, description = {}, model = "baller3"},
-                    {name = "Truffade Nero", costs = 2800000, description = {}, model = "Nero2"},
-                    {name = "Hijak Ruston", costs = 400000, description = {}, model = "Ruston"},
+                    {name = "Truffade Nero", costs = 2800000, description = {}, model = "nero2"},
+                    {name = "Hijak Ruston", costs = 400000, description = {}, model = "ruston"},
                 }
         },
 	}
@@ -645,13 +646,13 @@ function ButtonSelected(button)
 		elseif btn == "Motorcycles" then
 			OpenMenu('motorcycles')
         elseif btn == "Gang" then
-            if (User.job == 40 or User.job == 41 or User.job == 42 or User.job == 43 or User.job == 44) then
+            if (User.subjob == 2 or User.subjob == 3 or User.subjob == 4 or User.subjob == 5 or User.subjob == 6) then
                 OpenMenu('gang')
             else
             	TriggerEvent("itinerance:notif", "~r~Vous n'avez pas acces a ça")
             end
         elseif btn == "Cartel" then
-            if (User.job == 45 or User.job == 46 or User.job == 47) then
+            if (User.subjob == 10 or User.subjob == 9 or User.subjob == 8 or User.subjob == 7) then
                 OpenMenu('cartel')
             else
                 TriggerEvent("itinerance:notif", "~r~Vous n'avez pas acces a ça")

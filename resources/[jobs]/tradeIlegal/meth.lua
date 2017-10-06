@@ -107,7 +107,7 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de récolter~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isMine == false then
-                if (User.job == 41 and User.job ==42 and User.job == 40) then
+                if (User.subjob == 2 or User.subjob == 3 or User.subjob == 4) then
                     TriggerEvent("itinerance:notif", "~r~Vous devez pas faire parti des TheLost pour récolter !")
                 else
                     Citizen.Wait(1)

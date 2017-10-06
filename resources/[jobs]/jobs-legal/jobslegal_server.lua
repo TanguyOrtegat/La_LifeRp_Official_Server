@@ -267,7 +267,7 @@ AddEventHandler('taxi:pdg', function(amount)
         if (user) then
           --print(user.identifier)
             if (user.identifier == "steam:11000010785479a" ) then
-              LaLife.Player.Manager.SetPlayerJob(user, 18)
+              LaLife.Player.Manager.SetPlayerJob(user, 18,user.subjob)
               TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous êtes maintenant le pdg")
             else
               TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous n'êtes pas le pdg")
@@ -285,7 +285,7 @@ AddEventHandler('tow:pdg', function(amount)
         if (user) then
           --print(user.identifier)
             if (user.identifier == "steam:1100001027b298c" ) then
-              LaLife.Player.Manager.SetPlayerJob(user, 16)
+              LaLife.Player.Manager.SetPlayerJob(user, 16,user.subjob)
               TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous êtes maintenant le pdg")
             else
               TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous n'êtes pas le pdg")
@@ -303,7 +303,7 @@ AddEventHandler('garda:pdg', function(amount)
         if (user) then
           --print(user.identifier)
             if (user.identifier == "steam:110000105791fa5" or user.identifier == "steam:110000104cb2ae5" ) then
-              LaLife.Player.Manager.SetPlayerJob(user, 27)
+              LaLife.Player.Manager.SetPlayerJob(user, 27,user.subjob)
               TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous êtes maintenant le pdg")
             else
               TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous n'êtes pas le pdg")
@@ -321,7 +321,7 @@ AddEventHandler('journaliste:pdg', function(amount)
         if (user) then
           --print(user.identifier)
             if (user.identifier == "steam:1100001197962c7" or user.identifier == "steam:1100001159798ba" or user.identifier == "steam:110000111f14368" or user.identifier == "steam:11000010664af2a" ) then
-              LaLife.Player.Manager.SetPlayerJob(user, 21)
+              LaLife.Player.Manager.SetPlayerJob(user, 21,user.subjob)
               TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous êtes maintenant Journaliste")
             else
               TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous n'êtes pas Journaliste")
@@ -339,7 +339,7 @@ AddEventHandler('bs:pdg', function(amount)
         if (user) then
           --print(user.identifier)
             if (user.identifier == "steam:1100001197962c7" or user.identifier == "steam:1100001159798ba" or user.identifier == "steam:110000111f14368" or user.identifier == "steam:11000010664af2a" or user.identifier == "steam:110000104cb2ae5" ) then
-              LaLife.Player.Manager.SetPlayerJob(user, 21)
+              LaLife.Player.Manager.SetPlayerJob(user, 21,user.subjob)
               MySQL.Async.execute("UPDATE users SET `job` = @job WHERE identifier = @iden", {['@job'] = 21, ['@iden'] = user.identifier})
               TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous êtes maintenant Journaliste")
             else
@@ -358,7 +358,7 @@ AddEventHandler('ani:pdg', function(amount)
         if (user) then
           --print(user.identifier)
             if (user.identifier == "steam:1100001003c2b8c" or user.identifier == "steam:1100001000ac5a9") then
-              LaLife.Player.Manager.SetPlayerJob(user, 29)
+              LaLife.Player.Manager.SetPlayerJob(user, 29,user.subjob)
               TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous êtes maintenant Animateur")
             else
               TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous n'êtes pas Animateur")

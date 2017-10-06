@@ -6,7 +6,7 @@ AddEventHandler('menuls1:hire_s', function(netID)
 	if (user) then
 		local identifier = user.identifier
 		MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 31, ['@identifier'] = tostring(identifier)})
-		LaLife.Player.Manager.SetPlayerJob(user, 31)
+		LaLife.Player.Manager.SetPlayerJob(user, 31,user.subjob)
     	TriggerClientEvent("itinerance:notif", playerSource, "~g~Action effectuée!")
 		TriggerClientEvent("itinerance:notif", netID, "~g~Vous avez été engagé en tant qu'employer' !")
 	else
@@ -24,7 +24,7 @@ local playerSource = source
 	if (user) then
 		if tonumber(user.job) == 31 then
 		MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 1, ['@identifier'] =  tostring(identifier)})
-		LaLife.Player.Manager.SetPlayerJob(user, 1)
+		LaLife.Player.Manager.SetPlayerJob(user, 1,user.subjob)
     	TriggerClientEvent("itinerance:notif", playerSource, "~g~Action effectuée!")
 		TriggerClientEvent("itinerance:notif", netID, "~r~Vous avez été licencié !")
 		else
@@ -47,9 +47,9 @@ AddEventHandler('menuls1:promote_s', function(netID)
 	local identifiern = tIdentifiern[1]
 		if (tonumber(user.job)) == 31 then
 			MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 30, ['@identifier'] = tostring(identifier)})
-			LaLife.Player.Manager.SetPlayerJob(user, 30)
+			LaLife.Player.Manager.SetPlayerJob(user, 30,user.subjob)
 			MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 31, ['@identifier'] = tostring(identifiern)})
-			LaLife.Player.Manager.SetPlayerJob(usern, 31)
+			LaLife.Player.Manager.SetPlayerJob(usern, 31,user.subjob)
 			TriggerClientEvent("itinerance:notif", playerSource, "~g~Action effectuée ! Vous avez été retrogradé.")
 			TriggerClientEvent("itinerance:notif", netID, "~g~Vous avez été promu !")
 		else
@@ -74,7 +74,7 @@ AddEventHandler('menuls1:givefac_s', function(netID, amount)
 		local new_balance = bankbalance - amount
 		--print(new_balance)
 		MySQL.Async.execute("UPDATE users SET `bankbalance`=@value WHERE identifier = @identifier", {['@value'] = new_balance, ['@identifier'] = player})
-    MySQL.Async.fetchAll("SELECT money FROM user_appartement WHERE name = @name", {['@name'] = 'LaGarda'}, function (result)
+    MySQL.Async.fetchAll("SELECT money FROM user_appartement WHERE name = @name", {['@name'] = 'LSCustom Coffre 1/5'}, function (result)
       MySQL.Async.execute("UPDATE user_appartement SET `money`=@value WHERE name = @identifier", {['@value'] = (tonumber(result[1].money)+tonumber(amount)), ['@identifier'] = 'LSCustom Coffre 1/5'})
       TriggerClientEvent("itinerance:notif", target, "Vous avez reçu une facture de ~r~".. amount.."$~w~.")
     end)
@@ -95,7 +95,7 @@ AddEventHandler('menuls2:hire_s', function(netID)
 	if (user) then
 		local identifier = user.identifier
 		MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 33, ['@identifier'] = tostring(identifier)})
-		LaLife.Player.Manager.SetPlayerJob(user, 33)
+		LaLife.Player.Manager.SetPlayerJob(user, 33,user.subjob)
     	TriggerClientEvent("itinerance:notif", playerSource, "~g~Action effectuée!")
 		TriggerClientEvent("itinerance:notif", netID, "~g~Vous avez été engagé en tant qu'employer' !")
 	else
@@ -113,7 +113,7 @@ local playerSource = source
 	if (user) then
 		if tonumber(user.job) == 33 then
 		MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 1, ['@identifier'] =  tostring(identifier)})
-		LaLife.Player.Manager.SetPlayerJob(user, 1)
+		LaLife.Player.Manager.SetPlayerJob(user, 1,user.subjob)
     	TriggerClientEvent("itinerance:notif", playerSource, "~g~Action effectuée!")
 		TriggerClientEvent("itinerance:notif", netID, "~r~Vous avez été licencié !")
 		else
@@ -136,9 +136,9 @@ AddEventHandler('menuls2:promote_s', function(netID)
 	local identifiern = tIdentifiern[1]
 		if (tonumber(user.job)) == 33 then
 			MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 32, ['@identifier'] = tostring(identifier)})
-			LaLife.Player.Manager.SetPlayerJob(user, 32)
+			LaLife.Player.Manager.SetPlayerJob(user, 32,user.subjob)
 			MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 33, ['@identifier'] = tostring(identifiern)})
-			LaLife.Player.Manager.SetPlayerJob(usern, 33)
+			LaLife.Player.Manager.SetPlayerJob(usern, 33,user.subjob)
 			TriggerClientEvent("itinerance:notif", playerSource, "~g~Action effectuée ! Vous avez été retrogradé.")
 			TriggerClientEvent("itinerance:notif", netID, "~g~Vous avez été promu !")
 		else
@@ -163,7 +163,7 @@ AddEventHandler('menuls2:givefac_s', function(netID, amount)
 		local new_balance = bankbalance - amount
 		--print(new_balance)
 		MySQL.Async.execute("UPDATE users SET `bankbalance`=@value WHERE identifier = @identifier", {['@value'] = new_balance, ['@identifier'] = player})
-    MySQL.Async.fetchAll("SELECT money FROM user_appartement WHERE name = @name", {['@name'] = 'LaGarda'}, function (result)
+    MySQL.Async.fetchAll("SELECT money FROM user_appartement WHERE name = @name", {['@name'] = 'LSCustom Coffre 2/5'}, function (result)
       MySQL.Async.execute("UPDATE user_appartement SET `money`=@value WHERE name = @identifier", {['@value'] = (tonumber(result[1].money)+tonumber(amount)), ['@identifier'] = 'LSCustom Coffre 2/5'})
       TriggerClientEvent("itinerance:notif", target, "Vous avez reçu une facture de ~r~".. amount.."$~w~.")
     end)
@@ -184,7 +184,7 @@ AddEventHandler('menuls3:hire_s', function(netID)
 	if (user) then
 		local identifier = user.identifier
 		MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 35, ['@identifier'] = tostring(identifier)})
-		LaLife.Player.Manager.SetPlayerJob(user, 35)
+		LaLife.Player.Manager.SetPlayerJob(user, 35,user.subjob)
     	TriggerClientEvent("itinerance:notif", playerSource, "~g~Action effectuée!")
 		TriggerClientEvent("itinerance:notif", netID, "~g~Vous avez été engagé en tant qu'employer' !")
 	else
@@ -202,7 +202,7 @@ local playerSource = source
 	if (user) then
 		if tonumber(user.job) == 35 then
 		MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 1, ['@identifier'] =  tostring(identifier)})
-		LaLife.Player.Manager.SetPlayerJob(user, 1)
+		LaLife.Player.Manager.SetPlayerJob(user, 1,user.subjob)
     	TriggerClientEvent("itinerance:notif", playerSource, "~g~Action effectuée!")
 		TriggerClientEvent("itinerance:notif", netID, "~r~Vous avez été licencié !")
 		else
@@ -225,9 +225,9 @@ AddEventHandler('menuls3:promote_s', function(netID)
 	local identifiern = tIdentifiern[1]
 		if (tonumber(user.job)) == 35 then
 			MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 34, ['@identifier'] = tostring(identifier)})
-			LaLife.Player.Manager.SetPlayerJob(user, 34)
+			LaLife.Player.Manager.SetPlayerJob(user, 34,user.subjob)
 			MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 35, ['@identifier'] = tostring(identifiern)})
-			LaLife.Player.Manager.SetPlayerJob(usern, 35)
+			LaLife.Player.Manager.SetPlayerJob(usern, 35,user.subjob)
 			TriggerClientEvent("itinerance:notif", playerSource, "~g~Action effectuée ! Vous avez été retrogradé.")
 			TriggerClientEvent("itinerance:notif", netID, "~g~Vous avez été promu !")
 		else
@@ -252,7 +252,7 @@ AddEventHandler('menuls3:givefac_s', function(netID, amount)
 		local new_balance = bankbalance - amount
 		--print(new_balance)
 		MySQL.Async.execute("UPDATE users SET `bankbalance`=@value WHERE identifier = @identifier", {['@value'] = new_balance, ['@identifier'] = player})
-    MySQL.Async.fetchAll("SELECT money FROM user_appartement WHERE name = @name", {['@name'] = 'LaGarda'}, function (result)
+    MySQL.Async.fetchAll("SELECT money FROM user_appartement WHERE name = @name", {['@name'] = 'LSCustom Coffre 3/5'}, function (result)
       MySQL.Async.execute("UPDATE user_appartement SET `money`=@value WHERE name = @identifier", {['@value'] = (tonumber(result[1].money)+tonumber(amount)), ['@identifier'] = 'LSCustom Coffre 3/5'})
       TriggerClientEvent("itinerance:notif", target, "Vous avez reçu une facture de ~r~".. amount.."$~w~.")
     end)
@@ -272,7 +272,7 @@ AddEventHandler('menuls4:hire_s', function(netID)
 	if (user) then
 		local identifier = user.identifier
 		MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 37, ['@identifier'] = tostring(identifier)})
-		LaLife.Player.Manager.SetPlayerJob(user, 37)
+		LaLife.Player.Manager.SetPlayerJob(user, 37,user.subjob)
     	TriggerClientEvent("itinerance:notif", playerSource, "~g~Action effectuée!")
 		TriggerClientEvent("itinerance:notif", netID, "~g~Vous avez été engagé en tant qu'employer' !")
 	else
@@ -290,7 +290,7 @@ local playerSource = source
 	if (user) then
 		if tonumber(user.job) == 37 then
 		MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 1, ['@identifier'] =  tostring(identifier)})
-		LaLife.Player.Manager.SetPlayerJob(user, 1)
+		LaLife.Player.Manager.SetPlayerJob(user, 1,user.subjob)
     	TriggerClientEvent("itinerance:notif", playerSource, "~g~Action effectuée!")
 		TriggerClientEvent("itinerance:notif", netID, "~r~Vous avez été licencié !")
 		else
@@ -313,9 +313,9 @@ AddEventHandler('menuls4:promote_s', function(netID)
 	local identifiern = tIdentifiern[1]
 		if (tonumber(user.job)) == 37 then
 			MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 36, ['@identifier'] = tostring(identifier)})
-			LaLife.Player.Manager.SetPlayerJob(user, 36)
+			LaLife.Player.Manager.SetPlayerJob(user, 36,user.subjob)
 			MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 37, ['@identifier'] = tostring(identifiern)})
-			LaLife.Player.Manager.SetPlayerJob(usern, 37)
+			LaLife.Player.Manager.SetPlayerJob(usern, 37,user.subjob)
 			TriggerClientEvent("itinerance:notif", playerSource, "~g~Action effectuée ! Vous avez été retrogradé.")
 			TriggerClientEvent("itinerance:notif", netID, "~g~Vous avez été promu !")
 		else
@@ -360,7 +360,7 @@ AddEventHandler('menuls5:hire_s', function(netID)
 	if (user) then
 		local identifier = user.identifier
 		MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 39, ['@identifier'] = tostring(identifier)})
-		LaLife.Player.Manager.SetPlayerJob(user, 39)
+		LaLife.Player.Manager.SetPlayerJob(user, 39,user.subjob)
     	TriggerClientEvent("itinerance:notif", playerSource, "~g~Action effectuée!")
 		TriggerClientEvent("itinerance:notif", netID, "~g~Vous avez été engagé en tant qu'employer' !")
 	else
@@ -378,7 +378,7 @@ local playerSource = source
 	if (user) then
 		if tonumber(user.job) == 39 then
 		MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 1, ['@identifier'] =  tostring(identifier)})
-		LaLife.Player.Manager.SetPlayerJob(user, 1)
+		LaLife.Player.Manager.SetPlayerJob(user, 1,user.subjob)
     	TriggerClientEvent("itinerance:notif", playerSource, "~g~Action effectuée!")
 		TriggerClientEvent("itinerance:notif", netID, "~r~Vous avez été licencié !")
 		else
@@ -401,9 +401,9 @@ AddEventHandler('menuls5:promote_s', function(netID)
 	local identifiern = tIdentifiern[1]
 		if (tonumber(user.job)) == 37 then
 			MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 38, ['@identifier'] = tostring(identifier)})
-			LaLife.Player.Manager.SetPlayerJob(user, 38)
+			LaLife.Player.Manager.SetPlayerJob(user, 38,user.subjob)
 			MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 39, ['@identifier'] = tostring(identifiern)})
-			LaLife.Player.Manager.SetPlayerJob(usern, 39)
+			LaLife.Player.Manager.SetPlayerJob(usern, 39,user.subjob)
 			TriggerClientEvent("itinerance:notif", playerSource, "~g~Action effectuée ! Vous avez été retrogradé.")
 			TriggerClientEvent("itinerance:notif", netID, "~g~Vous avez été promu !")
 		else

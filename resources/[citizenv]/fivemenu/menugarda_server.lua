@@ -6,7 +6,7 @@ AddEventHandler('menugarda:hire_s', function(netID)
 	if (user) then
 		local identifier = user.identifier
 		MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 26, ['@identifier'] = tostring(identifier)})
-		LaLife.Player.Manager.SetPlayerJob(user, 26)
+		LaLife.Player.Manager.SetPlayerJob(user, 26,user.subjob)
     	TriggerClientEvent("itinerance:notif", playerSource, "~g~Action effectuée!")
 		TriggerClientEvent("itinerance:notif", netID, "~g~Vous avez été engagé en tant que LaGarda !")
 	else
@@ -24,7 +24,7 @@ local playerSource = source
 	if (user) then
 		if tonumber(user.job) == 26 then
 		MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 1, ['@identifier'] =  tostring(identifier)})
-		LaLife.Player.Manager.SetPlayerJob(user, 1)
+		LaLife.Player.Manager.SetPlayerJob(user, 1,user.subjob)
     	TriggerClientEvent("itinerance:notif", playerSource, "~g~Action effectuée!")
 		TriggerClientEvent("itinerance:notif", netID, "~r~Vous avez été licencié !")
 		else
@@ -47,9 +47,9 @@ AddEventHandler('menugarda:promote_s', function(netID)
 	local identifiern = tIdentifiern[1]
 		if (tonumber(user.job)) == 26 then
 			MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 27, ['@identifier'] = tostring(identifier)})
-			LaLife.Player.Manager.SetPlayerJob(user, 27)
+			LaLife.Player.Manager.SetPlayerJob(user, 27,user.subjob)
 			MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 26, ['@identifier'] = tostring(identifiern)})
-			LaLife.Player.Manager.SetPlayerJob(usern, 26)
+			LaLife.Player.Manager.SetPlayerJob(usern, 26,user.subjob)
 			TriggerClientEvent("itinerance:notif", playerSource, "~g~Action effectuée ! Vous avez été retrogradé.")
 			TriggerClientEvent("itinerance:notif", netID, "~g~Vous avez été promu !")
 		else

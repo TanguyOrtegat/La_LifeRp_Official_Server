@@ -20,7 +20,8 @@ LaLife.Player.Manager.GetPlayer = function(identifier, source, callback)
             result[1].prenom,
             result[1].telephone,
             { x = result[1].x, y = result[1].y, z = result[1].z},
-            result[1].skin
+            result[1].skin,
+            result[1].subjob
         ))
     end)
 end
@@ -89,12 +90,12 @@ LaLife.Player.Manager.RemovePlayerDirtyMoney = function (player, removedMoney)
     LaLife.Player.Manager.SetPlayerDirtyMoney(player, player.dirtymoney - removedMoney)
 end
 
-LaLife.Player.Manager.SetPlayerJob = function (player, param)
+LaLife.Player.Manager.SetPlayerJob = function (player, param,subjob)
     player.job = param
+    player.subjob = subjob
 	TriggerEvent('LaLife:Player:Save', {
         identifier = player.identifier,
         job = player.job,
+        subjob = player.subjob,
     })
 end
-
-

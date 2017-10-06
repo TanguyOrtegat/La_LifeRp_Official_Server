@@ -9,11 +9,11 @@ Citizen.Trace(ranglost)
 	VMenu.cartel = true
 	Wait(100)
 	VMenu.AddSep(98, tostring(nameTarget))
-    if ranglost == 49 then
+    if ranglost == 10 then
 		VMenu.AddSep(98, "Patron")
 	end
 	VMenu.AddFunc(98, "~r~Retour", "vmenu:MainMenuOG", {}, "Retour")
-	if ranglost == 49 then
+	if ranglost == 10 then
 		VMenu.AddSep(98, "~y~Gestion administrative~w~")
 		VMenu.AddFunc(98, "Céder la place de patron", "menucartel:promote", {}, "Accéder")
 		VMenu.AddFunc(98, "Bras-Droit", "menucartel:promote_2", {}, "Accéder")

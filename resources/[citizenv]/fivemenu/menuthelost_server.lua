@@ -5,12 +5,18 @@ AddEventHandler('menulost:hire_s', function(netID)
 	local tIdentifier = GetPlayerIdentifiers(netID)
 	if (user) then
 		local identifier = user.identifier
-		MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 40, ['@identifier'] = tostring(identifier)})
-		LaLife.Player.Manager.SetPlayerJob(user, 40)
+		MySQL.Async.execute("UPDATE users SET `subjob`=@value WHERE identifier = @identifier", {['@value'] = 2, ['@identifier'] = tostring(identifier)})
+		LaLife.Player.Manager.SetPlayerJob(user, user.job, 2)
     	TriggerClientEvent("itinerance:notif", playerSource, "~g~Action effectuée!")
 		TriggerClientEvent("itinerance:notif", netID, "~g~Vous avez été engagé en tant qu'employer' !")
 	else
 		TriggerClientEvent("itinerance:notif", playerSource, "~o~Une erreur de sync s'est produite !")
+	end
+  end)
+  TriggerEvent('es:getPlayerFromId', playerSource, function(owner)
+	if (owner) then
+		local identifier = user.identifier
+		LaLife.Player.Manager.RemovePlayerMoney(owner,10000)
 	end
   end)
 end)
@@ -22,9 +28,9 @@ local playerSource = source
 	local tIdentifier = GetPlayerIdentifiers(netID)
   	local identifier = tIdentifier[1]
 	if (user) then
-		if tonumber(user.job) == 40 or tonumber(user.job) == 41 then
-		MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 1, ['@identifier'] =  tostring(identifier)})
-		LaLife.Player.Manager.SetPlayerJob(user, 1)
+		if tonumber(user.subjob) == 2 or tonumber(user.subjob) == 3 then
+		MySQL.Async.execute("UPDATE users SET `subjob`=@value WHERE identifier = @identifier", {['@value'] = 1, ['@identifier'] =  tostring(identifier)})
+		LaLife.Player.Manager.SetPlayerJob(user, user.job, 1)
     	TriggerClientEvent("itinerance:notif", playerSource, "~g~Action effectuée!")
 		TriggerClientEvent("itinerance:notif", netID, "~r~Vous avez été licencié !")
 		else
@@ -45,11 +51,11 @@ AddEventHandler('menulost:promote_s', function(netID)
 	local identifier = tIdentifier[1]
 	local tIdentifiern = GetPlayerIdentifiers(playerSource)
 	local identifiern = tIdentifiern[1]
-		if (tonumber(user.job)) == 41 then
-			MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 42, ['@identifier'] = tostring(identifier)})
-			LaLife.Player.Manager.SetPlayerJob(user, 42)
-			MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 41, ['@identifier'] = tostring(identifiern)})
-			LaLife.Player.Manager.SetPlayerJob(usern, 41)
+		if (tonumber(user.subjob)) == 3 then
+			MySQL.Async.execute("UPDATE users SET `subjob`=@value WHERE identifier = @identifier", {['@value'] = 4, ['@identifier'] = tostring(identifier)})
+			LaLife.Player.Manager.SetPlayerJob(user, user.job,4)
+			MySQL.Async.execute("UPDATE users SET `subjob`=@value WHERE identifier = @identifier", {['@value'] = 3, ['@identifier'] = tostring(identifiern)})
+			LaLife.Player.Manager.SetPlayerJob(usern, user.job,3)
 			TriggerClientEvent("itinerance:notif", playerSource, "~g~Action effectuée ! Vous avez été retrogradé.")
 			TriggerClientEvent("itinerance:notif", netID, "~g~Vous avez été promu !")
 		else
@@ -68,9 +74,9 @@ AddEventHandler('menulost:promote_1_s', function(netID)
 	local identifier = tIdentifier[1]
 	local tIdentifiern = GetPlayerIdentifiers(playerSource)
 	local identifiern = tIdentifiern[1]
-		if (tonumber(user.job)) == 40 then
-			MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 41, ['@identifier'] = tostring(identifier)})
-			LaLife.Player.Manager.SetPlayerJob(user, 41)
+		if (tonumber(user.subjob)) == 2 then
+			MySQL.Async.execute("UPDATE users SET `subjob`=@value WHERE identifier = @identifier", {['@value'] = 3, ['@identifier'] = tostring(identifier)})
+			LaLife.Player.Manager.SetPlayerJob(user, user.job,3)
 			TriggerClientEvent("itinerance:notif", playerSource, "~g~Action effectuée ! Vous avez été retrogradé.")
 		else
 			TriggerClientEvent("itinerance:notif", playerSource, "~r~La cible n'est pas un empployer !")

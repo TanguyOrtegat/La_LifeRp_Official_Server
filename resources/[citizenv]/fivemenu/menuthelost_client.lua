@@ -9,11 +9,11 @@ Citizen.Trace(ranglost)
 	VMenu.lost = true
 	Wait(100)
 	VMenu.AddSep(98, tostring(nameTarget))
-    if ranglost == 42 then
+    if ranglost == 4 then
 		VMenu.AddSep(98, "Patron")
 	end
 	VMenu.AddFunc(98, "~r~Retour", "vmenu:MainMenuOG", {}, "Retour")
-	if ranglost == 42 then
+	if ranglost == 4 then
 		VMenu.AddSep(98, "~y~Gestion administrative~w~")
 		VMenu.AddFunc(98, "Céder la place de patron", "menulost:promote", {}, "Accéder")
         VMenu.AddFunc(98, "Membre", "menulost:promote_1", {}, "Accéder")

@@ -41,6 +41,7 @@ User = {
     money = 0,
     dirtymoney = 0,
     job = 0,
+    subjob = 0,
     police = 0,
     enService = 0,
     nom = "",
@@ -152,8 +153,7 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de traiter~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isProc == false then
-                Citizen.Trace(User.job)
-                if (User.job == 46 or User.job == 47 or User.job == 49) then
+                if (User.subjob == 8 or User.subjob == 9 or User.subjob == 10) then
                     Citizen.Wait(1)
                     isProc = true
                 else
@@ -225,7 +225,7 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de traiter~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isProc2 == false then
-                if (User.job == 46 or User.job == 47 or User.job == 49) then
+                if (User.subjob == 8 or User.subjob == 9 or User.subjob == 10) then
                     Citizen.Wait(1)
                     isProc2 = true
                 else
@@ -297,7 +297,7 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de traiter~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isProc3 == false then
-                if (User.job == 46 or User.job == 47 or User.job == 49) then
+                if (User.subjob == 8 or User.subjob == 9 or User.subjob == 10) then
                     Citizen.Wait(1)
                     isProc3 = true
                 else
@@ -369,7 +369,7 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de traiter~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isProc4 == false then
-                if (User.job == 46 or User.job == 47 or User.job == 49) then
+                if (User.subjob == 8 or User.subjob == 9 or User.subjob == 10) then
                     Citizen.Wait(1)
                     isProc4 = true
                 else
@@ -441,7 +441,7 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de traiter~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isProc5 == false then
-                if (User.job == 46 or User.job == 47 or User.job == 49) then
+                if (User.subjob == 8 or User.subjob == 9 or User.subjob == 10) then
                     Citizen.Wait(1)
                     isProc5 = true
                 else
@@ -513,7 +513,7 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de traiter~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isProc6 == false then
-                if (User.job == 46 or User.job == 47 or User.job == 49) then
+                if (User.subjob == 8 or User.subjob == 9 or User.subjob == 10) then
                     Citizen.Wait(1)
                     isProc6 = true
                 else
@@ -585,7 +585,7 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de vendre~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isSell == false then
-                if (User.job == 45 or User.job ==46 or User.job == 47 or User.job == 49) then
+                if (User.subjob == 7 or User.subjob == 8 or User.subjob == 9 or User.subjob == 10) then
                     TriggerEvent("itinerance:notif", "~r~Vous devez pas faire parti du Cartel pour vendre !")
                 else
                     Citizen.Wait(1)
@@ -669,7 +669,7 @@ Citizen.CreateThread(function()
 --        if serviceOn == false then
           ShowInfo('~w~Appuyez sur ~INPUT_CONTEXT~ pour ~b~Entrer~w~.', 0)
           if IsControlJustPressed(1,38) then
-            if User.job == 45 or User.job == 46 or User.job == 47 or User.job == 49 then
+            if (User.subjob == 7 or User.subjob == 8 or User.subjob == 9 or User.subjob == 10) then
                 cokeOutfits()
               Wait(500)
               SetEntityCoords(GetPlayerPed(-1), tonumber(Positions.Sorti.x),tonumber(Positions.Sorti.y),tonumber(Positions.Sorti.z-1))

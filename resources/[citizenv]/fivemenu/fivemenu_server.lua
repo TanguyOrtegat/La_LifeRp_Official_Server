@@ -59,6 +59,7 @@ function updateUserMenu(playerSource, openMenu)
             userInfos["telephone"] = user.telephone
             userInfos["identifier"] = user.identifier
             userInfos["gender"] = user.gender
+            userInfos["subjob"] = user.subjob
         end
     end)
     userInfos.Loaded = true
