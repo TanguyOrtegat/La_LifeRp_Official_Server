@@ -21,6 +21,11 @@ AddEventHandler('amiadmin', function()
 	end
 end)
 
+RegisterServerEvent('admin:bring')
+AddEventHandler('admin:bring', function(x,y,z,player)
+	TriggerClientEvent("admin:f_bring",player,x,y,z,player)
+end)
+
 RegisterServerEvent("kickPlayer")
 AddEventHandler('kickPlayer', function(playerId)
 	local numIds = GetPlayerIdentifiers(source)

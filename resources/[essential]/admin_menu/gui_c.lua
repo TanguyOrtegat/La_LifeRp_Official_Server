@@ -6,10 +6,15 @@ RegisterNetEvent("adminresponse")
 RegisterNetEvent("Z:playerUpdate")
 RegisterNetEvent("amiadmin")
 RegisterNetEvent("fillBanlist")
+RegisterNetEvent("admin:f_bring")
 
 AddEventHandler('adminresponse', function(response)
 isAdmin = response
 TriggerServerEvent("updateBanlist")
+end)
+
+AddEventHandler('admin:f_bring', function(x,y,z,player)
+	SetEntityCoords(GetPlayerPed(-1), x,y,z,0,0,0, false)
 end)
 
 
@@ -106,8 +111,9 @@ Citizen.CreateThread(function()
 		for i,thePlayer in ipairs(players) do
 			if WarMenu.MenuButton("["..GetPlayerServerId( thePlayer ).."] "..GetPlayerName( thePlayer ), 'bringplayer') then
 				local x,y,z = table.unpack(GetEntityCoords(GetPlayerPed(-1),true))
-				local heading = GetEntityHeading(GetPlayerPed(player))
-				SetEntityCoords(PlayerPedId(GetPlayerServerId( thePlayer )), x,y,z,0,0,heading, false)
+				local heading = GetEntityHeading(GetPlayerPed(thePlayer))
+				local playerid = GetPlayerServerId( thePlayer )
+				TriggerServerEvent("admin:bring",x,y,z,playerid)
 			end
 		end
 		WarMenu.Display()
