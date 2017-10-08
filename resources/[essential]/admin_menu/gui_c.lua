@@ -122,7 +122,7 @@ Citizen.CreateThread(function()
 		end
 		WarMenu.Display()
 
-	elseif IsControlJustReleased(0, 169) and isAdmin then --M by default
+	elseif IsControlJustReleased(0, 56) and isAdmin then --M by default
 			WarMenu.OpenMenu('admin')
 		end
 
