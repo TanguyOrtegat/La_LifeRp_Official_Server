@@ -82,7 +82,7 @@ function clear()
   onJobLegal = 2
   SetBlipRoute(BLIP.company, false)
   SetBlipRoute(BLIP.destination[BLIP.destination.i], false)
-  SetEntityAsNoLongerNeeded(BLIP.destination[BLIP.destination.i])
+  --SetEntityAsNoLongerNeeded(BLIP.destination[BLIP.destination.i])
 
   MISSION.hashTruck = 0
   currentMission = -1

@@ -37,6 +37,7 @@ Citizen.CreateThread(function()
                 SetEntityAsMissionEntity(vehicle, true, true)
                 WashDecalsFromVehicle(vehicle, 1.0)
                 SetVehicleDirtLevel(vehicle, 0.0)
+                SetVehicleMod(vehicle, 11, 2)
                 Wait(100)
                 Citizen.Wait(1)
                 camionSortie = true

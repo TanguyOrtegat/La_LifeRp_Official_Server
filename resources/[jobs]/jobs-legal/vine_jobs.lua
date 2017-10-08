@@ -70,7 +70,7 @@ end
 
 function viningEnding2()
   if ( DoesEntityExist(MISSION.boat) ) then
-    SetEntityAsNoLongerNeeded(MISSION.boat)
+    --SetEntityAsNoLongerNeeded(MISSION.boat)
     SetVehicleDoorsLocked(MISSION.boat, 2)
     SetVehicleUndriveable(MISSION.boat, true)
 
@@ -477,7 +477,7 @@ Citizen.CreateThread(function()
                       --local price = math.ceil(PriceBourse)
                       ShowMsgtime.msg = '~r~-1 Vin ~w~/ ~g~+' .. 50 .. '$'
                       ShowMsgtime.time = 150
-                      TriggerEvent("inventory:sell",0, 1, 37, 40, "")
+                      TriggerEvent("inventory:sell",0, 1, 37, 50, "")
                       Wait(2000)
                     else
                       TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de vin sur vous !")

@@ -81,7 +81,7 @@ end
 
 function fishingEnding2()
   if ( DoesEntityExist(MISSION.boat) ) then
-    SetEntityAsNoLongerNeeded(MISSION.boat)
+    --SetEntityAsNoLongerNeeded(MISSION.boat)
     SetVehicleDoorsLocked(MISSION.boat, 2)
     SetVehicleUndriveable(MISSION.boat, true)
 
@@ -556,7 +556,7 @@ Citizen.CreateThread(function()
                       --local price = math.ceil(PriceBourse)
                       ShowMsgtime.msg = '~r~-1 Morue surgelée ~w~/ ~g~+' .. 30 .. '$'
                       ShowMsgtime.time = 150
-                      TriggerEvent("inventory:sell",0, 1, 32, 20, "")
+                      TriggerEvent("inventory:sell",0, 1, 32, 30, "")
                       Wait(2000)
                     elseif tonumber(ITEMSJOB[33].quantity) > 0 then
 					  --TriggerServerEvent("jobs:getBoursePrice", 33)
@@ -567,7 +567,7 @@ Citizen.CreateThread(function()
                       --local price = math.ceil(PriceBourse)
                       ShowMsgtime.msg = '~r~-1 Sardine surgelée ~w~/ ~g~+' .. 60 .. '$'
                       ShowMsgtime.time = 150
-                      TriggerEvent("inventory:sell",0, 1, 33, 50, "")
+                      TriggerEvent("inventory:sell",0, 1, 33, 60, "")
                       Wait(2000)
                     elseif tonumber(ITEMSJOB[34].quantity) > 0 then
 					  --TriggerServerEvent("jobs:getBoursePrice", 34)
@@ -578,7 +578,7 @@ Citizen.CreateThread(function()
                       --local price = math.ceil(PriceBourse)
                       ShowMsgtime.msg = '~r~-1 Daurade surgelée ~w~/ ~g~+' .. 70 .. '$'
                       ShowMsgtime.time = 150
-                      TriggerEvent("inventory:sell",0, 1, 34, 60, "")
+                      TriggerEvent("inventory:sell",0, 1, 34, 70, "")
                       Wait(2000)
                     elseif tonumber(ITEMSJOB[35].quantity) > 0 then
 					  --TriggerServerEvent("jobs:getBoursePrice", 35)
@@ -589,7 +589,7 @@ Citizen.CreateThread(function()
                       --local price = math.ceil(PriceBourse)
                       ShowMsgtime.msg = '~r~-1 Saumon surgelé ~w~/ ~g~+' ..90 .. '$'
                       ShowMsgtime.time = 150
-                      TriggerEvent("inventory:sell",0, 1, 35, 80, "")
+                      TriggerEvent("inventory:sell",0, 1, 35, 90, "")
                       Wait(2000)
                     else
                       TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de poisson surgelé sur vous !")

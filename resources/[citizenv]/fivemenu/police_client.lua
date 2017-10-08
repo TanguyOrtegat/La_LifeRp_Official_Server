@@ -384,6 +384,7 @@ end)
 Citizen.CreateThread(function()
 	while true do
 		Citizen.Wait(0)
+		DisablePlayerVehicleRewards(PlayerId())
 		if showIdPolice == true then
 			Citizen.Wait(10000)
 			showIdPolice = false

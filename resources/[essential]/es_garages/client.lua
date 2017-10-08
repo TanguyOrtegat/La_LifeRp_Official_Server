@@ -466,6 +466,8 @@ local vehicule = {"verlierer2",
 "submersible",
 "suntrap",
 "toro",
+"buccaneer2",
+"ratloader2",
 }
 --[[Local/Global]]--
 
@@ -607,7 +609,6 @@ end
 function UpdateVehicule()
 	Citizen.CreateThread(function()
 		local veh = GetClosestVehicle(garageSelected.x, garageSelected.y, garageSelected.z, 3.000, 0, 70)
-		SetEntityAsMissionEntity(veh, true, true)
 		if DoesEntityExist(veh) then
 			local model = "rien"
 			local colors = table.pack(GetVehicleColours(veh))
@@ -817,7 +818,6 @@ Citizen.CreateThread(function()
       if IsControlJustPressed(1, 86) then
         local caissei = GetClosestVehicle(vente_location[1],vente_location[2],vente_location[3], 3.000, 0, 70)
 				local model = ""
-        SetEntityAsMissionEntity(caissei, true, true)
         local platecaissei = GetVehicleNumberPlateText(caissei)
         if DoesEntityExist(caissei) then
 					for _, car in pairs(vehicule) do

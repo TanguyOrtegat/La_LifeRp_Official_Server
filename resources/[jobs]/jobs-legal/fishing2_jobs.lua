@@ -65,7 +65,7 @@ end
 
 function fishing2Ending2()
   if ( DoesEntityExist(MISSION.boat) ) then
-    SetEntityAsNoLongerNeeded(MISSION.boat)
+    --SetEntityAsNoLongerNeeded(MISSION.boat)
     SetVehicleDoorsLocked(MISSION.boat, 2)
     SetVehicleUndriveable(MISSION.boat, true)
 
@@ -79,7 +79,7 @@ function fishing2Ending2()
   TriggerServerEvent("vmenu:lastChar")
   RemoveBlipfishing2()
   Citizen.Trace("Cleared")
-  EndingDay = false  
+  EndingDay = false
 end
 
 function RemoveBlipfishing2()
@@ -149,7 +149,7 @@ Citizen.CreateThread(function()
   if DrawBlipTradeShow then
     SetBlipTrade(410, "Port de plaisance", 3, Positions.spawnCamion.x, Positions.spawnCamion.y, Positions.spawnCamion.z)
   end
-  
+
    while true do
     Citizen.Wait(0)
     if DrawMarkerShow then
@@ -474,4 +474,3 @@ Citizen.CreateThread(function()
          end
       end
 end)
-

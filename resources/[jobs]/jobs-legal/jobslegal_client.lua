@@ -92,7 +92,7 @@ end)
 
 function clearJob()
   if ( DoesEntityExist(MISSION.truck) ) then
-    SetEntityAsNoLongerNeeded(MISSION.truck)
+    --SetEntityAsNoLongerNeeded(MISSION.truck)
     SetVehicleDoorsLocked(MISSION.truck, 2)
     SetVehicleUndriveable(MISSION.truck, true)
 
@@ -111,7 +111,7 @@ end
 
 function clearJob2()
   if ( DoesEntityExist(MISSION.truck) ) then
-    SetEntityAsNoLongerNeeded(MISSION.truck)
+    --SetEntityAsNoLongerNeeded(MISSION.truck)
     SetVehicleDoorsLocked(MISSION.truck, 2)
     SetVehicleUndriveable(MISSION.truck, true)
 
