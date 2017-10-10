@@ -85,11 +85,11 @@ AddEventHandler("car:receiveItem", function(vehclass, plate, item, lib, quantity
         TriggerClientEvent("player:looseItem", source, item, quantity)
     else
         if quantity > maxCapacity[vehclass].size then
-            TriggerClientEvent("car:systemMessage", source, "Dette køretøj kan kun indeholde " .. maxCapacity[vehclass].size .. " objets")
+            TriggerClientEvent("car:systemMessage", source, "Ce véhicule ne peut contenir que " .. maxCapacity[vehclass].size .. " objets")
         elseif ActualSlotUsed >= maxCapacity[vehclass].size then
-            TriggerClientEvent("car:systemMessage", source, "Bilen er fuld")
+            TriggerClientEvent("car:systemMessage", source, "La voiture est pleine")
         elseif limitslots > maxCapacity[vehclass].size then
-            TriggerClientEvent("car:systemMessage", source, "Der er plads nok!")
+            TriggerClientEvent("car:systemMessage", source, "Il y a assez d'espace!")
         end
     end
 end)
