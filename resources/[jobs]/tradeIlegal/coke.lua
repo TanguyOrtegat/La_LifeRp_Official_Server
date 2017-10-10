@@ -109,7 +109,7 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de récolter~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isMine == false then
-                    if (User.subjob == 7 or User.subjob == 8 or User.subjob == 9 or User.subjob == 10) then
+                    if (User.subjob == 7 or User.subjob == 8 or User.subjob == 9 or User.subjob == 10 or User.Subjob == 2 or User.Subjob == 3 or User.Subjob == 4) then
                         TriggerEvent("itinerance:notif", "~r~Vous devez pas faire parti du Cartel pour récolter !")
                     else
                         Citizen.Wait(1)
@@ -351,9 +351,9 @@ Citizen.CreateThread(function()
 				ShowMsgtime.time = 250
 				Wait(2500)
                 --local price = math.ceil(PriceBourse)
-				ShowMsgtime.msg = '~r~-1 cocaïne ~w~/ ~r~+'.. 300 ..'$'
+				ShowMsgtime.msg = '~r~-1 cocaïne ~w~/ ~r~+'.. 500 ..'$'
 				ShowMsgtime.time = 150
-				TriggerEvent("player:sellItem", 8, 300)
+				TriggerEvent("player:sellItem", 8, 500)
 			else
 				TriggerEvent("itinerance:notif", "~r~Vous devez avoir moins de 31 cocaïne pour vendre !")
 			end

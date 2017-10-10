@@ -41,7 +41,7 @@ local isCheckVente = false
 
 local Positions = {
   spawnCamion={x=137.32316589355,y=-3088.830078125,z=4.8963122367859,distance=10},
-  traitement={x=135.88681030273,y=-3106.8635253906,z=4.8963074684143,distance=10},
+  traitement={x=135.88681030273,y=-3106.8635253906,z=4.8963074684143,distance=5},
   spawnBateau={x=99.07535552979,y=-3093.8371582031,z=3.0190649032593,distance=10},
   peche={x=102.75986480713,y=-5199.7348632813,z=2.1498336791992, distance=60},
   priseServicePeche={x=117.98916625977,y=-3092.4345703125,z=5.0189809799194, distance=5},
@@ -342,50 +342,56 @@ Citizen.CreateThread(function()
             if myjob == 22 then
                 while true do
                   Citizen.Wait(0)
+                  local distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.peche.x, Positions.peche.y, Positions.peche.z, true)
+                  if distance < Positions.peche.distance then
                    if isFishing == true then
-                      chance_mat = math.random(0, chance)
-                      Citizen.Wait(1)
-                      TriggerEvent("inventory:getQuantityJob")
-                      Citizen.Wait(1000)
-                      inv_qty = tonumber(ITEMSJOB[28].quantity)+tonumber(ITEMSJOB[29].quantity)+tonumber(ITEMSJOB[30].quantity)+tonumber(ITEMSJOB[31].quantity)+tonumber(ITEMSJOB[32].quantity)+tonumber(ITEMSJOB[33].quantity)+tonumber(ITEMSJOB[34].quantity)+tonumber(ITEMSJOB[35].quantity)
-                      Citizen.Wait(1000)
+                       chance_mat = math.random(0, chance)
+                        Citizen.Wait(1)
+                        TriggerEvent("inventory:getQuantityJob")
+                        Citizen.Wait(1000)
+                        inv_qty = tonumber(ITEMSJOB[28].quantity)+tonumber(ITEMSJOB[29].quantity)+tonumber(ITEMSJOB[30].quantity)+tonumber(ITEMSJOB[31].quantity)+tonumber(ITEMSJOB[32].quantity)+tonumber(ITEMSJOB[33].quantity)+tonumber(ITEMSJOB[34].quantity)+tonumber(ITEMSJOB[35].quantity)
+                        Citizen.Wait(1000)
               				if isAnim == false then
                 				PlayScenario("WORLD_HUMAN_STAND_FISHING","GENERIC_CURSE_MED" ,"SPEECH_PARAMS_FORCE")
                 				isAnim = true
                 			end
-                   if tonumber(inv_qty) < 30 and chance_mat >= 0 and chance_mat < 500 then
-                       ShowMsgtime.msg = 'En train de pêcher...'
-                       ShowMsgtime.time = 250
-                       Wait(2500)
-                       ShowMsgtime.msg = '+1 Morue'
-                       ShowMsgtime.time = 150
-                       TriggerEvent("player:receiveItem", 28, 1)
-                   elseif tonumber(inv_qty) < 30 and chance_mat >= 500 and chance_mat < 800 then
-                       ShowMsgtime.msg = 'En train de pêcher...'
-                       ShowMsgtime.time = 250
-                       Wait(2500)
-                       ShowMsgtime.msg = '+1 Sardine'
-                       ShowMsgtime.time = 150
-                       TriggerEvent("player:receiveItem", 29, 1)
-                   elseif tonumber(inv_qty) < 30 and chance_mat >= 800 and chance_mat < 975 then
-                       ShowMsgtime.msg = 'En train de pêcher...'
-                       ShowMsgtime.time = 250
-                       Wait(2500)
-                       ShowMsgtime.msg = '+1 Daurade'
-                       ShowMsgtime.time = 150
-                       TriggerEvent("player:receiveItem", 30, 1)
-                   elseif tonumber(inv_qty) < 30 and chance_mat >= 975 and chance_mat <= 1000 then
-                       ShowMsgtime.msg = 'En train de pêcher...'
-                       ShowMsgtime.time = 250
-                       Wait(2500)
-                       ShowMsgtime.msg = '+1 Saumon'
-                       ShowMsgtime.time = 150
-                       TriggerEvent("player:receiveItem", 31, 1)
-                   else
-                    TriggerEvent("itinerance:notif", "~r~Votre inventaire est plein !")
-                    isFishing = false
-                   end
-                  end
+                            if tonumber(inv_qty) < 30 and chance_mat >= 0 and chance_mat < 500 then
+                                ShowMsgtime.msg = 'En train de pêcher...'
+                                ShowMsgtime.time = 250
+                                Wait(2500)
+                                ShowMsgtime.msg = '+1 Morue'
+                                ShowMsgtime.time = 150
+                                TriggerEvent("player:receiveItem", 28, 1)
+                            elseif tonumber(inv_qty) < 30 and chance_mat >= 500 and chance_mat < 800 then
+                                ShowMsgtime.msg = 'En train de pêcher...'
+                                ShowMsgtime.time = 250
+                                Wait(2500)
+                                ShowMsgtime.msg = '+1 Sardine'
+                                ShowMsgtime.time = 150
+                                TriggerEvent("player:receiveItem", 29, 1)
+                            elseif tonumber(inv_qty) < 30 and chance_mat >= 800 and chance_mat < 975 then
+                                ShowMsgtime.msg = 'En train de pêcher...'
+                                ShowMsgtime.time = 250
+                                Wait(2500)
+                                ShowMsgtime.msg = '+1 Daurade'
+                                ShowMsgtime.time = 150
+                                TriggerEvent("player:receiveItem", 30, 1)
+                            elseif tonumber(inv_qty) < 30 and chance_mat >= 975 and chance_mat <= 1000 then
+                                ShowMsgtime.msg = 'En train de pêcher...'
+                                ShowMsgtime.time = 250
+                                Wait(2500)
+                                ShowMsgtime.msg = '+1 Saumon'
+                                ShowMsgtime.time = 150
+                                TriggerEvent("player:receiveItem", 31, 1)
+                            else
+                                TriggerEvent("itinerance:notif", "~r~Votre inventaire est plein !")
+                                isFishing = false
+                            end
+                        end
+                    else
+                        isfishing = false
+                        isfishing = false
+                    end
                 end
             else
               TriggerEvent("itinerance:notif", "~r~Vous devez être pêcheur !")
@@ -436,60 +442,68 @@ Citizen.CreateThread(function()
       while true do
         Citizen.Wait(0)
         if isCheckTraitement == true then
-            TriggerServerEvent("poleemploi:getjobs")
-            Wait(100)
-            isCheckTraitement = false
-            if myjob == 22 then
-                while true do
-                  Citizen.Wait(0)
-                  if isProc == true then
-                        Wait(100)
-                        Citizen.Wait(1)
-                        TriggerEvent("inventory:getQuantityJob")
-                        Citizen.Wait(1000)
-                        inv_qty = tonumber(ITEMSJOB[28].quantity)+tonumber(ITEMSJOB[29].quantity)+tonumber(ITEMSJOB[30].quantity)+tonumber(ITEMSJOB[31].quantity)+tonumber(ITEMSJOB[32].quantity)+tonumber(ITEMSJOB[33].quantity)+tonumber(ITEMSJOB[34].quantity)+tonumber(ITEMSJOB[35].quantity)
-                        Citizen.Wait(1000)
-                      if ITEMSJOB[28].quantity > 0 and tonumber(inv_qty) <= 30 then
-                        ShowMsgtime.msg = 'Chargement du camion en cours...'
-                        ShowMsgtime.time = 250
-                        Wait(2500)
-                        ShowMsgtime.msg = '+1 Morue surgelée'
-                        ShowMsgtime.time = 150
-                        TriggerEvent("player:looseItem", 28, 1)
-                        TriggerEvent("player:receiveItem", 32, 1)
-                      elseif ITEMSJOB[29].quantity > 0 then
-                        ShowMsgtime.msg = 'Chargement du camion en cours...'
-                        ShowMsgtime.time = 250
-                        Wait(2500)
-                        ShowMsgtime.msg = '+1 Sardine surgelée'
-                        ShowMsgtime.time = 150
-                        TriggerEvent("player:looseItem", 29, 1)
-                        TriggerEvent("player:receiveItem", 33, 1)
-                      elseif ITEMSJOB[30].quantity > 0 then
-                        ShowMsgtime.msg = 'Chargement du camion en cours...'
-                        ShowMsgtime.time = 250
-                        Wait(2500)
-                        ShowMsgtime.msg = '+1 Daurade surgelée'
-                        ShowMsgtime.time = 150
-                        TriggerEvent("player:looseItem", 30, 1)
-                        TriggerEvent("player:receiveItem", 34, 1)
-                      elseif ITEMSJOB[31].quantity > 0 then
-                        ShowMsgtime.msg = 'Chargement du camion en cours...'
-                        ShowMsgtime.time = 250
-                        Wait(2500)
-                        ShowMsgtime.msg = '+1 Saumon surgelé'
-                        ShowMsgtime.time = 150
-                        TriggerEvent("player:looseItem", 31, 1)
-                        TriggerEvent("player:receiveItem", 35, 1)
+                TriggerServerEvent("poleemploi:getjobs")
+                Wait(100)
+                isCheckTraitement = false
+                    if myjob == 22 then
+                        while true do
+                            Wait(0)
+                            local distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.traitement.x, Positions.traitement.y, Positions.traitement.z, true)
+                            if distance < Positions.traitement.distance then
+                                Citizen.Trace(distance)
+                            Citizen.Wait(0)
+                            if isProc == true then
+                                Wait(100)
+                                Citizen.Wait(1)
+                                TriggerEvent("inventory:getQuantityJob")
+                                Citizen.Wait(1000)
+                                inv_qty = tonumber(ITEMSJOB[28].quantity)+tonumber(ITEMSJOB[29].quantity)+tonumber(ITEMSJOB[30].quantity)+tonumber(ITEMSJOB[31].quantity)+tonumber(ITEMSJOB[32].quantity)+tonumber(ITEMSJOB[33].quantity)+tonumber(ITEMSJOB[34].quantity)+tonumber(ITEMSJOB[35].quantity)
+                                Citizen.Wait(1000)
+                              if ITEMSJOB[28].quantity > 0 and tonumber(inv_qty) <= 30 then
+                                ShowMsgtime.msg = 'Chargement du camion en cours...'
+                                ShowMsgtime.time = 250
+                                Wait(2500)
+                                ShowMsgtime.msg = '+1 Morue surgelée'
+                                ShowMsgtime.time = 150
+                                TriggerEvent("player:looseItem", 28, 1)
+                                TriggerEvent("player:receiveItem", 32, 1)
+                              elseif ITEMSJOB[29].quantity > 0 then
+                                ShowMsgtime.msg = 'Chargement du camion en cours...'
+                                ShowMsgtime.time = 250
+                                Wait(2500)
+                                ShowMsgtime.msg = '+1 Sardine surgelée'
+                                ShowMsgtime.time = 150
+                                TriggerEvent("player:looseItem", 29, 1)
+                                TriggerEvent("player:receiveItem", 33, 1)
+                              elseif ITEMSJOB[30].quantity > 0 then
+                                ShowMsgtime.msg = 'Chargement du camion en cours...'
+                                ShowMsgtime.time = 250
+                                Wait(2500)
+                                ShowMsgtime.msg = '+1 Daurade surgelée'
+                                ShowMsgtime.time = 150
+                                TriggerEvent("player:looseItem", 30, 1)
+                                TriggerEvent("player:receiveItem", 34, 1)
+                              elseif ITEMSJOB[31].quantity > 0 then
+                                ShowMsgtime.msg = 'Chargement du camion en cours...'
+                                ShowMsgtime.time = 250
+                                Wait(2500)
+                                ShowMsgtime.msg = '+1 Saumon surgelé'
+                                ShowMsgtime.time = 150
+                                TriggerEvent("player:looseItem", 31, 1)
+                                TriggerEvent("player:receiveItem", 35, 1)
+                              else
+                                TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de poissons sur vous !")
+                                isProc = false
+                              end
+                          end
                       else
-                        TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de poissons sur vous !")
-                        isProc = false
+                          isProc = false
+                          isCheckTraitement = false
                       end
-                   end
-                end
-            else
-              TriggerEvent("itinerance:notif", "~r~Vous devez être pêcheur !")
-            end
+                      end
+                  else
+                      TriggerEvent("itinerance:notif", "~r~Vous devez être pêcheur !")
+                  end
          end
       end
 end)
@@ -536,70 +550,77 @@ Citizen.CreateThread(function()
          while true do
           Citizen.Wait(0)
           if isCheckVente == true then
-            TriggerServerEvent("poleemploi:getjobs")
-            Wait(100)
-            isCheckVente = false
-            if myjob == 22 then
-                while true do
-                  Citizen.Wait(0)
-                  if isSell == true then
-                      Wait(100)
-                      Citizen.Wait(1)
-                      TriggerEvent("inventory:getQuantityJob")
-                      Citizen.Wait(200)
-                    if tonumber(ITEMSJOB[32].quantity) > 0 then
-					  --TriggerServerEvent("jobs:getBoursePrice", 32)
-                      --TriggerServerEvent("jobs:changeBoursePrice", 32)
-                      ShowMsgtime.msg = 'En train de vendre...'
-                      ShowMsgtime.time = 250
-                      Wait(2500)
-                      --local price = math.ceil(PriceBourse)
-                      ShowMsgtime.msg = '~r~-1 Morue surgelée ~w~/ ~g~+' .. 30 .. '$'
-                      ShowMsgtime.time = 150
-                      TriggerEvent("inventory:sell",0, 1, 32, 30, "")
-                      Wait(2000)
-                    elseif tonumber(ITEMSJOB[33].quantity) > 0 then
-					  --TriggerServerEvent("jobs:getBoursePrice", 33)
-                      --TriggerServerEvent("jobs:changeBoursePrice", 32)
-                      ShowMsgtime.msg = 'En train de vendre...'
-                      ShowMsgtime.time = 250
-                      Wait(2500)
-                      --local price = math.ceil(PriceBourse)
-                      ShowMsgtime.msg = '~r~-1 Sardine surgelée ~w~/ ~g~+' .. 60 .. '$'
-                      ShowMsgtime.time = 150
-                      TriggerEvent("inventory:sell",0, 1, 33, 60, "")
-                      Wait(2000)
-                    elseif tonumber(ITEMSJOB[34].quantity) > 0 then
-					  --TriggerServerEvent("jobs:getBoursePrice", 34)
-                      --TriggerServerEvent("jobs:changeBoursePrice", 34)
-                      ShowMsgtime.msg = 'En train de vendre...'
-                      ShowMsgtime.time = 250
-                      Wait(2500)
-                      --local price = math.ceil(PriceBourse)
-                      ShowMsgtime.msg = '~r~-1 Daurade surgelée ~w~/ ~g~+' .. 70 .. '$'
-                      ShowMsgtime.time = 150
-                      TriggerEvent("inventory:sell",0, 1, 34, 70, "")
-                      Wait(2000)
-                    elseif tonumber(ITEMSJOB[35].quantity) > 0 then
-					  --TriggerServerEvent("jobs:getBoursePrice", 35)
-                      --TriggerServerEvent("jobs:changeBoursePrice", 35)
-                      ShowMsgtime.msg = 'En train de vendre...'
-                      ShowMsgtime.time = 250
-                      Wait(2500)
-                      --local price = math.ceil(PriceBourse)
-                      ShowMsgtime.msg = '~r~-1 Saumon surgelé ~w~/ ~g~+' ..90 .. '$'
-                      ShowMsgtime.time = 150
-                      TriggerEvent("inventory:sell",0, 1, 35, 90, "")
-                      Wait(2000)
-                    else
-                      TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de poisson surgelé sur vous !")
-                      isSell = false
-                    end
-                 end
-              end
-            else
-              TriggerEvent("itinerance:notif", "~r~Vous devez être pêcheur !")
-            end
+                  isCheckVente = false
+                if myjob == 22 then
+                    while true do
+                        Wait(0)
+                        local distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.vente.x, Positions.vente.y, Positions.vente.z, true)
+                        if distance < Positions.vente.distance then
+                            TriggerServerEvent("poleemploi:getjobs")
+                            Wait(100)
+                            Citizen.Wait(0)
+                            if isSell == true then
+                                Wait(100)
+                                Citizen.Wait(1)
+                                TriggerEvent("inventory:getQuantityJob")
+                                Citizen.Wait(200)
+                                if tonumber(ITEMSJOB[32].quantity) > 0 then
+    					                           --TriggerServerEvent("jobs:getBoursePrice", 32)
+                                                   --TriggerServerEvent("jobs:changeBoursePrice", 32)
+                                                   ShowMsgtime.msg = 'En train de vendre...'
+                                                   ShowMsgtime.time = 250
+                                                   Wait(2500)
+                                                   --local price = math.ceil(PriceBourse)
+                                                   ShowMsgtime.msg = '~r~-1 Morue surgelée ~w~/ ~g~+' .. 30 .. '$'
+                                                   ShowMsgtime.time = 150
+                                                   TriggerEvent("inventory:sell",0, 1, 32, 30, "")
+                                                   Wait(2000)
+                                elseif tonumber(ITEMSJOB[33].quantity) > 0 then
+    					                            --TriggerServerEvent("jobs:getBoursePrice", 33)
+                                                   --TriggerServerEvent("jobs:changeBoursePrice", 32)
+                                                   ShowMsgtime.msg = 'En train de vendre...'
+                                                   ShowMsgtime.time = 250
+                                                    Wait(2500)
+                                                    --local price = math.ceil(PriceBourse)
+                                                    ShowMsgtime.msg = '~r~-1 Sardine surgelée ~w~/ ~g~+' .. 60 .. '$'
+                                                    ShowMsgtime.time = 150
+                                                    TriggerEvent("inventory:sell",0, 1, 33, 60, "")
+                                                    Wait(2000)
+                                elseif tonumber(ITEMSJOB[34].quantity) > 0 then
+    					                           --TriggerServerEvent("jobs:getBoursePrice", 34)
+                                                   --TriggerServerEvent("jobs:changeBoursePrice", 34)
+                                                   ShowMsgtime.msg = 'En train de vendre...'
+                                                    ShowMsgtime.time = 250
+                                                        Wait(2500)
+                                                        --local price = math.ceil(PriceBourse)
+                                                        ShowMsgtime.msg = '~r~-1 Daurade surgelée ~w~/ ~g~+' .. 70 .. '$'
+                                                        ShowMsgtime.time = 150
+                                                        TriggerEvent("inventory:sell",0, 1, 34, 70, "")
+                                                        Wait(2000)
+                                elseif tonumber(ITEMSJOB[35].quantity) > 0 then
+    					                           --TriggerServerEvent("jobs:getBoursePrice", 35)
+                                                   --TriggerServerEvent("jobs:changeBoursePrice", 35)
+                                                   ShowMsgtime.msg = 'En train de vendre...'
+                                                   ShowMsgtime.time = 250
+                                                   Wait(2500)
+                                                   --local price = math.ceil(PriceBourse)
+                                                   ShowMsgtime.msg = '~r~-1 Saumon surgelé ~w~/ ~g~+' ..90 .. '$'
+                                                   ShowMsgtime.time = 150
+                                                   TriggerEvent("inventory:sell",0, 1, 35, 90, "")
+                                                   Wait(2000)
+                                else
+                                    TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de poisson surgelé sur vous !")
+                                    isSell = false
+                                end
+                                end
+                            else
+                                isSell = false
+                                isCheckVente = false
+                            end
+                            end
+                        else
+                          TriggerEvent("itinerance:notif", "~r~Vous devez être pêcheur !")
+                        end
          end
       end
 end)

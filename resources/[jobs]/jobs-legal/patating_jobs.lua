@@ -328,6 +328,9 @@ Citizen.CreateThread(function()
             if myjob == 25 then
                 while true do
                   Citizen.Wait(0)
+                  local DrawMarkerShow = true
+                  distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.recolte.x, Positions.recolte.y, Positions.recolte.z, true)
+                  if distance < Positions.recolte.distance then
                    if ispatating == true then
                       Citizen.Wait(1)
                       TriggerEvent("inventory:getQuantityJob")
@@ -350,6 +353,9 @@ Citizen.CreateThread(function()
                     ispatating = false
                    end
                   end
+              else
+                  ispatating = false
+              end
                 end
             else
               TriggerEvent("itinerance:notif", "~r~Vous devez être agriculteur !")
@@ -406,6 +412,8 @@ Citizen.CreateThread(function()
             if myjob == 25 then
                 while true do
                   Citizen.Wait(0)
+                  local distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.traitement.x, Positions.traitement.y, Positions.traitement.z, true)
+                  if distance < Positions.traitement.distance then
                   if isProc == true then
                         Wait(100)
                         Citizen.Wait(1)
@@ -426,6 +434,9 @@ Citizen.CreateThread(function()
                         isProc = false
                       end
                    end
+               else
+                   isProc = false
+               end
                 end
             else
               TriggerEvent("itinerance:notif", "~r~Vous devez être agriculteur !")
@@ -482,6 +493,8 @@ Citizen.CreateThread(function()
             if myjob == 25 then
                 while true do
                   Citizen.Wait(0)
+                  local distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.vente.x, Positions.vente.y, Positions.vente.z, true)
+                  if distance < Positions.vente.distance then
                   if isSell == true then
                       Wait(100)
                       Citizen.Wait(1)
@@ -503,6 +516,9 @@ Citizen.CreateThread(function()
                       isSell = false
                     end
                  end
+             else
+                 isSell = false
+             end
               end
             else
               TriggerEvent("itinerance:notif", "~r~Vous devez être agriculteur !")

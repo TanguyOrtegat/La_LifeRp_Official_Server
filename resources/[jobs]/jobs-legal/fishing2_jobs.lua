@@ -323,6 +323,8 @@ Citizen.CreateThread(function()
             if myjob == 22 then
                 while true do
                   Citizen.Wait(0)
+                  local distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.peche2.x, Positions.peche2.y, Positions.peche2.z, true)
+                  if distance < Positions.peche2.distance then
                    if isfishing2 == true then
                       chance_mat = math.random(0, chance)
                       Citizen.Wait(1)
@@ -367,6 +369,10 @@ Citizen.CreateThread(function()
                     isfishing2 = false
                    end
                   end
+              else
+                  isfishing2 = false
+                  isfishing2 = false
+              end
                 end
             else
               TriggerEvent("itinerance:notif", "~r~Vous devez être pêcheur !")
@@ -417,60 +423,68 @@ Citizen.CreateThread(function()
       while true do
         Citizen.Wait(0)
         if isCheckTraitement == true then
-            TriggerServerEvent("poleemploi:getjobs")
-            Wait(100)
-            isCheckTraitement = false
-            if myjob == 22 then
-                while true do
-                  Citizen.Wait(0)
-                  if isProc == true then
-                        Wait(100)
-                        Citizen.Wait(1)
-                        TriggerEvent("inventory:getQuantityJob")
-                        Citizen.Wait(1000)
-                        inv_qty = tonumber(ITEMSJOB[28].quantity)+tonumber(ITEMSJOB[29].quantity)+tonumber(ITEMSJOB[30].quantity)+tonumber(ITEMSJOB[31].quantity)+tonumber(ITEMSJOB[32].quantity)+tonumber(ITEMSJOB[33].quantity)+tonumber(ITEMSJOB[34].quantity)+tonumber(ITEMSJOB[35].quantity)
-                        Citizen.Wait(1000)
-                      if ITEMSJOB[28].quantity > 0 and tonumber(inv_qty) <= 30 then
-                        ShowMsgtime.msg = 'Chargement du camion en cours...'
-                        ShowMsgtime.time = 250
-                        Wait(2500)
-                        ShowMsgtime.msg = '+1 Morue surgelée'
-                        ShowMsgtime.time = 150
-                        TriggerEvent("player:looseItem", 28, 1)
-                        TriggerEvent("player:receiveItem", 32, 1)
-                      elseif ITEMSJOB[29].quantity > 0 then
-                        ShowMsgtime.msg = 'Chargement du camion en cours...'
-                        ShowMsgtime.time = 250
-                        Wait(2500)
-                        ShowMsgtime.msg = '+1 Sardine surgelée'
-                        ShowMsgtime.time = 150
-                        TriggerEvent("player:looseItem", 29, 1)
-                        TriggerEvent("player:receiveItem", 33, 1)
-                      elseif ITEMSJOB[30].quantity > 0 then
-                        ShowMsgtime.msg = 'Chargement du camion en cours...'
-                        ShowMsgtime.time = 250
-                        Wait(2500)
-                        ShowMsgtime.msg = '+1 Daurade surgelée'
-                        ShowMsgtime.time = 150
-                        TriggerEvent("player:looseItem", 30, 1)
-                        TriggerEvent("player:receiveItem", 34, 1)
-                      elseif ITEMSJOB[31].quantity > 0 then
-                        ShowMsgtime.msg = 'Chargement du camion en cours...'
-                        ShowMsgtime.time = 250
-                        Wait(2500)
-                        ShowMsgtime.msg = '+1 Saumon surgelé'
-                        ShowMsgtime.time = 150
-                        TriggerEvent("player:looseItem", 31, 1)
-                        TriggerEvent("player:receiveItem", 35, 1)
+                TriggerServerEvent("poleemploi:getjobs")
+                Wait(100)
+                isCheckTraitement = false
+                    if myjob == 22 then
+                        while true do
+                            Wait(0)
+                            local distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.traitement.x, Positions.traitement.y, Positions.traitement.z, true)
+                            if distance < Positions.traitement.distance then
+                                Citizen.Trace(distance)
+                            Citizen.Wait(0)
+                            if isProc == true then
+                                Wait(100)
+                                Citizen.Wait(1)
+                                TriggerEvent("inventory:getQuantityJob")
+                                Citizen.Wait(1000)
+                                inv_qty = tonumber(ITEMSJOB[28].quantity)+tonumber(ITEMSJOB[29].quantity)+tonumber(ITEMSJOB[30].quantity)+tonumber(ITEMSJOB[31].quantity)+tonumber(ITEMSJOB[32].quantity)+tonumber(ITEMSJOB[33].quantity)+tonumber(ITEMSJOB[34].quantity)+tonumber(ITEMSJOB[35].quantity)
+                                Citizen.Wait(1000)
+                              if ITEMSJOB[28].quantity > 0 and tonumber(inv_qty) <= 30 then
+                                ShowMsgtime.msg = 'Chargement du camion en cours...'
+                                ShowMsgtime.time = 250
+                                Wait(2500)
+                                ShowMsgtime.msg = '+1 Morue surgelée'
+                                ShowMsgtime.time = 150
+                                TriggerEvent("player:looseItem", 28, 1)
+                                TriggerEvent("player:receiveItem", 32, 1)
+                              elseif ITEMSJOB[29].quantity > 0 then
+                                ShowMsgtime.msg = 'Chargement du camion en cours...'
+                                ShowMsgtime.time = 250
+                                Wait(2500)
+                                ShowMsgtime.msg = '+1 Sardine surgelée'
+                                ShowMsgtime.time = 150
+                                TriggerEvent("player:looseItem", 29, 1)
+                                TriggerEvent("player:receiveItem", 33, 1)
+                              elseif ITEMSJOB[30].quantity > 0 then
+                                ShowMsgtime.msg = 'Chargement du camion en cours...'
+                                ShowMsgtime.time = 250
+                                Wait(2500)
+                                ShowMsgtime.msg = '+1 Daurade surgelée'
+                                ShowMsgtime.time = 150
+                                TriggerEvent("player:looseItem", 30, 1)
+                                TriggerEvent("player:receiveItem", 34, 1)
+                              elseif ITEMSJOB[31].quantity > 0 then
+                                ShowMsgtime.msg = 'Chargement du camion en cours...'
+                                ShowMsgtime.time = 250
+                                Wait(2500)
+                                ShowMsgtime.msg = '+1 Saumon surgelé'
+                                ShowMsgtime.time = 150
+                                TriggerEvent("player:looseItem", 31, 1)
+                                TriggerEvent("player:receiveItem", 35, 1)
+                              else
+                                TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de poissons sur vous !")
+                                isProc = false
+                              end
+                          end
                       else
-                        TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de poissons sur vous !")
-                        isProc = false
+                          isProc = false
+                          isCheckTraitement = false
                       end
-                   end
-                end
-            else
-              TriggerEvent("itinerance:notif", "~r~Vous devez être pêcheur !")
-            end
+                      end
+                  else
+                      TriggerEvent("itinerance:notif", "~r~Vous devez être pêcheur !")
+                  end
          end
       end
 end)

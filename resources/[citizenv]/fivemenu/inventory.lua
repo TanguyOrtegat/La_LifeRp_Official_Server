@@ -4,6 +4,11 @@ inv_array_legal = {
     {name="Pastabox", id=3, price=10, value=40},
 }
 
+inv_array_illegal = {
+    {name="Menotte", id=57, price=1000, value=0},
+    {name="Cutter", id=58, price=2500, value=0},
+}
+
 inv_array = {
     {name="Bouteille d'eau", id=1, price=5, value=20},
     {name="Sandwich", id=2, price=10, value=20},
@@ -64,4 +69,7 @@ inv_array_illlegal = {
     {name="Coke purifier 70%", id=54, price=100, value=0},
     {name="Coke purifier 90%", id=55, price=100, value=0},
     {name="Coke purifier 100%", id=56, price=100, value=0},
+    {name="Menotte", id=57, price=100, value=0},
+    {name="Cutter", id=58, price=100, value=0},
+    {name="Sac de poubelle", id=59, price=100, value=0},
 }

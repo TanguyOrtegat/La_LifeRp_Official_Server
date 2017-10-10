@@ -93,6 +93,7 @@ VMenu = {
   armorygouv = false,
   vote = false,
   lockerpolice = false,
+  store_ill = false,
 
 	Tanker_company = false,
 	Container_company = false,
@@ -114,6 +115,7 @@ VMenu = {
     lost = false,
     asso = false,
     cartel = false,
+    inter = false,
 
 	Cuffedkeys = {167, 168},
 	------------------ FIN AJOUT
@@ -2299,6 +2301,17 @@ function Construct()
     VMenu.AddNum(menu, "Tattoos", "tattoos", 1, 33, "Tattoos")
     --VMenu.AddFunc(menu, "Valider", "vmenu:settattoos", {GetHashKey(Tattoos[getOpt("tattoos")].name)}, "Valider")
     local menu = 51
+
+    local menu = 52
+    VMenu.AddMenu(menu, "", "default") -- default = Header "Texte" sur fond bleu
+    -- for _, item in pairs(inv_array_legal) do
+    --  VMenu.AddFunc(menu, item.name, "inventory:buy", {1, item.id, item.price, item.name}, "Acheter")
+    -- end
+    VMenu.AddNum(menu, "Quantité", "itemBuy", 1, 30, "Sélection")
+    for _, item in pairs(inv_array_illegal) do
+      VMenu.AddFunc(menu, item.name, "inventory:buy", {getOpt("itemBuy"), item.id, item.price, item.name}, "Prix: " .. item.price .. "$")
+    end
+
 	------- MAIN MENU F7
 	local menu = 98
 	VMenu.AddMenu(menu, "", "default") -- default = Header "Texte" sur fond bleu
@@ -2984,6 +2997,8 @@ Citizen.CreateThread(function()
 			VMenu.hospital = true
 		elseif (IsNearPoints(Store, 4) == true) then
 			VMenu.store = true
+        elseif (IsNearPoints(Store_ill, 4) == true) then
+            VMenu.store_ill = true
 		else
 			if VMenu.curMenu ~= 98 then
 				TriggerEvent("vmenu:toggleMenu")
@@ -3064,7 +3079,8 @@ Citizen.CreateThread(function()
 			TriggerEvent("vmenu:openMenu", 98)
 			VMenu.mainMenu = true
 			-- 	TriggerServerEvent("vmenu:updateUser", true)
-			if VMenu.police == false and VMenu.telephone == false and VMenu.animations == false and VMenu.item_menu == false and VMenu.medic == false and VMenu.depan == false and VMenu.taxi == false and VMenu.pres == false and VMenu.garde == false and VMenu.garda == false and VMenu.ls == false and VMenu.lost == false and VMenu.asso == false and VMenu.cartel == false then
+			if VMenu.police == false and VMenu.telephone == false and VMenu.animations == false and VMenu.item_menu == false and VMenu.medic == false and VMenu.depan == false and VMenu.taxi == false and VMenu.pres == false and VMenu.garde == false and VMenu.garda == false and VMenu.ls == false and VMenu.lost == false
+            and VMenu.asso == false and VMenu.cartel == false and VMenu.inter == false then
         Wait(300)
         getMainMenu()
 			end
@@ -3183,6 +3199,8 @@ Citizen.CreateThread(function()
         TriggerEvent("vmenu:openMenu", 10)
 			elseif (IsNearPoints(Store, 4) == true) then
 				TriggerEvent("vmenu:openMenu", 11)
+            elseif (IsNearPoints(Store_ill, 4) == true) then
+                TriggerEvent("vmenu:openMenu", 52)
 			elseif (IsNearPoints(informateur_weed, 3) == true) then
 				TriggerEvent("vmenu:openMenu", 14)
 			elseif (IsNearPoints(informateur_coke, 3) == true) then
@@ -3319,6 +3337,9 @@ Citizen.CreateThread(function()
 			VMenu.Info('Appuyer sur ~g~F6~s~ pour accéder au menu', false)
 		elseif (IsNearPoints(Store, 4) == true) then
 			VMenu.store = false
+			VMenu.Info('Appuyer sur ~g~F6~s~ pour accéder au magasin', false)
+        elseif (IsNearPoints(Store_ill, 4) == true) then
+			VMenu.store_ill = false
 			VMenu.Info('Appuyer sur ~g~F6~s~ pour accéder au magasin', false)
 		elseif (IsNearPoints(lavage_argent, 3) == true) then
 			VMenu.Info('Appuyer sur ~g~F6~s~ pour accéder au menu', false)

@@ -144,3 +144,8 @@ AddEventHandler("inventory:addMoney", function(number, type)
         end
     end)
 end)
+
+RegisterServerEvent("inventory:black")
+AddEventHandler("inventory:black", function(netid)
+    TriggerClientEvent("inventory:f_black",netid)
+end)

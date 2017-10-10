@@ -353,10 +353,14 @@ AddEventHandler("menupolice:f_verifp", function(name, tel, job, police, entrepri
         		TriggerEvent("itinerance:notif", "~y~Métier: ~w~Pêcheur")
       		elseif tonumber(job) == 23 then
         		TriggerEvent("itinerance:notif", "~y~Métier: ~w~Vigneron")
-      		elseif tonumber(job) == 25 then
+      		elseif tonumber(job) == 24 then
         		TriggerEvent("itinerance:notif", "~y~Métier: ~w~Metallurgiste")
-      		elseif tonumber(job) == 26 then
+      		elseif tonumber(job) == 25 then
         		TriggerEvent("itinerance:notif", "~y~Métier: ~w~Agriculteur")
+			elseif tonumber(job) == 26 or tonumber(job) == 27 then
+				TriggerEvent("itinerance:notif", "~y~Métier: ~w~LaGarda")
+			elseif tonumber(job) >= 30 and tonumber(job) <= 39 then
+				TriggerEvent("itinerance:notif", "~y~Métier: ~w~LsCustom")
 			else
 				TriggerEvent("itinerance:notif", "~y~Métier: ~r~Erreur")
 			end

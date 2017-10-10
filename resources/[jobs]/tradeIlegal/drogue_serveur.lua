@@ -88,7 +88,7 @@ local function AddDrogue()
 end
 
 local function GetPolice()
-    SetTimeout(60000, function()
+    SetTimeout(120000, function()
         police = 0
         TriggerEvent("LaLife.Player.Manager.GetConnectedPlayers", function(users)
             if(users ~= nil) then

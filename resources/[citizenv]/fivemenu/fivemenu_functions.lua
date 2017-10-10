@@ -152,6 +152,7 @@ AddEventHandler("vmenu:MainMenuOG", function(target)
 	VMenu.lost = false
 	VMenu.asso = false
 	VMenu.cartel = false
+	VMenu.inter = false
 end)
 ----------------------------------
 

@@ -655,7 +655,7 @@ Citizen.CreateThread(function()
 --        if serviceOn == false then
           ShowInfo('~w~Appuyez sur ~INPUT_CONTEXT~ pour ~b~Entrer~w~.', 0)
           if IsControlJustPressed(1,38) then
-            if (User.subjob == 2 or User.subjob == 3 or User.subjob == 4) then
+            if (User.subjob == 7 or User.subjob == 8 or User.subjob == 9 or User.subjob == 10 or User.Subjob == 2 or User.Subjob == 3 or User.Subjob == 4) then
             mdmaOutfits()
               spawnprops()
               Wait(500)

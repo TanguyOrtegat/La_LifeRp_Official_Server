@@ -282,6 +282,8 @@ Citizen.CreateThread(function()
             if myjob == 24 then
                 while true do
                   Citizen.Wait(0)
+                  distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.recolte.x, Positions.recolte.y, Positions.recolte.z, true)
+                  if distance < Positions.recolte.distance then
                   if isMine == true then
                       chance_mat = math.random(0, chance)
                       Citizen.Wait(1)
@@ -310,6 +312,9 @@ Citizen.CreateThread(function()
                     isMine = false
                    end
                   end
+              else
+                  isMine = false
+              end
                 end
             else
               TriggerEvent("itinerance:notif", "~r~Vous devez être métallurgiste !")
@@ -359,6 +364,8 @@ Citizen.CreateThread(function()
             if myjob == 24 then
                 while true do
                   Citizen.Wait(0)
+                  local distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.traitement.x, Positions.traitement.y, Positions.traitement.z, true)
+                  if distance < Positions.recolte.distance then
                   if isProc == true then
                         Wait(100)
                         Citizen.Wait(1)
@@ -387,6 +394,9 @@ Citizen.CreateThread(function()
                         isProc = false
                       end
                    end
+               else
+                   isProc = false
+               end
                 end
             else
               TriggerEvent("itinerance:notif", "~r~Vous devez être métallurgiste !")
@@ -443,6 +453,8 @@ Citizen.CreateThread(function()
             if myjob == 24 then
                 while true do
                   Citizen.Wait(0)
+                  local distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.vente.x, Positions.vente.y, Positions.vente.z, true)
+                  if distance < Positions.vente.distance then
                   if isSell == true then
                       Wait(100)
                       Citizen.Wait(1)
@@ -475,6 +487,9 @@ Citizen.CreateThread(function()
                       isSell = false
                     end
                  end
+             else
+                 isSell = false
+             end
               end
             else
               TriggerEvent("itinerance:notif", "~r~Vous devez être métallurgiste !")

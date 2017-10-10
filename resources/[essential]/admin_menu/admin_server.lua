@@ -1,6 +1,7 @@
 -- note that nothing has changed, i just added some examples, put your admins here as you've always did!
 admins = {
 "steam:110000104cb2ae5",
+"steam:110000105791fa5",
 "steam:A246A196C9", -- steamid64 converted to hex, this might need to be in lowercase, i didn't test
 "license:examplelicence", -- license as displayed by FiveM
 "ip:127.0.0.1" -- i don't recommend using an ip *at all*, but it still works

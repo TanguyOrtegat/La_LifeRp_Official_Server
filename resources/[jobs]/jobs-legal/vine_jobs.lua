@@ -312,6 +312,11 @@ Citizen.CreateThread(function()
             if myjob == 23 then
                 while true do
                   Citizen.Wait(0)
+                  distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.Zone1.x, Positions.Zone1.y, Positions.Zone1.z, true)
+                  distance2 = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.Zone2.x, Positions.Zone2.y, Positions.Zone2.z, true)
+                  distance3 = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.Zone3.x, Positions.Zone3.y, Positions.Zone3.z, true)
+                  distance4 = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.Zone4.x, Positions.Zone4.y, Positions.Zone4.z, true)
+                  if distance < Positions.Zone1.distance or distance2 < Positions.Zone2.distance or distance3 < Positions.Zone3.distance or distance4 < Positions.Zone4.distance then
                    if isvining == true then
                       Citizen.Wait(1)
                       TriggerEvent("inventory:getQuantityJob")
@@ -331,6 +336,10 @@ Citizen.CreateThread(function()
                     isvining = false
                    end
                   end
+              else
+                  isvining = false
+                  isvining = false
+              end
                 end
             else
               TriggerEvent("itinerance:notif", "~r~Vous devez être vigneron !")
@@ -389,6 +398,8 @@ Citizen.CreateThread(function()
                   Citizen.Wait(0)
                   if isProc == true then
                         Wait(100)
+                        local distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.traitement.x, Positions.traitement.y, Positions.traitement.z, true)
+                        if distance < Positions.traitement.distance then
                         Citizen.Wait(1)
                         TriggerEvent("inventory:getQuantityJob")
                         Citizen.Wait(1000)
@@ -407,6 +418,10 @@ Citizen.CreateThread(function()
                         isProc = false
                       end
                    end
+               else
+                   isProc = false
+                   isProc = false
+               end
                 end
             else
               TriggerEvent("itinerance:notif", "~r~Vous devez être vigneron !")
@@ -463,6 +478,8 @@ Citizen.CreateThread(function()
             if myjob == 23 then
                 while true do
                   Citizen.Wait(0)
+                  local distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.vente.x, Positions.vente.y, Positions.vente.z, true)
+                  if distance < Positions.vente.distance then
                   if isSell == true then
                       Wait(100)
                       Citizen.Wait(1)
@@ -484,6 +501,10 @@ Citizen.CreateThread(function()
                       isSell = false
                     end
                  end
+             else
+                 isProc = false
+                 isProc = false
+             end
               end
             else
               TriggerEvent("itinerance:notif", "~r~Vous devez être vigneron !")

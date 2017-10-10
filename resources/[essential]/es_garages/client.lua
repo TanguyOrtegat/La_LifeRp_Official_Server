@@ -468,6 +468,7 @@ local vehicule = {"verlierer2",
 "toro",
 "buccaneer2",
 "ratloader2",
+"paradise",
 }
 --[[Local/Global]]--
 

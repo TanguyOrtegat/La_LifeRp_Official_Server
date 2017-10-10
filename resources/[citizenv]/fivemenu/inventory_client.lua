@@ -84,18 +84,53 @@ AddEventHandler("inventory:useItem", function(target, id) -- target = Dernier jo
 			useItem = val
 		end
 	end
-	delete({id, 1})
 	if id == 1 or id == 37 then
 		if IsInVehicle() then
 			TriggerEvent("food:vdrink", value)
 		else
 			TriggerEvent("food:drink", useItem)
 		end
+		delete({id, 1})
 	elseif id == 2 or id == 3 or id == 36 or id == 42 or id == 43 then
 		if IsInVehicle() then
 			TriggerEvent("food:veat", value)
 		else
 			TriggerEvent("food:eat", useItem)
+		end
+		delete({id, 1})
+	elseif id == 57 then
+		if IsInVehicle() then
+		else
+			if target ~= -1 then
+				PhandCuffed = true
+				TriggerServerEvent("menupolice:cuff_s", GetPlayerServerId(VMenu.target))
+				TriggerEvent("menupolice:wcuff", VMenu.target)
+				delete({id, 1})
+			else
+				TriggerEvent("itinerance:notif", "~r~ Vous n'avez pas de cible" )
+			end
+		end
+	elseif id == 58 then
+		if IsInVehicle() then
+		else
+			if target ~= -1 then
+				PhandCuffed = false
+				TriggerServerEvent("menupolice:uncuff_s", GetPlayerServerId(VMenu.target))
+				TriggerEvent("menupolice:wuncuff", VMenu.target)
+			else
+				TriggerEvent("itinerance:notif", "~r~ Vous n'avez pas de cible" )
+			end
+		end
+	elseif id == 59 then
+		if IsInVehicle() then
+		else
+			if target ~= -1 then
+				local netid = GetPlayerServerId(target)
+				TriggerServerEvent("inventory:black",netid)
+				delete({id, 1})
+			else
+				TriggerEvent("itinerance:notif", "~r~ Vous n'avez pas de cible" )
+			end
 		end
 	else
 	 TriggerEvent("itinerance:notif", "~r~Vous ne pouvez pas utiliser cet objet.")
@@ -205,3 +240,8 @@ function IsInVehicle()
     return false
   end
 end
+
+RegisterNetEvent("inventory:f_black")
+AddEventHandler("inventory:f_black", function(param) -- target = Dernier joueur à avoir parlé, pas besoin ici. Mais obligatoire !
+	StartScreenEffect("MenuMGSelectionTint", 0, true)
+end)
