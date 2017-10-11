@@ -105,7 +105,7 @@ Citizen.CreateThread(
 
 			local playerPos = GetEntityCoords(GetPlayerPed(-1), true)
 
-			if (Vdist(playerPos.x, playerPos.y, playerPos.z, x, y, z) < 100.0) and isInService and jobId == 13 then
+			if (Vdist(playerPos.x, playerPos.y, playerPos.z, x, y, z) < 100.0) and isInService and (jobId == 13 or jobId == 50 or jobId == 51 or jobId == 52 or jobId == 53) then
 				-- Service car
 				DrawMarker(1, x, y, z - 1, 0, 0, 0, 0, 0, 0, 3.0001, 3.0001, 1.5001, 255, 165, 0,165, 0, 0, 0,0)
 
@@ -315,7 +315,7 @@ function GetService()
          SetPedComponentVariation(GetPlayerPed(-1), 4, 47, 0, 0)
          SetPedComponentVariation(GetPlayerPed(-1), 6, 29, 0, 0)
          SetPedComponentVariation(GetPlayerPed(-1), 11, 9, 2, 0)
-     end 
+     end
 end
 
 --[[

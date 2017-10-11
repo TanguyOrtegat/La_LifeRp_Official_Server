@@ -2240,7 +2240,7 @@ function Construct()
   TriggerServerEvent('vmenu:updateUser', menu)
   Wait(200)
   VMenu.ResetMenu(menu, "", "default")
-  if User.jobs == 13 then
+  if User.jobs == 50 or User.jobs == 51 or User.jobs == 52 then
     VMenu.AddFunc(menu, "Helico d'ambulancier", "vmenu:getAmbulanceHelicoGarage", {"polmav"}, "Obtenir cet hélicoptère")
   else
     VMenu.AddSep(menu, "Vous devez être en ambulancier")
@@ -2466,7 +2466,7 @@ function getGarageHelicoAmbulance()
 	TriggerServerEvent('vmenu:updateUser', 19)
 	Wait(200)
 	VMenu.ResetMenu(19, "", "default")
-	if User.job == 13 then
+	if User.jobs == 50 or User.jobs == 51 or User.jobs == 52 then
 		VMenu.AddFunc(19, "Helico d'ambulancier", "vmenu:getAmbulanceHelicoGarage", {"polmav"}, "Obtenir cet hélicoptère")
 	else
 		VMenu.AddSep(19, "Vous devez être en ambulancier")

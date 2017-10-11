@@ -16,7 +16,7 @@ Citizen.CreateThread(function()
           if IsControlJustPressed(1,38) then
             TriggerServerEvent("poleemploi:getjobs")
             Wait(200)
-            if myjob == 13 then
+            if myjob == 53 or myjob == 50 or myjob == 51 or myjob == 52 then
 			           --if serviceOn == true then
                 local car = GetHashKey("ambu")
                 RequestModel(car)

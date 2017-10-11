@@ -12,7 +12,7 @@ changeYourJob = {
 
 jobsname = {"Sans Emploi", "Nettoyeur de piscines", "Éboueur", "Mineur", "Chauffeur de taxi", "Livreur de bois", "Livreur de citerne", "Livreur de conteneur", "Livreur de médicaments", "Policier", "Fossoyeur", "Préposé à la morgue", "Ambulancier","Président", "Dépanneur", "Dépanneur (patron)", "Chauffeur de taxi", "Chauffeur de taxi (patron)",
  "FBI", "Secrétaire", "Journaliste", "Pêcheur", "Vigneron", "Metallurgiste", "Agriculteur","LaGarda","LaGarda (patron)","LaGardaSecurite","Animateur","LsCustom 1/5 (patron)","LsCustom 1/5","LsCustom 2/5 (patron)","LsCustom 2/5","LsCustom 3/5 (patron)","LsCustom 3/5","LsCustom 4/5 (patron)","LsCustom 4/5","LsCustom 5/5 (patron)","LsCustom 5/5",
-"Sans Emploi","Sans Emploi","Sans Emploi","Association Motar Propriétaire","Association Motar","Sans Emploi","Sans Emploi","Sans Emploi","Psychologue","Sans Emploi"}
+"Sans Emploi","Sans Emploi","Sans Emploi","Association Motar Propriétaire","Association Motar","Sans Emploi","Sans Emploi","Sans Emploi","Psychologue","Sans Emploi","Chef-Médecin","Médecin","Infirmier","Aide-soignant"}
 
 hair = {
   {name="Cheveux 1", id=108, zero=0},
