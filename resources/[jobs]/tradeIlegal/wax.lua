@@ -656,8 +656,8 @@ Citizen.CreateThread(function()
           ShowInfo('~w~Appuyez sur ~INPUT_CONTEXT~ pour ~b~Entrer~w~.', 0)
           if IsControlJustPressed(1,38) then
             if (User.subjob == 11 or User.subjob == 12 or User.subjob == 13 or User.subjob == 14) then
-            mdmaOutfits()
-              spawnprops()
+            waxOutfits()
+              spawnpropswax()
               Wait(500)
               SetEntityCoords(GetPlayerPed(-1), tonumber(Positions.Sorti.x),tonumber(Positions.Sorti.y),tonumber(Positions.Sorti.z-1))
             else
@@ -705,7 +705,7 @@ end
 end
 end)
 ]]
- function spawnprops()
+ function spawnpropswax()
     for _,v in pairs(props) do
         TriggerEvent("es_admin:loadpropsweed",v)
     end
@@ -718,7 +718,7 @@ AddEventHandler("vmenu:setUser", function(infos)
     end
 end)
 
-function mdmaOutfits()
+function waxOutfits()
   if GetEntityModel(GetPlayerPed(-1)) == 1885233650 then -- Male
       SetPedComponentVariation(GetPlayerPed(-1), 1, 38, 0, 0)
   elseif GetEntityModel(GetPlayerPed(-1)) == -1667301416 then -- Female

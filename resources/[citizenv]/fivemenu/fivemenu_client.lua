@@ -2333,7 +2333,7 @@ function getMainMenu()
 			VMenu.AddFunc(98, lang.menu.mainmenu.police, "menupolice:PoliceOG", {User.police}, lang.common.access)
 		end
 
-		if User.job == 13 then
+		if User.job == 13 or User.job == 50 or User.job == 51 or User.job == 52 or User.job == 53 then
 			VMenu.AddFunc(98, "Menu ambulancier", "menumedic:MedicOG", {}, lang.common.access)
 		end
 		if tonumber(User.job) == 15 or tonumber(User.job) == 16 then

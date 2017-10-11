@@ -432,7 +432,7 @@ end)
 ---------------------------------------------VENTE 2-----------------------------------------------
 ------------------------------------------------------------------------------------------------------
 
-Citizen.CreateThread(function()
+--[[Citizen.CreateThread(function()
   while true do
       Citizen.Wait(0)
       playerPos = GetEntityCoords(GetPlayerPed(-1))
@@ -456,10 +456,10 @@ Citizen.CreateThread(function()
         end
       end
   end
-end)
+end)]]
 
 
-Citizen.CreateThread(function()
+--[[Citizen.CreateThread(function()
   while true do
     Citizen.Wait(0)
     playerPos = GetEntityCoords(GetPlayerPed(-1))
@@ -494,4 +494,4 @@ Citizen.CreateThread(function()
         isSell2 = false
       end
     end
-end)
+end)]]

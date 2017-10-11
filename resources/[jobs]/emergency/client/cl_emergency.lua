@@ -135,7 +135,7 @@ AddEventHandler('es_em:sendEmergencyToDocs',
 
 		Citizen.CreateThread(
 			function()
-				if isInService and jobId == 13 and not playerInComaIsADoc then
+				if isInService and (jobId == 13 or jobId == 50 or jobId == 51 or jobId == 52 or jobId == 53) and not playerInComaIsADoc then
 					local controlPressed = false
 
 					while notificationInProgress do
@@ -177,7 +177,7 @@ AddEventHandler('es_em:callTaken',
 	function(playerName, playerID, x, y, z, sourcePlayerInComa)
 		local playerServerId = GetPlayerServerId(PlayerId())
 
-		if isInService and jobId == 13 and not playerInComaIsADoc then
+		if isInService and (jobId == 13 or jobId == 50 or jobId == 51 or jobId == 52 or jobId == 53) and not playerInComaIsADoc then
 			SendNotification(txt[lang]['callTaken'] .. playerName .. '~s~')
 		end
 
@@ -285,7 +285,7 @@ end
 function GetService()
 	local playerPed = GetPlayerPed(-1)
 
-	if jobId ~= 13 then
+	if jobId ~= 13 or jobId ~= 50 or jobId ~= 51 or jobId ~= 52 or jobId ~= 53 then
 	SendNotification(txt[lang]['notDoc'])
 		return
 	end

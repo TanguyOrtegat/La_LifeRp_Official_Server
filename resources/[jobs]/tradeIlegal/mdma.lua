@@ -13,14 +13,6 @@ local inv_qty = 0
 local methserver = 0
 local props = {
 }
-RegisterNetEvent('trade:f_requestmeth')
-AddEventHandler('trade:f_requestmeth', function(propsmeth)
-    props = propsmeth
-end)
-
-Citizen.CreateThread(function()
-    TriggerServerEvent("trade:requestmeth")
-end)
 
 User = {
     Spawned = false,
@@ -729,3 +721,12 @@ function mdmaOutfits()
       SetPedComponentVariation(GetPlayerPed(-1), 1, 38, 0, 0)
   end
 end
+
+RegisterNetEvent('trade:f_requestmeth')
+AddEventHandler('trade:f_requestmeth', function(propsmeth)
+    props = propsmeth
+end)
+
+Citizen.CreateThread(function()
+    TriggerServerEvent("trade:requestmeth")
+end)
