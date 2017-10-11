@@ -72,4 +72,10 @@ inv_array_illlegal = {
     {name="Menotte", id=57, price=100, value=0},
     {name="Cutter", id=58, price=100, value=0},
     {name="Sac de poubelle", id=59, price=100, value=0},
+    {name="weed traité 10%", id=60, price=100, value=0},
+    {name="weed traité 30%", id=61, price=100, value=0},
+    {name="weed traité 50%", id=62, price=100, value=0},
+    {name="weed traité 70%", id=63, price=100, value=0},
+    {name="weed traité 90%", id=64, price=100, value=0},
+    {name="Wax", id=65, price=100, value=0},
 }

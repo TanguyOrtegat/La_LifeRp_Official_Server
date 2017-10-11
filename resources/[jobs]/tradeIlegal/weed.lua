@@ -95,8 +95,12 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de récolter~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isMine == false then
-                Citizen.Wait(1)
-                isMine = true
+                if (User.subjob == 7 or User.subjob == 8 or User.subjob == 9 or User.subjob == 10 or User.Subjob == 2 or User.Subjob == 3 or User.Subjob == 4 or User.subjob == 11 or User.subjob == 12 or User.subjob == 13 or User.subjob == 14) then
+                    TriggerEvent("itinerance:notif", "~r~Vous devez pas faire parti d'un gang pour récolter !")
+                else
+                    Citizen.Wait(1)
+                    isMine = true
+                end
             end
             if IsControlJustPressed(1, 38) and isMine == true then
               Citizen.Wait(1)

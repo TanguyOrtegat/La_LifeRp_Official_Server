@@ -388,7 +388,7 @@ AddEventHandler("apart:Mremitem",function()
         if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), interiors[i].xc,interiors[i].yc,interiors[i].zc, true) < 2.099 then
             TriggerServerEvent("apart:getitem", interiors[i].name)
               Wait(750)
-                for j=1,27 do
+                for j=1,#item do
                     --Citizen.Trace(item[1].valeur)
                     --Citizen.Trace(item[j].libelle)
                     if (tonumber(item[j].valeur) > 0) then

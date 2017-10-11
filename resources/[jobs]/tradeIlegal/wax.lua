@@ -13,14 +13,6 @@ local inv_qty = 0
 local methserver = 0
 local props = {
 }
-RegisterNetEvent('trade:f_requestmeth')
-AddEventHandler('trade:f_requestmeth', function(propsmeth)
-    props = propsmeth
-end)
-
-Citizen.CreateThread(function()
-    TriggerServerEvent("trade:requestmeth")
-end)
 
 User = {
     Spawned = false,
@@ -41,18 +33,22 @@ User = {
     gender = ""
 }
 
+RegisterNetEvent('trade:f_requestweed')
+AddEventHandler('trade:f_requestweed', function(propsweed)
+    props = propsweed
+end)
+
 local Positions = {
     -- VOS POINTS ICI
-    Entrer={ ['x'] = 1005.6166381836, ['y'] = -114.64562225342, ['z'] = 72.973709106445,["distance"] = 3 },
-    traitement={ ['x'] = 1010.866394043, ['y'] = -3194.9821777344, ['z'] = -38.993144989014,["distance"] = 1 },
-    traitement2={ ['x'] = 1011.0309448242, ['y'] = -3199.9638671875, ['z'] = -38.993156433105,["distance"] = 1 },
-    traitement3={ ['x'] = 1005.8270874023, ['y'] = -3200.3728027344, ['z'] = -38.519325256348,["distance"] = 1 },
-    traitement4={ ['x'] = 1002.7363891602, ['y'] = -3199.8361816406, ['z'] = -38.993171691895,["distance"] = 1 },
-    traitement5={ ['x'] = 1004.1533813477, ['y'] = -3196.4401855469, ['z'] = -38.993171691895,["distance"] = 1 },
-    traitement6={ ['x'] = 1006.024597168, ['y'] = -3194.9404296875, ['z'] = -38.993171691895,["distance"] = 1 },
-    Sorti={ ['x'] = 997.05859375, ['y'] = -3200.646484375, ['z'] = -37.393688201904,["distance"] = 1 },
-    vente={ ['x'] = -2165.9821777344, ['y'] = 5196.9291992188, ['z'] = 16.880392074585,["distance"] = 1 },
-    Couleur={ ['x'] = 983.45251464844, ['y'] = -98.58341217041, ['z'] = 74.845741271973 },
+    Entrer={ ['x'] = 2428.1909179688, ['y'] = 4970.33203125, ['z'] = 46.170871734619 ,["distance"] = 3 },
+    traitement={ ['x'] = 1063.3736572266, ['y'] = -3194.3112792969, ['z'] = -39.124752044678 ,["distance"] = 1 },
+    traitement2={ ['x'] = 1063.9052734375, ['y'] = -3204.40625, ['z'] = -39.151641845703 ,["distance"] = 1 },
+    traitement3={ ['x'] = 1052.1785888672, ['y'] = -3206.3544921875, ['z'] = -39.148048400879 ,["distance"] = 1 },
+    traitement4={ ['x'] = 1037.6202392578, ['y'] = -3205.40234375, ['z'] = -38.170040130615 ,["distance"] = 1 },
+    traitement5={ ['x'] = 1032.9360351563, ['y'] = -3205.5493164063, ['z'] = -38.180423736572 ,["distance"] = 1 },
+    traitement6={ ['x'] = 1039.4704589844, ['y'] = -3201.2404785156, ['z'] = -38.167304992676 ,["distance"] = 1 },
+    Sorti={ ['x'] = 1066.0001220703, ['y'] = -3183.3852539063, ['z'] = -39.163482666016 ,["distance"] = 3 },
+    vente={ ['x'] = -2168.3701171875, ['y'] = 5198.0712890625, ['z'] = 17.028638839722 ,["distance"] = 1 },
 }
 
 function drawTxt(text,font,centre,x,y,scale,r,g,b,a)
@@ -143,7 +139,7 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de traiter~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isProc == false then
-                if (User.subjob == 3 or User.subjob == 4) and tenu == true then
+                if (User.subjob == 12 or User.subjob == 13 or User.subjob == 14) and tenu == true then
                     Citizen.Wait(1)
                     isProc = true
                 else
@@ -172,22 +168,22 @@ Citizen.CreateThread(function()
         Citizen.Wait(1)
         TriggerEvent("inventory:getQuantityDrugs")
         Citizen.Wait(1000)
-        inv_qty = tonumber(ITEMSDRUGS[9].quantity)
+        inv_qty = tonumber(ITEMSDRUGS[4].quantity)
         Citizen.Wait(1000)
-          if ITEMSDRUGS[9].quantity > 0 then
+          if ITEMSDRUGS[4].quantity > 0 then
 			if tonumber(inv_qty) <= 30 then
 				ShowMsgtime.msg = 'En train de traiter...'
 				ShowMsgtime.time = 250
 				Wait(2500)
-				ShowMsgtime.msg = '+1 Mix amoniaque'
+				ShowMsgtime.msg = '+1 weed traité 10%'
 				ShowMsgtime.time = 150
-				TriggerEvent("player:looseItem", 9, 1)
-				TriggerEvent("player:receiveItem", 45, 1)
+				TriggerEvent("player:looseItem", 4, 1)
+				TriggerEvent("player:receiveItem", 60, 1)
 			else
-				TriggerEvent("itinerance:notif", "~r~Vous devez avoir moins de 31  pour traiter !")
+				TriggerEvent("itinerance:notif", "~r~Vous devez avoir moins de 31 canabis pour traiter !")
 			end
           else
-            TriggerEvent("itinerance:notif", "~r~Vous n'avez pas d'éphédrine !")
+            TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de canabis !")
             isProc = false
           end
       end
@@ -215,7 +211,7 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de traiter~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isProc2 == false then
-                if (User.subjob == 3 or User.subjob == 4) and tenu == true then
+                if (User.subjob == 12 or User.subjob == 13 or User.subjob == 14) and tenu == true then
                     Citizen.Wait(1)
                     isProc2 = true
                 else
@@ -244,22 +240,22 @@ Citizen.CreateThread(function()
         Citizen.Wait(1)
         TriggerEvent("inventory:getQuantityDrugs")
         Citizen.Wait(1000)
-        inv_qty = tonumber(ITEMSDRUGS[45].quantity)
+        inv_qty = tonumber(ITEMSDRUGS[60].quantity)
         Citizen.Wait(1000)
-          if ITEMSDRUGS[45].quantity > 0 then
+          if ITEMSDRUGS[60].quantity > 0 then
 			if tonumber(inv_qty) <= 30 then
 				ShowMsgtime.msg = 'En train de traiter...'
 				ShowMsgtime.time = 250
 				Wait(2500)
-				ShowMsgtime.msg = '+1 Sérotonine'
+				ShowMsgtime.msg = '+1 weed traité 30%'
 				ShowMsgtime.time = 150
-				TriggerEvent("player:looseItem", 45, 1)
-				TriggerEvent("player:receiveItem", 46, 1)
+				TriggerEvent("player:looseItem", 60, 1)
+				TriggerEvent("player:receiveItem", 61, 1)
 			else
-				TriggerEvent("itinerance:notif", "~r~Vous devez avoir moins de 31 Mix amoniaque pour traiter !")
+				TriggerEvent("itinerance:notif", "~r~Vous devez avoir moins de 31 weed traité 10% pour traiter !")
 			end
           else
-            TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de Mix amoniaque!")
+            TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de weed traité 10%!")
             isProc2 = false
           end
       end
@@ -287,7 +283,7 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de traiter~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isProc3 == false then
-                if (User.subjob == 3 or User.subjob == 4) and tenu == true then
+                if (User.subjob == 12 or User.subjob == 13 or User.subjob == 14) and tenu == true then
                     Citizen.Wait(1)
                     isProc3 = true
                 else
@@ -316,22 +312,22 @@ Citizen.CreateThread(function()
         Citizen.Wait(1)
         TriggerEvent("inventory:getQuantityDrugs")
         Citizen.Wait(1000)
-        inv_qty = tonumber(ITEMSDRUGS[46].quantity)
+        inv_qty = tonumber(ITEMSDRUGS[61].quantity)
         Citizen.Wait(1000)
-          if ITEMSDRUGS[46].quantity > 0 then
+          if ITEMSDRUGS[61].quantity > 0 then
 			if tonumber(inv_qty) <= 30 then
 				ShowMsgtime.msg = 'En train de traiter...'
 				ShowMsgtime.time = 250
 				Wait(2500)
-				ShowMsgtime.msg = '+1 Dopamine'
+				ShowMsgtime.msg = '+1 weed traité 50%'
 				ShowMsgtime.time = 150
-				TriggerEvent("player:looseItem", 46, 1)
-				TriggerEvent("player:receiveItem", 47, 1)
+				TriggerEvent("player:looseItem", 61, 1)
+				TriggerEvent("player:receiveItem", 62, 1)
 			else
-				TriggerEvent("itinerance:notif", "~r~Vous devez avoir moins de 31 Sérotonine pour traiter !")
+				TriggerEvent("itinerance:notif", "~r~Vous devez avoir moins de 31 weed traité 30% pour traiter !")
 			end
           else
-            TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de Sérotonine 66% !")
+            TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de weed traité 30% !")
             isProc3 = false
           end
       end
@@ -359,7 +355,7 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de traiter~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isProc4 == false then
-                if (User.subjob == 3 or User.subjob == 4) and tenu == true then
+                if (User.subjob == 12 or User.subjob == 13 or User.subjob == 14) and tenu == true then
                     Citizen.Wait(1)
                     isProc4 = true
                 else
@@ -388,22 +384,22 @@ Citizen.CreateThread(function()
         Citizen.Wait(1)
         TriggerEvent("inventory:getQuantityDrugs")
         Citizen.Wait(1000)
-        inv_qty = tonumber(ITEMSDRUGS[47].quantity)
+        inv_qty = tonumber(ITEMSDRUGS[62].quantity)
         Citizen.Wait(1000)
-          if ITEMSDRUGS[47].quantity > 0 then
+          if ITEMSDRUGS[62].quantity > 0 then
 			if tonumber(inv_qty) <= 30 then
 				ShowMsgtime.msg = 'En train de traiter...'
 				ShowMsgtime.time = 250
 				Wait(2500)
-				ShowMsgtime.msg = '+1 Noradrénaline'
+				ShowMsgtime.msg = '+1 31 weed traité 70%'
 				ShowMsgtime.time = 150
-				TriggerEvent("player:looseItem", 47, 1)
-				TriggerEvent("player:receiveItem", 48, 1)
+				TriggerEvent("player:looseItem", 62, 1)
+				TriggerEvent("player:receiveItem", 63, 1)
 			else
-				TriggerEvent("itinerance:notif", "~r~Vous devez avoir moins de 31 Dopamine pour traiter !")
+				TriggerEvent("itinerance:notif", "~r~Vous devez avoir moins de 31 31 weed traité 50% pour traiter !")
 			end
           else
-            TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de Dopamine !")
+            TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de 31 weed traité 50% !")
             isProc4 = false
           end
       end
@@ -431,7 +427,7 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de traiter~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isProc5 == false then
-                if (User.subjob == 3 or User.subjob == 4) and tenu == true then
+                if (User.subjob == 12 or User.subjob == 13 or User.subjob == 14) and tenu == true then
                     Citizen.Wait(1)
                     isProc5 = true
                 else
@@ -460,22 +456,22 @@ Citizen.CreateThread(function()
         Citizen.Wait(1)
         TriggerEvent("inventory:getQuantityDrugs")
         Citizen.Wait(1000)
-        inv_qty = tonumber(ITEMSDRUGS[48].quantity)
+        inv_qty = tonumber(ITEMSDRUGS[63].quantity)
         Citizen.Wait(1000)
-          if ITEMSDRUGS[48].quantity > 0 then
+          if ITEMSDRUGS[63].quantity > 0 then
 			if tonumber(inv_qty) <= 30 then
 				ShowMsgtime.msg = 'En train de traiter...'
 				ShowMsgtime.time = 250
 				Wait(2500)
-				ShowMsgtime.msg = '+1 Ocytocine'
+				ShowMsgtime.msg = '+1 weed traité 90%'
 				ShowMsgtime.time = 150
-				TriggerEvent("player:looseItem", 48, 1)
-				TriggerEvent("player:receiveItem", 49, 1)
+				TriggerEvent("player:looseItem", 63, 1)
+				TriggerEvent("player:receiveItem", 64, 1)
 			else
-				TriggerEvent("itinerance:notif", "~r~Vous devez avoir moins de 31 Noradrénaline pour traiter !")
+				TriggerEvent("itinerance:notif", "~r~Vous devez avoir moins de 31 weed traité 70% pour traiter !")
 			end
           else
-            TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de Noradrénaline !")
+            TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de weed traité 70% !")
             isProc5 = false
           end
       end
@@ -503,7 +499,7 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de traiter~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isProc6 == false then
-                if (User.subjob == 3 or User.subjob == 4) and tenu == true then
+                if (User.subjob == 12 or User.subjob == 13 or User.subjob == 14) and tenu == true then
                     Citizen.Wait(1)
                     isProc6 = true
                 else
@@ -532,22 +528,22 @@ Citizen.CreateThread(function()
         Citizen.Wait(1)
         TriggerEvent("inventory:getQuantityDrugs")
         Citizen.Wait(1000)
-        inv_qty = tonumber(ITEMSDRUGS[49].quantity)
+        inv_qty = tonumber(ITEMSDRUGS[64].quantity)
         Citizen.Wait(1000)
-          if ITEMSDRUGS[49].quantity > 0 then
+          if ITEMSDRUGS[64].quantity > 0 then
 			if tonumber(inv_qty) <= 30 then
 				ShowMsgtime.msg = 'En train de traiter...'
 				ShowMsgtime.time = 250
 				Wait(2500)
-				ShowMsgtime.msg = '+1 Ecstasy'
+				ShowMsgtime.msg = '+1 wax'
 				ShowMsgtime.time = 150
-				TriggerEvent("player:looseItem", 49, 1)
-				TriggerEvent("player:receiveItem", 50, 1)
+				TriggerEvent("player:looseItem", 64, 1)
+				TriggerEvent("player:receiveItem", 65, 1)
 			else
-				TriggerEvent("itinerance:notif", "~r~Vous devez avoir moins de 31 Ocytocine pour traiter !")
+				TriggerEvent("itinerance:notif", "~r~Vous devez avoir moins de 31 weed traité 90% pour traiter !")
 			end
           else
-            TriggerEvent("itinerance:notif", "~r~Vous n'avez pas d'Ocytocine !")
+            TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de weed traité 90% !")
             isProc6 = false
           end
       end
@@ -602,9 +598,9 @@ Citizen.CreateThread(function()
         Citizen.Wait(1)
         TriggerEvent("inventory:getQuantityDrugs")
         Citizen.Wait(1000)
-        inv_qty = tonumber(ITEMSDRUGS[50].quantity)
+        inv_qty = tonumber(ITEMSDRUGS[65].quantity)
         Citizen.Wait(1000)
-          if ITEMSDRUGS[50].quantity > 0 then
+          if ITEMSDRUGS[65].quantity > 0 then
 			if tonumber(inv_qty) <= 30 then
 				--TriggerServerEvent("drugs:getBoursePrice", 12)
                 --TriggerServerEvent("drugs:changeBoursePrice", 12)
@@ -612,14 +608,14 @@ Citizen.CreateThread(function()
 				ShowMsgtime.time = 250
 				Wait(2500)
                 --local price = math.ceil(PriceBourse)
-				ShowMsgtime.msg = '~r~-1 Ecstasy ~w~/ ~r~+'.. 1500 ..'$'
+				ShowMsgtime.msg = '~r~-1 Wax ~w~/ ~r~+'.. 1500 ..'$'
 				ShowMsgtime.time = 150
-				TriggerEvent("player:sellItem", 50, 1500)
+				TriggerEvent("player:sellItem", 64, 1500)
 			else
-				TriggerEvent("itinerance:notif", "~r~Vous devez avoir moins de 31 Ecstasy pour vendre !")
+				TriggerEvent("itinerance:notif", "~r~Vous devez avoir moins de 31 wax pour vendre !")
 			end
           else
-            TriggerEvent("itinerance:notif", "~r~Vous n'avez pas d'Ecstasy !")
+            TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de wax !")
             isSell = false
           end
       end
@@ -659,7 +655,7 @@ Citizen.CreateThread(function()
 --        if serviceOn == false then
           ShowInfo('~w~Appuyez sur ~INPUT_CONTEXT~ pour ~b~Entrer~w~.', 0)
           if IsControlJustPressed(1,38) then
-            if (User.subjob == 2 or User.subjob == 3 or User.subjob == 4) then
+            if (User.subjob == 11 or User.subjob == 12 or User.subjob == 13 or User.subjob == 14) then
             mdmaOutfits()
               spawnprops()
               Wait(500)
@@ -711,7 +707,7 @@ end)
 ]]
  function spawnprops()
     for _,v in pairs(props) do
-        TriggerEvent("es_admin:loadprops",v)
+        TriggerEvent("es_admin:loadpropsweed",v)
     end
 end
 
@@ -729,3 +725,7 @@ function mdmaOutfits()
       SetPedComponentVariation(GetPlayerPed(-1), 1, 38, 0, 0)
   end
 end
+
+Citizen.CreateThread(function()
+    TriggerServerEvent("trade:requestweed")
+end)

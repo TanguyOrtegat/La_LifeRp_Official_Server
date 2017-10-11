@@ -12,26 +12,16 @@ local isSell = false
 local inv_qty = 0
 local methserver = 0
 local props = {
-    "coke_press_upgrade",
-    "coke_cut_05",
-    "coke_cut_04",
-    "coke_cut_03",
-    "coke_cut_02",
-    "coke_cut_01",
-    "basic",
-    "table_equipment",
-    "table_equipment_upgrade",
-    "production_basic",
-    "production_upgrade",
-    "coke_cut_coccutter",
-    "coke_cut_powderedmilk",
-    "coke_cut_creditcard",
-    "coke_cut_scoop",
-    "equipment_upgrade",
-    "security_high",
-    "special_chairs",
-
 }
+
+RegisterNetEvent('trade:f_requestcoke')
+AddEventHandler('trade:f_requestcoke', function(propscoke)
+    props = propscoke
+end)
+
+Citizen.CreateThread(function()
+    TriggerServerEvent("trade:requestcoke")
+end)
 
 User = {
     Spawned = false,
@@ -585,7 +575,7 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de vendre~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isSell == false then
-                if (User.subjob == 7 or User.subjob == 8 or User.subjob == 9 or User.subjob == 10 or User.subjob == 2 or User.subjob == 3 or User.subjob == 4) then
+                if (User.subjob == 7 or User.subjob == 8 or User.subjob == 9 or User.subjob == 10 or User.Subjob == 2 or User.Subjob == 3 or User.Subjob == 4 or User.subjob == 11 or User.subjob == 12 or User.subjob == 13 or User.subjob == 14) then
                     TriggerEvent("itinerance:notif", "~r~Vous devez pas faire parti d'un gang pour vendre !")
                 else
                     Citizen.Wait(1)

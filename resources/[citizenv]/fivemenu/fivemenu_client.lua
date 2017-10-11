@@ -2369,6 +2369,9 @@ function getMainMenu()
     if tonumber(User.subjob) == 10 then
     VMenu.AddFunc(98, "Menu Cartel", "menucartel:menuOG", {User.subjob}, lang.common.access)
     end
+    if tonumber(User.subjob) == 14 then
+    VMenu.AddFunc(98, "Menu Redneck", "menuweed:menuOG", {User.subjob}, lang.common.access)
+    end
 		if tonumber(User.job) == 14 then
 			VMenu.AddFunc(98, "Menu président", "menupres:MayorOG", {}, lang.common.access)
 		end

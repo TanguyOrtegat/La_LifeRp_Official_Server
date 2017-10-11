@@ -2,6 +2,74 @@ local weed = 60
 local meth = 60
 local coke = 60
 local police = 0
+local propsweed = {
+    "weed_upgrade_equip",
+    "light_growtha_stage23_upgrade",
+    "light_growthb_stage23_upgrade",
+    "light_growthc_stage23_upgrade",
+    "light_growthd_stage23_upgrade",
+    "light_growthe_stage23_upgrade",
+    "light_growthf_stage23_upgrade",
+    "light_growthg_stage23_upgrade",
+    "light_growthh_stage23_upgrade",
+    "light_growthi_stage23_upgrade",
+    "weed_security_upgrade",
+    "weed_chairs",
+    "weed_hosea",
+    "weed_hoseb",
+    "weed_hosec",
+    "weed_hosed",
+    "weed_hosee",
+    "weed_hosef",
+    "weed_hoseg",
+    "weed_hoseh",
+    "weed_hosei",
+    "weed_growtha_stage3",
+    "weed_growthb_stage3",
+    "weed_growthc_stage3",
+    "weed_growthd_stage3",
+    "weed_growthe_stage3",
+    "weed_growthf_stage3",
+    "weed_growthg_stage3",
+    "weed_growthh_stage3",
+    "weed_growthi_stage3",
+    "weed_set_up",
+    "weed_drying",
+    "weed_production",
+    "interior_upgrade",
+    "security_high",
+    "equipment_upgrade",
+    "set_up",
+    "production",
+    "clutter",
+    "counterfeit_cashpile20d",
+}
+local propscoke = {
+    "coke_press_upgrade",
+    "coke_cut_05",
+    "coke_cut_04",
+    "coke_cut_03",
+    "coke_cut_02",
+    "coke_cut_01",
+    "basic",
+    "table_equipment",
+    "table_equipment_upgrade",
+    "production_basic",
+    "production_upgrade",
+    "coke_cut_coccutter",
+    "coke_cut_powderedmilk",
+    "coke_cut_creditcard",
+    "coke_cut_scoop",
+    "equipment_upgrade",
+    "security_high",
+    "special_chairs",
+}
+local propsmeth = {
+    "meth_lab_upgrade",
+    "meth_lab_setup",
+    "meth_lab_production",
+    "meth_lab_security_high",
+}
 
 RegisterServerEvent('drugs:getBoursePrice')
 AddEventHandler('drugs:getBoursePrice', function(libelle)
@@ -107,3 +175,18 @@ local function GetPolice()
 end
 
 GetPolice()
+
+RegisterServerEvent('trade:requestweed')
+AddEventHandler('trade:requestweed', function()
+    TriggerClientEvent('trade:f_requestweed',source,propsweed)
+end)
+
+RegisterServerEvent('trade:requestcoke')
+AddEventHandler('trade:requestcoke', function()
+    TriggerClientEvent('trade:f_requestcoke',source,propscoke)
+end)
+
+RegisterServerEvent('trade:requestmeth')
+AddEventHandler('trade:requestmeth', function()
+    TriggerClientEvent('trade:f_requestmeth',source,propsmeth)
+end)
