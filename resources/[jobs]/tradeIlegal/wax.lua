@@ -391,7 +391,7 @@ Citizen.CreateThread(function()
 				ShowMsgtime.msg = 'En train de traiter...'
 				ShowMsgtime.time = 250
 				Wait(2500)
-				ShowMsgtime.msg = '+1 31 weed traité 70%'
+				ShowMsgtime.msg = '+1 weed traité 70%'
 				ShowMsgtime.time = 150
 				TriggerEvent("player:looseItem", 62, 1)
 				TriggerEvent("player:receiveItem", 63, 1)
