@@ -285,7 +285,7 @@ end
 function GetService()
 	local playerPed = GetPlayerPed(-1)
 
-	if jobId ~= 13 or jobId ~= 50 or jobId ~= 51 or jobId ~= 52 or jobId ~= 53 then
+	if jobId ~= 13 and jobId ~= 50 and jobId ~= 51 and jobId ~= 52 and jobId ~= 53 then
 	SendNotification(txt[lang]['notDoc'])
 		return
 	end
