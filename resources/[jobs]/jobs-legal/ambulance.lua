@@ -54,7 +54,7 @@ Citizen.CreateThread(function()
           if IsControlJustPressed(1,38) then
           TriggerServerEvent("poleemploi:getjobs")
             Wait(100)
-            if myjob == 13 then
+            if myjob == 53 or myjob == 50 or myjob == 51 or myjob == 52 then
               camionSortie = false
 			           onJobLegal = 3
             end
