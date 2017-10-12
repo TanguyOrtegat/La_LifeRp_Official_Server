@@ -575,7 +575,7 @@ Citizen.CreateThread(function()
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de vendre~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isSell == false then
-                if (User.subjob == 7 or User.subjob == 8 or User.subjob == 9 or User.subjob == 10 or User.Subjob == 2 or User.Subjob == 3 or User.Subjob == 4 or User.subjob == 11 or User.subjob == 12 or User.subjob == 13 or User.subjob == 14) then
+                if (User.subjob == 7 or User.subjob == 8 or User.subjob == 9 or User.subjob == 10 or User.subjob == 2 or User.subjob == 3 or User.subjob == 4 or User.subjob == 11 or User.subjob == 12 or User.subjob == 13 or User.subjob == 14) then
                     TriggerEvent("itinerance:notif", "~r~Vous devez pas faire parti d'un gang pour vendre !")
                 else
                     Citizen.Wait(1)
