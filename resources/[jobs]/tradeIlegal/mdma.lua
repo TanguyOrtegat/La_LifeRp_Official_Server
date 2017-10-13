@@ -43,7 +43,7 @@ local Positions = {
     traitement5={ ['x'] = 1004.1533813477, ['y'] = -3196.4401855469, ['z'] = -38.993171691895,["distance"] = 1 },
     traitement6={ ['x'] = 1006.024597168, ['y'] = -3194.9404296875, ['z'] = -38.993171691895,["distance"] = 1 },
     Sorti={ ['x'] = 997.05859375, ['y'] = -3200.646484375, ['z'] = -37.393688201904,["distance"] = 1 },
-    vente={ ['x'] = -2165.9821777344, ['y'] = 5196.9291992188, ['z'] = 16.880392074585,["distance"] = 1 },
+    vente={ ['x'] = -183.84407043457, ['y'] = 6540.5844726563, ['z'] = 11.097848892212,["distance"] = 1 },
     Couleur={ ['x'] = 983.45251464844, ['y'] = -98.58341217041, ['z'] = 74.845741271973 },
 }
 
@@ -560,10 +560,10 @@ Citizen.CreateThread(function()
       distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.vente.x, Positions.vente.y, Positions.vente.z, true)
       if not IsInVehicle() then
         if distance < Positions.vente.distance then
-            if isSell == false then
+            if isSell == false and (User.subjob == 2 or User.subjob == 3 or User.subjob == 4) then
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~commencer à vendre~w~.", 0)
             end
-            if isSell == true then
+            if isSell == true and (User.subjob == 2 or User.subjob == 3 or User.subjob == 4) then
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de vendre~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isSell == false then
@@ -647,7 +647,7 @@ Citizen.CreateThread(function()
     local playerPos = GetEntityCoords(GetPlayerPed(-1))
     local distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.Entrer.x, Positions.Entrer.y, Positions.Entrer.z, true)
     if not IsInVehicle() then
-      if distance < 1.5 then
+      if distance < 1.5 and (User.subjob == 2 or User.subjob == 3 or User.subjob == 4) then
 --        if serviceOn == false then
           ShowInfo('~w~Appuyez sur ~INPUT_CONTEXT~ pour ~b~Entrer~w~.', 0)
           if IsControlJustPressed(1,38) then

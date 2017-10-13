@@ -52,7 +52,7 @@ local Positions = {
     traitement5={ ['x'] = 1101.5905761719, ['y'] = -3193.7861328125, ['z'] = -38.993465423584,["distance"] = 1 },
     traitement6={ ['x'] = 1100.5286865234, ['y'] = -3198.830078125, ['z'] = -38.993465423584,["distance"] = 1 },
     Sorti={ ['x'] = 1088.7034912109, ['y'] = -3187.6997070313, ['z'] = -38.993461608887,["distance"] = 1},
-    vente={ ['x'] = -2170.203125, ['y'] = 5196.6694335938, ['z'] = 17.069763183594,["distance"] = 1},
+    vente={ ['x'] = -1146.6641845703, ['y'] = 4940.2470703125, ['z'] = 222.26872253418,["distance"] = 1 },
 }
 
 function drawTxt(text,font,centre,x,y,scale,r,g,b,a)
@@ -568,10 +568,10 @@ Citizen.CreateThread(function()
       distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.vente.x, Positions.vente.y, Positions.vente.z, true)
       if not IsInVehicle() then
         if distance < Positions.vente.distance then
-            if isSell == false then
+            if isSell == false and (User.subjob == 7 or User.subjob == 8 or User.subjob == 9 or User.subjob == 10) then
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~commencer à vendre~w~.", 0)
             end
-            if isSell == true then
+            if isSell == true and (User.subjob == 7 or User.subjob == 8 or User.subjob == 9 or User.subjob == 10) then
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de vendre~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isSell == false then
@@ -655,7 +655,7 @@ Citizen.CreateThread(function()
     local playerPos = GetEntityCoords(GetPlayerPed(-1))
     local distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.Entrer.x, Positions.Entrer.y, Positions.Entrer.z, true)
     if not IsInVehicle() then
-      if distance < 1.5 then
+      if distance < 1.5 and (User.subjob == 7 or User.subjob == 8 or User.subjob == 9 or User.subjob == 10) then
 --        if serviceOn == false then
           ShowInfo('~w~Appuyez sur ~INPUT_CONTEXT~ pour ~b~Entrer~w~.', 0)
           if IsControlJustPressed(1,38) then

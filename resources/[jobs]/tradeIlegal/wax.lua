@@ -48,7 +48,7 @@ local Positions = {
     traitement5={ ['x'] = 1032.9360351563, ['y'] = -3205.5493164063, ['z'] = -38.180423736572 ,["distance"] = 1 },
     traitement6={ ['x'] = 1039.4704589844, ['y'] = -3201.2404785156, ['z'] = -38.167304992676 ,["distance"] = 1 },
     Sorti={ ['x'] = 1066.0001220703, ['y'] = -3183.3852539063, ['z'] = -39.163482666016 ,["distance"] = 3 },
-    vente={ ['x'] = -2168.3701171875, ['y'] = 5198.0712890625, ['z'] = 17.028638839722 ,["distance"] = 1 },
+    vente={ ['x'] = 2745.2131347656, ['y'] = 1487.2316894531, ['z'] = 30.791774749756,["distance"] = 1 },
 }
 
 function drawTxt(text,font,centre,x,y,scale,r,g,b,a)
@@ -564,10 +564,10 @@ Citizen.CreateThread(function()
       distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.vente.x, Positions.vente.y, Positions.vente.z, true)
       if not IsInVehicle() then
         if distance < Positions.vente.distance then
-            if isSell == false then
+            if isSell == false and (User.subjob == 11 or User.subjob == 12 or User.subjob == 13 or User.subjob == 14) then
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~commencer à vendre~w~.", 0)
             end
-            if isSell == true then
+            if isSell == true and (User.subjob == 11 or User.subjob == 12 or User.subjob == 13 or User.subjob == 14) then
               ShowInfo("Appuyez sur ~INPUT_CONTEXT~ pour ~r~arrêter de vendre~w~.", 0)
             end
             if IsControlJustPressed(1, 38) and isSell == false then
@@ -610,7 +610,7 @@ Citizen.CreateThread(function()
                 --local price = math.ceil(PriceBourse)
 				ShowMsgtime.msg = '~r~-1 Wax ~w~/ ~r~+'.. 1500 ..'$'
 				ShowMsgtime.time = 150
-				TriggerEvent("player:sellItem", 64, 1500)
+				TriggerEvent("player:sellItem", 65, 1500)
 			else
 				TriggerEvent("itinerance:notif", "~r~Vous devez avoir moins de 31 wax pour vendre !")
 			end
@@ -651,7 +651,7 @@ Citizen.CreateThread(function()
     local playerPos = GetEntityCoords(GetPlayerPed(-1))
     local distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.Entrer.x, Positions.Entrer.y, Positions.Entrer.z, true)
     if not IsInVehicle() then
-      if distance < 1.5 then
+      if distance < 1.5 and (User.subjob == 7 or User.subjob == 8 or User.subjob == 9 or User.subjob == 10) then
 --        if serviceOn == false then
           ShowInfo('~w~Appuyez sur ~INPUT_CONTEXT~ pour ~b~Entrer~w~.', 0)
           if IsControlJustPressed(1,38) then
