@@ -433,6 +433,9 @@ AddEventHandler('apart:getitem', function(name)
 	  TriggerEvent('es:getPlayerFromId', source, function(user)
     local player = user.identifier
     local name = name
+    for i=1,#items do
+        items[i].valeur = 0
+    end
     if (mode == "Async") then
       MySQL.Async.fetchAll("SELECT * FROM appartement_item WHERE name = @nom ", {['@nom'] = tostring(name)}, function (result)
         --if (result) then
@@ -492,14 +495,15 @@ AddEventHandler('apart:additem_s', function(id,name)
 	  TriggerEvent('es:getPlayerFromId', source, function(user)
     local player = user.identifier
     local name = name
+    local item_id = id
     --print("addItem_s")
     if (mode == "Async") then
       MySQL.Async.fetchAll("SELECT * FROM appartement_item WHERE name = @nom and item_id = @id ", {['@nom'] = tostring(name),['@id'] = tostring(id)}, function (result)
-        if (result[1]) then
+        if (result[1] ~= nil) then
           MySQL.Async.execute("UPDATE appartement_item SET `qty`= @qty WHERE name = @nom and item_id = @id",{['@qty'] = tostring(result[1].qty+1), ['@nom'] = tostring(result[1].name) ,['@id'] = result[1].item_id}, function(data)
           end)
         else
-            MySQL.Async.execute("INSERT INTO appartement_item (`identifier`, `name`, `item_id`,`qty`) VALUES (@username, @name, @id,@qty)", {['@username'] = player, ['@name'] = name, ['@item_id'] = id,["@qty"] = 1})
+            MySQL.Async.execute("INSERT INTO appartement_item (`identifier`, `name`, `item_id`,`qty`) VALUES (@username, @name, @id,@qty)", {['@username'] = player, ['@name'] = name, ['@id'] = tonumber(item_id),["@qty"] = 1})
         end
       end)
     end

@@ -15,7 +15,7 @@ AddEventHandler('menulost:hire_s', function(netID)
   end)
   TriggerEvent('es:getPlayerFromId', playerSource, function(owner)
 	if (owner) then
-		local identifier = user.identifier
+		local identifier = owner.identifier
 		LaLife.Player.Manager.RemovePlayerMoney(owner,10000)
 	end
   end)

@@ -7,7 +7,7 @@ local inService = {
     ["police"] = {},
     ["medic"] = {},
     ["taxi"] = {},
-	  ["tow"] = {},
+	["tow"] = {},
     ["garda"] = {},
 }
 local callActive = {
