@@ -651,7 +651,7 @@ Citizen.CreateThread(function()
     local playerPos = GetEntityCoords(GetPlayerPed(-1))
     local distance = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, Positions.Entrer.x, Positions.Entrer.y, Positions.Entrer.z, true)
     if not IsInVehicle() then
-      if distance < 1.5 and (User.subjob == 7 or User.subjob == 8 or User.subjob == 9 or User.subjob == 10) then
+      if distance < 1.5 and (User.subjob == 11 or User.subjob == 12 or User.subjob == 13 or User.subjob == 14) then
 --        if serviceOn == false then
           ShowInfo('~w~Appuyez sur ~INPUT_CONTEXT~ pour ~b~Entrer~w~.', 0)
           if IsControlJustPressed(1,38) then
