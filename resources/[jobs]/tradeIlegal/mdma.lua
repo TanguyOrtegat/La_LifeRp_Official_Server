@@ -608,10 +608,10 @@ Citizen.CreateThread(function()
 				ShowMsgtime.time = 150
 				TriggerEvent("player:sellItem", 50, 1500)
 			else
-				--TriggerEvent("itinerance:notif", "~r~Vous devez avoir moins de 31 Ecstasy pour vendre !")
+				TriggerEvent("itinerance:notif", "~r~Vous devez avoir moins de 31 Ecstasy pour vendre !")
 			end
           else
-            --TriggerEvent("itinerance:notif", "~r~Vous n'avez pas d'Ecstasy !")
+            TriggerEvent("itinerance:notif", "~r~Vous n'avez pas d'Ecstasy !")
             isSell = false
           end
       end

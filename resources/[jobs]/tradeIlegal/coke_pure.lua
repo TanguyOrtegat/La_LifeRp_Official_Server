@@ -616,10 +616,10 @@ Citizen.CreateThread(function()
 				ShowMsgtime.time = 150
 				TriggerEvent("player:sellItem", 56, 1500)
 			else
-				--TriggerEvent("itinerance:notif", "~r~Vous devez avoir moins de 31 Coke purifier 100% pour vendre !")
+				TriggerEvent("itinerance:notif", "~r~Vous devez avoir moins de 31 Coke purifier 100% pour vendre !")
 			end
           else
-            --TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de Coke purifier 100% !")
+            TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de Coke purifier 100% !")
             isSell = false
           end
       end
