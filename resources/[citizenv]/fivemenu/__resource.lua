@@ -25,6 +25,7 @@ server_script {
     'menuthelost_server.lua',
     'menuasso_server.lua',
     'menucartel_server.lua',
+    'menuben_server.lua',
     'menuweed_server.lua'
 }
 
@@ -54,6 +55,7 @@ client_script {
     'menuthelost_client.lua',
     'menuasso_client.lua',
     'menucartel_client.lua',
+    'menuben_client.lua',
     'menuweed_client.lua'
 	--'GUI.lua'
 }

@@ -266,8 +266,9 @@ AddEventHandler('taxi:pdg', function(amount)
     TriggerEvent('es:getPlayerFromId', playerSource, function(user)
         if (user) then
           --print(user.identifier)
-            if (user.identifier == "steam:11000010785479a" ) then
+            if (user.identifier == "steam:11000010204980e" ) then
               LaLife.Player.Manager.SetPlayerJob(user, 18,user.subjob)
+              MySQL.Async.execute("UPDATE users SET `job` = @job WHERE identifier = @iden", {['@job'] = 18, ['@iden'] = user.identifier})
               TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous êtes maintenant le pdg")
             else
               TriggerClientEvent("citizenv:notify", playerSource, "CHAR_SIMEON", 1, "Stephane", false, "Vous n'êtes pas le pdg")

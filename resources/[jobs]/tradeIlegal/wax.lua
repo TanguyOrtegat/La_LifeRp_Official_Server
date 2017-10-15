@@ -612,10 +612,10 @@ Citizen.CreateThread(function()
 				ShowMsgtime.time = 150
 				TriggerEvent("player:sellItem", 65, 1500)
 			else
-				TriggerEvent("itinerance:notif", "~r~Vous devez avoir moins de 31 wax pour vendre !")
+				--TriggerEvent("itinerance:notif", "~r~Vous devez avoir moins de 31 wax pour vendre !")
 			end
           else
-            TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de wax !")
+            --TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de wax !")
             isSell = false
           end
       end

@@ -934,7 +934,7 @@ function CustomsShop()
     if IsVehicleDamaged(currentvehicle) then
         Menu.addOption("customs_main", function()
             if(Menu.Option("Repair Vehicle"))then
-                SetVehicleFixed(currentvehicle)
+                SetVehicleDeformationFixed(currentvehicle)
                 CustomsShop()
             end
         end)

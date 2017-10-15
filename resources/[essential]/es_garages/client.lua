@@ -295,6 +295,7 @@ local vehicule = {"verlierer2",
 "ruiner",
 "sabregt",
 "voodoo2",
+"voodoo",
 "vigero",
 "virgo",
 "coquette3",
@@ -666,7 +667,28 @@ function UpdateVehicule()
 			local mods16 = GetVehicleMod(veh, 16)
 			local mods23 = GetVehicleMod(veh, 23)
 			local mods24 = GetVehicleMod(veh, 24)
-
+			local mods25 = GetVehicleMod(veh, 25)
+		    local mods27 = GetVehicleMod(veh, 27)
+		    local mods28 = GetVehicleMod(veh, 28)
+		    local mods29 = GetVehicleMod(veh, 29)
+		    local mods30 = GetVehicleMod(veh, 30)
+		    local mods31 = GetVehicleMod(veh, 31)
+		    local mods32 = GetVehicleMod(veh, 32)
+		    local mods33 = GetVehicleMod(veh, 33)
+		    local mods34 = GetVehicleMod(veh, 34)
+		    local mods35 = GetVehicleMod(veh, 35)
+		    local mods36 = GetVehicleMod(veh, 36)
+		    local mods37 = GetVehicleMod(veh, 37)
+		    local mods38 = GetVehicleMod(veh, 38)
+		    local mods39 = GetVehicleMod(veh, 39)
+		    local mods40 = GetVehicleMod(veh, 40)
+		    local mods41 = GetVehicleMod(veh, 41)
+		    local mods42 = GetVehicleMod(veh, 42)
+		    local mods43 = GetVehicleMod(veh, 43)
+		    local mods44 = GetVehicleMod(veh, 44)
+		    local mods45 = GetVehicleMod(veh, 45)
+		    local mods46 = GetVehicleMod(veh, 46)
+		    local mods48 = GetVehicleMod(veh, 48)
 			if IsToggleModOn(veh,18) then
 				turbo = "on"
 			else
@@ -717,7 +739,7 @@ function UpdateVehicule()
 					model = car
 				end
 			end
-			TriggerServerEvent('ply_garages:UpdateVeh', plate, plateindex,primarycolor,secondarycolor,pearlescentcolor,wheelcolor,neoncolor1,neoncolor2,neoncolor3,windowtint,wheeltype,mods0,mods1,mods2,mods3,mods4,mods5,mods6,mods7,mods8,mods9,mods10,mods11,mods12,mods13,mods14,mods15,mods16,turbo,tiresmoke,xenon,mods23,mods24,neon0,neon1,neon2,neon3,bulletproof,smokecolor1,smokecolor2,smokecolor3,variation,model)
+			TriggerServerEvent('ply_garages:UpdateVeh', plate, plateindex,primarycolor,secondarycolor,pearlescentcolor,wheelcolor,neoncolor1,neoncolor2,neoncolor3,windowtint,wheeltype,mods0,mods1,mods2,mods3,mods4,mods5,mods6,mods7,mods8,mods9,mods10,mods11,mods12,mods13,mods14,mods15,mods16,turbo,tiresmoke,xenon,mods23,mods24,neon0,neon1,neon2,neon3,bulletproof,smokecolor1,smokecolor2,smokecolor3,variation,model,mods25,mods27,mods28,mods29,mods30,mods31,mods32,mods33,mods34,mods35,mods36,mods37,mods38,mods39,mods40,mods41,mods42,mods43,mods44,mods45,mods46,mods48)
 		else
 			drawNotification(lang_string.text6)
 		end
@@ -866,8 +888,8 @@ AddEventHandler("playerSpawned", function()
     TriggerServerEvent("ply_garages:Lang", lang)
     configLang(lang)
 end)
-AddEventHandler('ply_garages:SpawnVehicle', function(vehicle,damage, plate, state, primarycolor, secondarycolor, pearlescentcolor, wheelcolor, plateindex, neoncolor1, neoncolor2, neoncolor3, windowtint, wheeltype, mods0, mods1, mods2, mods3, mods4, mods5, mods6, mods7, mods8, mods9, mods10, mods11, mods12, mods13, mods14, mods15, mods16, turbo,tiresmoke,xenon, mods23, mods24,neon0,neon1,neon2,neon3,bulletproof,smokecolor1,smokecolor2,smokecolor3,variation)
-	Citizen.Trace(tostring(damage))
+AddEventHandler('ply_garages:SpawnVehicle', function(vehicle,damage, plate, state, primarycolor, secondarycolor, pearlescentcolor, wheelcolor, plateindex, neoncolor1, neoncolor2, neoncolor3, windowtint, wheeltype, mods0, mods1, mods2, mods3, mods4, mods5, mods6, mods7, mods8, mods9, mods10, mods11, mods12, mods13, mods14, mods15, mods16, turbo,tiresmoke,xenon, mods23, mods24,neon0,neon1,neon2,neon3,bulletproof,smokecolor1,smokecolor2,smokecolor3,variation,
+mods25,mods27,mods28,mods29,mods30,mods31,mods32,mods33,mods34,mods35,mods36,mods37,mods38,mods39,mods40,mods41,mods42,mods43,mods44,mods45,mods46,mods48)
 	local car = GetHashKey(vehicle)
   local plate = plate
   local state = state
@@ -897,6 +919,50 @@ AddEventHandler('ply_garages:SpawnVehicle', function(vehicle,damage, plate, stat
   local mods14 = tonumber(mods14)
   local mods15 = tonumber(mods15)
   local mods16 = tonumber(mods16)
+  local mods25 = tonumber(mods25)
+  local mods27 = tonumber(mods27)
+  local mods28 = tonumber(mods28)
+  local mods29 = tonumber(mods39)
+  local mods30 = tonumber(mods30)
+  local mods31 = tonumber(mods31)
+  local mods32 = tonumber(mods32)
+  local mods33 = tonumber(mods33)
+  local mods34 = tonumber(mods34)
+  local mods35 = tonumber(mods35)
+  local mods36 = tonumber(mods36)
+  local mods37 = tonumber(mods37)
+  local mods38 = tonumber(mods38)
+  local mods39 = tonumber(mods39)
+  local mods40 = tonumber(mods40)
+  local mods41 = tonumber(mods41)
+  local mods42 = tonumber(mods42)
+  local mods43 = tonumber(mods43)
+  local mods44 = tonumber(mods44)
+  local mods45 = tonumber(mods45)
+  local mods46 = tonumber(mods46)
+  local mods48 = tonumber(mods48)
+  Citizen.Trace("le 25 "..tostring(mods25))
+  Citizen.Trace("le 27 "..tostring(mods27))
+  Citizen.Trace("le 28 "..tostring(mods28))
+  Citizen.Trace("le 29 "..tostring(mods29))
+  Citizen.Trace("le 30 "..tostring(mods30))
+  Citizen.Trace("le 31 "..tostring(mods31))
+  Citizen.Trace("le 32 "..tostring(mods32))
+  Citizen.Trace("le 33 "..tostring(mods33))
+  Citizen.Trace("le 34 "..tostring(mods34))
+  Citizen.Trace("le 35 "..tostring(mods35))
+  Citizen.Trace("le 36 "..tostring(mods36))
+  Citizen.Trace("le 37 "..tostring(mods37))
+  Citizen.Trace("le 38 "..tostring(mods38))
+  Citizen.Trace("le 39 "..tostring(mods39))
+  Citizen.Trace("le 40 "..tostring(mods40))
+  Citizen.Trace("le 41 "..tostring(mods41))
+  Citizen.Trace("le 42 "..tostring(mods42))
+  Citizen.Trace("le 43 "..tostring(mods43))
+  Citizen.Trace("le 44 "..tostring(mods44))
+  Citizen.Trace("le 45 "..tostring(mods45))
+Citizen.Trace("le 46 "..tostring(mods46))
+Citizen.Trace("le 48 "..tostring(mods48))
   local turbo = turbo
   local tiresmoke = tiresmoke
   local xenon = xenon
@@ -912,7 +978,6 @@ AddEventHandler('ply_garages:SpawnVehicle', function(vehicle,damage, plate, stat
   local smokecolor3 = smokecolor3
   local variation = variation
 	local damage = damage
-	Citizen.Trace(tostring(damage))
   Citizen.CreateThread(function()
     Citizen.Wait(1000)
     local caisseo = GetClosestVehicle(garageSelected.x, garageSelected.y, garageSelected.z, 3.000, 0, 70)
@@ -961,6 +1026,29 @@ AddEventHandler('ply_garages:SpawnVehicle', function(vehicle,damage, plate, stat
         SetVehicleMod(veh, 14, mods14)
         SetVehicleMod(veh, 15, mods15)
         SetVehicleMod(veh, 16, mods16)
+		SetVehicleMod(veh, 25, mods25)
+		SetVehicleMod(veh, 27, mods27)
+		SetVehicleMod(veh, 28, mods28)
+		SetVehicleMod(veh, 29, mods29)
+		SetVehicleMod(veh, 30, mods30)
+		SetVehicleMod(veh, 31, mods31)
+		SetVehicleMod(veh, 32, mods32)
+		SetVehicleMod(veh, 33, mods33)
+		SetVehicleMod(veh, 34, mods34)
+		SetVehicleMod(veh, 35, mods35)
+		SetVehicleMod(veh, 36, mods36)
+		SetVehicleMod(veh, 37, mods37)
+		SetVehicleMod(veh, 38, mods38)
+		SetVehicleMod(veh, 39, mods39)
+		SetVehicleMod(veh, 40, mods40)
+		SetVehicleMod(veh, 41, mods41)
+		SetVehicleMod(veh, 42, mods42)
+		SetVehicleMod(veh, 43, mods43)
+		SetVehicleMod(veh, 44, mods44)
+		SetVehicleMod(veh, 45, mods45)
+		SetVehicleMod(veh, 46, mods46)
+		SetVehicleMod(veh, 48, mods48)
+
         if turbo == "on" then
           ToggleVehicleMod(veh, 18, true)
         else

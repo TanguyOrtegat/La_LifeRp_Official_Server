@@ -12,7 +12,7 @@ changeYourJob = {
 
 jobsname = {"Sans Emploi", "Nettoyeur de piscines", "Éboueur", "Mineur", "Chauffeur de taxi", "Livreur de bois", "Livreur de citerne", "Livreur de conteneur", "Livreur de médicaments", "Policier", "Fossoyeur", "Préposé à la morgue", "Ambulancier","Président", "Dépanneur", "Dépanneur (patron)", "Chauffeur de taxi", "Chauffeur de taxi (patron)",
  "FBI", "Secrétaire", "Journaliste", "Pêcheur", "Vigneron", "Metallurgiste", "Agriculteur","LaGarda","LaGarda (patron)","LaGardaSecurite","Animateur","LsCustom 1/5 (patron)","LsCustom 1/5","LsCustom 2/5 (patron)","LsCustom 2/5","LsCustom 3/5 (patron)","LsCustom 3/5","LsCustom 4/5 (patron)","LsCustom 4/5","LsCustom 5/5 (patron)","LsCustom 5/5",
-"Sans Emploi","Sans Emploi","Sans Emploi","Association Motar Propriétaire","Association Motar","Sans Emploi","Sans Emploi","Sans Emploi","Psychologue","Sans Emploi","Chef-Médecin","Médecin","Infirmier","Aide-soignant"}
+"Sans Emploi","Sans Emploi","Sans Emploi","Association Motar Propriétaire","Association Motar","Sans Emploi","Sans Emploi","Sans Emploi","Psychologue","Sans Emploi","Chef-Médecin","Médecin","Infirmier","Aide-soignant","Benny's (patron)"}
 
 hair = {
   {name="Cheveux 1", id=108, zero=0},
@@ -352,6 +352,7 @@ apart_cache = {
   {['x'] = 976.78576660156, ['y'] = -104.14051818848, ['z'] = 74.845184326172 , ["name"] = 'TheLost black' },
   {['x'] = 1044.4772949219, ['y'] = -3194.9265136719, ['z'] = -38.15816116333, ["name"] = 'Redneck black Coffre'},
   {['x'] = 2428.8916015625, ['y'] = 4969.56640625, ['z'] = 42.347606658936,["name"] = 'Redneck Coffre'},
+  { ['x'] = -224.28187561035, ['y'] = -1320.5544433594, ['z'] = 30.890378952026,["name"] = 'benny Coffre' },
 }
 
 apart_agent = {
