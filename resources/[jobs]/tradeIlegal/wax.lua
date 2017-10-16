@@ -615,7 +615,7 @@ Citizen.CreateThread(function()
 				TriggerEvent("itinerance:notif", "~r~Vous devez avoir moins de 31 wax pour vendre !")
 			end
           else
-            TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de wax !")
+            --TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de wax !")
             isSell = false
           end
       end
