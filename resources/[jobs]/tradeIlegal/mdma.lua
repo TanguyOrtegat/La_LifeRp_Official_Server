@@ -611,7 +611,7 @@ Citizen.CreateThread(function()
 				TriggerEvent("itinerance:notif", "~r~Vous devez avoir moins de 31 Ecstasy pour vendre !")
 			end
           else
-            TriggerEvent("itinerance:notif", "~r~Vous n'avez pas d'Ecstasy !")
+            --TriggerEvent("itinerance:notif", "~r~Vous n'avez pas d'Ecstasy !")
             isSell = false
           end
       end
