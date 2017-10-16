@@ -2352,7 +2352,7 @@ function getMainMenu()
       VMenu.AddFunc(98, "Menu Custom", "menuls2:menuOG", {User.job}, lang.common.access)
     end
     if tonumber(User.job) == 54 or tonumber(User.job) == 55 then
-      VMenu.AddFunc(98, "Menu Benny", "menubenny:menuOG", {User.job}, lang.common.access)
+      VMenu.AddFunc(98, "Menu Benny", "menuben:menuOG", {User.job}, lang.common.access)
     end
     if tonumber(User.job) == 34 or tonumber(User.job) == 35 then
       VMenu.AddFunc(98, "Menu Custom", "menuls3:menuOG", {User.job}, lang.common.access)
