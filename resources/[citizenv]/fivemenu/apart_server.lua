@@ -473,7 +473,7 @@ AddEventHandler('apart:user_getitem', function(name)
 end)
 
 RegisterServerEvent("apart:remitem_s")
-AddEventHandler('apart:remitem_s', function(id,name)
+AddEventHandler('apart:remitem_s', function(id,name,qty)
 	local playersource = source
 	  TriggerEvent('es:getPlayerFromId', source, function(user)
     local player = user.identifier
@@ -481,7 +481,7 @@ AddEventHandler('apart:remitem_s', function(id,name)
     if (mode == "Async") then
       MySQL.Async.fetchAll("SELECT * FROM appartement_item WHERE name = @nom and item_id = @id ", {['@nom'] = tostring(name),['@id'] = tostring(id)}, function (result)
         --if (result) then)
-          MySQL.Async.execute("UPDATE appartement_item SET `qty`= @qty WHERE name = @nom and item_id = @id",{['@qty'] = tostring(result[1].qty-1), ['@nom'] = tostring(result[1].name),['@id'] = result[1].item_id}, function(data)
+          MySQL.Async.execute("UPDATE appartement_item SET `qty`= @qty WHERE name = @nom and item_id = @id",{['@qty'] = tostring(result[1].qty-qty), ['@nom'] = tostring(result[1].name),['@id'] = result[1].item_id}, function(data)
           end)
         --end
       end)
@@ -490,7 +490,7 @@ AddEventHandler('apart:remitem_s', function(id,name)
 end)
 
 RegisterServerEvent("apart:additem_s")
-AddEventHandler('apart:additem_s', function(id,name)
+AddEventHandler('apart:additem_s', function(id,name,qty)
 	local playersource = source
 	  TriggerEvent('es:getPlayerFromId', source, function(user)
     local player = user.identifier
@@ -500,10 +500,10 @@ AddEventHandler('apart:additem_s', function(id,name)
     if (mode == "Async") then
       MySQL.Async.fetchAll("SELECT * FROM appartement_item WHERE name = @nom and item_id = @id ", {['@nom'] = tostring(name),['@id'] = tostring(id)}, function (result)
         if (result[1] ~= nil) then
-          MySQL.Async.execute("UPDATE appartement_item SET `qty`= @qty WHERE name = @nom and item_id = @id",{['@qty'] = tostring(result[1].qty+1), ['@nom'] = tostring(result[1].name) ,['@id'] = result[1].item_id}, function(data)
+          MySQL.Async.execute("UPDATE appartement_item SET `qty`= @qty WHERE name = @nom and item_id = @id",{['@qty'] = tostring(result[1].qty+qty), ['@nom'] = tostring(result[1].name) ,['@id'] = result[1].item_id}, function(data)
           end)
         else
-            MySQL.Async.execute("INSERT INTO appartement_item (`identifier`, `name`, `item_id`,`qty`) VALUES (@username, @name, @id,@qty)", {['@username'] = player, ['@name'] = name, ['@id'] = tonumber(item_id),["@qty"] = 1})
+            MySQL.Async.execute("INSERT INTO appartement_item (`identifier`, `name`, `item_id`,`qty`) VALUES (@username, @name, @id,@qty)", {['@username'] = player, ['@name'] = name, ['@id'] = tonumber(item_id),["@qty"] = qty})
         end
       end)
     end

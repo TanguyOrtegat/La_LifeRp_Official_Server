@@ -288,3 +288,28 @@ end)
 end)
 end)
 end)
+
+RegisterServerEvent("lalife:dropMask_s")
+AddEventHandler("lalife:dropMask_s", function()
+  local ouvert = 1
+local playerSource = source
+  TriggerEvent('es:getPlayerFromId', playerSource, function(user)
+      if (user) then
+  local player = user.identifier
+      MySQL.Async.execute("UPDATE outfits SET `mask`=@value,`mask_text`=@value2 WHERE identifier = @identifier", {['@value'] = 0,['@value2'] = 0, ['@identifier'] = player})
+  end
+end)
+end)
+
+RegisterServerEvent("lalife:dropWeapon_s")
+AddEventHandler("lalife:dropWeapon_s", function(model)
+  local ouvert = 1
+local playerSource = source
+  TriggerEvent('es:getPlayerFromId', playerSource, function(user)
+      if (user) then
+  local player = user.identifier
+    print(model)
+      MySQL.Async.execute("DELETE FROM user_weapons WHERE identifier = @identifier and weapon_model=@model", {['@model'] = model, ['@identifier'] = player})
+  end
+end)
+end)

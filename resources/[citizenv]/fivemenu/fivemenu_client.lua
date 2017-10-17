@@ -2389,6 +2389,7 @@ function getMainMenu()
 		VMenu.AddFunc(98, lang.menu.mainmenu.givecash, "vmenu:giveCash", {User.money}, lang.common.access)
 		VMenu.AddFunc(98, lang.menu.mainmenu.givedcash, "vmenu:giveDCash", {User.dirtymoney}, lang.common.access)
         --VMenu.AddFunc(98, "Jeter l'arme", "lalife:dropWeapon", {}, lang.common.access)
+        VMenu.AddFunc(98, "Jeter le masque", "lalife:dropMask", {}, lang.common.access)
     VMenu.AddFunc(98, "Mettre/Enlever le masque", "vmenu:switchMask", {}, lang.common.access)
 		VMenu.AddSep(98, lang.menu.mainmenu.inventory)
 		for ind, value in ipairs(ITEMS) do

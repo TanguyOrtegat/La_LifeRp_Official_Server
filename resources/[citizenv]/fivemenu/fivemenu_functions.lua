@@ -534,3 +534,30 @@ AddEventHandler("vmenu:teleport_marker", function(target, pos)
 
 	end)
 end)
+
+RegisterNetEvent("lalife:dropWeapon")
+AddEventHandler('lalife:dropWeapon', function()
+	Citizen.Trace("drop")
+    local playerPed = GetPlayerPed(-1)
+    local validWeapon, weaponHash = GetCurrentPedWeapon(playerPed, 1)
+	Citizen.Trace(weaponHash)
+    if validWeapon then
+        local pos = GetEntityCoords(playerPed)
+        SetPedDropsInventoryWeapon(playerPed, weaponHash, pos.x, pos.y, pos.z, 1)
+		for _,w in pairs(weapons) do
+			Citizen.Trace(w.hash)
+			if(tonumber(w.hash) == tonumber(weaponHash)) then
+				Citizen.Trace("hash good")
+				TriggerServerEvent("lalife:dropWeapon_s",w.name)
+				TriggerEvent("vmenu:anim" ,"pickup_object", "pickup_low")
+				break;
+			end
+		end
+    end
+end)
+
+RegisterNetEvent("lalife:dropMask")
+AddEventHandler("lalife:dropMask", function()
+	TriggerServerEvent("lalife:dropMask_s")
+	TriggerEvent("vmenu:anim" ,"pickup_object", "pickup_low")
+end)

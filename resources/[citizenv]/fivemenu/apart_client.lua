@@ -4,6 +4,15 @@
 
 local displayApartBlips = true --SET TO TRUE IF YOU WANT TO ADD BLIPS FOR APPARTMENTS
 
+local id = 0
+local nom = ""
+local nb = 0
+local remitem = 0
+local envoi = 0
+local recois = 0
+local additem = 0
+local waittemp = 0
+
 local interiors = {
     [1] = { ["price"] = 1500000, ["xe"] = -1910.7265625, ["ye"] = -576.919189453125, ["ze"] = 19.0969314575195, ["he"] = 0.00, ["xo"] = -1910.099609375, ["yo"] = -574.97265625, ["zo"] = 19.0956039428711, ["ho"] = 0.00, ["xc"] = -1905.1245117188, ["yc"] = -570.59210205078, ["zc"] = 19.097215652466, ["hc"] = 0.000, ["name"] = 'Great Ocean Rte Office'},
     [2] = { ["price"] = 3000000, ["xe"] = -269.457214355469, ["ye"] = -955.855529785156, ["ze"] = 31.2231330871582, ["he"] = 0.00, ["xo"] = -270.538421630859, ["yo"] = -940.73974609375, ["zo"] = 92.5109481811523, ["ho"] = 0.00, ["xc"] = -273.08609008789, ["yc"] = -949.53454589844, ["zc"] = 92.519584655762, ["hc"] = 0.000, ["name"] = '3 Alta Street'},
@@ -373,8 +382,8 @@ AddEventHandler("apart:MenuCache",function()
                 VMenu.AddFunc(25,txt[lang]['deposersale'],"apart:deposersale",{interiors[i].name},"Déposer")
                 VMenu.AddFunc(25,txt[lang]['retirerargent'],"apart:retirerargent",{interiors[i].name},"Retirer")
                 VMenu.AddFunc(25,txt[lang]['retirersale'],"apart:retirersale",{interiors[i].name},"Retirer")
-                        VMenu.AddFunc(25,"Ajouter un item","apart:Madditem",{},"Déposer")
-                        VMenu.AddFunc(25,"Retirer un item","apart:Mremitem",{},"Retirer")
+                VMenu.AddFunc(25,"Ajouter un item","apart:Madditem",{},"Déposer")
+                VMenu.AddFunc(25,"Retirer un item","apart:Mremitem",{},"Retirer")
             end
                 VMenu.AddFunc(25,"Fermer le menu","apart:CloseMenu",{},"Fermer")
         else
@@ -384,7 +393,7 @@ AddEventHandler("apart:MenuCache",function()
     end
 end)
 
-AddEventHandler("apart:Mremitem",function()
+AddEventHandler("apart:Mremitem",function(target)
     VMenu.ResetMenu(25, "", "default")
     VMenu.curItem = 1
     for i=1, #interiors do
@@ -392,16 +401,65 @@ AddEventHandler("apart:Mremitem",function()
             TriggerServerEvent("apart:getitem", interiors[i].name)
               Wait(750)
                 for j=1,#item do
-                    --Citizen.Trace(item[1].valeur)
-                    --Citizen.Trace(item[j].libelle)
                     if (tonumber(item[j].valeur) > 0) then
-                        VMenu.AddFunc(25,tostring(item[j].libelle).." "..":".." "..tostring(item[j].valeur),"apart:remitem",{j,interiors[i].name},"Retirer")
+                        VMenu.AddFunc(25,tostring(item[j].libelle).." "..":".." "..tostring(item[j].valeur),"removeitem",{j,interiors[i].name,item[j].valeur},"Retirer")
                     end
                 end
                   VMenu.AddFunc(25,"Retour","apart:MenuCache",{},"Retour")
             VMenu.AddFunc(25,txt[lang]['fermermenu'],"apart:CloseMenu",{},"Fermer")
         end
     end
+end)
+
+AddEventHandler("removeitem",function(target,iditem,nom,qty)
+    DisplayOnscreenKeyboard(true, "FMMC_KEY_TIP8", "", "", "", "", "", 120)
+    envoi = 1
+    Citizen.Trace(qty)
+    id = iditem
+    nb = qty
+    nomApart = nom
+end)
+
+Citizen.CreateThread(function()
+	while true do
+		Wait(0)
+		if envoi == 1 then
+			if UpdateOnscreenKeyboard() == 3 then
+				envoi = 0
+			elseif UpdateOnscreenKeyboard() == 1 then
+				local txt = GetOnscreenKeyboardResult()
+				if (string.len(txt) > 0) and (string.match(txt, '%d+')) then -- BEAU REGEX PATTERN EN LUA PARCE QUE C'EST PAUVRE
+					txt = tonumber(txt)
+					if nb >= txt then
+						if txt > 0 then
+							remitem = txt
+							envoi = 2
+						else
+							TriggerEvent("itinerance:notif", "~r~ Vous devez entrer un nombre positif")
+							envoi = 0
+							nb = 0
+						end
+					else
+						TriggerEvent("itinerance:notif", "~r~ Vous n'avez pas assez d'argent")
+						envoi = 0
+						nb = 0
+					end
+				else
+					TriggerEvent("itinerance:notif", "~r~ Entrer un montant valide")
+					envoi = 0
+					nb = 0
+				end
+			elseif UpdateOnscreenKeyboard() == 2 then
+				envoi = 0
+				nb = 0
+			end
+		end
+		if envoi == 2 then
+			TriggerEvent('apart:remitem')
+			envoi = 0
+			nb = 0
+		end
+	end
 end)
 
 AddEventHandler("apart:Madditem",function()
@@ -412,10 +470,8 @@ AddEventHandler("apart:Madditem",function()
             TriggerServerEvent("apart:user_getitem", interiors[i].name)
               Wait(750)
                 for j=1, #item do
-                    --Citizen.Trace(user_item[j].libelle)
-                    --Citizen.Trace(item[i].value)
                     if (tonumber(item[j].valeur) > 0) then
-                        VMenu.AddFunc(25,tostring(item[j].libelle).." "..":".." "..tostring(item[j].valeur),"apart:additem",{j,interiors[i].name},"Retirer")
+                        VMenu.AddFunc(25,tostring(item[j].libelle).." "..":".." "..tostring(item[j].valeur),"additem",{j,interiors[i].name,item[j].valeur},"Retirer")
                     end
                 end
             VMenu.AddFunc(25,"Retour","apart:MenuCache",{},"Retour")
@@ -424,25 +480,88 @@ AddEventHandler("apart:Madditem",function()
     end
 end)
 
-AddEventHandler("apart:additem",function(target,id,nom)
-  TriggerServerEvent("apart:additem_s",id,nom)
+AddEventHandler("additem",function(target,iditem,nom,qty)
+    DisplayOnscreenKeyboard(true, "FMMC_KEY_TIP8", "", "", "", "", "", 120)
+    recois = 1
+    Citizen.Trace(qty)
+    id = iditem
+    nb = qty
+    nomApart = nom
+end)
+
+Citizen.CreateThread(function()
+	while true do
+		Wait(0)
+		if recois == 1 then
+			if UpdateOnscreenKeyboard() == 3 then
+				recois = 0
+			elseif UpdateOnscreenKeyboard() == 1 then
+				local txt = GetOnscreenKeyboardResult()
+				if (string.len(txt) > 0) and (string.match(txt, '%d+')) then -- BEAU REGEX PATTERN EN LUA PARCE QUE C'EST PAUVRE
+					txt = tonumber(txt)
+					if nb >= txt then
+						if txt > 0 then
+							additem = txt
+							recois = 2
+						else
+							TriggerEvent("itinerance:notif", "~r~ Vous devez entrer un nombre positif")
+							recois = 0
+							nb = 0
+						end
+					else
+						TriggerEvent("itinerance:notif", "~r~ Vous n'avez pas assez d'argent")
+						recois = 0
+						nb = 0
+					end
+				else
+					TriggerEvent("itinerance:notif", "~r~ Entrer un montant valide")
+					recois = 0
+					nb = 0
+				end
+			elseif UpdateOnscreenKeyboard() == 2 then
+				recois = 0
+				nb = 0
+			end
+		end
+		if recois == 2 then
+			TriggerEvent('apart:additem')
+			recois = 0
+			nb = 0
+		end
+	end
+end)
+
+AddEventHandler("apart:additem",function()
+  TriggerServerEvent("apart:additem_s",id,nomApart,additem)
   --TriggerEvent("player:receiveItem", tonumber(id), 1)
 
   Wait(100)
   item = tonumber(id)
-  TriggerEvent("player:looseItem", item, 1)
-  Wait(1000)
-  TriggerEvent("apart:Madditem")
+  TriggerEvent("player:looseItem", tonumber(id), additem)
+    TriggerEvent("apart:CloseMenu")
+  waittemp = (additem*100)
+    TriggerEvent("itinerance:notif","Vous devez attendre "..(waittemp/100).." secondes avant de pouvoir bouger.")
+  while (waittemp>0) do
+      DisableAllControlActions(0)
+      waittemp = waittemp-1
+      Wait(0)
+  end
 end)
 
-AddEventHandler("apart:remitem",function(target,id,nom)
-  TriggerServerEvent("apart:remitem_s",id,nom)
+AddEventHandler("apart:remitem",function()
+  TriggerServerEvent("apart:remitem_s",id,nomApart,remitem)
   --TriggerEvent("player:receiveItem", tonumber(id), 1)
-  Citizen.Trace(id)
   Wait(100)
-  TriggerEvent("inventory:giveItem_f", tonumber(id), 1)
-  Wait(1000)
-  TriggerEvent("apart:Mremitem")
+  Citizen.Trace(id)
+  TriggerEvent("inventory:giveItem_f", tonumber(id), remitem)
+TriggerEvent("apart:CloseMenu")
+  waittemp = (remitem*100)
+  TriggerEvent("itinerance:notif","Vous devez attendre "..(waittemp/100).." secondes avant de pouvoir bouger.")
+  while (waittemp>0) do
+      DisableAllControlActions(0)
+      waittemp = waittemp-1
+      Wait(0)
+  end
 end)
 
 --function EMenuCache()
@@ -494,7 +613,7 @@ AddEventHandler("apart:deposerargent",function(target,apart)
         local txt = GetOnscreenKeyboardResult()
         if (string.len(txt) > 0) then
             TriggerServerEvent("apart:depositcash", txt, apart)
-      Wait(800)
+            Wait(800)
            TriggerEvent("apart:MenuCache")
         end
     end
@@ -510,7 +629,7 @@ AddEventHandler("apart:deposersale",function(target,apart)
         local txt = GetOnscreenKeyboardResult()
         if (string.len(txt) > 0) then
             TriggerServerEvent("apart:depositdirtycash", txt, apart)
-      Wait(800)
+            Wait(800)
             TriggerEvent("apart:MenuCache")
         end
     end
@@ -599,7 +718,6 @@ AddEventHandler("apart:EExit",function()
 end)
 
 AddEventHandler("apart:MenuAppartement",function()
-  VMenu.apart = true
   VMenu.curItem = 1
     VMenu.ResetMenu(23, "", "default")
 --  Menu.hidden = false
