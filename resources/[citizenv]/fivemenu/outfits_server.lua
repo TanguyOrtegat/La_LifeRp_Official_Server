@@ -119,7 +119,7 @@ function updatetats(player,torso,bras_g,bras_d,jambe_g,jambe_d,tete)
 end
 
 RegisterServerEvent('vmenu:getFace')
-AddEventHandler('vmenu:getFace', function(e, v, t)
+AddEventHandler('vmenu:getFace', function(e, v, t,c)
     local playerSource = source
 
     TriggerEvent('es:getPlayerFromId', playerSource, function(user)
