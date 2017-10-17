@@ -447,8 +447,8 @@ AddEventHandler("vmenu:settattoos", function(target,torso,bras_g,bras_d,jambe_g,
 		TriggerServerEvent("vmenu:setclienttattoo", torso,bras_g,bras_d,jambe_g,jambe_d,tete,price)
 end)
 
-AddEventHandler("vmenu:getclientFace", function(target, sex, face, face_text) -- target = Dernier joueur à avoir parlé, pas besoin ici. Mais obligatoire !
-	TriggerServerEvent("vmenu:getFace", sex, face, face_text)
+AddEventHandler("vmenu:getclientFace", function(target, sex, face, face_text,couleur) -- target = Dernier joueur à avoir parlé, pas besoin ici. Mais obligatoire !
+	TriggerServerEvent("vmenu:getFace", sex, face, face_text,couleur)
 end)
 
 AddEventHandler("vmenu:spawnVeh", function(target, model, bool) -- target = Dernier joueur à avoir parlé, pas besoin ici. Mais obligatoire !
