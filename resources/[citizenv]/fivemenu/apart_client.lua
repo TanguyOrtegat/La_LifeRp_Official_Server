@@ -440,7 +440,7 @@ Citizen.CreateThread(function()
 							nb = 0
 						end
 					else
-						TriggerEvent("itinerance:notif", "~r~ Vous n'avez pas assez d'argent")
+						TriggerEvent("itinerance:notif", "~r~ Il n'y as pas assez de cet item dans le coffre")
 						envoi = 0
 						nb = 0
 					end
@@ -509,12 +509,12 @@ Citizen.CreateThread(function()
 							nb = 0
 						end
 					else
-						TriggerEvent("itinerance:notif", "~r~ Vous n'avez pas assez d'argent")
+						TriggerEvent("itinerance:notif", "~r~ Vous n'avez pas de cet item sur vous")
 						recois = 0
 						nb = 0
 					end
 				else
-					TriggerEvent("itinerance:notif", "~r~ Entrer un montant valide")
+					TriggerEvent("itinerance:notif", "~r~ Entrer un nombre valide")
 					recois = 0
 					nb = 0
 				end
