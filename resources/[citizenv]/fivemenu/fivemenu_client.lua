@@ -2148,7 +2148,8 @@ function Construct()
   VMenu.AddMenu(menu, "", "default") -- default = Header "Texte" sur fond bleu
   VMenu.AddNum(menu, "Sexe", "Sexe", 0, 1, "Changer de sexe")
   VMenu.AddNum(menu, "Face", "Face", 0, 45, "Changer de face")
-  VMenu.AddFunc(menu, "Valider", "vmenu:getclientFace", {getOpt("Sexe"),getOpt("Face"),0}, "Obtenir ce changement")
+  VMenu.AddNum(menu, "Couleur", "couleur", 0, 45, "Changer de couleur")
+  VMenu.AddFunc(menu, "Valider", "vmenu:getclientFace", {getOpt("Sexe"),getOpt("Face"),0,getOpt("couleur")}, "Obtenir ce changement")
 
   local menu = 11
   VMenu.AddMenu(menu, "", "default") -- default = Header "Texte" sur fond bleu
@@ -2732,15 +2733,15 @@ Citizen.CreateThread(function()
       if model ~= nil then
         TriggerServerEvent("vmenu:lastCharInShop", model)
       end
-      VMenu.EditFunc(10, "Valider", "vmenu:getclientFace", {getOpt("Sexe"),getOpt("Face"),0}, "Obtenir ce changement")
-    elseif VOpts.toUpdate == "Face" or VOpts.toUpdate == "Face_text" then
+      VMenu.EditFunc(10, "Valider", "vmenu:getclientFace", {getOpt("Sexe"),getOpt("Face"),0,getOpt("couleur")}, "Obtenir ce changement")
+  elseif VOpts.toUpdate == "Face" or VOpts.toUpdate == "couleur" then
       -- local id = getOpt("Face")
-      SetPedHeadBlendData(GetPlayerPed(-1), getOpt("Face"), getOpt("Face"), getOpt("Face"), getOpt("Couleur"), getOpt("Couleur"), getOpt("Couleur"), 1.0, 1.0, 1.0, true)
+      SetPedHeadBlendData(GetPlayerPed(-1), getOpt("Face"), getOpt("Face"), getOpt("Face"), getOpt("couleur"), getOpt("couleur"), getOpt("couleur"), 1.0, 1.0, 1.0, true)
       -- La barbe bientôt
       --SetPedHeadOverlay(playerPed,  1,  Character['beard_1'],  (Character['beard_2'] / 10) + 0.0)    -- Beard
       --SetPedHeadOverlayColor(playerPed,  1,  1,  Character['beard_3'],  Character['beard_4'])        -- Beard Color
       SetPedComponentVariation(GetPlayerPed(-1), 0, getOpt("Face"), 0, 2)
-      VMenu.EditFunc(10, "Valider", "vmenu:getclientFace", {getOpt("Sexe"),getOpt("Face"),0}, "Obtenir ce changement")
+      VMenu.EditFunc(10, "Valider", "vmenu:getclientFace", {getOpt("Sexe"),getOpt("Face"),0,getOpt("couleur")}, "Obtenir ce changement")
     end
   end
 

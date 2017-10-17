@@ -8,8 +8,8 @@ function updateHair(player, e, v, t, y, g, h,a,b,c)
     local sourcil = a
     local sourcilcolor = b
     local sourcilcolorsec = c
-    print()
-    print(lipstick_color)
+    --print()
+    --print(lipstick_color)
     MySQL.Async.execute("UPDATE outfits SET `hair`=@hair WHERE identifier=@user",{['@hair'] = hair, ['@user'] = player})
     MySQL.Async.execute("UPDATE outfits SET `hair_text`=@hairsec WHERE identifier=@user",{['@hairsec'] = hairsec, ['@user'] = player})
     MySQL.Async.execute("UPDATE outfits SET `haircolor`=@haircolor WHERE identifier=@user",{['@haircolor'] = haircolor, ['@user'] = player})
@@ -23,9 +23,9 @@ function updateHair(player, e, v, t, y, g, h,a,b,c)
 end
 
 function updatemakeup(player,a,b,c)
-    print(a)
-    print(b)
-    print(c)
+    --print(a)
+    --print(b)
+    --print(c)
     MySQL.Async.execute("UPDATE outfits SET `makeup`=@makeup WHERE identifier=@user",{['@makeup'] = a, ['@user'] = player})
     MySQL.Async.execute("UPDATE outfits SET `lipstick`=@lipstick WHERE identifier=@user",{['@lipstick'] = b, ['@user'] = player})
     MySQL.Async.execute("UPDATE outfits SET `lipstick_color`=@lipstick_color WHERE identifier=@user",{['@lipstick_color'] = c, ['@user'] = player})
@@ -49,7 +49,7 @@ end)
 RegisterServerEvent('vmenu:getHair')
 AddEventHandler('vmenu:getHair', function(hair, hairsec, haircolor, haircolorsec, beard, beardcolor,sourcil,sourcilcolor,sourcilcolorsec)
     local playerSource = source
-    print(lipstick_color)
+    --print(lipstick_color)
     TriggerEvent('es:getPlayerFromId', playerSource, function(user)
         if (user) then
             local player = user.identifier
@@ -90,8 +90,8 @@ AddEventHandler('vmenu:setclienttattoo', function(torso,bras_g,bras_d,jambe_g,ja
     end)
 end)
 
-function updateFace(player, e, v, t)
-  print("change la face")
+function updateFace(player, e, v, t,c)
+  --print("change la face")
     local sexe = "mp_m_freemode_01"
     if e == 0 then
         sexe = "mp_m_freemode_01"
@@ -100,9 +100,11 @@ function updateFace(player, e, v, t)
     end
     local face = v
     local face_text = t
+    local couleur = c
     MySQL.Async.execute("UPDATE outfits SET `skin`=@skin WHERE identifier=@user",{['@skin'] = sexe, ['@user'] = player})
     MySQL.Async.execute("UPDATE outfits SET `face`=@face WHERE identifier=@user",{['@face'] = face, ['@user'] = player})
     MySQL.Async.execute("UPDATE outfits SET `face_text`=@face_text WHERE identifier=@user",{['@face_text'] = face_text, ['@user'] = player})
+    MySQL.Async.execute("UPDATE outfits SET `couleur`=@couleur WHERE identifier=@user",{['@couleur'] = couleur, ['@user'] = player})
 end
 
 function updatetats(player,torso,bras_g,bras_d,jambe_g,jambe_d,tete)
@@ -129,7 +131,7 @@ AddEventHandler('vmenu:getFace', function(e, v, t)
             else
                 sexe = "mp_f_freemode_01"
             end
-            updateFace(player, e, v, t)
+            updateFace(player, e, v, t,c)
         else
             TriggerEvent("es:desyncMsg")
         end
@@ -189,11 +191,10 @@ AddEventHandler('vmenu:lastChar', function()
         if (user) then
             local player = user.identifier
 
-            MySQL.Async.fetchAll("SELECT skin,face,face_text,hair,hair_text,pants,pants_text,shoes,shoes_text,torso,torso_text,shirt,shirt_text,three,three_text,seven,seven_text,haircolor,haircolor_text,hat,hat_text,glass,glass_text,watch,watch_text,beard,beard_text,sourcil,sourcilcolor,sourcilcolorsec,tattoo_bras_d,tattoo_bras_g,tattoo_jambe_g,tattoo_jambe_d,tattoo_tete,tattoo_torso,makeup,lipstick,lipstick_color FROM outfits WHERE identifier=@user",{['@user']=player}, function(result)
+            MySQL.Async.fetchAll("SELECT skin,face,face_text,hair,hair_text,pants,pants_text,shoes,shoes_text,torso,torso_text,shirt,shirt_text,three,three_text,seven,seven_text,haircolor,haircolor_text,hat,hat_text,glass,glass_text,watch,watch_text,beard,beard_text,sourcil,sourcilcolor,sourcilcolorsec,tattoo_bras_d,tattoo_bras_g,tattoo_jambe_g,tattoo_jambe_d,tattoo_tete,tattoo_torso,makeup,lipstick,lipstick_color,tattoo_dos,couleur FROM outfits WHERE identifier=@user",{['@user']=player}, function(result)
                 TriggerClientEvent("vmenu:updateChar",playerSource,{result[1].face,result[1].face_text,result[1].hair,result[1].hair_text,result[1].pants,result[1].pants_text,result[1].shoes,result[1].shoes_text,result[1].torso,result[1].torso_text,result[1].shirt,result[1].shirt_text,result[1].three,result[1].three_text,
                 result[1].seven,result[1].seven_text,result[1].haircolor,result[1].haircolor_text,result[1].skin,result[1].hat,result[1].hat_text,result[1].glass,result[1].glass_text,result[1].watch,result[1].watch_text,result[1].beard,result[1].beard_text,result[1].sourcil,result[1].sourcilcolor,result[1].sourcilcolorsec,
-                result[1].tattoo_bras_d,result[1].tattoo_bras_g,result[1].tattoo_jambe_g,result[1].tattoo_jambe_d,result[1].tattoo_tete,result[1].tattoo_torso,result[1].makeup,result[1].lipstick,result[1].lipstick_color})
-                print(result[1].makeup)
+                result[1].tattoo_bras_d,result[1].tattoo_bras_g,result[1].tattoo_jambe_g,result[1].tattoo_jambe_d,result[1].tattoo_tete,result[1].tattoo_torso,result[1].makeup,result[1].lipstick,result[1].lipstick_color,result[1].tattoo_dos,result[1].couleur})
             end)
         else
             TriggerEvent("es:desyncMsg")
@@ -209,9 +210,9 @@ AddEventHandler('vmenu:lastCharInShop', function(model)
         if (user) then
             local player = user.identifier
 
-           MySQL.Async.fetchAll("SELECT skin,face,face_text,hair,hair_text,pants,pants_text,shoes,shoes_text,torso,torso_text,shirt,shirt_text,three,three_text,seven,seven_text,haircolor,haircolor_text,hat,hat_text,glass,glass_text,watch,watch_text,beard,beard_text,tattoo_bras_d,tattoo_bras_g,tattoo_jambe_g,tattoo_jambe_d,tattoo_tete,tattoo_torso,makeup,lipstick,lipstick_color FROM outfits WHERE identifier=@user",{['@user']=player}, function(result)
-                TriggerClientEvent("vmenu:updateCharInShop",playerSource,{result[1].face,result[1].face_text,result[1].hair,result[1].hair_text,result[1].pants,result[1].pants_text,result[1].shoes,result[1].shoes_text,result[1].torso,result[1].torso_text,result[1].shirt,result[1].shirt_text,result[1].three,result[1].three_text,result[1].seven,result[1].seven_text,result[1].haircolor,result[1].haircolor_text,result[1].skin,result[1].hat,result[1].hat_text,result[1].glass,result[1].glass_text,result[1].watch,result[1].watch_text,result[1].beard,result[1].beard_text,result[1].sourcil,result[1].sourcilcolor,result[1].sourcilcolorsec,result[1].tattoo_bras_d,result[1].tattoo_bras_g,result[1].tattoo_jambe_g,result[1].tattoo_jambe_d,result[1].tattoo_tete,result[1].tattoo_torso,result[1].makeup,result[1].lipstick,result[1].lipstick_color})
-                print(result[1].makeup)
+           MySQL.Async.fetchAll("SELECT skin,face,face_text,hair,hair_text,pants,pants_text,shoes,shoes_text,torso,torso_text,shirt,shirt_text,three,three_text,seven,seven_text,haircolor,haircolor_text,hat,hat_text,glass,glass_text,watch,watch_text,beard,beard_text,tattoo_bras_d,tattoo_bras_g,tattoo_jambe_g,tattoo_jambe_d,tattoo_tete,tattoo_torso,makeup,lipstick,lipstick_color,tattoo_dos,couleur FROM outfits WHERE identifier=@user",{['@user']=player}, function(result)
+                TriggerClientEvent("vmenu:updateCharInShop",playerSource,{result[1].face,result[1].face_text,result[1].hair,result[1].hair_text,result[1].pants,result[1].pants_text,result[1].shoes,result[1].shoes_text,result[1].torso,result[1].torso_text,result[1].shirt,result[1].shirt_text,result[1].three,result[1].three_text,result[1].seven,result[1].seven_text,result[1].haircolor,result[1].haircolor_text,result[1].skin,result[1].hat,result[1].hat_text,result[1].glass,result[1].glass_text,result[1].watch,result[1].watch_text,result[1].beard,result[1].beard_text,result[1].sourcil,result[1].sourcilcolor,result[1].sourcilcolorsec,result[1].tattoo_bras_d,result[1].tattoo_bras_g,result[1].tattoo_jambe_g,result[1].tattoo_jambe_d,result[1].tattoo_tete,result[1].tattoo_torso,result[1].makeup,result[1].lipstick,result[1].lipstick_color,result[1].tattoo_dos,result[1].couleur})
+                --print(result[1].makeup)
             end)
         else
             TriggerEvent("es:desyncMsg")

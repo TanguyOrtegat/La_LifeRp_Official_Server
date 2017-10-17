@@ -854,8 +854,7 @@ AddEventHandler("vmenu:updateChar", function(args)
   --Citizen.Trace(args[26].." ".. args[27])
   SetPlayerModel(PlayerId(), model)
   SetModelAsNoLongerNeeded(model)
-  Citizen.Trace("TEST")
-	SetPedHeadBlendData(GetPlayerPed(-1), args[1], args[1], args[1], args[1], args[1], args[1], 1.0, 1.0, 1.0, true)
+	SetPedHeadBlendData(GetPlayerPed(-1), args[1], args[1], args[1], args[41], args[41], args[41], 1.0, 1.0, 1.0, true)
   ChangeComponent({0,0,args[1],args[2]})-- 1:componentID; 2: page; 3: drawbleID; 4: textureID
   ChangeComponent({2,0,args[3],args[4]})
   SetPedHairColor(GetPlayerPed(-1), args[17], args[18])
@@ -955,7 +954,7 @@ AddEventHandler("vmenu:updateCharInShop", function(args)
   end
   SetPlayerModel(PlayerId(), model)
   SetModelAsNoLongerNeeded(model)
-  SetPedHeadBlendData(GetPlayerPed(-1), args[1], args[1], args[1], args[1], args[1], args[1], 1.0, 1.0, 1.0, true)
+  SetPedHeadBlendData(GetPlayerPed(-1), args[1], args[1], args[1], args[41], args[41], args[41], 1.0, 1.0, 1.0, true)
   ChangeComponent({0,0,args[1],args[2]})-- 1:componentID; 2: page; 3: drawbleID; 4: textureID
   ChangeComponent({2,0,args[3],args[4]})
   SetPedHairColor(GetPlayerPed(-1), args[17], args[18])
