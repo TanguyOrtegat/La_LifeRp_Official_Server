@@ -86,7 +86,7 @@ Citizen.Trace(vehicle)
 
 		-- ## Notifications
 			if soundEnable then TriggerServerEvent("InteractSound_SV:PlayWithinDistance", soundDistance, "lock", 1.0) end
-			TriggerEvent("itinerance:notif",  "Vehicule verouillé.")
+			TriggerEvent("itinerance:notif",  "Vehicule ~r~verouillé.")
 		-- ## Notifications
 
 	elseif lockStatus == 2 then -- Si le véhicule est verrouillé
@@ -109,7 +109,7 @@ Citizen.Trace(vehicle)
 
 		-- ## Notifications
 			if soundEnable then	TriggerServerEvent("InteractSound_SV:PlayWithinDistance", soundDistance, "unlock", 1.0) end
-			TriggerEvent("itinerance:notif",  "Vehicule déverouillé.")
+			TriggerEvent("itinerance:notif",  "Vehicule ~g~déverouillé.")
 		-- ## Notifications
 
 	end

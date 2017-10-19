@@ -17,17 +17,17 @@ AddEventHandler("ls:check", function(plate, vehicleId, isPlayerInside, notifPara
 				TriggerClientEvent("ls:lock", source, vehStorage[i].lockStatus, vehStorage[i].id)
 				break
 			else
-				TriggerClientEvent("itinerance:notif", playerSource, "Vous n'avez pas les clés !")
+				TriggerClientEvent("itinerance:notif", playerSource, "~r~Vous n'avez pas les clés !")
 				break
 			end
 		end
 	end
 
 	if result == 0 and isPlayerInside then
-
+local playerSource = source
 		length = #(randomMsg)
 		randomNbr = math.random(1, tonumber(length))
-		TriggerClientEvent("ls:sendNotification", source, notifParam, randomMsg[randomNbr], 0.5)
+		TriggerClientEvent("itinerance:notif", playerSource, tostring(randomMsg))
 
 		table.insert(vehStorage, {plate=plate, owner=playerIdentifier, lockStatus=0, id=vehicleId})
 		TriggerClientEvent("ls:createMissionEntity", source, vehicleId)
