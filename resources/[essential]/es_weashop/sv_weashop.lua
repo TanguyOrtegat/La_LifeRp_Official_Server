@@ -9,7 +9,7 @@ AddEventHandler('CheckMoneyForWea', function(weapon,price)
         local player = user.identifier
         MySQL.Async.fetchAll("SELECT * FROM users WHERE identifier = @username",{['@username'] = player}, function (result)
             if (user) then
-                if (weapon ~= "WEAPON_FlareGun") and (weapon ~= "WEAPON_Crowbar") and (weapon ~= "WEAPON_Flashlight") and (weapon ~= "WEAPON_Machete") and (weapon ~= "WEAPON_KNUCKLE") and (weapon ~= "WEAPON_Hatchet") and (weapon ~= "WEAPON_Dagger") and (weapon ~= "WEAPON_Bat") and (weapon ~= "WEAPON_HAMMER") and (weapon ~= "WEAPON_Knife") then
+                if (weapon ~= "WEAPON_FlareGun") and (weapon ~= "WEAPON_Crowbar") and (weapon ~= "WEAPON_Flashlight") and (weapon ~= "WEAPON_Machete") and (weapon ~= "WEAPON_KNUCKLE") and (weapon ~= "WEAPON_Hatchet") and (weapon ~= "WEAPON_Dagger") and (weapon ~= "WEAPON_Bat") and (weapon ~= "WEAPON_HAMMER") and (weapon ~= "WEAPON_Knife") and (weapon ~= "WEAPON_PARACHUTE") then
                     if (tonumber(result[1].permisArme)) == 1 then
                         if (tonumber(user.money) >= tonumber(price)) then
                             local nb_weapon = 0

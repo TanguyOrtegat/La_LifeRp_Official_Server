@@ -27,3 +27,23 @@ local playerSource = source
     end)
   end)
 end)
+
+RegisterServerEvent('casqueshop:reloadOutfits_s')
+AddEventHandler('casqueshop:reloadOutfits_s', function()
+local playerSource = source
+  TriggerEvent('es:getPlayerFromId', playerSource, function(user)
+    MySQL.Async.fetchAll("SELECT casque,casque_text FROM outfits WHERE identifier = @name", {['@name'] = tostring(user.identifier)}, function (result)
+      TriggerClientEvent("casqueshop:reloadOutfits", playerSource, result[1].casque, result[1].casque_text)
+    end)
+  end)
+end)
+
+RegisterServerEvent('casqueshop:reloadOutfits_s2')
+AddEventHandler('casqueshop:reloadOutfits_s2', function()
+local playerSource = source
+  TriggerEvent('es:getPlayerFromId', playerSource, function(user)
+    MySQL.Async.fetchAll("SELECT hat,hat_text FROM outfits WHERE identifier = @name", {['@name'] = tostring(user.identifier)}, function (result)
+      TriggerClientEvent("casqueshop:reloadOutfits", playerSource, result[1].hat, result[1].hat_text)
+    end)
+  end)
+end)

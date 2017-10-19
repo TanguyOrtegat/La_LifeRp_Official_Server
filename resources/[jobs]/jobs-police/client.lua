@@ -158,7 +158,7 @@ Citizen.CreateThread(function()
           spawncar = false
         end
         if spawncar == true then
-          SetVehicleNumberPlateText(veh, plate)
+          --SetVehicleNumberPlateText(veh, plate)
           SetVehicleOnGroundProperly(veh)
           SetVehicleHasBeenOwnedByPlayer(veh,true)
           local id = NetworkGetNetworkIdFromEntity(veh)
@@ -185,7 +185,7 @@ Citizen.CreateThread(function()
         Citizen.Wait(0)
       end
       veh = CreateVehicle(car, 449.87265014648, -981.50982666016, 43.69164276123, 0.0, true, false)
-      SetVehicleNumberPlateText(veh, plate)
+      --SetVehicleNumberPlateText(veh, plate)
       SetVehicleOnGroundProperly(veh)
       SetVehicleHasBeenOwnedByPlayer(veh,true)
       local id = NetworkGetNetworkIdFromEntity(veh)
@@ -204,7 +204,7 @@ Citizen.CreateThread(function()
         Citizen.Wait(0)
       end
       veh = CreateVehicle(car, 449.87265014648, -981.50982666016, 43.69164276123, 109.81607055664, true, false)
-      SetVehicleNumberPlateText(veh, plate)
+      --SetVehicleNumberPlateText(veh, plate)
       SetVehicleOnGroundProperly(veh)
       SetVehicleHasBeenOwnedByPlayer(veh,true)
       local id = NetworkGetNetworkIdFromEntity(veh)

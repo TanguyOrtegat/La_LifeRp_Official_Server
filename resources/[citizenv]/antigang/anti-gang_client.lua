@@ -1,7 +1,7 @@
 local relationshipTypes = {
 "PLAYER",
---"CIVMALE",
---"CIVFEMALE",
+"CIVMALE",
+"CIVFEMALE",
 "COP",
 "SECURITY_GUARD",
 "PRIVATE_SECURITY",

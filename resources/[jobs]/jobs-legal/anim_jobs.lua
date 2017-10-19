@@ -25,7 +25,7 @@ Citizen.CreateThread(function()
                 vehicle =  CreateVehicle(car, 1014.2610473633, -2522.470703125, 28.305421829224, 0.0, true, false)		-- Sortie véhicule 1
                 MISSION.truck = vehicle
                 SetVehicleOnGroundProperly(vehicle)
-        				SetVehicleNumberPlateText(vehicle, job.plate)
+        				--SetVehicleNumberPlateText(vehicle, job.plate)
         				Wait(100)
         				SetVehicleHasBeenOwnedByPlayer(vehicle,true)
                 SetVehRadioStation(vehicle, "OFF")
@@ -78,7 +78,7 @@ Citizen.CreateThread(function()
                 vehicle =  CreateVehicle(car, 1024.1528320313, -2501.1918945313, 28.420265197754, 84.89, true, false)		-- Sortie véhicule 2
                 MISSION.truck = vehicle
                 SetVehicleOnGroundProperly(vehicle)
-        				SetVehicleNumberPlateText(vehicle, job.plate)
+        				--SetVehicleNumberPlateText(vehicle, job.plate)
         				Wait(100)
         				SetVehicleHasBeenOwnedByPlayer(vehicle,true)
                 SetVehRadioStation(vehicle, "OFF")
@@ -98,7 +98,7 @@ Citizen.CreateThread(function()
                 vehicle =  CreateVehicle(car, 1039.0118408203, -2502.7395019531, 28.416711807251, 78.20, true, false)		-- Sortie véhicule 2
                 MISSION.truck = vehicle
                 SetVehicleOnGroundProperly(vehicle)
-        				SetVehicleNumberPlateText(vehicle, job.plate)
+        				--SetVehicleNumberPlateText(vehicle, job.plate)
         				Wait(100)
         				SetVehicleHasBeenOwnedByPlayer(vehicle,true)
                 SetVehRadioStation(vehicle, "OFF")

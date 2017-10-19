@@ -171,7 +171,7 @@ Citizen.CreateThread(function()
                 vehicle = CreateVehicle(car, Positions.spawnCamion.x,  Positions.spawnCamion.y,  Positions.spawnCamion.z, 0.0, true, false)
                 MISSION.truck = vehicle
                 SetVehicleOnGroundProperly(vehicle)
-                SetVehicleNumberPlateText(vehicle, job.plate)
+                --SetVehicleNumberPlateText(vehicle, job.plate)
                 Wait(100)
                 SetVehicleHasBeenOwnedByPlayer(vehicle,true)
                 SetVehRadioStation(vehicle, "OFF")

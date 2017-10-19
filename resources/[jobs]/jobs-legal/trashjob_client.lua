@@ -125,7 +125,7 @@ Citizen.CreateThread(function()
 								veh = CreateVehicle(car, -324.254, -1530.044, 27.54, 0.0, true, false)
 								MISSION.truck = veh
 								SetEntityVelocity(veh, 2000)
-								SetVehicleNumberPlateText(veh, cplate)
+								--SetVehicleNumberPlateText(veh, cplate)
 								SetVehicleOnGroundProperly(veh)
 								SetVehicleHasBeenOwnedByPlayer(veh,true)
 								local id = NetworkGetNetworkIdFromEntity(veh)

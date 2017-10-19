@@ -192,7 +192,7 @@ Citizen.CreateThread(function()
               MISSION.truck = vehicle
               Wait(100)
               SetVehicleOnGroundProperly(vehicle)
-              SetVehicleNumberPlateText(vehicle, job.plate)
+              --SetVehicleNumberPlateText(vehicle, job.plate)
               SetVehicleHasBeenOwnedByPlayer(vehicle,true)
               SetVehRadioStation(vehicle, "OFF")
               SetPedIntoVehicle(GetPlayerPed(-1), vehicle, -1)

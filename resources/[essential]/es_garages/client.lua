@@ -633,7 +633,6 @@ function UpdateVehicule()
 			local neoncolor = table.pack(GetVehicleNeonLightsColour(veh))
 			local mods = table.pack(GetVehicleMod(veh))
 			local smokecolor = table.pack(GetVehicleTyreSmokeColor(veh))
-
 			local plate = GetVehicleNumberPlateText(veh) -- Licence ID
 			local plateindex = GetVehicleNumberPlateTextIndex(veh) --
 			local primarycolor = colors[1] -- 1rst colour

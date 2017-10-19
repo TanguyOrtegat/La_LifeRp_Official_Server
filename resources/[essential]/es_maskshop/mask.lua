@@ -970,6 +970,17 @@ AddEventHandler("maskshop:reloadOutfits", function(mask, mask_text)
   SetPedComponentVariation(GetPlayerPed(-1), 1, mask, mask_text, 0)
 end)
 
+RegisterNetEvent("casqueshop:reloadOutfits")
+AddEventHandler("casqueshop:reloadOutfits", function(mask, mask_text)
+  SetPedPropIndex(GetPlayerPed(-1), 0, mask, mask_text, 0)
+end)
+
+RegisterNetEvent("casqueshop:reloadOutfits2")
+AddEventHandler("casqueshop:reloadOutfits2", function(mask, mask_text)
+  SetPedPropIndex(GetPlayerPed(-1), 0, mask, mask_text, 0)
+end)
+
+
 function stringstarts(String,Start)
    return string.sub(String,1,string.len(Start))==Start
 end
