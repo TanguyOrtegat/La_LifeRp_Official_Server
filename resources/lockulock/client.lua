@@ -39,7 +39,7 @@ Citizen.CreateThread(function()
 		if IsControlJustPressed(1, keyParam) then
 
 			player = GetPlayerPed(-1)
-			lastVehicle = GetPlayersLastVehicle()
+		    lastVehicle = GetClosestVehicle(x, y, z, 3.500, 0, 70)
 			px, py, pz = table.unpack(GetEntityCoords(player, true))
 			coordA = GetEntityCoords(player, true)
 

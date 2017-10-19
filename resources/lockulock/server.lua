@@ -27,7 +27,7 @@ AddEventHandler("ls:check", function(plate, vehicleId, isPlayerInside, notifPara
 local playerSource = source
 		length = #(randomMsg)
 		randomNbr = math.random(1, tonumber(length))
-		TriggerClientEvent("itinerance:notif", playerSource, tostring(randomMsg))
+		TriggerClientEvent("itinerance:notif", playerSource, tostring(randomMsg[randomNbr]))
 
 		table.insert(vehStorage, {plate=plate, owner=playerIdentifier, lockStatus=0, id=vehicleId})
 		--fTriggerClientEvent("ls:createMissionEntity", source, vehicleId)
