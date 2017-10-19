@@ -1,13 +1,13 @@
 local vehStorage = {}
-local randomMsg = {	"You have found the keys on the sun-shield",
-     				"You found the keys in the glove box.",
-    				"You found the keys on the passenger seat.",
-    				"You found the keys on the floor.",
-    				"The keys were already on the contact, you took them."}
+local randomMsg = {	"Vous avez trouvé les clés sur le pare-soleil.",
+                     "Vous avez trouvé les clés dans la boite a gants.",
+                    "Vous avez trouvé les clés sur le siège passager.",
+                    "Vous avez trouvé les clés sur le sol.",
+                    "Les clés était sur le contact, vous les avez prise."}
 
 RegisterServerEvent("ls:check")
 AddEventHandler("ls:check", function(plate, vehicleId, isPlayerInside, notifParam)
-
+    local playerSource = source
 	playerIdentifier = GetPlayerIdentifiers(source)[1]
    	result = 0
 	for i=1, #(vehStorage) do
@@ -17,7 +17,7 @@ AddEventHandler("ls:check", function(plate, vehicleId, isPlayerInside, notifPara
 				TriggerClientEvent("ls:lock", source, vehStorage[i].lockStatus, vehStorage[i].id)
 				break
 			else
-				TriggerClientEvent("ls:sendNotification", source, notifParam, "You don't have the key of this vehicle.", 0.5)
+				TriggerClientEvent("itinerance:notif", playerSource, "Vous n'avez pas les clés !")
 				break
 			end
 		end
