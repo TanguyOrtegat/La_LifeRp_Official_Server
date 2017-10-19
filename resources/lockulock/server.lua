@@ -30,7 +30,7 @@ local playerSource = source
 		TriggerClientEvent("itinerance:notif", playerSource, tostring(randomMsg))
 
 		table.insert(vehStorage, {plate=plate, owner=playerIdentifier, lockStatus=0, id=vehicleId})
-		TriggerClientEvent("ls:createMissionEntity", source, vehicleId)
+		--fTriggerClientEvent("ls:createMissionEntity", source, vehicleId)
 	end
 end)
 
