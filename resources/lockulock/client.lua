@@ -78,10 +78,10 @@ Citizen.Trace(vehicle)
 	if lockStatus == 1 or lockStatus == 0 then -- Si le véhicule est déverrouillé (on le verrouille):
 
 		if IsVehicleEngineOn(vehicle) and not isPlayerInside then
-			SetVehicleUndriveable(vehicle, true)
+			--SetVehicleUndriveable(vehicle, true)
 		end
-		SetVehicleDoorsLocked(vehicle, 2)
-		SetVehicleDoorsLockedForPlayer(vehicle, PlayerId(), true)
+		lockStatus = SetVehicleDoorsLocked(vehicle, 2)
+		--SetVehicleDoorsLockedForPlayer(vehicle, PlayerId(), true)
 		TriggerServerEvent("ls:updateLockStatus", 2, plate,vehicle)
 
 		-- ## Notifications
@@ -96,14 +96,14 @@ Citizen.Trace(vehicle)
 				while true do
 					Wait(0)
 					if isPlayerInside then
-						SetVehicleUndriveable(vehicle, false)
+						--SetVehicleUndriveable(vehicle, false)
 						break
 					end
 				end
 			end)
 		end
 
-		SetVehicleDoorsLocked(vehicle, 1)
+		lockStatus = SetVehicleDoorsLocked(vehicle, 1)
 		SetVehicleDoorsLockedForPlayer(vehicle, PlayerId(), false)
 		TriggerServerEvent("ls:updateLockStatus", 1, plate,vehicle)
 

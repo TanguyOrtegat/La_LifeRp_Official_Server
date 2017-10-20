@@ -3,7 +3,7 @@ local randomMsg = {	"Vous avez trouvé les clés sur le pare-soleil.",
                      "Vous avez trouvé les clés dans la boite a gants.",
                     "Vous avez trouvé les clés sur le siège passager.",
                     "Vous avez trouvé les clés sur le sol.",
-                    "Les clés était sur le contact, vous les avez prise."}
+                    "Les clés était sur le contact, vous les avez prises."}
 
 RegisterServerEvent("ls:check")
 AddEventHandler("ls:check", function(plate, vehicleId, isPlayerInside, notifParam)
@@ -11,9 +11,10 @@ AddEventHandler("ls:check", function(plate, vehicleId, isPlayerInside, notifPara
 	playerIdentifier = GetPlayerIdentifiers(source)[1]
    	result = 0
 	for i=1, #(vehStorage) do
-		if vehStorage[i].plate == plate and vehStorage[i].id == vehicleId then
+		if vehStorage[i].plate == plate then
 			result = result + 1
 			if vehStorage[i].owner == playerIdentifier then
+                vehStorage[i].id = vehicleId 
 				TriggerClientEvent("ls:lock", source, vehStorage[i].lockStatus, vehStorage[i].id)
 				break
 			else
