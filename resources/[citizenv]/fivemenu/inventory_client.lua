@@ -159,7 +159,7 @@ RegisterNetEvent("player:receiveItem")
 AddEventHandler("player:receiveItem", function(item, quantity)
   item = tonumber(item)
   local qty = ITEMS[tonumber(item)].quantity + quantity
-  	if (ITEMS[tonumber(item)].quantity <= 60) then
+  	if (qty <= 60) then
 	add({item, quantity})
 	else
 		TriggerEvent("itinerance:notif", "~r~ Vous n'avez pas assez d'espace" )

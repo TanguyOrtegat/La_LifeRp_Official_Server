@@ -85,7 +85,7 @@ local interiors = {
     [69] = { ["price"] = 100000000, ['xe'] = 1026.0834960938,  ['ye'] = -3016.1506347656, ['ze'] = -32.993156433105,['xo'] = 1058.7902832031, ['yo'] = -3138.4250488281, ['zo'] = -32.993156433105,['xc'] = 998.01782226563, ['yc'] = -3200.7097167969, ['zc'] = -38.993160247803, ["name"] = 'TheLost' },
     [70] = { ["price"] = 100000000, ['xe'] = 1052.6751708984, ['ye'] = -35.938674926758, ['ze'] = 59.845184326172,['xo'] = 976.87249755859, ['yo'] = -104.18993377686, ['zo'] = 59.845184326172 ,['xc'] = 976.78576660156, ['yc'] = -104.14051818848, ['zc'] = 74.845184326172,["name"] = 'asso'},
     [71] = { ["price"] = 100000000, ['xe'] = 81026.0834960938,  ['ye'] = -83016.1506347656, ['ze'] = -32.993156433105,['xo'] = 81058.7902832031, ['yo'] = -83138.4250488281, ['zo'] = -32.993156433105,['xc'] = 1044.4772949219, ['yc'] = -3194.9265136719, ['zc'] = -38.15816116333,["name"] = 'Redneck black Coffre'},
-    [72] = { ["price"] = 100000000, ['xe'] = 91026.0834960938,  ['ye'] = -93016.1506347656, ['ze'] = -32.993156433105,['xo'] = 91058.7902832031, ['yo'] = -93138.4250488281, ['zo'] = -32.993156433105,['xc'] = 2428.8916015625, ['yc'] = 4969.56640625, ['zc'] = 42.347606658936,["name"] = 'Redneck Coffre'},
+    [72] = { ["price"] = 100000000, ['xe'] = 91026.0834960938,  ['ye'] = -93016.1506347656, ['ze'] = -32.993156433105,['xo'] = 91058.7902832031, ['yo'] = -93138.4250488281, ['zo'] = -32.993156433105,['xc'] = 1101.6062011719, ['yc'] = -3101.74609375, ['zc'] = -38.999965667725,["name"] = 'Redneck Coffre'},
     [73] = { ["price"] = 100000000, ['xe'] = 2052.6751708984, ['ye'] = -2235.938674926758, ['ze'] = 2259.845184326172,['xo'] = 22976.87249755859, ['yo'] = -2104.18993377686, ['zo'] = 2259.845184326172 ,["xc"] = -1559.2835693359, ["yc"] = -570.54168701172, ["zc"] = 108.52300262451, ["hc"] = 0.000, ["name"] = 'Bureau du Maire'},
     [73] = { ["price"] = 100000000, ['xe'] = 3052.6751708984, ['ye'] = -3235.938674926758, ['ze'] = 3259.845184326172,['xo'] = 32976.87249755859, ['yo'] = -3104.18993377686, ['zo'] = 3259.845184326172 ,['xc'] = -224.28187561035, ['yc'] = -1320.5544433594, ['zc'] = 30.890378952026,["name"] = 'benny Coffre'},
 }
@@ -550,10 +550,11 @@ AddEventHandler("apart:additem",function()
 end)
 
 AddEventHandler("apart:remitem",function()
-  TriggerServerEvent("apart:remitem_s",id,nomApart,remitem)
   --TriggerEvent("player:receiveItem", tonumber(id), 1)
   Wait(100)
   Citizen.Trace(id)
+  if (ITEMS[tonumber(id)].quantity + remitem <60) then
+  TriggerServerEvent("apart:remitem_s",id,nomApart,remitem)
   TriggerEvent("inventory:giveItem_f", tonumber(id), remitem)
   waittemp = waittemp + (remitem*100)
   TriggerEvent("itinerance:notif","Vous devez attendre "..(waittemp/100).." secondes avant de pouvoir bouger.")
@@ -561,6 +562,9 @@ AddEventHandler("apart:remitem",function()
       DisableAllControlActions(0)
       waittemp = waittemp-1
       Wait(0)
+  end
+  else
+      TriggerEvent("itinerance:notif", "~r~Vous n'avez pas assez d'espace sur vous")
   end
 end)
 

@@ -16,16 +16,25 @@ AddEventHandler("inventory:giveItem_s", function(netID, id, name, quantity, quan
     local playerSource = source
 
     TriggerEvent('es:getPlayerFromId', netID, function(user)
-        if (user) then
-            if quantity_check >= quantity then
-                TriggerClientEvent("inventory:refresh", playerSource)
-                TriggerClientEvent("player:looseItem", playerSource, id, quantity)
-                TriggerClientEvent("inventory:giveItem_f", netID, id, quantity)
-                TriggerClientEvent("itinerance:notif", playerSource, "Vous avez donné ~g~"..quantity.. " " ..name.. "~w~.")
-                TriggerClientEvent("itinerance:notif", netID, "Vous avez reçu ~g~"..quantity.. " " ..name.. "~w~.")
+        local cible = user.identifier
+        local ok = true
+        MySQL.Async.fetchAll("SELECT * FROM user_inventory WHERE user_id = @iden and item_id=@item", {['@iden'] = cible,['@item'] = id}, function (items)
+            if(items[1].quantity + quantity > 60) then
+                ok = false
+                TriggerClientEvent("itinerance:notif", playerSource, "~r~La cible as les poches pleine.")
             else
-                TriggerClientEvent("itinerance:notif", playerSource, "~r~Une erreur s'est produite.")
+                if quantity_check >= quantity and ok == true then
+                    TriggerClientEvent("inventory:refresh", playerSource)
+                    TriggerClientEvent("player:looseItem", playerSource, id, quantity)
+                    TriggerClientEvent("inventory:giveItem_f", netID, id, quantity)
+                    TriggerClientEvent("itinerance:notif", playerSource, "Vous avez donné ~g~"..quantity.. " " ..name.. "~w~.")
+                    TriggerClientEvent("itinerance:notif", netID, "Vous avez reçu ~g~"..quantity.. " " ..name.. "~w~.")
+                else
+
+                end
             end
+        end)
+        if (user) then
         end
     end)
 end)
