@@ -22,7 +22,7 @@ local playerSource = source
 	local tIdentifier = GetPlayerIdentifiers(netID)
   	local identifier = tIdentifier[1]
 	if (user) then
-		if tonumber(user.job) == 31 then
+		if tonumber(user.job) == 55 then
 		MySQL.Async.execute("UPDATE users SET `job`=@value WHERE identifier = @identifier", {['@value'] = 1, ['@identifier'] =  tostring(identifier)})
 		LaLife.Player.Manager.SetPlayerJob(user, 1,user.subjob)
     	TriggerClientEvent("itinerance:notif", playerSource, "~g~Action effectuée!")

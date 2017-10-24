@@ -470,7 +470,7 @@ Citizen.CreateThread(function()
 				Citizen.Trace(tostring(payed))
 				if payed then
 					SetVehicleFixed(veh)
-					TriggerServerEvent("benny:fac",1000)
+					TriggerServerEvent("benny:fac",1500)
 				end
 
 			elseif GetVehicleDirtLevel(veh) ~= 0.0 and WarMenu.Button('Clean Vehicle', modPrices.clean.."$") then

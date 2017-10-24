@@ -6,7 +6,7 @@ local tbl = {
 }
 
 local modPrices = {
-	["repair"] = 1500,
+	["repair"] = 0,
 	["clean"] = 30,
 	["extra"] = 0,
 	["neons"] = 2250,
