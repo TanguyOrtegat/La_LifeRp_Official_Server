@@ -485,6 +485,7 @@ local vehicule = {"verlierer2",
 "italigtb2",
 "specter",
 "ruston",
+"FCR2",
 }
 --[[Local/Global]]--
 
@@ -502,6 +503,7 @@ local garages = {
     {name="Garage", colour=3, id=357, x=126.434, y=6610.04, z=30.750,blip=true},
 	{name="Garage", colour=3, id=34, x=971.67523193359, y=-140.0779876709, z=73.337661743164,blip=false},
 	{name="Garage", colour=3, id=34, x=1407.3972167969, y=1116.1669921875, z=113.83769989014,blip=false},
+	{name="Garage", colour=3, id=34, x=1348.2918701172, y=4375.8627929688, z=44.343795776367,blip=false},
 }
 
 garageSelected = { {x=nil, y=nil, z=nil}, }
