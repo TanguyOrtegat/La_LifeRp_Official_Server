@@ -597,7 +597,7 @@ Citizen.CreateThread(function()
                                                         ShowMsgtime.time = 150
                                                         TriggerEvent("inventory:sell",0, 1, 34, 70, "")
                                                         Wait(2000)
-                                elseif tonumber(ITEMSJOB[35].quantity) > 0 then
+                                --[[elseif tonumber(ITEMSJOB[35].quantity) > 0 then
     					                           --TriggerServerEvent("jobs:getBoursePrice", 35)
                                                    --TriggerServerEvent("jobs:changeBoursePrice", 35)
                                                    ShowMsgtime.msg = 'En train de vendre...'
@@ -607,7 +607,7 @@ Citizen.CreateThread(function()
                                                    ShowMsgtime.msg = '~r~-1 Saumon surgelé ~w~/ ~g~+' ..90 .. '$'
                                                    ShowMsgtime.time = 150
                                                    TriggerEvent("inventory:sell",0, 1, 35, 90, "")
-                                                   Wait(2000)
+                                                   Wait(2000)]]
                                 else
                                     TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de poisson surgelé sur vous !")
                                     isSell = false

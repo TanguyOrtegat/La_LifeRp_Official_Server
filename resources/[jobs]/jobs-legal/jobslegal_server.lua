@@ -367,3 +367,21 @@ AddEventHandler('ani:pdg', function(amount)
         end
     end)
 end)
+
+RegisterServerEvent("fish:fac")
+AddEventHandler("fish:fac", function(amount)
+	local playerSource = source
+  TriggerEvent('es:getPlayerFromId', source, function(user)
+--  if user.money >= amount then
+		--local player = user.identifier
+		--local bankbalance = bankBalance(user.identifier)
+		--local new_balance = bankbalance - amount
+		--print(new_balance)
+    MySQL.Async.fetchAll("SELECT money FROM user_appartement WHERE name = @name", {['@name'] = 'Redneck Coffre'}, function (result)
+      MySQL.Async.execute("UPDATE user_appartement SET `money`=@value WHERE name = @identifier", {['@value'] = (tonumber(result[1].money)+tonumber(amount)), ['@identifier'] = 'Redneck Coffre'})
+    end)
+--  else
+--    TriggerClientEvent("itinerance:notif", playerSource, "~r~La cible n'a pas assez d'argent.")
+--  end
+  end)
+end)

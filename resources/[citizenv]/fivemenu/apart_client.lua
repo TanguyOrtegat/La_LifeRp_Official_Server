@@ -85,7 +85,7 @@ local interiors = {
     [69] = { ["price"] = 100000000, ['xe'] = 1026.0834960938,  ['ye'] = -3016.1506347656, ['ze'] = -32.993156433105,['xo'] = 1058.7902832031, ['yo'] = -3138.4250488281, ['zo'] = -32.993156433105,['xc'] = 998.01782226563, ['yc'] = -3200.7097167969, ['zc'] = -38.993160247803, ["name"] = 'TheLost' },
     [70] = { ["price"] = 100000000, ['xe'] = 1052.6751708984, ['ye'] = -35.938674926758, ['ze'] = 59.845184326172,['xo'] = 976.87249755859, ['yo'] = -104.18993377686, ['zo'] = 59.845184326172 ,['xc'] = 976.78576660156, ['yc'] = -104.14051818848, ['zc'] = 74.845184326172,["name"] = 'asso'},
     [71] = { ["price"] = 100000000, ['xe'] = 81026.0834960938,  ['ye'] = -83016.1506347656, ['ze'] = -32.993156433105,['xo'] = 81058.7902832031, ['yo'] = -83138.4250488281, ['zo'] = -32.993156433105,['xc'] = 1044.4772949219, ['yc'] = -3194.9265136719, ['zc'] = -38.15816116333,["name"] = 'Redneck black Coffre'},
-    [72] = { ["price"] = 100000000, ['xe'] = 91026.0834960938,  ['ye'] = -93016.1506347656, ['ze'] = -32.993156433105,['xo'] = 91058.7902832031, ['yo'] = -93138.4250488281, ['zo'] = -32.993156433105,['xc'] = 2428.8916015625, ['yc'] = 4969.56640625, ['zc'] = 42.347606658936,["name"] = 'Redneck Coffre'},
+    [72] = { ["price"] = 100000000, ['xe'] = 1332.6390380859, ['ye'] = 4325.42578125, ['ze'] = 38.086376190186,['xo'] = 1087.3833007813, ['yo'] = -3099.322265625, ['zo'] = -38.99995803833 , ['xc'] = 1101.6062011719, ['yc'] = -3101.74609375, ['zc'] = -38.999965667725 ,["name"] = 'Redneck Coffre'},
     [73] = { ["price"] = 100000000, ['xe'] = 2052.6751708984, ['ye'] = -2235.938674926758, ['ze'] = 2259.845184326172,['xo'] = 22976.87249755859, ['yo'] = -2104.18993377686, ['zo'] = 2259.845184326172 ,["xc"] = -1559.2835693359, ["yc"] = -570.54168701172, ["zc"] = 108.52300262451, ["hc"] = 0.000, ["name"] = 'Bureau du Maire'},
     [73] = { ["price"] = 100000000, ['xe'] = 3052.6751708984, ['ye'] = -3235.938674926758, ['ze'] = 3259.845184326172,['xo'] = 32976.87249755859, ['yo'] = -3104.18993377686, ['zo'] = 3259.845184326172 ,['xc'] = -224.28187561035, ['yc'] = -1320.5544433594, ['zc'] = 30.890378952026,["name"] = 'benny Coffre'},
 }
@@ -162,84 +162,17 @@ User = {
 }
 
 local item = {
-    --[[[1] = {["libelle"] = "" ,["valeur"] = 0},
-    [2] = {["libelle"] = "" ,["valeur"] = 0},
-    [3] = {["libelle"] = "" ,["valeur"] = 0},
-    [4] = {["libelle"] = "" ,["valeur"] = 0},
-    [5] = {["libelle"] = "" ,["valeur"] = 0},
-    [6] = {["libelle"] = "" ,["valeur"] = 0},
-    [7] = {["libelle"] = "" ,["valeur"] = 0},
-    [8] = {["libelle"] = "" ,["valeur"] = 0},
-    [9] = {["libelle"] = "" ,["valeur"] = 0},
-    [10] = {["libelle"] = "" ,["valeur"] = 0},
-    [11] = {["libelle"] = "" ,["valeur"] = 0},
-    [12] = {["libelle"] = "" ,["valeur"] = 0},
-    [13] = {["libelle"] = "" ,["valeur"] = 0},
-    [14] = {["libelle"] = "" ,["valeur"] = 0},
-    [15] = {["libelle"] = "" ,["valeur"] = 0},
-    [16] = {["libelle"] = "" ,["valeur"] = 0},
-    [17] = {["libelle"] = "" ,["valeur"] = 0},
-    [18] = {["libelle"] = "" ,["valeur"] = 0},
-    [19] = {["libelle"] = "" ,["valeur"] = 0},
-    [20] = {["libelle"] = "" ,["valeur"] = 0},
-    [21] = {["libelle"] = "" ,["valeur"] = 0},
-    [22] = {["libelle"] = "" ,["valeur"] = 0},
-    [23] = {["libelle"] = "" ,["valeur"] = 0},
-    [24] = {["libelle"] = "" ,["valeur"] = 0},
-    [25] = {["libelle"] = "" ,["valeur"] = 0},
-    [26] = {["libelle"] = "" ,["valeur"] = 0},
-    [27] = {["libelle"] = "" ,["valeur"] = 0}
-  ]]--
+
 }
 
 local user_item = {
-  --[[
-    [1] = {["libelle"] = "Bouteille d'eau" ,["valeur"] = 0},
-    [2] = {["libelle"] = "Sandwich" ,["valeur"] = 0},
-    [3] = {["libelle"] = "Filet Mignon" ,["valeur"] = 0},
-    [4] = {["libelle"] = "Cannabis" ,["valeur"] = 0},
-    [5] = {["libelle"] = "Cannabis roulé" ,["valeur"] = 0},
-    [6] = {["libelle"] = "Feuille de cocaïne" ,["valeur"] = 0},
-    [7] = {["libelle"] = "Feuille de cocaïne 50" ,["valeur"] = 0},
-    [8] = {["libelle"] = "Cocaïne" ,["valeur"] = 0},
-    [9] = {["libelle"] = "Éphédrine" ,["valeur"] = 0},
-    [10] = {["libelle"] = "Éphédrine 33" ,["valeur"] = 0},
-    [11] = {["libelle"] = "Éphédrine 66" ,["valeur"] = 0},
-    [12] = {["libelle"] = "Meth" ,["valeur"] = 0},
-    [13] = {["libelle"] = "Organe" ,["valeur"] = 0},
-    [14] = {["libelle"] = "Organe emballé" ,["valeur"] = 0},
-    [15] = {["libelle"] = "Organe analysé" ,["valeur"] = 0},
-    [16] = {["libelle"] = "Organe livrable" ,["valeur"] = 0},
-    [17] = {["libelle"] = "Cuivre" ,["valeur"] = 0},
-    [18] = {["libelle"] = "Fer" ,["valeur"] = 0},
-    [19] = {["libelle"] = "Diamant" ,["valeur"] = 0},
-    [20] = {["libelle"] = "Cuivre traité" ,["valeur"] = 0},
-    [21] = {["libelle"] = "Fer traité" ,["valeur"] = 0},
-    [22] = {["libelle"] = "Diamant traité" ,["valeur"] = 0},
-    [23] = {["libelle"] = "Roche" ,["valeur"] = 0},
-    [24] = {["libelle"] = "Roche traité" ,["valeur"] = 0},
-    [25] = {["libelle"] = "Poisson" ,["valeur"] = 0},
-    [26] = {["libelle"] = "Corps" ,["valeur"] = 0},
-    [27] = {["libelle"] = "Corps traité" ,["valeur"] = 0}
-  ]]--
+
 }
 
 distance = 50.5999 -- distance to draw
 timer = 0
 current_int = 0
 
--- AddEventHandler("playerSpawned", function()
---   TriggerServerEvent("apart:sendData_s")
--- end)
-
--- -- Active this when you restart resource. If you don't want to close the server
--- TriggerServerEvent("apart:sendData_s")
-
--- RegisterNetEvent("apart:f_sendData")
--- AddEventHandler("apart:f_sendData", function(t1)
---     -- Tyler1 my boy
---   interiors = t1
--- end)
 
 RegisterNetEvent("apart:islock")
 AddEventHandler("apart:islock", function(lock)
@@ -337,32 +270,6 @@ AddEventHandler("apart:MenuInsideAppartement", function()
         end
     end
 end)
-
---function EMenuInsideAppartement()
---  TriggerEvent("vmenu:toggleMenu")
---  Vmenu.curItem = 1
---  VMenu.ResetMenu(24, "", "default")
---  Wait(100)
---    for i=1, #extrat do
---        if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), extrat[i].xo,extrat[i].yo,extrat[i].zo, true) < 1.699 then
---            TriggerServerEvent("apart:getCash", extrat[i].name)
---          TriggerServerEvent("apart:getAppart", extrat[i].name)
---          TriggerServerEvent("apart:getlock", extrat[i].name)
---          Wait(500)
---            Wait(250)
---            if isBuy == 2 then
---              --print(money)
---              --print(dirtymoney)
---                        VMenu.AddFunc(24,"Vérouiller/Dévérouiller","apart:lock",{extrat[i].name},"Vérouiller/Dévérouiller")
---                VMenu.AddFunc(24,txt[lang]['exit'],"apart:EExit",{},"Sortir")
---            elseif islock == 0 or isBuy == 0 then
---                VMenu.AddFunc(24,txt[lang]['exit'],"apart:EExit",{},"Sortir")
---            end
---            VMenu.AddFunc(24,txt[lang]['fermermenu'],"apart:CloseMenu",{},"Sortir")
---      else
---      end
---    end
---end
 
 AddEventHandler("apart:MenuCache",function()
     --TriggerEvent("vmenu:toggleMenu")
@@ -568,37 +475,6 @@ AddEventHandler("apart:remitem",function()
   end
 end)
 
---function EMenuCache()
---  TriggerEvent("vmenu:toggleMenu")
---  Vmenu.curItem = 1
---  VMenu.ResetMenu(25, "", "default")
---  Wait(100)
---
---    for i=1, #extrat do
---        if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), extrat[i].xc,extrat[i].yc,extrat[i].zc, true) < 2.099 then
---            TriggerServerEvent("apart:getCash", extrat[i].name)
---          TriggerServerEvent("apart:getAppart", extrat[i].name)
---          Wait(500)
---            Wait(250)
---            if isBuy == 2 or (isBuy == 1 and User.police > 3) then
---              print(money)
---              print(dirtymoney)
---              VMenu.AddFunc(25,"Argent propre: " .. money .. " $","apart:privetimuseless",{},"Rien")
---                VMenu.AddFunc(25,"Argent sale: " .. dirtymoney .." $","apart:privetimuseless",{},"Rien")
---                VMenu.AddFunc(25,txt[lang]['deposerargent'],"apart:deposerargent",{extrat[i].name},"Déposer")
---                VMenu.AddFunc(25,txt[lang]['deposersale'],"apart:deposersale",{extrat[i].name},"Déposer")
---                VMenu.AddFunc(25,txt[lang]['retirerargent'],"apart:retirerargent",{extrat[i].name},"Déposer")
---                VMenu.AddFunc(25,txt[lang]['retirersale'],"apart:retirersale",{extrat[i].name},"Retirer")
---            else
---            end
---            VMenu.AddFunc(25,txt[lang]['fermermenu'],"apart:CloseMenu",{},"Fermer")
---      else
---          TriggerEvent("apart:CloseMenu")
---      end
---
---    end
---end
-
 AddEventHandler("apart:lock",function(target,nom)
     TriggerServerEvent("apart:lock_s", nom)
 --    TriggerEvent("apart:CloseMenu")
@@ -779,8 +655,6 @@ function EMenuAppartement(i)
             end
             VMenu.AddFunc(23,txt[lang]['fermermenu'],"apart:CloseMenu",{},"Fermer")
         else
-            --CloseMenu()
---          ClearMenu()
         end
     end
 
@@ -806,7 +680,6 @@ AddEventHandler("apart:Vendre",function()
 end)
 
 AddEventHandler("apart:Acheter",function()
-    -- drawNotification('Cette fonctionnalite arrivera tres vite')
     for i=1, #interiors do
         if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), interiors[i].xe,interiors[i].ye,interiors[i].ze, true) < 1.599 then
             TriggerServerEvent("apart:buyAppart", interiors[i].name, interiors[i].price)
@@ -832,48 +705,11 @@ AddEventHandler("apart:Visiter",function(target,i)
                 timer = 5
                 SimulatePlayerInputGait(PlayerId(), 1.0, 100, 1.0, 1, 0)
                 DoScreenFadeIn(1000)
-                --Menu.hidden = true
                 while IsScreenFadingIn() do Citizen.Wait(0) end
             end
         end
     end
 end)
-
---AddEventHandler("apart:EVisiter",function(target,i)
---    for i=1, #extrat do
---        if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), extrat[i].xe,extrat[i].ye,extrat[i].ze, true) < 1.599 then
---            if timer == 0 then
---              TriggerEvent("apart:CloseMenu")
---                DoScreenFadeOut(1000)
---                while IsScreenFadingOut() do Citizen.Wait(0) end
---                NetworkFadeOutEntity(GetPlayerPed(-1), true, false)
---                Wait(1000)
---                SetEntityCoords(GetPlayerPed(-1), extrat[i].xo,extrat[i].yo,extrat[i].zo)
---                SetEntityHeading(GetPlayerPed(-1), extrat[i].ho)
---                NetworkFadeInEntity(GetPlayerPed(-1), 0)
---                Wait(1000)
---                current_int = i
---                timer = 5
---                SimulatePlayerInputGait(PlayerId(), 1.0, 100, 1.0, 1, 0)
---                DoScreenFadeIn(1000)
---                Menu.hidden = true
---                while IsScreenFadingIn() do Citizen.Wait(0) end
---            end
---        end
---    end
---end)
-
---Citizen.CreateThread(function()
-    --while true do
-    --Wait(100)
-                    --Citizen.Trace(tostring(freeze))
-        --if freeze == true then
-        --  FreezeEntityPosition(GetPlayerPed(-1),true)
-        --else
-        --  FreezeEntityPosition(GetPlayerPed(-1),false)
-        --end
-    --end
---end)
 
 Citizen.CreateThread(function()
   TriggerServerEvent("apart:getinvitem")
@@ -885,15 +721,9 @@ Citizen.CreateThread(function()
                         DrawMarker(1,interiors[i].xe,interiors[i].ye,interiors[i].ze-1.0001, 0, 0, 0, 0, 0, 0, 1.01, 1.01, 0.3, 212, 189, 0, 105, 0, 0, 2, 0, 0, 0, 0)
                         if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), interiors[i].xe,interiors[i].ye,interiors[i].ze, true) < 1.599 then
                                 DrawAdvancedText(0.707, 0.77, 0.005, 0.0028, 1.89, "~b~"..interiors[i].name, 255, 255, 255, 255, 1, 1)
-                                --drawTxt(txt[lang]['menu'],0,1,0.5,0.8,0.6,255,255,255,255)
                             if IsControlJustPressed(1, 86) then
-                                                --freeze = true
-                                --MenuAppartement(i)
-                                --Menu.hidden = not Menu.hidden
                             end
-                                                -- Menu.renderGUI()
                         else
-                          --ClearMenu()
                         end
                     end
                 end
@@ -903,16 +733,9 @@ Citizen.CreateThread(function()
                         DrawMarker(1,interiors[i].xo,interiors[i].yo,interiors[i].zo-1.0001, 0, 0, 0, 0, 0, 0, 1.01, 1.01, 0.3, 212, 189, 0, 105, 0, 0, 2, 0, 0, 0, 0)
                         if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), interiors[i].xo,interiors[i].yo,interiors[i].zo, true) < 1.699 then
                             DrawAdvancedText(0.707, 0.77, 0.005, 0.0028, 1.89, "~b~"..interiors[i].name, 255, 255, 255, 255, 1, 1)
-                            --drawTxt(txt[lang]['menu'],0,1,0.5,0.8,0.6,255,255,255,255)
                             if IsControlJustPressed(1, 86) then
-                                                      --freeze = true
-                                --MenuInsideAppartement()
-                                --Menu.hidden = not Menu.hidden
                             end
-                            --Menu.renderGUI()
                             else
-                        --ClearMenu()
-                        --CloseMenu()
                         end
                     end
                 end
@@ -920,87 +743,19 @@ Citizen.CreateThread(function()
                     if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), interiors[i].xc,interiors[i].yc,interiors[i].zc, true) < distance then
                         DrawMarker(1,interiors[i].xc,interiors[i].yc,interiors[i].zc-1.0001, 0, 0, 0, 0, 0, 0, 1.01, 1.01, 0.3, 212, 189, 0, 105, 0, 0, 2, 0, 0, 0, 0)
                         if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), interiors[i].xc,interiors[i].yc,interiors[i].zc, true) < 2.099 then
-                          --  drawTxt(txt[lang]['menu'],0,1,0.5,0.8,0.6,255,255,255,255)
                             if IsControlJustPressed(1, 86) then
-                                                      --freeze = true
-                                --MenuCache()
-                                --Menu.hidden = not Menu.hidden
                             end
-                            --Menu.renderGUI()
 
                         else
-                        --ClearMenu()
-                        --CloseMenu()
                         end
                     end
                 end
---[[                            for i=1, #extrat do
-                if not IsEntityDead(PlayerPedId()) then
-                    if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), extrat[i].xe,extrat[i].ye,extrat[i].ze, true) < distance then
-                        DrawMarker(1,extrat[i].xe,extrat[i].ye,extrat[i].ze-1.0001, 0, 0, 0, 0, 0, 0, 1.01, 1.01, 0.3, 212, 189, 0, 105, 0, 0, 2, 0, 0, 0, 0)
-                        if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), extrat[i].xe,extrat[i].ye,extrat[i].ze, true) < 1.599 then
-                                DrawAdvancedText(0.707, 0.77, 0.005, 0.0028, 1.89, "~b~"..extrat[i].name, 255, 255, 255, 255, 1, 1)
-                                --drawTxt(txt[lang]['menu'],0,1,0.5,0.8,0.6,255,255,255,255)
-                            if IsControlJustPressed(1, 86) then
-                                                      --freeze = true
-                              --  EMenuAppartement(i)
-                                --Menu.hidden = not Menu.hidden
-                            end
-                                --                 Menu.renderGUI()
-                        else
-                          --ClearMenu()
-                        end
-                    end
-                end
-            end
-                for i=1, #extrat do
-                    if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), extrat[i].xo,extrat[i].yo,extrat[i].zo, true) < distance then
-                        DrawMarker(1,extrat[i].xo,extrat[i].yo,extrat[i].zo-1.0001, 0, 0, 0, 0, 0, 0, 1.01, 1.01, 0.3, 212, 189, 0, 105, 0, 0, 2, 0, 0, 0, 0)
-                        if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), extrat[i].xo,extrat[i].yo,extrat[i].zo, true) < 1.699 then
-                            DrawAdvancedText(0.707, 0.77, 0.005, 0.0028, 1.89, "~b~"..extrat[i].name, 255, 255, 255, 255, 1, 1)
-                            --drawTxt(txt[lang]['menu'],0,1,0.5,0.8,0.6,255,255,255,255)
-                            if IsControlJustPressed(1, 86) then
-                                                      --freeze = true
-                                --EMenuInsideAppartement()
-                               -- Menu.hidden = not Menu.hidden
-                            end
-                            --Menu.renderGUI()
-                            else
-                        --ClearMenu()
-                        --CloseMenu()
-                        end
-                    end
-                end
-                for i=1, #extrat do
-                    if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), extrat[i].xc,extrat[i].yc,extrat[i].zc, true) < distance then
-                        DrawMarker(1,extrat[i].xc,extrat[i].yc,extrat[i].zc-1.0001, 0, 0, 0, 0, 0, 0, 1.01, 1.01, 0.3, 212, 189, 0, 105, 0, 0, 2, 0, 0, 0, 0)
-                        if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), extrat[i].xc,extrat[i].yc,extrat[i].zc, true) < 2.099 then
-                          --  drawTxt(txt[lang]['menu'],0,1,0.5,0.8,0.6,255,255,255,255)
-                            if IsControlJustPressed(1, 86) then
-                                                      --freeze = true
-                                --EMenuCache()
-                                --Menu.hidden = not Menu.hidden
-                            end
-                            --Menu.renderGUI()
-
-                        else
-                        --ClearMenu()
-                        --CloseMenu()
-                        end
-                    end
-                end]]--
              if not IsEntityDead(PlayerPedId()) then
                     if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), agent[1].xe,agent[1].ye,agent[1].ze, true) < distance then
                         DrawMarker(1,agent[1].xe,agent[1].ye,agent[1].ze-1.0001, 0, 0, 0, 0, 0, 0, 1.01, 1.01, 0.3, 212, 189, 0, 105, 0, 0, 2, 0, 0, 0, 0)
                         if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), agent[1].xe,agent[1].ye,agent[1].ze, true) < 1.599 then
-                            --drawTxt(txt[lang]['menu'],0,1,0.5,0.8,0.6,255,255,255,255)
                             if IsControlJustPressed(1, 86) then
-                                --Citizen.Trace(freeze)
-                                        --freeze = true
-                                --MenuAgent()
-                                --Menu.hidden = not Menu.hidden
                             end
-                            --Menu.renderGUI()
                         end
                     end
                 end
@@ -1016,21 +771,6 @@ Citizen.CreateThread(function()
         end
     end
 end)
-
---Citizen.CreateThread(function()
---    if displayApartBlips == true then
---        for _, item in pairs(interiors) do
---          item.blip = AddBlipForCoord(item.xe, item.ye, item.ze)
---          SetBlipSprite(item.blip, 375)
---          SetBlipAsShortRange(item.blip, true)
---          BeginTextCommandSetBlipName("STRING")
---          SetBlipColour(item.blip, 3)
---          SetBlipScale(item.blip, 0.9)
---          AddTextComponentString("Appartement")
---          EndTextCommandSetBlipName(item.blip)
---        end
---    end
---end)
 
 AddEventHandler("playerSpawned", function()
     Citizen.CreateThread(function()
@@ -1112,23 +852,10 @@ end)
 
 RegisterNetEvent("apart:getitem_f")
 AddEventHandler("apart:getitem_f", function(info)
-    --[[for i=1,27 do
-        item[i].libelle = info[i].libelle
-        item[i].valeur = info[i].valeur
-        --Citizen.Trace(item[i].valeur)
-    end]]--
-  Citizen.Trace(info[1].valeur)
   item = info
-  Citizen.Trace(item[1].libelle)
 end)
 
 RegisterNetEvent("apart:user_getitem_f")
 AddEventHandler("apart:user_getitem_f", function(info)
-  --[[
-    for i=1,27 do
-        user_item[i].valeur = info[i].valeur
-    end]]--
-  Citizen.Trace(info[1].valeur)
   item = info
-  Citizen.Trace(item[1].libelle)
 end)
