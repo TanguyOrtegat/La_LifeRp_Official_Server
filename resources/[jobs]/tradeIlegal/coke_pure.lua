@@ -612,9 +612,9 @@ Citizen.CreateThread(function()
 				ShowMsgtime.time = 250
 				Wait(2500)
                 --local price = math.ceil(PriceBourse)
-				ShowMsgtime.msg = '~r~-1 Coke purifier 100% ~w~/ ~r~+'.. 1500 ..'$'
+				ShowMsgtime.msg = '~r~-1 Coke purifier 100% ~w~/ ~r~+'.. 1250 ..'$'
 				ShowMsgtime.time = 150
-				TriggerEvent("player:sellItem", 56, 1500)
+				TriggerEvent("player:sellItem", 56, 1250)
 			else
 				TriggerEvent("itinerance:notif", "~r~Vous devez avoir moins de 31 Coke purifier 100% pour vendre !")
 			end

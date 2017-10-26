@@ -349,7 +349,7 @@ Citizen.CreateThread(function()
 										TaskPlayAnim(myPed, dict, animation, 8.0, -8, -1, flags, 0, 0, 0, 0)
 										Wait(2000)
 										DrawMissionTextpool("Vous avez ~g~nettoyé~w~ une piscine !", 5000)
-										TriggerServerEvent('job:success', distance/200)
+										TriggerServerEvent('job:success', distance/175)
 										--TriggerServerEvent('CheckPool')
 										Wait(1000)
 										daily.flag[1] = 1

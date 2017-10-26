@@ -99,10 +99,10 @@ function fishingEnding2()
 end
 
 function RemoveBlipFishing()
-Citizen.Trace("Cleared")
-  RemoveBlip(BlipCamionPeche)
-  RemoveBlip(BlipZonePeche)
-   RemoveBlip(BlipVentePeche)
+    Citizen.Trace("Cleared")
+    RemoveBlip(BlipCamionPeche)
+    RemoveBlip(BlipZonePeche)
+    RemoveBlip(BlipVentePeche)
 end
 
 function fishingOutfits()

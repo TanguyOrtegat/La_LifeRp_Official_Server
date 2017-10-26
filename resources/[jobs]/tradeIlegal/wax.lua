@@ -608,9 +608,9 @@ Citizen.CreateThread(function()
 				ShowMsgtime.time = 250
 				Wait(2500)
                 --local price = math.ceil(PriceBourse)
-				ShowMsgtime.msg = '~r~-1 Wax ~w~/ ~r~+'.. 1500 ..'$'
+				ShowMsgtime.msg = '~r~-1 Wax ~w~/ ~r~+'.. 1000 ..'$'
 				ShowMsgtime.time = 150
-				TriggerEvent("player:sellItem", 65, 1500)
+				TriggerEvent("player:sellItem", 65, 1000)
 			else
 				TriggerEvent("itinerance:notif", "~r~Vous devez avoir moins de 31 wax pour vendre !")
 			end

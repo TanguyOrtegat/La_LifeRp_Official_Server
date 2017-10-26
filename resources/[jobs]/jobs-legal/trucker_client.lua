@@ -266,7 +266,7 @@ SetPedComponentVariation(GetPlayerPed(-1), 7, 0, 0, 0)
     end
     if ( GetDistanceBetweenCoords(BLIP.truckReturn[1], BLIP.truckReturn[2], BLIP.truckReturn[3], truckCoords ) < 25 and not IsEntityAttached(MISSION.trailer) and MISSION.toDest) then
       distance = GetDistanceBetweenCoords(BLIP.truckReturn[1], BLIP.truckReturn[2], BLIP.truckReturn[3], currentMission[1], currentMission[2], currentMission[3], true)
-      distance = tonumber(math.floor(distance/10))
+      distance = tonumber(math.floor(distance/5))
       TriggerServerEvent("job:success", distance)
       TriggerServerEvent("vmenu:lastChar")
       --TriggerEvent("mt:missiontext", "Vous êtes arrivé. Vous avez obtenu ~g~$"..distance, 10000)

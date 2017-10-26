@@ -604,9 +604,9 @@ Citizen.CreateThread(function()
 				ShowMsgtime.time = 250
 				Wait(2500)
                 --local price = math.ceil(PriceBourse)
-				ShowMsgtime.msg = '~r~-1 Ecstasy ~w~/ ~r~+'.. 1500 ..'$'
+				ShowMsgtime.msg = '~r~-1 Ecstasy ~w~/ ~r~+'.. 1250 ..'$'
 				ShowMsgtime.time = 150
-				TriggerEvent("player:sellItem", 50, 1500)
+				TriggerEvent("player:sellItem", 50, 1250)
 			else
 				TriggerEvent("itinerance:notif", "~r~Vous devez avoir moins de 31 Ecstasy pour vendre !")
 			end
