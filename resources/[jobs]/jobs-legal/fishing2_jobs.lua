@@ -519,14 +519,14 @@ Citizen.CreateThread(function()
                                 ShowMsgtime.time = 150
                                 TriggerEvent("player:looseItem", 30, 1)
                                 TriggerEvent("player:receiveItem", 34, 1)
-                              --[[elseif ITEMSJOB[31].quantity > 0 then
+                              elseif ITEMSJOB[31].quantity > 0 then
                                 ShowMsgtime.msg = 'Chargement du camion en cours...'
                                 ShowMsgtime.time = 250
                                 Wait(2500)
                                 ShowMsgtime.msg = '+1 Saumon surgelé'
                                 ShowMsgtime.time = 150
                                 TriggerEvent("player:looseItem", 31, 1)
-                                TriggerEvent("player:receiveItem", 35, 1)]]
+                                TriggerEvent("player:receiveItem", 35, 1)
                               else
                                 TriggerEvent("itinerance:notif", "~r~Vous n'avez pas de poissons sur vous !")
                                 isProc = false
