@@ -10,9 +10,9 @@ local weedserver = 0
 
 local Positions = {
     -- VOS POINTS ICI
-    recolte={x=1875.8841552734,y=5056.6772460938,z=51.513126373291, distance=20},
+    recolte={x=2224.1516113281,y=5577.0385742188,z=53.850303649902, distance=10},
     traitement={x=83.502479553223,y=6650.2631835938,z=32.19792175293, distance=5},
-    vente={x=2477.1474609375,y=3763.0439453125,z=41.8897171020508, distance=5}
+    vente={x=-1172.1466064453,y=-1571.8356933594,z=4.6636247634888, distance=2}
 }
 
 function drawTxt(text,font,centre,x,y,scale,r,g,b,a)
