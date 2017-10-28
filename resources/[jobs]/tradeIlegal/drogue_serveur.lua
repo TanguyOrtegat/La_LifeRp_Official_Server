@@ -70,6 +70,24 @@ local propsmeth = {
     "meth_lab_production",
     "meth_lab_security_high",
 }
+local posweed = {
+    recolte={x=2224.1516113281,y=5577.0385742188,z=53.850303649902, distance=10},
+    traitement={x=83.502479553223,y=6650.2631835938,z=32.19792175293, distance=5},
+    vente={x=-1172.1466064453,y=-1571.8356933594,z=4.6636247634888, distance=2}
+}
+local posmeth = {
+    recolte={x=1236.0565185547,y=-413.88595581055,z=68.929946899414, distance=2},
+    traitement={x=2432.111328125,y=4971.6157226563,z=42.347606658936, distance=1},
+    traitement2={x=2433.7814941406,y=4969.1127929688,z=42.347606658936, distance=1},
+    traitement3={x=2435.4404296875,y=4964.9174804688,z=42.347606658936, distance=1},
+    vente={x=1296.9028320313,y=-1610.1544189453,z=58.426330566406, distance=3},
+}
+local poscoke = {
+    recolte={x=-283.25057983398,y=2217.6774902344,z=130.59672546387, distance=5},
+    traitement={x=1268.0032958984,y=-1710.7111816406,z=54.771495819092, distance=1},
+    traitement2={x=92.365592956543,y=3755.4782714844,z=40.774532318115, distance=1},
+    vente={x=-1171.3258056641,y=364.10034179688,z=71.691909790039, distance=3},
+}
 
 RegisterServerEvent('drugs:getBoursePrice')
 AddEventHandler('drugs:getBoursePrice', function(libelle)
@@ -189,4 +207,19 @@ end)
 RegisterServerEvent('trade:requestmeth')
 AddEventHandler('trade:requestmeth', function()
     TriggerClientEvent('trade:f_requestmeth',source,propsmeth)
+end)
+
+RegisterServerEvent('drugs:weed')
+AddEventHandler('drugs:weed', function()
+    TriggerClientEvent('drugs:weed_f',source,posweed)
+end)
+
+RegisterServerEvent('drugs:coke')
+AddEventHandler('drugs:coke', function()
+    TriggerClientEvent('drugs:coke_f',source,poscoke)
+end)
+
+RegisterServerEvent('drugs:meth')
+AddEventHandler('drugs:meth', function()
+    TriggerClientEvent('drugs:meth_f',source,posmeth)
 end)

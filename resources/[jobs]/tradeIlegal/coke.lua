@@ -8,16 +8,42 @@ local isSell = false
 local isSell2 = false
 local inv_qty = 0
 local cokeserver = 0
+local recu = false
 ITEMSDRUGS = {}
 
 local Positions = {
   -- VOS POINTS ICI
-    recolte={x=-283.25057983398,y=2217.6774902344,z=130.59672546387, distance=5},
-    traitement={x=1268.0032958984,y=-1710.7111816406,z=54.771495819092, distance=1},
-    traitement2={x=92.365592956543,y=3755.4782714844,z=40.774532318115, distance=1},
-    vente={x=-1171.3258056641,y=364.10034179688,z=71.691909790039, distance=3},
+  --[[NICE TRY BITCH
+NICE TRY BITCH
+NICE TRY BITCH
+NICE TRY BITCH
+NICE TRY BITCH
+NICE TRY BITCH
+NICE TRY BITCH
+NICE TRY BITCH
+NICE TRY BITCH
+NICE TRY BITCH
+NICE TRY BITCH
+NICE TRY BITCH
+NICE TRY BITCH
+NICE TRY BITCH
+NICE TRY BITCH
+  ]]
+  recolte={x=0,y=0,z=0, distance=5},
+  traitement={x=0,y=0,z=0, distance=1},
+  traitement2={x=0,y=0,z=0, distance=1},
+  vente={x=0,y=0,z=0, distance=3},
  --   vente2={x=448.2629699707,y=-176.4065246582,z=71.254043579102, distance=10},
 }
+RegisterNetEvent("drugs:coke_f")
+AddEventHandler("drugs:coke_f",function(THECOKE)
+    Positions = THECOKE
+    recu = true
+end)
+
+AddEventHandler("playerSpawned", function()
+    TriggerServerEvent("drugs:coke")
+end)
 
 function drawTxt(text,font,centre,x,y,scale,r,g,b,a)
   SetTextFont(font)

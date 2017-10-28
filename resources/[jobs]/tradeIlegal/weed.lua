@@ -7,13 +7,40 @@ local isProc = false
 local isSell = false
 local inv_qty = 0
 local weedserver = 0
+local recu = false
 
 local Positions = {
     -- VOS POINTS ICI
-    recolte={x=2224.1516113281,y=5577.0385742188,z=53.850303649902, distance=10},
-    traitement={x=83.502479553223,y=6650.2631835938,z=32.19792175293, distance=5},
-    vente={x=-1172.1466064453,y=-1571.8356933594,z=4.6636247634888, distance=2}
+    --[[NICE TRY BITCH
+  NICE TRY BITCH
+  NICE TRY BITCH
+  NICE TRY BITCH
+  NICE TRY BITCH
+  NICE TRY BITCH
+  NICE TRY BITCH
+  NICE TRY BITCH
+  NICE TRY BITCH
+  NICE TRY BITCH
+  NICE TRY BITCH
+  NICE TRY BITCH
+  NICE TRY BITCH
+  NICE TRY BITCH
+  NICE TRY BITCH
+    ]]
+    recolte={x=0,y=0,z=0, distance=10},
+    traitement={x=0,y=0,z=0, distance=5},
+    vente={x=0,y=0,z=0, distance=2}
 }
+
+RegisterNetEvent("drugs:weed_f")
+AddEventHandler("drugs:weed_f",function(THEWEED)
+    Positions = THEWEED
+    recu = true
+end)
+
+AddEventHandler("playerSpawned", function()
+    TriggerServerEvent("drugs:weed")
+end)
 
 function drawTxt(text,font,centre,x,y,scale,r,g,b,a)
   SetTextFont(font)

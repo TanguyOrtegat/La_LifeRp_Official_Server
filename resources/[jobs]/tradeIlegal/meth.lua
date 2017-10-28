@@ -9,15 +9,42 @@ local isSell = false
 local isSell2 = false
 local inv_qty = 0
 local methserver = 0
+local recu = false
 
 local Positions = {
     -- VOS POINTS ICI
-    recolte={x=1236.0565185547,y=-413.88595581055,z=68.929946899414, distance=2},
-    traitement={x=2432.111328125,y=4971.6157226563,z=42.347606658936, distance=1},
-    traitement2={x=2433.7814941406,y=4969.1127929688,z=42.347606658936, distance=1},
-    traitement3={x=2435.4404296875,y=4964.9174804688,z=42.347606658936, distance=1},
-    vente={x=1296.9028320313,y=-1610.1544189453,z=58.426330566406, distance=3},
+    --[[NICE TRY BITCH
+  NICE TRY BITCH
+  NICE TRY BITCH
+  NICE TRY BITCH
+  NICE TRY BITCH
+  NICE TRY BITCH
+  NICE TRY BITCH
+  NICE TRY BITCH
+  NICE TRY BITCH
+  NICE TRY BITCH
+  NICE TRY BITCH
+  NICE TRY BITCH
+  NICE TRY BITCH
+  NICE TRY BITCH
+  NICE TRY BITCH
+    ]]
+    recolte={x=0,y=0,z=0, distance=2},
+    traitement={x=0,y=0,z=0, distance=1},
+    traitement2={x=0,y=0,z=0, distance=1},
+    traitement3={x=0,y=0,z=0, distance=1},
+    vente={x=0,y=0,z=0, distance=3},
 }
+
+RegisterNetEvent("drugs:meth_f")
+AddEventHandler("drugs:meth_f",function(THEMETH)
+    Positions = THEMETH
+    recu = true
+end)
+
+AddEventHandler("playerSpawned", function()
+    TriggerServerEvent("drugs:meth")
+end)
 
 function drawTxt(text,font,centre,x,y,scale,r,g,b,a)
   SetTextFont(font)
