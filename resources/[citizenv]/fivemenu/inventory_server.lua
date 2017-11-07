@@ -158,3 +158,12 @@ RegisterServerEvent("inventory:black")
 AddEventHandler("inventory:black", function(netid)
     TriggerClientEvent("inventory:f_black",netid)
 end)
+
+RegisterServerEvent("inventory:equip")
+AddEventHandler("inventory:equip", function(hash)
+    local playerSource = source
+    TriggerEvent('es:getPlayerFromId', playerSource, function(user)
+        local player = user.identifier
+        MySQL.Async.execute("INSERT INTO user_weapons (`identifier`, `weapon_model`, `withdraw_cost`) VALUES (@username, @hash, @withdraw_cost)", {['@username'] = player, ['@hash'] = hash, ['@withdraw_cost'] = 85})
+end)
+end)

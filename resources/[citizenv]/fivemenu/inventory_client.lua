@@ -132,6 +132,55 @@ AddEventHandler("inventory:useItem", function(target, id) -- target = Dernier jo
 				TriggerEvent("itinerance:notif", "~r~ Vous n'avez pas de cible" )
 			end
 		end
+	elseif id == 66 then
+		if IsInVehicle() then
+		else
+				local hash = GetHashKey("WEAPON_SAWNOFFSHOTGUN")
+				TriggerServerEvent("inventory:equip","WEAPON_SAWNOFFSHOTGUN")
+				GiveWeaponToPed(GetPlayerPed(-1), hash, 1000, 0, false)
+				delete({id, 1})
+		end
+	elseif id == 67 then
+		if IsInVehicle() then
+		else
+				local hash = GetHashKey("WEAPON_COMPACTRIFLE")
+				TriggerServerEvent("inventory:equip","WEAPON_COMPACTRIFLE")
+				GiveWeaponToPed(GetPlayerPed(-1), hash, 1000, 0, false)
+				delete({id, 1})
+		end
+	elseif id == 68 then
+		if IsInVehicle() then
+		else
+				local hash = GetHashKey("WEAPON_MINISMG")
+				TriggerServerEvent("inventory:equip","WEAPON_MINISMG")
+				GiveWeaponToPed(GetPlayerPed(-1), hash, 1000, 0, false)
+				delete({id, 1})
+		end
+	elseif id == 69 then
+		if IsInVehicle() then
+		else
+				local hash = GetHashKey("WEAPON_APPISTOL")
+				TriggerServerEvent("inventory:equip","WEAPON_APPISTOL")
+				GiveWeaponToPed(GetPlayerPed(-1), hash, 1000, 0, false)
+				delete({id, 1})
+		end
+	elseif id == 70 then
+		if IsInVehicle() then
+		else
+				local hash = GetHashKey("WEAPON_CARBINERIFLE")
+				TriggerServerEvent("inventory:equip","WEAPON_CARBINERIFLE")
+				GiveWeaponToPed(GetPlayerPed(-1), hash, 1000, 0, false)
+				delete({id, 1})
+		end
+	elseif id == 71 then
+		if IsInVehicle() then
+		else
+				local hash = GetHashKey("WEAPON_SWITCHBLADE")
+				TriggerServerEvent("inventory:equip","WEAPON_SWITCHBLADE")
+				GiveWeaponToPed(GetPlayerPed(-1), hash, 1000, 0, false)
+				delete({id, 1})
+		end
+
 	else
 	 TriggerEvent("itinerance:notif", "~r~Vous ne pouvez pas utiliser cet objet.")
 	end

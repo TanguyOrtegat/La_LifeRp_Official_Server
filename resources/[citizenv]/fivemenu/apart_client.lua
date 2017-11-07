@@ -460,7 +460,7 @@ AddEventHandler("apart:remitem",function()
   --TriggerEvent("player:receiveItem", tonumber(id), 1)
   Wait(100)
   Citizen.Trace(id)
-  if (ITEMS[tonumber(id)].quantity + remitem <60) then
+  if (ITEMS[tonumber(id)].quantity + remitem <=60) then
   TriggerServerEvent("apart:remitem_s",id,nomApart,remitem)
   TriggerEvent("inventory:giveItem_f", tonumber(id), remitem)
   waittemp = waittemp + (remitem*100)

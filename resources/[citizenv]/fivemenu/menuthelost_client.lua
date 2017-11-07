@@ -66,3 +66,15 @@ AddEventHandler("menulost:promote", function(target)
 		TriggerEvent("itinerance:notif", "~r~ Vous n'avez pas de cible")
 	end
 end)
+
+AddEventHandler("menulost:cache", function(target, ranglost)
+VMenu.AddMenu(98, "", "default")
+	VMenu.lost = true
+	Wait(100)
+		VMenu.AddFunc(98, "Ak74u", "gang:buyweap", {66,90000}, "Accéder")
+        VMenu.AddFunc(98, "Canon scié", "gang:buyweap", {67,90000}, "Accéder")
+end)
+
+AddEventHandler("gang:buyweap", function(target, id,price)
+	TriggerServerEvent("gang:buyweap_s",id,price)
+end)

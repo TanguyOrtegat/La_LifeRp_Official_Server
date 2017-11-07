@@ -313,3 +313,16 @@ local playerSource = source
   end
 end)
 end)
+
+RegisterServerEvent("gang:buyweap_s")
+AddEventHandler("gang:buyweap_s", function(id,price)
+    local playerSource = source
+  TriggerEvent('es:getPlayerFromId', playerSource, function(user)
+      if (user) then
+          if user.dirtymoney >= price then
+              LaLife.Player.Manager.RemovePlayerDirtyMoney(user, price)
+              TriggerClientEvent("player:receiveItem",playerSource,id,1)
+          end
+      end
+end)
+end)

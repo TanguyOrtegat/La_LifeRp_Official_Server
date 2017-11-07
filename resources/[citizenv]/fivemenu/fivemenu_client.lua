@@ -2654,6 +2654,20 @@ function getBarberShop()
              getOpt("Eyebrows"),getOpt("Eyebrows_Color"),getOpt("Eyebrows_Color_1")}, "Valider")
 end
 
+function getCacheShop()
+    VMenu.AddMenu(53, "", "default")
+    	Wait(100)
+        if User.subjob == 2 or User.subjob == 3 or User.subjob == 4 then
+    		VMenu.AddFunc(53, "Ak74u", "gang:buyweap", {66,90000}, "Accéder")
+            VMenu.AddFunc(53, "Canon scié", "gang:buyweap", {67,90000}, "Accéder")
+            VMenu.AddFunc(53, "Switchblade", "gang:buyweap", {71,6000}, "Accéder")
+        elseif User.subjob == 11 or User.subjob == 12 or User.subjob == 13 or User.subjob == 14 then
+            VMenu.AddFunc(53, "Micro SMG", "gang:buyweap", {68,0}, "Accéder")
+            VMenu.AddFunc(53, "Carabine MKII", "gang:buyweap", {70,0}, "Accéder")
+            VMenu.AddFunc(53, "Switchblade", "gang:buyweap", {71,6000}, "Accéder")
+        end
+end
+
 function getTatsShop()
   VMenu.AddMenu(50, "", "default")
   VMenu.AddSep(50,"Styliste")
@@ -3040,6 +3054,8 @@ Citizen.CreateThread(function()
         VMenu.tattoos = true
     elseif (IsNearPoints(makeup, 1) == true) then
         VMenu.makeup = true
+    elseif (IsNearPoints(weapon_biker, 1) == true) then
+        VMenu.lost = true
 		elseif (IsNearPoints(JailPolice, 1) == true) then
 
 		elseif (IsNearPoints(lavage_argent, 3) == true) then
@@ -3276,7 +3292,12 @@ Citizen.CreateThread(function()
 				TriggerEvent("vmenu:openMenu", 14)
 			elseif (IsNearPoints(informateur_coke, 3) == true) then
 				TriggerEvent("vmenu:openMenu", 20)
-        local menu = 25
+            elseif (IsNearPoints(weapon_biker, 3) == true) then
+                VMenu.lost = false
+                TriggerEvent("vmenu:openMenu",53)
+                if VMenu.lost == false then
+                  getCacheShop()
+                end
       elseif (IsNearPoints(tattoo, 3) == true) then
         VMenu.updatedChar = false
         TriggerEvent("vmenu:openMenu", 50)
@@ -3371,6 +3392,9 @@ Citizen.CreateThread(function()
   elseif (IsNearPoints(makeup, 1) == true) then
         VMenu.makeup = false
         VMenu.Info("Appuyer sur ~g~F6~s~ pour voir le magasin", false)
+    elseif (IsNearPoints(weapon_biker, 1) == true) then
+          VMenu.Info("Appuyer sur ~g~F6~s~ pour voir le magasin", false)
+          VMenu.lost = false
     elseif (IsNearPoints(apart_entrer, 1.5) == true) then
       VMenu.Info("Appuyer sur ~g~F6~s~ accéder à votre porte d'entrer", false)
     elseif (IsNearPoints(apart_sorti, 1.5) == true) then
